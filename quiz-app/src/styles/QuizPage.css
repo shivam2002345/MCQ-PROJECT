@@ -1,0 +1,48 @@
+/* Container for the timer, positioned at the top right */
+.timer-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #dee2e6; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Enlarged and red-colored timer text */
+.timer-text {
+  font-size: 1.5rem; /* Enlarged font size */
+  font-weight: bold;
+  color: #e21919; /* Red color for the timer text */
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  color: #495057;
+}
+
+.modal-body {
+  font-size: 16px;
+}
+
+.modal-footer .btn {
+  margin-right: 10px;
+}
+
+/* Additional styling for alignment */
+.timer-container {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}

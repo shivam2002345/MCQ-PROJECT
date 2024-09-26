@@ -1,0 +1,92 @@
+/* Styling for SignIn and SignUp Pages */
+body {
+    background-color: #f0f2f5; /* Softer light background color */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Standard text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Full-page centering for forms */
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full page height */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Container for both SignIn and SignUp forms */
+  .container {
+    background-color: #f5f4f4; /* White background for the form */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    max-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Headings for SignIn and SignUp */
+  h2 {
+    text-align: center;
+    color: #007bff; /* Professional blue color */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Input label styling */
+  .form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 0.9rem;
+  }
+  
+  /* Input field styling */
+  .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Blue highlight border on focus */
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Light shadow on focus */
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    color: #dc3545; /* Bootstrap red for errors */
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Button styling remains unchanged as per request */
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .form-control {
+      padding: 8px;
+    }
+  }
+  

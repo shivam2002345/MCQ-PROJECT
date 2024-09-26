@@ -1,0 +1,72 @@
+/* src/App.css */
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0768c8;
+  color: #f1f3f6;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+/* Home Page */
+.home-page {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-page img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-page p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Form Styling */
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 0.3rem;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.btn {
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+}

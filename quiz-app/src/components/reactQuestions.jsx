@@ -1,0 +1,250 @@
+const reactQuestions = [
+    {
+      id: 1,
+      text: 'What is React primarily used for?',
+      options: ['Building user interfaces', 'Managing databases', 'Handling server-side logic', 'Compiling code'],
+      correctAnswer: 'Building user interfaces',
+    },
+    {
+      id: 2,
+      text: 'Which method is used to update the state in a React component?',
+      options: ['setState', 'changeState', 'updateState', 'modifyState'],
+      correctAnswer: 'setState',
+    },
+    {
+      id: 3,
+      text: 'What is JSX?',
+      options: [
+        'A JavaScript extension to write HTML within JavaScript',
+        'A function to create components',
+        'A tool for optimizing code',
+        'A syntax used in vanilla JavaScript',
+      ],
+      correctAnswer: 'A JavaScript extension to write HTML within JavaScript',
+    },
+    {
+      id: 4,
+      text: 'What is a functional component in React?',
+      options: [
+        'A function that returns HTML elements or JSX',
+        'A class that handles state',
+        'A function that modifies props',
+        'A method to fetch API data',
+      ],
+      correctAnswer: 'A function that returns HTML elements or JSX',
+    },
+    {
+      id: 5,
+      text: 'Which React hook is used to manage side effects in functional components?',
+      options: ['useEffect', 'useState', 'useReducer', 'useContext'],
+      correctAnswer: 'useEffect',
+    },
+    {
+      id: 6,
+      text: 'Which of the following is true about props in React?',
+      options: [
+        'Props are immutable',
+        'Props can only be numbers and strings',
+        'Props cannot be passed between components',
+        'Props are used to handle component state',
+      ],
+      correctAnswer: 'Props are immutable',
+    },
+    {
+      id: 7,
+      text: 'What does the useState hook return?',
+      options: [
+        'An array with the current state and a function to update it',
+        'A promise to fetch state',
+        'The current props and state',
+        'A function to render the component',
+      ],
+      correctAnswer: 'An array with the current state and a function to update it',
+    },
+    {
+      id: 8,
+      text: 'How do you pass data from a child component to a parent component?',
+      options: ['Through callback functions', 'Using props', 'Using context', 'Using refs'],
+      correctAnswer: 'Through callback functions',
+    },
+    {
+      id: 9,
+      text: 'What is the purpose of a key prop in React?',
+      options: [
+        'To uniquely identify elements in a list',
+        'To style the component',
+        'To manage the component’s state',
+        'To trigger a re-render',
+      ],
+      correctAnswer: 'To uniquely identify elements in a list',
+    },
+    {
+      id: 10,
+      text: 'What does lifting state up refer to in React?',
+      options: [
+        'Moving state to a common ancestor component',
+        'Using higher-order components',
+        'Moving state from parent to child',
+        'Removing state from the component tree',
+      ],
+      correctAnswer: 'Moving state to a common ancestor component',
+    },
+    {
+      id: 11,
+      text: 'What is the default behavior of React when rendering components?',
+      options: [
+        'It re-renders every component on state or props change',
+        'It only re-renders the parent component on state change',
+        'It prevents all re-renders unless manually forced',
+        'It re-renders only the components affected by state or props changes',
+      ],
+      correctAnswer: 'It re-renders only the components affected by state or props changes',
+    },
+    {
+      id: 12,
+      text: 'What is the virtual DOM in React?',
+      options: [
+        'A lightweight copy of the actual DOM',
+        'A DOM object that runs faster than the actual DOM',
+        'A different programming language for writing React apps',
+        'A tool to manipulate state in React',
+      ],
+      correctAnswer: 'A lightweight copy of the actual DOM',
+    },
+    {
+      id: 13,
+      text: 'What is the significance of the "key" attribute when rendering lists in React?',
+      options: [
+        'It helps React identify which items have changed, are added, or removed',
+        'It forces React to always re-render the entire list',
+        'It allows adding multiple components to a list',
+        'It changes the layout of list items',
+      ],
+      correctAnswer: 'It helps React identify which items have changed, are added, or removed',
+    },
+    {
+      id: 14,
+      text: 'How do you prevent a default form submit action in React?',
+      options: ['Using event.preventDefault()', 'Using event.stopPropagation()', 'Using return false', 'Using event.preventSubmit()'],
+      correctAnswer: 'Using event.preventDefault()',
+    },
+    {
+      id: 15,
+      text: 'What does the useContext hook do in React?',
+      options: [
+        'It allows components to access context values without passing props',
+        'It manages global state',
+        'It fetches data from external APIs',
+        'It directly updates the DOM',
+      ],
+      correctAnswer: 'It allows components to access context values without passing props',
+    },
+    {
+      id: 16,
+      text: 'Which React hook is used to manage state in a functional component?',
+      options: ['useState', 'useEffect', 'useContext', 'useRef'],
+      correctAnswer: 'useState',
+    },
+    {
+      id: 17,
+      text: 'What are Higher-Order Components (HOC) in React?',
+      options: [
+        'Functions that take a component and return a new component',
+        'Components that manage global state',
+        'React elements that contain conditional logic',
+        'Components that render arrays of JSX elements',
+      ],
+      correctAnswer: 'Functions that take a component and return a new component',
+    },
+    {
+      id: 18,
+      text: 'What is the correct way to import a React component?',
+      options: [
+        'import Component from "react";',
+        'import { Component } from "react";',
+        'import { React, Component } from "react";',
+        'import { useState, Component } from "react";',
+      ],
+      correctAnswer: 'import { Component } from "react";',
+    },
+    {
+      id: 19,
+      text: 'What does the useRef hook in React do?',
+      options: [
+        'Returns a mutable ref object whose .current property holds a value',
+        'Allows direct access to the DOM element',
+        'Manages side effects in a functional component',
+        'Fetches data from APIs',
+      ],
+      correctAnswer: 'Returns a mutable ref object whose .current property holds a value',
+    },
+    {
+      id: 20,
+      text: 'What is prop drilling in React?',
+      options: [
+        'Passing data through multiple levels of components',
+        'Drilling into the component tree to fetch data',
+        'Using refs to access deeply nested components',
+        'Modifying component state deeply',
+      ],
+      correctAnswer: 'Passing data through multiple levels of components',
+    },
+    {
+      id: 21,
+      text: 'What is the purpose of React Fragments?',
+      options: [
+        'To group multiple elements without adding extra nodes to the DOM',
+        'To render conditional elements',
+        'To define stateful components',
+        'To modify the virtual DOM',
+      ],
+      correctAnswer: 'To group multiple elements without adding extra nodes to the DOM',
+    },
+    {
+      id: 22,
+      text: 'What does the useReducer hook provide in React?',
+      options: [
+        'A way to manage more complex state logic',
+        'An alternative to rendering the DOM',
+        'A function to handle lifecycle events',
+        'A way to pass props between components',
+      ],
+      correctAnswer: 'A way to manage more complex state logic',
+    },
+    {
+      id: 23,
+      text: 'What is a React Portal?',
+      options: [
+        'A way to render children into a different DOM subtree',
+        'A method to manage global state',
+        'A method to fetch data from APIs',
+        'A function to organize context',
+      ],
+      correctAnswer: 'A way to render children into a different DOM subtree',
+    },
+    {
+      id: 24,
+      text: 'What is the role of the React.StrictMode component?',
+      options: [
+        'To help identify potential problems in an application',
+        'To optimize rendering performance',
+        'To prevent rendering of certain components',
+        'To disable error boundaries',
+      ],
+      correctAnswer: 'To help identify potential problems in an application',
+    },
+    {
+      id: 25,
+      text: 'What is reconciliation in React?',
+      options: [
+        'The process React uses to update the DOM',
+        'A way to resolve state conflicts',
+        'A function to manage side effects',
+        'The method of handling component updates',
+      ],
+      correctAnswer: 'The process React uses to update the DOM',
+    },
+  ];
+  
+  export default reactQuestions;
+  

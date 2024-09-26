@@ -1,0 +1,105 @@
+/* Ensure the container takes up the full viewport and more */
+.homepage-container {
+    background-image: url('../assets/home.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed */
+    min-height: 120vh; /* Increase the minimum height to make the page longer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Allows the footer to be positioned absolutely */
+}
+
+/* Navbar styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.01); /* More transparent background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(10px); 
+}
+
+/* Adjust positioning for the content overlay */
+.content-overlay {
+    text-align: center;
+    margin-top: 80px; /* Adjust based on navbar height */
+    z-index: 1; /* Ensure content stays above the background */
+    color: white;
+    padding: 40px 20px; /* Increase padding to make the content area longer */
+    flex: 1; /* Allows content to grow and push footer to the bottom */
+}
+
+/* Styling for the title */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 8px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Improved styling for buttons */
+.btn-primary, .btn-login-signup, .btn-logout {
+    padding: 12px 24px; /* Increased padding for better touch area */
+    font-size: 1.2rem; /* Font size for readability */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.btn-primary:hover, .btn-login-signup:hover, .btn-logout:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Styling for the footer */
+.footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute; /* Fixes footer to the bottom */
+    bottom: 0;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .btn-primary, .btn-login-signup, .btn-logout {
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Notification styling */
+.notification {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Custom alert styling */
+.alert-custom {
+    background-color: #f8c7cb;
+    color: #f02424;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #e30404;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
