@@ -26,23 +26,35 @@ const signup = async (req, res) => {
 };
 
 const login = async (req, res) => {
+  // 1. Check for validation errors
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
 
+  // 2. Destructure user input
   const { email, password } = req.body;
+
   try {
+    // 3. Check if user exists
     const user = await userModel.findUserByEmail(email);
     if (!user) return res.status(401).json({ message: 'Invalid email or password' });
 
+    // 4. Compare the password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(401).json({ message: 'Invalid email or password' });
 
+    // 5. Create a JWT token
     const token = jwt.sign({ user_id: user.user_id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.json({ message: 'Login successful', token });
+
+    // 6. Respond with the token and user_id
+    res.json({
+      message: 'Login successful',
+      token,        // The JWT token
+      user_id: user.user_id  // The user ID
+    });
   } catch (error) {
-    errorHandler(res, error);
+    errorHandler(res, error);  // Handle errors
   }
 };
 

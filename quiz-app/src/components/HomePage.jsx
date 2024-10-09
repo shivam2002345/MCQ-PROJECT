@@ -47,7 +47,7 @@ const HomePage = () => {
           </div>
         )}
 
-        <button className="btn btn-primary mt-3" onClick={handleStartTest}>
+        <button className="button  mt-3" onClick={handleStartTest}>
           Start Test
         </button>
       </div>

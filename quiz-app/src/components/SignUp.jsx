@@ -23,6 +23,8 @@ const SignUp = () => {
 
       const result = await response.json();
       if (response.ok) {
+        // Store the user ID in local storage
+        localStorage.setItem('userId', result.user_id);
         navigate('/signin'); // Redirect on success
       } else {
         setError(result.message || 'Signup failed');

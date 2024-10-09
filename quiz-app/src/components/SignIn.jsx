@@ -1,7 +1,8 @@
+// SignIn.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../utils/auth';
-import '../styles/AuthStyles.css'; // Assuming the above CSS is in authStyles.css
+import '../styles/AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -11,10 +12,13 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(''); // Clear any previous error
 
     const isLoggedIn = await login(email, password);
+
     if (isLoggedIn) {
-      navigate('/', { state: { notification: 'You have successfully logged in!' } });
+      // After successful login, redirect to dashboard
+      navigate('/dashboard', { state: { notification: 'You have successfully logged in!' } });
     } else {
       setError('Invalid email or password');
     }
@@ -26,7 +30,6 @@ const SignIn = () => {
 
   return (
     <div className="container mt-5" style={{ maxWidth: '600px' }}>
-      {/* Home button */}
       <div className="d-flex justify-content-start mb-4">
         <button className="btn btn-primary" onClick={handleHomeRedirect}>
           Home

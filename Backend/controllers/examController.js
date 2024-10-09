@@ -1,10 +1,15 @@
-const pool = require('../config/db');  // Import the pool here
+const pool = require('../config/db'); // Import the pool here
 const examService = require('../services/examService');
-
 
 const examController = {
   async createExam(req, res) {
     const { user_id, level_id, tech_id } = req.body;
+
+    // Input validation
+    if (!user_id || !level_id || !tech_id) {
+      return res.status(400).json({ message: 'Missing required fields: user_id, level_id, tech_id' });
+    }
+
     try {
       console.log('Creating exam with:', { user_id, level_id, tech_id });
 
@@ -16,7 +21,7 @@ const examController = {
 
       // Step 2: Select 5 random questions based on tech_id and level_id
       const selectedQuestions = await pool.query(
-        'SELECT question_id FROM questions WHERE tech_id = $1 AND level_id = $2 ORDER BY random() LIMIT 5',
+        'SELECT question_id FROM questions WHERE tech_id = $1 AND level_id = $2 ORDER BY random() LIMIT 25',
         [tech_id, level_id]
       );
       console.log('Selected questions:', selectedQuestions.rows);
@@ -29,10 +34,11 @@ const examController = {
 
       // Step 3: Insert the selected questions into the exam_questions table
       const insertQuestionsQuery = 'INSERT INTO exam_questions (exam_id, question_id) VALUES ($1, $2)';
-      for (const question of selectedQuestions.rows) {
-        console.log('Inserting question:', question.question_id);
-        await pool.query(insertQuestionsQuery, [exam_id, question.question_id]);
-      }
+      const insertPromises = selectedQuestions.rows.map(question =>
+        pool.query(insertQuestionsQuery, [exam_id, question.question_id])
+      );
+
+      await Promise.all(insertPromises); // Insert all questions concurrently
 
       res.status(201).json({ message: 'Exam created with selected questions', exam_id });
     } catch (err) {
@@ -43,23 +49,29 @@ const examController = {
 
   async getExamQuestions(req, res) {
     const { exam_id } = req.params;
+
     try {
       console.log('Fetching questions for exam_id:', exam_id);
 
-      // Query to fetch questions for the given exam_id, excluding the correct option
+      // Query to fetch questions for the given exam_id, including the correct option
       const query = `
-        SELECT q.question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d
+        SELECT q.question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_option
         FROM questions q
         JOIN exam_questions eq ON q.question_id = eq.question_id
         WHERE eq.exam_id = $1
       `;
       const result = await pool.query(query, [exam_id]);
-      
+
+      if (result.rows.length === 0) {
+        console.log('No questions found for the given exam_id');
+        return res.status(404).json({ message: 'No questions found for this exam' });
+      }
+
       console.log('Fetched questions:', result.rows);
       res.status(200).json(result.rows);
     } catch (error) {
       console.error('Error in getExamQuestions:', error.message);
-      res.status(500).json({ message: 'Server error' });
+      res.status(500).json({ message: 'Server error', error: error.message });
     }
   }
 };

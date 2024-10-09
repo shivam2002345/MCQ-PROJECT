@@ -11,15 +11,32 @@
     position: relative; /* Allows the footer to be positioned absolutely */
 }
 
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* Text color */
+    background-color: #0075fcfa; /* Default background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline on links */
+    transition: background-color 0.3s ease, transform 0.1s; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .button:active {
+    background-color: #004494; /* Even darker background on active */
+    transform: translateY(0); /* Reset lift effect */
+  }
 /* Navbar styling */
-.navbar {
-    background: rgba(255, 255, 255, 0.01); /* More transparent background */
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    backdrop-filter: blur(10px); 
-}
+
 
 /* Adjust positioning for the content overlay */
 .content-overlay {
@@ -39,23 +56,7 @@
     text-shadow: 8px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Improved styling for buttons */
-.btn-primary, .btn-login-signup, .btn-logout {
-    padding: 12px 24px; /* Increased padding for better touch area */
-    font-size: 1.2rem; /* Font size for readability */
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff; /* Primary button color */
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
 
-.btn-primary:hover, .btn-login-signup:hover, .btn-logout:hover {
-    background-color: #0056b3; /* Darker color on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
 
 /* Styling for the footer */
 .footer {

@@ -1,0 +1,20 @@
+.question-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.correct {
+  background-color: #d4edda; /* Light green for correct answers */
+  border-color: #c3e6cb;
+}
+
+.incorrect {
+  background-color: #f8d7da; /* Light red for incorrect answers */
+  border-color: #f5c6cb;
+}
+
+h3{
+  color: red;
+}

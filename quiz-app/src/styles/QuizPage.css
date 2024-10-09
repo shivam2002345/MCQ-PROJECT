@@ -10,6 +10,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
+.pie-chart-container {
+  width: 300px; /* Set desired width */
+  height: 500px; /* Set desired height */
+  margin: auto; /* Center the chart */
+}
+
 /* Enlarged and red-colored timer text */
 .timer-text {
   font-size: 1.5rem; /* Enlarged font size */
