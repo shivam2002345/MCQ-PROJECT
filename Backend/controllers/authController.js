@@ -18,12 +18,16 @@ const signup = async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = await userModel.createUser(name, email, hashedPassword);
+
+    // Add user_count = 0 and allowed_count = 1 on signup
+    const newUser = await userModel.createUser(name, email, hashedPassword, 0, 1);
+
     res.status(201).json({ message: 'User created successfully', user_id: newUser.user_id });
   } catch (error) {
     errorHandler(res, error);
   }
 };
+
 
 const login = async (req, res) => {
   // 1. Check for validation errors

@@ -1,0 +1,21 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .display-4 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  

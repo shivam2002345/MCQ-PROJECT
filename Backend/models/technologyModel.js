@@ -5,4 +5,12 @@ const getAllTechnologies = async () => {
   return result.rows;
 };
 
-module.exports = { getAllTechnologies };
+
+const Technology = {
+  getAllTechnologies: async () => {
+      const res = await pool.query('SELECT * FROM technologies');
+      return res.rows;
+  },
+};
+
+module.exports = { getAllTechnologies ,Technology};

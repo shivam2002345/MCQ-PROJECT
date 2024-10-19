@@ -1,6 +1,6 @@
 /* Ensure the container takes up the full viewport and more */
 .homepage-container {
-    background-image: url('../assets/home.jpg'); /* Path to your image */
+    background-image: url('../assets/1.jpg'); /* Path to your new image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps the background fixed */
@@ -9,34 +9,26 @@
     flex-direction: column;
     align-items: center;
     position: relative; /* Allows the footer to be positioned absolutely */
+    filter: brightness(0.8); /* Makes the background image slightly faded */
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px; /* Vertical and horizontal padding */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Bold text */
-    color: #fff; /* Text color */
-    background-color: #0075fcfa; /* Default background color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline on links */
-    transition: background-color 0.3s ease, transform 0.1s; /* Smooth transitions */
-    cursor: pointer; /* Pointer cursor on hover */
-  }
-  
-  .button:hover {
-    background-color: #0056b3; /* Darker background on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-  }
-  
-  .button:active {
-    background-color: #004494; /* Even darker background on active */
-    transform: translateY(0); /* Reset lift effect */
-  }
-/* Navbar styling */
+.info-section h2 {
+    color: white; /* Ensure the h2 takes the white color */
+}
 
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* Adjust positioning for the content overlay */
 .content-overlay {
@@ -46,27 +38,149 @@
     color: white;
     padding: 40px 20px; /* Increase padding to make the content area longer */
     flex: 1; /* Allows content to grow and push footer to the bottom */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    border-radius: 10px; /* Rounded corners for overlay */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.content-overlay:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 /* Styling for the title */
+/* Fade and Move Animation for Title */
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start 50px above */
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(10px); /* Move slightly down */
+    }
+    50% {
+        transform: rotate(5deg); /* Slight rotation */
+    }
+    70% {
+        transform: rotate(-5deg); /* Slight rotation back */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+/* Updated title styling */
 .title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 8px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: titleAnimation 2s ease-in-out forwards; /* More pronounced animation */
+    color: #ffcc00; /* Bright color for the title */
+    background: linear-gradient(90deg, #ff5722, #ffcc00); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section styling */
+.info-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    padding: 40px 20px;
+    margin: 20px 0; /* Space between sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+    color: #f0e68c; /* Light yellow for text */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+}
+
+/* Styling for the heading */
+.info-section h2 {
+    color: #ffcc00; /* Bright yellow color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    animation: bounce 1s infinite; /* Add bounce animation */
+}
+
+/* Image styling */
+.info-image {
+    width: 150px; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    margin-left: auto; /* Push image to the right */
+}
+
+/* Paragraph and list styles remain the same */
+.info-section p,
+.info-section ul {
+    color: #f9f9f9; /* Light color for readability */
+    margin-right: 20px; /* Add some margin to the right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .info-image {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-top: 20px; /* Add top margin for space */
+    }
 }
 
 
 
-/* Styling for the footer */
-.footer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+/* Styling for the Start Test button */
+.button {
+    background: linear-gradient(135deg, #ff4081, #ffab40); /* Color mix */
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute; /* Fixes footer to the bottom */
-    bottom: 0;
+    padding: 10px 20px; /* Adjusted padding for smaller button */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Ensure contents stay within the button */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth */
+}
+
+/* Button hover effect */
+.button:hover {
+    background: linear-gradient(135deg, #ffab40, #ff4081); /* Inverted gradient on hover */
+    transform: scale(1.05) rotate(3deg); /* Slightly scale and rotate */
+}
+
+/* Button active effect */
+.button:active {
+    transform: scale(0.95); /* Shrink on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow when clicked */
+}
+
+/* Add a pseudo-element for a ripple effect */
+.button:before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease; /* Smooth ripple effect */
+    z-index: 0; /* Ensure it stays behind the text */
+}
+
+/* Trigger ripple effect on hover */
+.button:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Show ripple effect */
+    opacity: 0; /* Fade out ripple */
 }
 
 /* Ensure responsiveness */
@@ -75,9 +189,9 @@
         font-size: 2rem;
     }
 
-    .btn-primary, .btn-login-signup, .btn-logout {
-        font-size: 1rem;
-        padding: 10px 20px; /* Adjust padding for smaller screens */
+    .button {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
     }
 }
 
@@ -103,4 +217,31 @@
     width: 100%;
     text-align: center;
     font-size: 16px;
+}
+
+
+.footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Increased top and bottom padding */
+    position: relative; /* Changed to relative to allow for dynamic height */
+    height: auto; /* Allow the height to adjust based on content */
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-bottom: 10px; /* Space below the icons */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: white; /* Icon color */
+    font-size: 24px; /* Size of icons */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.social-icons a:hover {
+    color: #0075fc; /* Change color on hover */
 }

@@ -1,0 +1,376 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+10,3,Which HTML5 element is used to specify a footer for a document or section?,<footer>,<bottom>,<section-footer>,<end>,<footer>
+10,3,What is the correct HTML element for playing audio files?,<audio>,<sound>,<music>,<media>,<audio>
+10,3,How do you properly embed a video in HTML5?,<video src="movie.mp4">,<media src="movie.mp4">,<embed src="movie.mp4">,<link src="movie.mp4">,<video src="movie.mp4">
+10,3,What attribute is used to define inline styles in an HTML element?,style,class,id,css,style
+10,3,Which HTML tag is used to define an internal style sheet?,<style>,<css>,<script>,<link>,<style>
+10,3,What is the purpose of the <canvas> element in HTML5?,To draw graphics,To create animations,To embed multimedia,To define a container for content,To draw graphics
+10,3,Which attribute is used to specify that an input field must be filled out before submitting the form?,required,mandatory,validate,confirm,required
+10,3,How do you create a hyperlink that opens in a new tab?,<a href="url" target="_blank">,<a href="url" new>,<a href="url" target="new">,<a href="url" tab="_new">,<a href="url" target="_blank">
+10,3,Which tag is used to define a section of navigation links?,<nav>,<header>,<footer>,<section>,<nav>
+10,3,Which attribute specifies the maximum number of characters in an input field?,maxlength,maxsize,limit,restriction,maxlength
+10,3,Which HTML element is used to display a scalar measurement within a range?,<meter>,<progress>,<gauge>,<range>,<meter>
+10,3,What is the correct HTML element to define emphasized text?,<em>,<i>,<strong>,<b>,<em>
+10,3,Which attribute specifies an alternate text for an image, if the image cannot be displayed?,alt,title,description,src,alt
+10,3,How do you define a multi-line text input field in HTML?,<textarea>,<input type="text">,<multiline>,<textfield>,<textarea>
+10,3,What is the correct syntax to create a drop-down list in HTML?,<select>,<dropdown>,<list>,<input type="select">,<select>
+10,3,Which tag is used to group inline-elements in a document?,<span>,<div>,<group>,<inline>,<span>
+10,3,What does the <aside> element represent in HTML5?,A section of content related to the main content,Main content of the page,A section for advertisements,A section for side notes,A section of content related to the main content
+10,3,Which element is used to specify a section in a document?,<section>,<div>,<article>,<header>,<section>
+10,3,Which tag is used to define an image map?,<map>,<area>,<imgmap>,<maparea>,<map>
+10,3,Which HTML attribute specifies the URL of the page the link goes to?,href,src,link,location,href
+10,3,What is the purpose of the <details> element in HTML5?,To create a disclosure widget,To define summary information,To group details,To hide details,To create a disclosure widget
+10,3,Which HTML attribute specifies the language of the element's content?,lang,xml,locale,charset,lang
+10,3,Which element is used to define a table header?,<th>,<thead>,<header>,<td>,<th>
+10,3,How do you make a checkbox in HTML?,<input type="checkbox">,<checkbox>,<input type="box">,<box>,<input type="checkbox">
+10,3,What does the <figcaption> tag represent in HTML5?,Caption for a figure,Description of a figure,Label for a figure,Title of a figure,Caption for a figure
+10,3,Which HTML tag is used to create an ordered list?,<ol>,<ul>,<list>,<order>,<ol>
+10,3,What is the correct HTML element for inserting a line break?,<br>,<break>,<lb>,<newline>,<br>
+10,3,Which HTML5 element defines important text?,<strong>,<important>,<bold>,<highlight>,<strong>
+10,3,How do you properly link a CSS file to an HTML document?,<link rel="stylesheet" href="styles.css">,<style href="styles.css">,<stylesheet link="styles.css">,<css href="styles.css">,<link rel="stylesheet" href="styles.css">
+10,3,Which element is used to create a table row in HTML?,<tr>,<td>,<th>,<row>,<tr>
+10,3,What is the correct HTML for adding a background color?,<body style="background-color:yellow;">,<background color="yellow">,<body color="yellow">,<color background="yellow">,<body style="background-color:yellow;">
+10,3,Which attribute is used to specify a unique identifier for an HTML element?,id,name,class,key,id
+10,3,How do you insert an image in HTML?,<img src="image.jpg">,<image src="image.jpg">,<img link="image.jpg">,<src image="image.jpg">,<img src="image.jpg">
+10,3,What is the correct HTML element for inserting a comment?,<!-- -->,// <comment>,<note>,<cmt>,<!-- -->
+10,3,Which element defines a self-contained piece of content in HTML5?,<article>,<section>,<div>,<content>,<article>
+10,3,How can you specify the direction of text in an HTML document?,dir,align,text-direction,flow,dir
+10,3,What does the <output> element represent in HTML5?,Result of a calculation,Output from a program,Display for forms,Final content,Result of a calculation
+10,3,Which HTML element defines a title for the document?,<title>,<head>,<meta>,<header>,<title>
+10,3,What does the <progress> element represent in HTML5?,Progress of a task,Progress of loading,Data progress,Animation progress,Progress of a task
+10,3,How do you specify a default value for an input field?,value,placeholder,default,value-set,value
+10,3,What is the purpose of the <datalist> element in HTML5?,To provide a list of predefined options,To create a drop-down list,To link data sets,To display data in a table,To provide a list of predefined options
+10,3,Which attribute specifies the relationship between the current document and the linked document?,rel,ref,link,type,rel
+10,3,Which tag is used to create a numbered list in HTML?,<ol>,<ul>,<li>,<list>,<ol>
+10,3,What does the <bdi> element stand for?,Bidirectional Isolation,Bi-direction Interaction,Block Display Isolation,Block Direction Inline,Bidirectional Isolation
+10,3,Which tag is used to display a table cell?,<td>,<th>,<tr>,<tc>,<td>
+10,3,What does the <wbr> element represent in HTML5?,Word Break Opportunity,Web Break Resource,Wide Break Resource,Word Boundary Reserve,Word Break Opportunity
+10,3,How do you create an email link in HTML?,<a href="mailto:someone@example.com">,<a href="email:someone@example.com">,<mail to="someone@example.com">,<email href="someone@example.com">,<a href="mailto:someone@example.com">
+10,3,What is the purpose of the <mark> element in HTML5?,To highlight text,To mark important text,To tag elements,To add comments,To highlight text
+10,3,What is the correct syntax to create a checkbox group in HTML?,<input type="checkbox">,<checkbox>,<input type="group">,<group>,<input type="checkbox">
+10,3,Which HTML5 element represents a visible break in the content?,<hr>,<break>,<line>,<br>,<hr>
+10,3,What does the <samp> element represent in HTML5?,Sample output from a computer program,Sampling of content,Script and markup language,Sample of forms,Sample output from a computer program
+10,3,Which HTML tag is used to create a drop-down list?,<select>,<dropdown>,<list>,<formselect>,<select>
+10,3,Which attribute is used to provide a tooltip for an element in HTML?,title,tooltip,alt,hint,title
+10,3,What is the correct HTML element for bold text?,<b>,<strong>,<em>,<bold>,<b>
+10,3,What does the <dfn> element represent in HTML5?,Defining instance of a term,Default formatting,Defined content,Definition list,Defining instance of a term
+10,3,How do you specify a fallback content for browsers that do not support a specific HTML5 feature?,Use <noscript>,Use <fallback>,Use <nofeature>,Use <backup>,Use <noscript>
+10,3,Which HTML element is used to group form controls?,<fieldset>,<group>,<formgroup>,<controls>,<fieldset>
+10,3,Which HTML element is used to define a clickable button?,<button>,<input type="button">,<click>,<input type="submit">,<button>
+10,3,Which attribute specifies the target of a hyperlink in HTML?,target,href,destination,link,target
+10,3,What is the purpose of the <template> element in HTML5?,To define a reusable template of content,To create templates for web components,To embed content from another site,To load external templates,To define a reusable template of content
+10,3,What is the correct syntax for an image map area?,<area coords="34,44,270,350" href="url">,<map area="34,44,270,350" link="url">,<img map="url" coords="34,44,270,350">,<area map="34,44,270,350" href="url">,<area coords="34,44,270,350" href="url">
+10,3,Which HTML element is used to define a caption for a table?,<caption>,<title>,<head>,<footer>,<caption>
+10,3,How do you embed an SVG image in HTML?,<img src="image.svg">,<svg src="image.svg">,<embed svg="image.svg">,<object data="image.svg">,<img src="image.svg">
+10,3,What is the correct HTML element for inserting a horizontal rule?,<hr>,<rule>,<br>,<line>,<hr>
+10,3,How do you specify that a form field is read-only?,readonly,disabled,static,noredit,readonly
+10,3,What is the correct HTML element for defining a hyperlink?,<a>,<link>,<anchor>,<url>,<a>
+10,3,What is the purpose of the <menu> element in HTML5?,To create a context menu,To define a navigation bar,To create a sidebar,To group items,To create a context menu
+10,3,Which element is used to define a table cell in HTML?,<td>,<th>,<tr>,<cell>,<td>
+10,3,What does the <bdo> element represent in HTML?,Bidirectional Override,Bidirectional Object,Bidirectional Output,Bi Display Object,Bidirectional Override
+10,3,Which HTML element is used to create an input field for entering a URL?,<input type="url">,<input type="text">,<input type="link">,<input type="address">,<input type="url">
+10,3,What is the correct HTML tag for inserting an inline frame?,<iframe>,<frame>,<embed>,<object>,<iframe>
+10,3,Which HTML element is used to group header content in a document?,<header>,<section>,<nav>,<group>,<header>
+10,3,What is the correct syntax for an ordered list in HTML?,<ol>,<ul>,<list>,<order>,<ol>
+10,3,Which HTML element is used to create a form?,<form>,<input>,<fieldset>,<textarea>,<form>
+10,3,What is the correct HTML element for emphasizing text?,<em>,<i>,<b>,<strong>,<em>
+10,3,Which tag is used to define a division or section in an HTML document?,<div>,<section>,<header>,<footer>,<div>
+10,3,How do you add a comment in HTML?,<!-- comment -->,// comment,<cmt>,<note>,<!-- comment -->
+10,3,Which HTML element is used to define a label for an input element?,<label>,<tag>,<inputlabel>,<mark>,<label>
+10,3,What is the purpose of the <abbr> element in HTML?,To define an abbreviation,To highlight content,To mark abbreviated text,To add special characters,To define an abbreviation
+10,3,What is the correct HTML element for inserting a background image?,<body style="background-image:url(image.jpg);">,<background image="image.jpg">,<img background="image.jpg">,<img src="image.jpg">,<body style="background-image:url(image.jpg);">
+10,3,Which tag is used to define a table in HTML?,<table>,<grid>,<tab>,<div>,<table>
+10,3,What is the correct HTML tag for creating a radio button?,<input type="radio">,<radio>,<input type="button">,<input type="checkbox">,<input type="radio">
+10,3,What does the <pre> element represent in HTML?,Preformatted text,Preloaded content,Predefined content,Pre-filled forms,Preformatted text
+10,3,How do you specify the placeholder text for an input field in HTML?,placeholder,value,default,hint,placeholder
+10,3,What is the correct syntax for creating a submit button in a form?,<input type="submit">,<button type="submit">,<submit>,<input type="button">,<input type="submit">
+10,3,Which HTML attribute is used to define inline JavaScript?,onclick,script,onexecute,run,onclick
+10,3,How do you specify the media type of a linked CSS file in HTML?,media,type,rel,link,media
+10,3,What is the correct syntax for creating an image that is a link?,<a href="url"><img src="image.jpg"></a>,<img src="image.jpg" link="url">,<a src="image.jpg" href="url">,<link href="url"><img src="image.jpg"></link>,<a href="url"><img src="image.jpg"></a>
+10,3,What does the <time> element represent in HTML5?,A specific time or date,A countdown,A timer,A time span,A specific time or date
+10,3,Which tag is used to define a block of content that can be repeated in HTML5?,<template>,<repeat>,<loop>,<block>,<template>
+10,3,What is the correct HTML element for defining superscript text?,<sup>,<sub>,<super>,<sc>,<sup>
+10,3,How do you set a form field to be automatically focused on page load?,autofocus,focused,active,default-focus,autofocus
+10,3,What does the <keygen> element represent in HTML5?,A key-pair generator,A keyframe for animation,A keyboard input,A shortcut key,A key-pair generator
+10,3,Which attribute is used to set an image as a submit button in a form?,src,image,type,submit,src
+10,3,How do you group related options in a drop-down list in HTML?,<optgroup>,<group>,<selectgroup>,<grouplist>,<optgroup>
+10,3,Which tag is used to define the header of a table in HTML?,<thead>,<header>,<tablehead>,<th>,<thead>
+10,3,What is the purpose of the <data> element in HTML5?,To link content to a machine-readable value,To store hidden data,To create a dataset,To insert dynamic data,To link content to a machine-readable value
+10,3,How do you make an image responsive in HTML?,Add width="100%" and height="auto",Add height="100%" and width="auto",Use media queries,Use <responsive>,Add width="100%" and height="auto"
+10,3,Which attribute is used to specify an image description for screen readers?,alt,title,description,role,alt
+10,3,How do you create an HTML button that will reset a form?,<input type="reset">,<button type="reset">,<form reset>,<reset>,<input type="reset">
+10,3,Which HTML element is used to define pre-selected options in a drop-down list?,<option selected>,<option default>,<option checked>,<select selected>,<option selected>
+10,3,What does the <picture> element in HTML5 represent?,A container for multiple image sources,A slideshow of images,A video gallery,A linked image,A container for multiple image sources
+10,3,Which tag is used to define a multi-column layout in HTML5?,<colgroup>,<column>,<grid>,<multicol>,<colgroup>
+10,3,How do you specify multiple file types for an <input type="file"> field?,accept,type,multiple,format,accept
+10,3,What is the correct syntax for creating a link to download a file?,<a href="file.zip" download>,<link src="file.zip" download>,<a href="file.zip" download="true">,<download href="file.zip">,<a href="file.zip" download>
+10,3,Which HTML tag is used to define a summary for the <details> element?,<summary>,<detailheader>,<overview>,<disclosure>,<summary>
+10,3,How do you mark text that has been deleted in HTML?,<del>,<strike>,<s>,<remove>,<del>
+10,3,Which element is used to represent the result of a calculation in HTML5?,<output>,<result>,<calc>,<summary>,<output>
+10,3,What attribute is used to specify whether a form field is editable?,readonly,disabled,locked,static,readonly
+10,3,Which HTML tag is used to define a navigation bar?,<nav>,<menu>,<header>,<toolbar>,<nav>
+10,3,What is the correct HTML element for defining the main content of a document?,<main>,<section>,<content>,<body>,<main>
+10,3,Which HTML element is used to display text with a strikethrough effect?,<s>,<strike>,<del>,<removed>,<s>
+10,3,How do you make an image clickable in HTML?,Wrap the <img> tag inside an <a> tag,Add the href attribute to the <img> tag,Use the <link> tag with an <img> tag,Add the onClick event to the <img> tag,Wrap the <img> tag inside an <a> tag
+10,3,What is the correct syntax for defining a section in HTML5?,<section>,<div>,<part>,<content>,<section>
+10,3,How do you include a favicon in an HTML document?,<link rel="icon" href="favicon.ico">,<link rel="shortcut icon" href="favicon.ico">,<img src="favicon.ico">,<meta rel="icon" href="favicon.ico">,<link rel="icon" href="favicon.ico">
+10,3,Which HTML attribute is used to group table rows for styling purposes?,class,style,rowgroup,group,class
+10,3,How do you specify a fallback for an HTML5 video element?,Add the fallback content between the opening and closing <video> tags,Add a <nosupport> tag within the <video> element,Use the <fallback> attribute,Use the <alt> attribute,Add the fallback content between the opening and closing <video> tags
+10,3,What is the purpose of the <dialog> element in HTML5?,To create a dialog box,To display interactive content,To create an alert box,To trigger a modal,To create a dialog box
+10,3,Which tag is used to define a section of a document in HTML5?,<section>,<div>,<header>,<body>,<section>
+10,3,How do you include a video from YouTube in HTML?,Use the <iframe> tag with the YouTube video URL,Use the <video> tag with the YouTube video URL,Use the <embed> tag with the YouTube link,Use the <object> tag with the YouTube video,Use the <iframe> tag with the YouTube video URL
+10,3,Which attribute defines the width of a table in HTML?,width,tablewidth,colwidth,size,width
+10,3,How do you specify the MIME type of a resource in HTML5?,type,mime,media,format,type
+10,3,What is the purpose of the <track> element in HTML5?,To provide text tracks for media elements,To create a timeline of a video,To link external subtitles,To add annotations to a video,To provide text tracks for media elements
+10,3,Which tag is used to define a dropdown in HTML?,<select>,<dropdown>,<menu>,<option>,<select>
+10,3,How do you create an ordered list in HTML?,<ol>,<ul>,<list>,<order>,<ol>
+10,3,What does the <cite> element represent in HTML5?,Title of a work,Quotation of text,Reference to an external document,Citation of a person,Title of a work
+10,3,Which attribute specifies that an input field is disabled in HTML?,disabled,readonly,uneditable,locked,disabled
+10,3,What is the purpose of the <fieldset> element in HTML?,To group related form controls,To create a container for form elements,To define the field structure,To group field labels,To group related form controls
+10,3,Which HTML attribute is used to enable cross-origin requests for linked resources?,crossorigin,cors,origin,external,crossorigin
+10,3,How do you create a number input field in HTML?,<input type="number">,<input type="digit">,<input type="numeric">,<input type="range">,<input type="number">
+10,3,What does the <caption> element define in an HTML table?,Table title,Table heading,Table data,Table row,Table title
+10,3,Which HTML element is used to define a container for external content?,<object>,<embed>,<iframe>,<content>,<object>
+10,3,How do you specify that an input field should not be validated in HTML?,novalidate,nocheck,invalid,unchecked,novalidate
+10,3,What is the purpose of the <abbr> element in HTML5?,To define an abbreviation,To format abbreviations,To highlight text,To shorten content,To define an abbreviation
+10,3,Which HTML tag is used to define metadata about an HTML document?,<meta>,<head>,<script>,<data>,<meta>
+10,3,How do you specify that an option in a drop-down list is disabled in HTML?,disabled,readonly,unselectable,locked,disabled
+10,3,What is the correct syntax for linking an external JavaScript file?,<script src="script.js">,<link src="script.js">,<a href="script.js">,<js src="script.js">,<script src="script.js">
+10,3,What is the correct HTML element for emphasizing important text?,<strong>,<em>,<b>,<highlight>,<strong>
+10,3,How do you create a clickable checkbox in HTML?,<input type="checkbox">,<check>,<input type="check">,<checkbox>,<input type="checkbox">
+10,3,Which attribute specifies an alternative text for an image in HTML?,alt,title,description,src,alt
+10,3,What is the correct syntax for creating an email input field in HTML?,<input type="email">,<input type="text">,<input type="mail">,<input type="address">,<input type="email">
+10,3,Which HTML element is used to display a progress bar?,<progress>,<meter>,<bar>,<range>,<progress>
+10,3,How do you specify a list with bullet points in HTML?,<ul>,<ol>,<list>,<bulletlist>,<ul>
+10,3,What is the purpose of the <wbr> element in HTML?,To indicate a word break opportunity,To insert a line break,To wrap text,To prevent line breaks,To indicate a word break opportunity
+10,3,Which attribute is used to make an <input> element mandatory in a form?,required,mandatory,validate,needed,required
+10,3,How do you set a default value for an input field in HTML?,value,default,placeholder,set,value
+10,3,What is the correct HTML element for displaying a range slider?,<input type="range">,<slider>,<range>,<input type="slider">,<input type="range">
+10,3,Which tag is used to define the body of an HTML document?,<body>,<html>,<content>,<section>,<body>
+10,3,What is the correct syntax for defining a blockquote in HTML?,<blockquote>,<quote>,<citation>,<bq>,<blockquote>
+10,3,How do you specify that a link should open in a new tab?,Add target="_blank",Add open="new",Add window="new",Add newtab="true",Add target="_blank"
+10,3,Which tag is used to define a cell that spans multiple columns in an HTML table?,<td colspan="2">,<td span="2">,<col span="2">,<colgroup colspan="2">,<td colspan="2">
+10,3,What does the <meta charset="UTF-8"> tag define in HTML?,Character encoding,Page language,Text format,Content type,Character encoding
+10,3,What is the correct HTML element for creating a line break?,<br>,<lb>,<break>,<newline>,<br>
+10,3,Which attribute is used to specify a unique identifier for an HTML element?,id,class,identifier,key,id
+10,3,How do you define a checkbox group in HTML?,Use multiple <input type="checkbox"> tags,Use <checkboxgroup>,Use <input type="checkbox" multiple>,Use <input group="checkbox">,Use multiple <input type="checkbox"> tags
+10,3,What is the purpose of the <mark> element in HTML5?,To highlight text,To mark important text,To add notes,To define metadata,To highlight text
+10,3,Which tag is used to define an option in a drop-down list?,<option>,<select>,<choice>,<item>,<option>
+10,3,How do you specify a clickable area on an image in HTML?,Use the <area> tag inside a <map>,Use the <hotspot> attribute,Use the <clickable> tag,Use the <map area> tag,Use the <area> tag inside a <map>
+10,3,What is the purpose of the <base> tag in HTML?,To specify the base URL for all relative links,To define the foundation of the page,To include a base stylesheet,To define the document type,To specify the base URL for all relative links
+10,3,Which HTML tag is used to define an ordered list item?,<li>,<ol>,<item>,<order>,<li>
+10,3,How do you create a password input field in HTML?,<input type="password">,<input type="text" hidden>,<password>,<input type="secure">,<input type="password">
+10,3,Which tag is used to define a clickable button in a form?,<button>,<input type="submit">,<formbutton>,<actionbutton>,<button>
+10,3,What is the purpose of the <dfn> element in HTML5?,To define a term,To define a variable,To highlight a definition,To insert dynamic content,To define a term
+10,3,How do you create a definition list in HTML?,<dl>,<list>,<define>,<deflist>,<dl>
+10,3,What is the correct syntax for embedding a PDF file in HTML?,<embed src="file.pdf">,<object data="file.pdf">,<iframe src="file.pdf">,<pdf src="file.pdf">,<embed src="file.pdf">
+10,3,How do you group form elements in HTML?,<fieldset>,<group>,<formset>,<section>,<fieldset>
+10,3,Which HTML element is used to define the title of a document?,<title>,<header>,<head>,<dochead>,<title>
+10,3,How do you add an image as the background of a table in HTML?,<table background="image.jpg">,<table style="background-image:url(image.jpg)">,<img src="image.jpg" background>,<img src="image.jpg" as="table-background">,<table style="background-image:url(image.jpg)">
+10,3,What is the purpose of the <nav> element in HTML5?,To define navigation links,To create a menu bar,To insert an external link,To link to a stylesheet,To define navigation links
+10,3,Which attribute is used to define the URL of an embedded image?,src,href,link,embed,src
+10,3,How do you make a text field that accepts only numbers in HTML?,<input type="number">,<input type="digit">,<input type="integer">,<input type="numeric">,<input type="number">
+10,3,What is the correct syntax for creating a drop-down list in HTML?,<select>,<dropdown>,<list>,<menu>,<select>
+10,3,Which tag is used to define a horizontal navigation bar?,<nav>,<hnav>,<hbar>,<navbar>,<nav>
+10,3,How do you specify a tooltip for an HTML element?,title,alt,tooltip,hint,title
+10,3,What is the correct HTML element for adding subtitles to a video?,<track kind="subtitles">,<subtitle>,<sub>,<caption>,<track kind="subtitles">
+10,3,Which HTML tag is used to define the footer of a document?,<footer>,<bottom>,<foot>,<section>,<footer>
+10,3,How do you prevent a link from being clicked in HTML?,Add the disabled attribute,Wrap the link in a <span>,Add the href="#" attribute,Set the onclick event to return false,Add the disabled attribute
+10,3,What is the purpose of the <small> element in HTML5?,To render text in a smaller size,To highlight smaller text,To shrink text content,To mark fine print,To render text in a smaller size
+10,3,Which attribute is used to control the autoplay behavior of an HTML5 video?,autoplay,play,start,auto,autoplay
+10,3,What does the <u> element represent in HTML5?,Text with a non-semantic underline,Text that is highlighted,Text that is bold,Text that is emphasized,Text with a non-semantic underline
+10,3,Which HTML attribute specifies whether a form field can be edited?,readonly,editable,locked,disabled,readonly
+10,3,How do you create a radio button group in HTML?,Use multiple <input type="radio"> with the same name,Use <radiogroup>,Use <input type="radio" group="true">,Use <input type="radio" multiple>,Use multiple <input type="radio"> with the same name
+10,3,What is the correct HTML element for marking up short quotations?,<q>,<quote>,<blockquote>,<shortquote>,<q>
+10,3,How do you specify a video poster image in HTML5?,poster,src,alt,image,poster
+10,3,What does the <strong> element represent in HTML5?,Strong importance or emphasis,Bold text,Highlighted text,Increased text size,Strong importance or emphasis
+10,3,Which tag is used to create a search field in HTML?,<input type="search">,<search>,<find>,<input type="find">,<input type="search">
+10,3,How do you specify that a field should not autocomplete in HTML?,autocomplete="off",autofill="false",noautocomplete,disable-autocomplete,autocomplete="off"
+10,3,What is the correct syntax for embedding an audio file in HTML5?,<audio src="sound.mp3">,<embed src="sound.mp3">,<sound src="sound.mp3">,<media src="sound.mp3">,<audio src="sound.mp3">
+10,3,Which attribute specifies a placeholder text in an input field?,placeholder,value,default,alt,placeholder
+10,3,How do you specify a looped video in HTML5?,loop,repeat,cycle,autoplay,loop
+10,3,What is the purpose of the <bdi> element in HTML5?,To isolate a span of text that might be formatted in a different direction,To display bidirectional text,To format bold inline text,To change text alignment,To isolate a span of text that might be formatted in a different direction
+10,3,Which tag is used to define a contact address in HTML?,<address>,<contact>,<footer>,<location>,<address>
+10,3,What is the purpose of the <meter> element in HTML5?,To represent a scalar measurement,To create a progress bar,To define a unit of measurement,To represent a time duration,To represent a scalar measurement
+10,3,Which HTML attribute specifies a shortcut key to activate or focus an element?,accesskey,shortcut,focus,trigger,accesskey
+10,3,What is the correct syntax for creating an iframe in HTML?,<iframe src="url">,<frame src="url">,<inlineframe src="url">,<embed src="url">,<iframe src="url">
+10,3,What is the purpose of the <abbr> element in HTML5?,To define an abbreviation,To mark a word as important,To format bold text,To create an acronym,To define an abbreviation
+10,3,How do you create an image map in HTML?,Use the <map> element with <area> tags,Use the <imagemap> tag,Use the <map> attribute inside <img>,Use the <area> attribute inside <img>,Use the <map> element with <area> tags
+10,3,Which tag is used to define a section of an HTML document?,<section>,<div>,<article>,<block>,<section>
+10,3,What is the correct HTML element for marking up the title of a work?,<cite>,<title>,<heading>,<reference>,<cite>
+10,3,How do you add a progress bar in HTML?,<progress>,<meter>,<bar>,<range>,<progress>
+10,3,What is the correct HTML tag for embedding a Flash object?,<embed>,<object>,<flash>,<media>,<embed>
+10,3,Which HTML tag is used to define a multi-line text input field?,<textarea>,<input type="text">,<multitext>,<text>,<textarea>
+10,3,How do you specify that a field is read-only in HTML?,readonly,disabled,locked,noread,readonly
+10,3,What is the correct HTML tag for creating a scrolling text effect?,<marquee>,<scroll>,<blink>,<textscroll>,<marquee>
+10,3,Which tag is used to define a term in a description list?,<dt>,<dd>,<term>,<definition>,<dt>
+10,3,How do you specify an image as a link in HTML?,<a href="url"><img src="image.jpg"></a>,<link src="image.jpg">,<image href="url">,<img link="url">,<a href="url"><img src="image.jpg"></a>
+10,3,What is the correct HTML tag for creating a tooltip?,title,alt,tooltip,hint,title
+10,3,Which HTML tag is used to define the header of a section or document?,<header>,<head>,<section>,<top>,<header>
+10,3,How do you create an image button in HTML?,<input type="image">,<button type="image">,<img type="button">,<button src="image.jpg">,<input type="image">
+10,3,What is the purpose of the <samp> element in HTML?,To represent sample output from a program,To format code,To mark special text,To create a sample block,To represent sample output from a program
+10,3,Which attribute is used to specify that an input field must be filled out before submitting a form?,required,mandatory,validate,check,required
+10,3,What is the correct syntax for creating a progress bar in HTML5?,<progress value="50" max="100">,<progressbar value="50" max="100">,<meter value="50" max="100">,<range value="50" max="100">,<progress value="50" max="100">
+10,3,Which tag is used to define the main content of an HTML document?,<main>,<body>,<content>,<article>,<main>
+10,3,How do you define a clickable phone number link in HTML?,<a href="tel:+1234567890">,<phone href="1234567890">,<callto href="1234567890">,<tel href="1234567890">,<a href="tel:+1234567890">
+10,3,What is the purpose of the <figure> element in HTML5?,To group media elements like images and captions,To create a figure,To insert a graph,To display numeric data,To group media elements like images and captions
+10,3,Which tag is used to create a list of options in a form?,<select>,<list>,<choices>,<dropdown>,<select>
+10,3,How do you specify a placeholder text in a text area in HTML?,placeholder,alt,default,value,placeholder
+10,3,What is the correct HTML element for defining a subscript?,<sub>,<sup>,<small>,<subscript>,<sub>
+10,3,Which attribute specifies the character encoding for an HTML document?,charset,encoding,format,codepage,charset
+10,3,How do you create a hidden field in HTML?,<input type="hidden">,<hidden>,<input type="invisible">,<field type="hidden">,<input type="hidden">
+10,3,What is the correct HTML element for defining a superscript?,<sup>,<sub>,<small>,<super>,<sup>
+10,3,Which HTML tag is used to define a client-side image map?,<map>,<imgmap>,<imagemap>,<area>,<map>
+10,3,How do you specify that an input field should automatically get focus when the page loads?,autofocus,focus,default,active,autofocus
+10,3,Which tag is used to define a caption for an HTML table?,<caption>,<title>,<header>,<legend>,<caption>
+10,3,What is the correct syntax for embedding a video file in HTML5?,<video src="movie.mp4">,<embed src="movie.mp4">,<media src="movie.mp4">,<video source="movie.mp4">,<video src="movie.mp4">
+10,3,How do you create a drop-down list that allows multiple selections in HTML?,<select multiple>,<list multiple>,<dropdown multiple>,<choices multiple>,<select multiple>
+10,3,What is the purpose of the <code> element in HTML5?,To display a block of code,To render a string as code,To insert comments,To define source code,To display a block of code
+10,3,Which tag is used to define the title of a table in HTML?,<caption>,<title>,<header>,<legend>,<caption>
+10,3,How do you specify a default selected option in a drop-down list?,Add the selected attribute to the <option> tag,Add the default attribute,Add the checked attribute,Add the chosen attribute,Add the selected attribute to the <option> tag
+10,3,What is the correct syntax for creating a checkbox in HTML?,<input type="checkbox">,<input type="check">,<checkbox>,<check>,<input type="checkbox">
+10,3,Which HTML tag is used to create a number input field?,<input type="number">,<input type="digit">,<input type="integer">,<input type="numeric">,<input type="number">
+10,3,How do you create an ordered list in HTML?,<ol>,<ul>,<list>,<order>,<ol>
+10,3,What is the correct HTML element for playing audio files?,<audio>,<embed>,<sound>,<music>,<audio>
+10,3,Which attribute specifies the width of an input field in HTML?,size,width,length,cols,size
+10,3,How do you specify an image in a table cell background in HTML?,<td background="image.jpg">,<td style="background-image:url(image.jpg)">,<img src="image.jpg" background>,<img src="image.jpg" as="cell-background">,<td style="background-image:url(image.jpg)">
+10,3,What is the correct syntax for specifying a data list in HTML?,<datalist>,<select>,<list>,<options>,<datalist>
+10,3,Which HTML tag is used to define an article in a webpage?,<article>,<section>,<div>,<content>,<article>
+10,3,How do you specify a default text in an input field?,placeholder,value,default,text,placeholder
+10,3,What is the correct HTML element for embedding SVG graphics?,<svg>,<img>,<graphic>,<vector>,<svg>
+10,3,Which attribute is used to specify a form input field's maximum value?,max,maxvalue,limit,range,max
+10,3,How do you group radio buttons in HTML?,Use the same name attribute for each <input type="radio">,Use <group>,Use <fieldset>,Use <radiogroup>,Use the same name attribute for each <input type="radio">
+10,3,What is the purpose of the <footer> element in HTML5?,To define a footer for a section or page,To add closing content,To create a bottom bar,To insert references,To define a footer for a section or page
+10,3,Which tag is used to define a paragraph in HTML?,<p>,<para>,<text>,<line>,<p>
+10,3,What is the correct HTML element for marking text that is no longer accurate?,<del>,<strike>,<obsolete>,<remove>,<del>
+10,3,How do you create a form button that submits form data?,<button type="submit">,<input type="submit">,<formbutton>,<submit>,<button type="submit">
+10,3,Which attribute is used to create an input field with a minimum value?,min,minvalue,range,limit,min
+10,3,What is the correct syntax for creating a hidden form field in HTML?,<input type="hidden">,<input type="invisible">,<hidden>,<field type="hidden">,<input type="hidden">
+10,3,Which tag is used to define emphasized text in HTML?,<em>,<strong>,<i>,<bold>,<em>
+10,3,How do you insert a clickable image in HTML?,<a href="url"><img src="image.jpg"></a>,<link href="url"><img>,<image href="url">,<img src="image.jpg" link="url">,<a href="url"><img src="image.jpg"></a>
+10,3,What is the correct syntax for specifying a clickable button in HTML?,<button>,<input type="button">,<click>,<btn>,<button>
+10,3,Which attribute is used to make an input field a drop-down list?,list,datalist,options,dropdown,list
+10,3,How do you specify an alt text for an image in HTML?,alt,src,title,description,alt
+10,3,What is the correct syntax for creating a radio button in HTML?,<input type="radio">,<input type="option">,<radiobutton>,<radio>,<input type="radio">
+10,3,Which attribute is used to disable a form element in HTML?,disabled,readonly,locked,nouse,disabled
+10,3,How do you create a comment in HTML?,<!-- comment -->,<!--comment-->,// comment,/* comment */,<!-- comment -->
+10,3,Which HTML tag is used to create an inline frame?,<iframe>,<inlineframe>,<frame>,<embed>,<iframe>
+10,3,What is the correct syntax for creating a submit button in HTML?,<input type="submit">,<submit>,<button type="submit">,<form submit>,<input type="submit">
+10,3,How do you specify a title for an HTML document?,<title>,<head>,<header>,<doc>,<title>
+10,3,Which attribute specifies the default value of an input field?,value,default,initial,set,value
+10,3,What is the correct HTML tag for creating an unordered list?,<ul>,<ol>,<list>,<unordered>,<ul>
+10,3,How do you insert an audio file in HTML5?,<audio src="file.mp3">,<embed src="file.mp3">,<sound src="file.mp3">,<audiofile src="file.mp3">,<audio src="file.mp3">
+10,3,Which tag is used to create a drop-down list in HTML?,<select>,<dropdown>,<list>,<choices>,<select>
+10,3,What is the correct HTML element for highlighting text?,<mark>,<highlight>,<em>,<strong>,<mark>
+10,3,How do you specify that an input field is required in HTML?,required,mandatory,validate,needed,required
+10,3,Which tag is used to create a navigation link in HTML?,<nav>,<link>,<menu>,<anchor>,<nav>
+10,3,What is the correct syntax for creating a password field in HTML?,<input type="password">,<password>,<input type="pass">,<input type="hidden">,<input type="password">
+10,3,How do you define an HTML document's character set?,<meta charset="UTF-8">,<charset="UTF-8">,<meta encoding="UTF-8">,<set charset="UTF-8">,<meta charset="UTF-8">
+10,3,Which attribute specifies a unique identifier for an HTML element?,id,name,class,identity,id
+10,3,How do you create a button that triggers a JavaScript function when clicked?,<button onclick="myFunction()">,<button trigger="myFunction()">,<btn click="myFunction()">,<input click="myFunction()">,<button onclick="myFunction()">
+10,3,What is the purpose of the <time> element in HTML5?,To define a date or time,To display a timer,To insert a clock,To mark a time-related event,To define a date or time
+10,3,Which HTML attribute specifies a tooltip that appears when hovering over an element?,title,alt,hover,tooltip,title
+10,3,How do you create a required radio button in HTML?,Add the required attribute to <input type="radio">,Add the checked attribute to <input type="radio">,Add the mandatory attribute,Add the validate attribute,Add the required attribute to <input type="radio">
+10,3,What is the correct syntax for creating a file input field in HTML?,<input type="file">,<file>,<input type="upload">,<fileinput>,<input type="file">
+10,3,How do you create a drop-down menu in HTML?,<select>,<dropdown>,<list>,<choices>,<select>
+10,3,Which tag is used to create an ordered list in HTML?,<ol>,<ul>,<list>,<order>,<ol>
+10,3,What is the correct HTML tag for specifying a quote from another source?,<blockquote>,<quote>,<cite>,<q>,<blockquote>
+10,3,How do you create an email link in HTML?,<a href="mailto:someone@example.com">,<email href="someone@example.com">,<mail to="someone@example.com">,<email="someone@example.com">,<a href="mailto:someone@example.com">
+10,3,Which attribute specifies the language of an HTML document?,lang,language,locale,region,lang
+10,3,What is the correct syntax for embedding a CSS file in HTML?,<link rel="stylesheet" href="style.css">,<css href="style.css">,<style link="style.css">,<link type="css" src="style.css">,<link rel="stylesheet" href="style.css">
+10,3,How do you create a clickable area in an image map?,<area>,<imgmap>,<maparea>,<clickarea>,<area>
+10,3,Which HTML element is used to display a machine-readable timestamp?,<time>,<date>,<timestamp>,<datetime>,<time>
+10,3,What is the purpose of the <small> element in HTML5?,To make text smaller,To create a smaller section,To shrink an image,To reduce spacing,To make text smaller
+10,3,Which HTML attribute specifies the width of a table column?,width,size,cols,column,width
+10,3,How do you create a radio button in HTML?,<input type="radio">,<radiobutton>,<radio>,<input type="option">,<input type="radio">
+10,3,What is the correct syntax for creating an email input field in HTML?,<input type="email">,<email>,<input type="mail">,<input type="text" email>,<input type="email">
+10,3,Which HTML tag is used to define a label for an input field?,<label>,<tag>,<inputlabel>,<formlabel>,<label>
+10,3,How do you specify a form field that should not be editable?,readonly,disabled,lock,noedit,readonly
+10,3,What is the correct syntax for creating a date input field in HTML5?,<input type="date">,<date>,<input type="calendar">,<input type="datetime">,<input type="date">
+10,3,Which attribute is used to specify the alignment of text in a table cell?,align,text-align,position,layout,align
+10,3,How do you create a section that the user can toggle open or closed in HTML5?,<details>,<toggle>,<openclose>,<section toggle>,<details>
+10,3,Which HTML element is used to define important text?,<strong>,<important>,<em>,<bold>,<strong>
+10,3,What is the purpose of the <nav> element in HTML5?,To define navigation links,To create a navigation bar,To organize links,To define a menu,To define navigation links
+10,3,How do you specify that a link should open in a new tab or window?,target="_blank",window="new",link="new",target="_new",target="_blank"
+10,3,Which HTML tag is used to define a clickable button?,<button>,<input type="button">,<clickable>,<linkbutton>,<button>
+10,3,What is the correct HTML tag for creating a text input field?,<input type="text">,<textfield>,<text>,<input>,<input type="text">
+10,3,How do you define a section in HTML5?,<section>,<div>,<article>,<main>,<section>
+10,3,Which attribute is used to define an image's height in HTML?,height,size,dimension,scale,height
+10,3,How do you specify that an input field is optional?,optional,notrequired,validate="false",required="false",optional
+10,3,What is the correct HTML tag for creating a description list?,<dl>,<description>,<list>,<details>,<dl>
+10,3,How do you specify a list item with a square bullet in HTML?,list-style-type: square,bullet: square,type: square,list-bullet: square,list-style-type: square
+10,3,Which HTML element is used to define a figure caption?,<figcaption>,<caption>,<legend>,<figurecaption>,<figcaption>
+10,3,How do you create a read-only checkbox in HTML?,readonly="true",checked="readonly",disable="checkbox",readonly="checkbox",readonly="true"
+10,3,Which tag is used to define a header cell in an HTML table?,<th>,<td>,<header>,<heading>,<th>
+10,3,How do you create a self-closing tag in HTML5?,Use the tag without a closing tag,<tag />,Close the tag with />,Use a closing slash,<tag />
+10,3,What is the purpose of the <aside> element in HTML5?,To represent content that is tangentially related,To create a sidebar,To format as a blockquote,To insert notes,To represent content that is tangentially related
+10,3,How do you specify a border for a table in HTML?,border="1",frame="border",bordered="true",border-width="1px",border="1"
+10,3,Which HTML tag is used to display computer code?,<code>,<pre>,<samp>,<kbd>,<code>
+10,3,How do you insert a non-breaking space in HTML?,&nbsp;,<space>,&#32;,non-breaking-space,&nbsp;
+10,3,What is the correct syntax for creating an image with rounded corners in HTML5?,<img style="border-radius: 10px;">,<img corner="rounded">,<img style="corners">,<img radius="10px">,<img style="border-radius: 10px;">
+10,3,Which attribute specifies the action URL for a form submission?,action,submit,destination,target,action
+10,3,How do you specify a noresize attribute for a frame in HTML?,<frame noresize>,<frame disable-resize>,<frame no-resize>,<frame static>,<frame noresize>
+10,3,What is the correct HTML element for inserting a line break?,<br>,<lb>,<break>,<newline>,<br>
+10,3,Which HTML tag is used to define emphasized text?,<em>,<strong>,<i>,<bold>,<em>
+10,3,How do you create an image that is a clickable link?,<a href="url"><img src="image.jpg"></a>,<img link="url">,<image href="url">,<a img="image.jpg" href="url">,<a href="url"><img src="image.jpg"></a>
+10,3,What is the correct syntax for embedding an external JavaScript file?,<script src="script.js">,<js src="script.js">,<link rel="script" href="script.js">,<script type="text/javascript" src="script.js">,<script src="script.js">
+10,3,How do you create a file upload button in HTML?,<input type="file">,<fileupload>,<input type="upload">,<file type="upload">,<input type="file">
+10,3,Which tag is used to display preformatted text in HTML?,<pre>,<code>,<formatted>,<samp>,<pre>
+10,3,How do you add a background color to a table cell in HTML?,<td style="background-color:yellow;">,<td bgcolor="yellow">,<td background-color="yellow">,<td color="yellow">,<td style="background-color:yellow;">
+10,3,What is the purpose of the <bdo> tag in HTML?,To override text direction,To make text bold,To mark a block element,To define a block quote,To override text direction
+10,3,How do you specify a link that points to an email address?,<a href="mailto:someone@example.com">,<link href="email:someone@example.com">,<email href="someone@example.com">,<mail to="someone@example.com">,<a href="mailto:someone@example.com">
+10,3,Which attribute specifies that an element is not displayed in HTML?,hidden,display:none,invisible,noshow,hidden
+10,3,What is the correct syntax for creating a color input field in HTML5?,<input type="color">,<colorpicker>,<input type="colorpicker">,<colorinput>,<input type="color">
+10,3,How do you create an input field that accepts only numbers in HTML5?,<input type="number">,<input type="numeric">,<input type="digit">,<input number>,<input type="number">
+10,3,Which tag is used to define the title of a document?,<title>,<header>,<head>,<caption>,<title>
+10,3,How do you specify that an option in a select menu is disabled?,<option disabled>,<option noselect>,<option disable>,<option inactive>,<option disabled>
+10,3,Which HTML attribute defines a placeholder text in an input field?,placeholder,default,value,hint,placeholder
+10,3,How do you specify a minimum value for an input field in HTML?,min,minvalue,minimum,limit,min
+10,3,What is the purpose of the <summary> tag in HTML5?,To specify a visible heading for the <details> element,To provide a summary of an article,To create a footnote,To add a title to a section,To specify a visible heading for the <details> element
+10,3,Which HTML element is used to define a horizontal rule?,<hr>,<line>,<rule>,<divider>,<hr>
+10,3,How do you specify that an input field should be preselected when the page loads?,checked,selected,autofocus,enabled,checked
+10,3,Which HTML element is used to define a form that allows file uploads?,<form enctype="multipart/form-data">,<form enctype="upload">,<input type="file">,<form method="upload">,<form enctype="multipart/form-data">
+10,3,What is the correct syntax for creating a multi-line text input field?,<textarea></textarea>,<input type="textarea">,<multitext></multitext>,<input type="text" rows="5">,<textarea></textarea>
+10,3,How do you specify that a checkbox should be checked by default?,checked,defaultchecked,selected,autochecked,checked
+10,3,Which HTML tag is used to define the footer of a document or section?,<footer>,<bottom>,<sectionfooter>,<foot>,<footer>
+10,3,What is the correct syntax for creating a number input field in HTML5?,<input type="number">,<input type="digit">,<numberinput>,<numericinput>,<input type="number">
+10,3,How do you create a group of related options in a dropdown menu?,<optgroup>,<grouplist>,<dropdown-group>,<grouped>,<optgroup>
+10,3,Which tag is used to define a table row in HTML?,<tr>,<row>,<table-row>,<tablerow>,<tr>
+10,3,What is the correct HTML tag for inserting an inline quote?,<q>,<quote>,<cite>,<inlinequote>,<q>
+10,3,How do you define the relationship between a document and an external resource?,<link>,<rel>,<reference>,<resource>,<link>
+10,3,What is the purpose of the <output> element in HTML5?,To represent the result of a calculation,To show the outcome of a form,To generate an output,To display console output,To represent the result of a calculation
+10,3,Which attribute defines an image’s alternate text in HTML?,alt,alttext,text,alternative,alt
+10,3,How do you specify the starting number for an ordered list in HTML?,start,begin,countfrom,value,start
+10,3,What is the purpose of the <legend> element in HTML?,To provide a caption for a <fieldset> element,To label a table,To create a legend text,To name a section,To provide a caption for a <fieldset> element
+10,3,How do you create a clickable submit button with an image in HTML?,<input type="image">,<submitimage>,<imagebutton>,<button type="image">,<input type="image">
+10,3,Which tag is used to define a division or section in an HTML document?,<div>,<section>,<split>,<area>,<div>
+10,3,What is the correct syntax for defining a hidden input field in HTML?,<input type="hidden">,<hiddeninput>,<input hidden="true">,<input invisible>,<input type="hidden">
+10,3,How do you specify that a script should be executed when the page loads?,onload,runonload,scriptload,init,onload
+10,3,Which HTML attribute specifies the source of an image?,src,source,image,imgpath,src
+10,3,What is the purpose of the <dl> tag in HTML?,To define a description list,To list key-value pairs,To create a data list,To insert descriptive content,To define a description list
+10,3,How do you create a text field that only accepts uppercase input?,<input style="text-transform: uppercase;">,<input uppercase>,<input caps>,<input upper>,<input style="text-transform: uppercase;">
+10,3,Which tag is used to embed an external webpage within an HTML page?,<iframe>,<embed>,<page>,<external>,<iframe>
+10,3,How do you specify a minimum character length for an input field?,minlength,minchars,length,limit,minlength
+10,3,What is the correct syntax for creating a range input field in HTML5?,<input type="range">,<input type="slider">,<input range="true">,<rangeinput>,<input type="range">
+10,3,Which attribute is used to specify that an input field must be filled out?,required,mustfill,mandatory,fillout,required
+10,3,How do you specify a tooltip for an element in HTML?,title,alt,hover,tooltip,title
+10,3,What is the purpose of the <article> element in HTML5?,To define a self-contained piece of content,To create a section for articles,To display text content,To wrap paragraph elements,To define a self-contained piece of content
+10,3,How do you disable an input field in HTML?,disabled="true",disable="true",readonly,lock,disabled="true"
+10,3,Which HTML element is used to define subscript text?,<sub>,<small>,<underline>,<low>,<sub>
+10,3,What is the correct HTML tag for creating a form?,<form>,<inputform>,<submitform>,<htmlform>,<form>
+10,3,How do you create a video tag in HTML5?,<video src="video.mp4">,<embed video="video.mp4">,<file src="video.mp4">,<media type="video">,<video src="video.mp4">
+10,3,Which attribute specifies the visible width of a text input field?,size,width,maxlength,length,size
+10,3,What is the correct HTML tag for creating a link to another document?,<a href="url">,<link url="url">,<anchor href="url">,<hyperlink href="url">,<a href="url">
+10,3,How do you define a long description for an image in HTML?,longdesc,longalt,description,descript,longdesc
+10,3,What is the purpose of the <progress> element in HTML5?,To display the progress of a task,To create a progress bar,To mark steps in a process,To indicate a timeline,To display the progress of a task
+10,3,Which tag is used to define a client-side script in HTML?,<script>,<javascript>,<clientscript>,<js>,<script>
+10,3,How do you add a title to an HTML table?,<caption>,<title>,<head>,<tablecaption>,<caption>
+10,3,What is the correct syntax for embedding a video in HTML5?,<video controls><source src="video.mp4" type="video/mp4"></video>,<embed src="video.mp4" type="video/mp4">,<video href="video.mp4">,<video src="video.mp4" controls="true">,<video controls><source src="video.mp4" type="video/mp4"></video>
+10,3,Which attribute specifies the relationship between the current document and an external one?,rel,link,connection,relation,rel
+10,3,What is the correct HTML tag for creating a checkbox?,<input type="checkbox">,<checkbox>,<input checkbox>,<option type="checkbox">,<input type="checkbox">
+10,3,How do you specify an audio file that should be played in HTML5?,<audio controls><source src="audio.mp3" type="audio/mp3"></audio>,<sound src="audio.mp3">,<audio href="audio.mp3">,<media src="audio.mp3">,<audio controls><source src="audio.mp3" type="audio/mp3"></audio>
+10,3,Which tag is used to define the main content of an HTML document?,<main>,<body>,<content>,<article>,<main>
+10,3,How do you create a list of options that can be selected in an HTML form?,<select>,<dropdown>,<options>,<choices>,<select>
+10,3,What is the correct syntax for creating a button in HTML?,<button type="button">,<input button>,<button submit>,<clickbutton>,<button type="button">
+10,3,Which HTML attribute is used to define the font size of text?,size,font,fontsize,textsize,size
+10,3,How do you create a checkbox that is checked by default?,<input type="checkbox" checked>,<checkbox default="true">,<checkbox selected>,<checkbox status="checked">,<input type="checkbox" checked>

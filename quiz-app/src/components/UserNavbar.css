@@ -1,0 +1,132 @@
+/* Navbar Brand (Logo) */
+.user-navbar-brand img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.5s ease-in-out; /* Smooth scale transition */
+}
+
+/* Hover Effect for the Logo */
+.user-navbar-brand img:hover {
+  transform: scale(1.2); /* First, the logo scales up */
+  animation: jump-and-dance 1.5s ease-in-out infinite; /* Adds dancing and jumping */
+}
+
+/* Keyframes for the Dance and Jump Animation */
+@keyframes jump-and-dance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1.2); /* Initial state - scaled up */
+  }
+  25% {
+    transform: translateY(-10px) rotate(-10deg) scale(1.2); /* Move up and rotate left */
+  }
+  50% {
+    transform: translateY(0) rotate(10deg) scale(1.2); /* Move back to original Y and rotate right */
+  }
+  75% {
+    transform: translateY(-5px) rotate(-10deg) scale(1.2); /* Small jump and rotate back left */
+  }
+}
+
+/* Navbar Container */
+.user-navbar-container {
+  background-color: #000; /* Dark background */
+  border-bottom: 2px solid #060606;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Navbar Links Styling */
+.user-navbar-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+}
+
+.user-navbar-nav .user-nav-item {
+  margin-right: 20px;
+}
+
+.user-navbar-nav .user-nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Links */
+.user-navbar-nav .user-nav-link:hover {
+  color: #f39c12; /* Change to a yellow/orange color */
+  opacity: 0.85; /* Fade effect */
+  transform: translateY(-3px); /* Slight upward motion */
+}
+
+/* Icon Styling */
+.user-nav-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Add animation for icons */
+.user-navbar-nav .user-nav-link:hover .user-nav-icon {
+  transform: rotate(15deg);  /* Rotate icons slightly on hover */
+}
+
+/* Logout Button */
+.user-btn-outline-danger {
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  background-color: transparent;
+  padding: 5px 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-btn-outline-danger:hover {
+  background-color: #e74c3c;
+  color: white;
+  transform: translateY(-5px) scale(1.05);  /* Animate upward motion and scaling */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .user-navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .user-navbar-brand img {
+    width: 40px; /* Smaller logo size on mobile */
+  }
+
+  .user-navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .user-navbar-nav .user-nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .user-navbar-nav .user-nav-link {
+    font-size: 1rem;
+  }
+
+  .user-btn-outline-danger {
+    width: 100%; /* Full width button on smaller screens */
+    font-size: 1rem;
+  }
+}

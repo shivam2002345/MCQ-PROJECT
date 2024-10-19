@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import '../styles/QuizPage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie } from 'react-chartjs-2'; // Importing Pie chart
-import 'chart.js/auto'; // Important for Chart.js v3+
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import "../styles/QuizPage.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Pie } from "react-chartjs-2"; // Importing Pie chart
+import "chart.js/auto"; // Important for Chart.js v3+
 
 const QuizPage = () => {
   const { exam_id } = useParams();
@@ -19,17 +19,19 @@ const QuizPage = () => {
   const [isTimerRunning, setIsTimerRunning] = useState(true);
   const navigate = useNavigate();
 
-  const user_id = localStorage.getItem('user_id');
+  const user_id = localStorage.getItem("user_id");
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/exams/${exam_id}`);
+        const response = await fetch(
+          `http://localhost:8080/api/exams/${exam_id}`
+        );
         if (!response.ok) {
-          throw new Error('Failed to fetch questions');
+          throw new Error("Failed to fetch questions");
         }
         const data = await response.json();
-        console.log('Raw API Data:', data);
+        console.log("Raw API Data:", data);
 
         if (Array.isArray(data)) {
           const formattedQuestions = data.map((question) => ({
@@ -46,11 +48,11 @@ const QuizPage = () => {
 
           setQuestions(formattedQuestions);
         } else {
-          throw new Error('Invalid data format');
+          throw new Error("Invalid data format");
         }
       } catch (error) {
-        console.error('Error fetching questions:', error);
-        setError('Error fetching questions: ' + error.message);
+        console.error("Error fetching questions:", error);
+        setError("Error fetching questions: " + error.message);
       } finally {
         setLoading(false);
       }
@@ -59,15 +61,17 @@ const QuizPage = () => {
   }, [exam_id]);
 
   const handleAnswerChange = (questionId, selectedOption) => {
-    const question = questions.find(q => q.id === questionId);
+    const question = questions.find((q) => q.id === questionId);
     const answer = {
       option_text: selectedOption,
       question_text: question.text,
-      selected_option: selectedOption
+      selected_option: selectedOption,
     };
 
     setAnswers((prevAnswers) => {
-      const updatedAnswers = prevAnswers.filter(ans => ans.question_text !== question.text);
+      const updatedAnswers = prevAnswers.filter(
+        (ans) => ans.question_text !== question.text
+      );
       return [...updatedAnswers, answer];
     });
   };
@@ -89,7 +93,13 @@ const QuizPage = () => {
     let correctAnswers = 0;
 
     questions.forEach((question) => {
-      if (answers.some(answer => answer.question_text === question.text && answer.selected_option === question.correct_answer)) {
+      if (
+        answers.some(
+          (answer) =>
+            answer.question_text === question.text &&
+            answer.selected_option === question.correct_answer
+        )
+      ) {
         correctAnswers++;
       }
     });
@@ -108,8 +118,8 @@ const QuizPage = () => {
       total_questions: questions.length,
       correct_answers: correctAnswersCount,
       score: score.toFixed(2),
-      selected_answers: answers.map(answer => {
-        const question = questions.find(q => q.text === answer.question_text);
+      selected_answers: answers.map((answer) => {
+        const question = questions.find((q) => q.text === answer.question_text);
         return {
           option_text: answer.option_text,
           question_text: answer.question_text,
@@ -120,25 +130,27 @@ const QuizPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/results', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8080/results", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(resultData),
       });
 
       const result = await response.json();
-      console.log('Response from API:', result);
+      console.log("Response from API:", result);
 
       if (response.ok) {
         alert(result.message);
-        navigate(`/results/${exam_id}/${user_id}`, { state: { result: resultData } });
+        navigate(`/results/${exam_id}/${user_id}`, {
+          state: { result: resultData },
+        });
       } else {
-        console.error('Error submitting results:', result);
+        console.error("Error submitting results:", result);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
@@ -166,13 +178,13 @@ const QuizPage = () => {
     };
 
     // Adding event listeners
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('copy', handleCopy);
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("copy", handleCopy);
 
     // Clean up event listeners on component unmount
     return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('copy', handleCopy);
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("copy", handleCopy);
     };
   }, []);
 
@@ -186,13 +198,12 @@ const QuizPage = () => {
 
   // Data for the pie chart
   const data = {
-
-    labels: ['Correct', 'Incorrect'],
+    labels: ["Correct", "Incorrect"],
     datasets: [
       {
         data: [correctAnswersCount, questions.length - correctAnswersCount],
-        backgroundColor: ['#4caf50', '#f44336'],
-        hoverBackgroundColor: ['#66bb6a', '#e57373'],
+        backgroundColor: ["#4caf50", "#f44336"],
+        hoverBackgroundColor: ["#66bb6a", "#e57373"],
       },
     ],
   };
@@ -201,48 +212,55 @@ const QuizPage = () => {
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${minutes}:${secs < 10 ? '0' + secs : secs}`;
+    return `${minutes}:${secs < 10 ? "0" + secs : secs}`;
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: '1000px' }}>
-      <h2>Quiz on React.js</h2>
-      <div style={{ color: 'red', position: 'absolute', top: '20px', left: '20px', fontSize: '24px' }}>
+    <div className="container mt-5" style={{ maxWidth: "1000px" }}>
+      <h2>Select correct option and go next</h2>
+      <div
+        className={`timer-box ${
+          timer <= 30 ? "critical" : timer <= 60 ? "warning" : "safe"
+        }`}
+      >
         Time Remaining: {formatTime(timer)}
       </div>
+
       {!showResults ? (
-        <>
-          <div className="question-container mb-3">
-            <p>
-              <strong>Question {currentQuestion + 1}:</strong>{' '}
+        <div className="quiz-container p-4">
+          <div className="question-container mb-4">
+            <p className="question-text">
+              <strong>Question {currentQuestion + 1}:</strong>{" "}
               {questions[currentQuestion].text}
             </p>
             {questions[currentQuestion].options.map((option, index) => (
-              <div className="form-check" key={index}>
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name={`q${questions[currentQuestion].id}`}
-                  id={`q${questions[currentQuestion].id}-${option}`}
-                  onChange={() =>
-                    handleAnswerChange(questions[currentQuestion].id, option)
-                  }
-                  checked={answers.some(ans => ans.question_text === questions[currentQuestion].text && ans.selected_option === option)}
-                />
-                <label
-                  className="form-check-label"
-                  htmlFor={`q${questions[currentQuestion].id}-${option}`}
-                >
-                  {option}
-                </label>
+              <div
+                className={`option-container ${
+                  answers.some(
+                    (ans) =>
+                      ans.question_text === questions[currentQuestion].text &&
+                      ans.selected_option === option
+                  )
+                    ? "selected-option"
+                    : ""
+                }`}
+                key={index}
+                onClick={() =>
+                  handleAnswerChange(questions[currentQuestion].id, option)
+                }
+              >
+                {option}
               </div>
             ))}
           </div>
 
-          <div className="d-flex justify-content-between">
+          <div className="navigation-container d-flex justify-content-between align-items-center">
             <div>
               {currentQuestion > 0 && (
-                <button className="btn btn-secondary me-2" onClick={handlePrevious}>
+                <button
+                  className="btn btn-secondary me-2"
+                  onClick={handlePrevious}
+                >
                   Previous
                 </button>
               )}
@@ -252,33 +270,37 @@ const QuizPage = () => {
                 </button>
               )}
             </div>
-            <button className="btn btn-success" onClick={handleSubmitClick}>
+            <button
+              className="btn btn-success submit-btn"
+              onClick={handleSubmitClick}
+            >
               Submit
             </button>
           </div>
-        </>
+        </div>
       ) : (
         <div className="results-container mt-4">
           <h3>Results</h3>
           <div className="pie-chart-container">
-          <Pie data={data} />
-          <p>
-            <strong>Total Questions:</strong> {questions.length}
-          </p>
-          <p>
-            <strong>Correct Answers:</strong> {correctAnswersCount}
-          </p>
-          <p>
-            <strong>Score:</strong> {score.toFixed(2)}%
-          </p>
-          <button className="btn btn-primary" onClick={handleReviewExam}>
-            Review Exam
-          </button>
-        </div>
+            <Pie className="pie" data={data} />
+            <div className="data">
+            <p>
+              <strong>Total Questions:</strong> {questions.length}
+            </p>
+            <p>
+              <strong>Correct Answers:</strong> {correctAnswersCount}
+            </p>
+            <p>
+              <strong>Score:</strong> {score.toFixed(2)}%
+            </p>
+            <button className="btn btn-primary" onClick={handleReviewExam}>
+              Review Exam
+            </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
-     
   );
 };
 

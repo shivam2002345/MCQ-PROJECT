@@ -7,7 +7,9 @@ const TestSetupPage = () => {
   const [levels, setLevels] = useState([]);
   const [selectedTech, setSelectedTech] = useState('');
   const [selectedLevel, setSelectedLevel] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // New state for error message
   const navigate = useNavigate();
+  const user_id = localStorage.getItem('user_id');
 
   useEffect(() => {
     fetchTechnologies();
@@ -40,7 +42,7 @@ const TestSetupPage = () => {
     e.preventDefault();
 
     const examData = {
-      user_id: 1,
+      user_id: user_id,
       tech_id: selectedTech,
       level_id: selectedLevel,
     };
@@ -60,11 +62,17 @@ const TestSetupPage = () => {
 
         // Navigate to the QuizPage and pass the exam_id
         navigate(`/quiz/${examId}`, { state: { exam_id: examId } });
+      } else if (response.status === 403) {
+        // User has reached their limit, set the error message
+        const data = await response.json();
+        setErrorMessage(data.message);  // Display the message from the backend
       } else {
         console.error('Failed to create exam');
+        setErrorMessage('Failed to create exam. Please try again.');
       }
     } catch (error) {
       console.error('Error starting exam:', error);
+      setErrorMessage('An error occurred. Please try again later.');
     }
   };
 
@@ -81,6 +89,9 @@ const TestSetupPage = () => {
       </div>
 
       <h1>Set Up Your Test</h1>
+
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} {/* Display error message */}
+
       <form onSubmit={handleStartExam}>
         <div className="form-group">
           <label htmlFor="topic">Technology</label>

@@ -1,14 +1,38 @@
 const pool = require('../config/db'); // Assuming you are using PostgreSQL
 
-// Create result
+// Create result and delete specific exam questions
 const createResult = async (exam_id, user_id, total_questions, correct_answers, score, selected_answers) => {
-  const query = `INSERT INTO results (exam_id, user_id, total_questions, correct_answers, score, selected_answers)
-                 VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
-  const values = [exam_id, user_id, total_questions, correct_answers, score, selected_answers];
-
-  const result = await pool.query(query, values);
-  return result.rows[0];
-};
+    const insertQuery = `
+      INSERT INTO results (exam_id, user_id, total_questions, correct_answers, score, selected_answers)
+      VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
+    
+    // Delete questions related to the specific exam_id
+    const deleteQuery = `DELETE FROM exam_questions WHERE exam_id = $1`;
+  
+    const values = [exam_id, user_id, total_questions, correct_answers, score, selected_answers];
+  
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN'); // Start a transaction
+  
+      // Insert the result
+      const result = await client.query(insertQuery, values);
+  
+      // Delete exam questions for the specified exam_id
+      await client.query(deleteQuery, [exam_id]);
+  
+      await client.query('COMMIT'); // Commit the transaction
+  
+      return result.rows[0]; // Return the inserted result
+    } catch (error) {
+      await client.query('ROLLBACK'); // Rollback in case of error
+      console.error('Error creating result or deleting exam questions:', error);
+      throw error; // Rethrow the error to handle it upstream
+    } finally {
+      client.release(); // Release the client back to the pool
+    }
+  };
+  
 
 // Get result by exam_id and user_id
 const getResultByExamAndUser = async (exam_id, user_id) => {

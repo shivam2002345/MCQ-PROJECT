@@ -1,0 +1,380 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+7,1,What does MERN stand for?,MongoDB,Express,React,Node,MongoDB,Express,React,Node
+7,1,Which database is used in the MERN stack?,MongoDB,MySQL,PostgreSQL,Firebase,MongoDB
+7,1,Which is the frontend framework in MERN?,React,Angular,Vue,Svelte,React
+7,1,Which HTTP method is used to retrieve data?,GET,POST,PUT,DELETE,GET
+7,1,What command initializes a new Node.js project?,npm init,yarn start,node run,npm install,npm init
+7,1,What is the correct syntax to install Express in Node.js?,npm install express,yarn install react,npm express install,express init,npm install express
+7,1,Which of the following is used for handling HTTP requests in Express?,app.get(),res.send(),app.route(),req.body(),app.get()
+7,1,What is JSX in React?,JavaScript XML,JavaScript Extension,JavaScript Xtra,JavaScript Express,JavaScript XML
+7,1,What is used to define components in React?,class,function,module,constructor,function
+7,1,Which of the following is used to define a state in a React functional component?,useState(),setState(),setContext(),useContext(),useState()
+7,1,What command is used to start a MongoDB server?,mongod,mongo,start-db,start-mongodb,mongod
+7,1,Which command creates a new React app?,npx create-react-app myApp,npm install react-create-app,npx react-init,npm start myApp,npx create-react-app myApp
+7,1,What is the correct way to import a component in React?,import Component from './Component',require Component from './Component',load Component from './Component',fetch Component from './Component',import Component from './Component'
+7,1,Which is a valid MongoDB data type?,String,DateTime,Integer,File,String
+7,1,Which of the following is used to connect to a MongoDB database in Node.js?,mongoose,mysql,sequelize,typeORM,mongoose
+7,1,What is the default port number for a MongoDB server?,27017,8080,3000,5432,27017
+7,1,In Node.js, which of the following is a core module?,fs,express,mongoose,axios,fs
+7,1,Which of the following helps in developing RESTful APIs in Express?,Router,View,Model,Schema,Router
+7,1,Which hook is used for side-effects in React functional components?,useEffect(),useReducer(),useState(),useCallback(),useEffect()
+7,1,What is the purpose of Node.js?,Server-side JavaScript runtime,Client-side JavaScript runtime,Database management tool,Operating system,Server-side JavaScript runtime
+7,1,Which of the following is not a valid HTTP status code?,600,200,404,500,600
+7,1,What does CRUD stand for?,Create Read Update Delete,Connect React Update Develop,Create Retrieve Upload Deploy,Configure Read Undo Download,Create Read Update Delete
+7,1,In React, how do you pass data from parent to child component?,props,state,context,reducer,props
+7,1,Which command is used to install all dependencies in Node.js?,npm install,npm start,npm run dev,yarn add,npm install
+7,1,What method is used to update a document in MongoDB?,updateOne(),updateDocument(),editOne(),modifyOne(),updateOne()
+7,1,In Node.js, which package is used to work with file paths?,path,express,fs,axios,path
+7,1,Which lifecycle method is called after the first render in a React class component?,componentDidMount(),componentWillMount(),render(),componentWillUnmount(),componentDidMount()
+7,1,Which command lists all the databases in MongoDB?,show dbs,list databases,show databases,db.show(),show dbs
+7,1,What is the main purpose of Express.js?,To build web applications,To query databases,To manage system files,To create machine learning models,To build web applications
+7,1,Which React hook is used for managing state?,useState(),useEffect(),useReducer(),useContext(),useState()
+7,1,Which of the following is not a MongoDB query operator?,$pop,$match,$project,$replaceRoot,$pop
+7,1,What keyword is used to declare a constant in JavaScript?,const,var,let,final,const
+7,1,Which of the following is a NoSQL database?,MongoDB,PostgreSQL,MySQL,SQLite,MongoDB
+7,1,In Express, which middleware is used to parse JSON request bodies?,express.json(),express.parse(),bodyParser.json(),express.urlencoded(),express.json()
+7,1,Which of the following is a valid hook in React?,useReducer(),useMongo(),useExpress(),useRouter(),useReducer()
+7,1,What is the correct method to close a MongoDB connection?,close(),disconnect(),end(),shutdown(),close()
+7,1,Which of the following is a CSS-in-JS library used with React?,styled-components,SASS,LESS,PostCSS,styled-components
+7,1,Which JavaScript method is used to filter elements of an array?,filter(),reduce(),map(),sort(),filter()
+7,1,In Node.js, which of the following can be used to make HTTP requests?,axios,bodyParser,mongoose,express,axios
+7,1,In React, which hook can be used to improve performance by memoizing functions?,useCallback(),useEffect(),useReducer(),useMemo(),useCallback()
+7,1,Which MongoDB command is used to delete a collection?,drop(),removeCollection(),delete(),erase(),drop()
+7,1,In Express.js, which method is used to handle POST requests?,app.post(),app.get(),app.put(),app.delete(),app.post()
+7,1,In React, what is a key used for in lists?,To uniquely identify elements,To style elements,To update elements,To bind elements,To uniquely identify elements
+7,1,What does npm stand for?,Node Package Manager,Network Process Manager,New Package Maker,Node Programming Method,Node Package Manager
+7,1,Which of the following is a valid React event handler?,onClick,onpress,onTap,onHover,onClick
+7,1,What is the purpose of the Express `next()` function in middleware?,To move to the next middleware function,To terminate the request-response cycle,To handle errors,To start the server,To move to the next middleware function
+7,1,Which method is used to add a new field to a document in MongoDB?,$set(),$push(),$add(),$create(),$set()
+7,1,Which of the following is a valid HTTP request method?,PATCH,SELECT,QUERY,SEARCH,PATCH
+7,1,What is the default state of a React component?,undefined,null,false,true,undefined
+7,1,In MongoDB, which data type is used for arrays?,Array,BSON,Object,Document,Array
+7,1,Which method is used to return the first element of an array that satisfies a condition in JavaScript?,find(),search(),filter(),select(),find()
+7,1,What is the correct way to render a React component?,ReactDOM.render(<Component />, document.getElementById('root')),render(<Component />, 'root'),React.render(Component, root),ReactDOM(Component, root),ReactDOM.render(<Component />, document.getElementById('root'))
+7,1,Which command is used to start an Express server on port 3000?,app.listen(3000),app.start(3000),app.run(3000),app.use(3000),app.listen(3000)
+7,1,What is the primary function of `useReducer` in React?,To manage complex state logic,To fetch data,To handle events,To trigger effects,To manage complex state logic
+7,1,What is the primary role of `mongoose` in a MERN application?,To connect to MongoDB,To manage HTTP requests,To render components,To handle authentication,To connect to MongoDB
+7,1,Which method is used to stop the server in Node.js?,server.close(),app.stop(),server.shutdown(),app.quit(),server.close()
+7,1,What is the purpose of the `key` attribute in React list rendering?,To help identify which items have changed,To style the elements,To set a unique ID,To assign CSS classes,To help identify which items have changed
+7,1,Which of the following is not a valid JavaScript variable declaration?,new,let,var,const,new
+7,1,What method is used to return a new array with modified elements in JavaScript?,map(),filter(),find(),sort(),map()
+7,1,Which of the following is used to create a new document in MongoDB?,insertOne(),add(),save(),create(),insertOne()
+7,1,In React, which hook returns a memoized value?,useMemo(),useCallback(),useReducer(),useEffect(),useMemo()
+7,1,What is the default port number for Express.js?,3000,8080,5000,27017,3000
+7,1,Which of the following is a state management library often used with React?,Redux,Mongoose,Vuex,Express,Redux
+7,1,Which is the correct syntax for a MongoDB query to find all documents in a collection?,db.collection.find({}),db.collection.query({}),db.collection.search({}),db.collection.get({}),db.collection.find({})
+7,1,What is the correct syntax for handling errors in a promise?,.catch(),.then(),.finally(),.fail(),.catch()
+7,1,Which method is used to create a shallow copy of an array in JavaScript?,slice(),splice(),split(),shift(),slice()
+7,1,What is the purpose of the `setState` method in a React class component?,To update the component state,To fetch data,To render the component,To bind event listeners,To update the component state
+7,1,What is the primary use of `axios` in a Node.js application?,To make HTTP requests,To manage routes,To serve static files,To interact with databases,To make HTTP requests
+7,1,Which of the following is not a JavaScript array method?,repeat(),map(),reduce(),filter(),repeat
+7,1,What is the correct command to install MongoDB on a Linux system?,sudo apt install mongodb,mongo install,sudo install mongodb,apt get mongodb,sudo apt install mongodb
+7,1,What does JSX allow you to do in React?,Write HTML in JavaScript,Add state to components,Make HTTP requests,Perform side-effects,Write HTML in JavaScript
+7,1,Which React lifecycle method is invoked immediately before a component is unmounted?,componentWillUnmount(),componentDidMount(),shouldComponentUpdate(),componentWillMount(),componentWillUnmount()
+7,1,In JavaScript, which operator checks both value and type?,===,==,!=,!==,===
+7,1,Which method is used to merge arrays in JavaScript?,concat(),merge(),append(),join(),concat()
+7,1,Which of the following is a valid way to create a MongoDB collection?,db.createCollection(),db.addCollection(),db.newCollection(),db.create(),db.createCollection()
+7,1,In React, what does the `useContext` hook do?,It allows components to consume context values,It updates the component state,It triggers side-effects,It handles component rendering,It allows components to consume context values
+7,1,Which method is used to handle asynchronous code in JavaScript?,async/await,forEach/await,async/next,await/catch,async/await
+7,1,In Express, which method is used to serve static files?,express.static(),app.serveStatic(),express.files(),app.files(),express.static()
+7,1,Which HTTP status code indicates "Not Found"?,404,200,403,500,404
+7,1,What does the `path` module in Node.js handle?,File and directory paths,HTTP requests,Database queries,File uploads,File and directory paths
+7,1,Which of the following is a feature of Node.js?,Non-blocking I/O,Supports threading,Front-end framework,Relational database,Non-blocking I/O
+7,1,Which method is used to send data in an HTTP POST request in Express?,res.send(),res.post(),app.send(),app.get(),res.send()
+7,1,In React, what does the `key` prop help with when rendering lists?,Identifying elements,Handling state,Fetching data,Styling elements,Identifying elements
+7,1,What command updates a Node.js package to the latest version?,npm update,npm upgrade,npm init,npm remove,npm update
+7,1,Which of the following is a middleware function in Express?,app.use(),app.get(),app.post(),app.listen(),app.use()
+7,1,What method is used to merge multiple objects in JavaScript?,Object.assign(),Object.merge(),Object.join(),Object.add(),Object.assign()
+7,1,Which React hook is used for managing refs?,useRef(),useState(),useEffect(),useContext(),useRef()
+7,1,In MongoDB, what command is used to update multiple documents?,updateMany(),updateAll(),updateAllDocuments(),editMany(),updateMany()
+7,1,What does the command `npm run` do?,Runs scripts defined in package.json,Starts a React app,Installs a package,Runs a MongoDB server,Runs scripts defined in package.json
+7,1,Which of the following is not a valid JavaScript data type?,Float,String,Object,Character,Character
+7,1,Which method is used to remove the last element from an array in JavaScript?,pop(),remove(),delete(),slice(),pop()
+7,1,Which is the default file extension for Node.js modules?,.js,.json,.node,.mod,.js
+7,1,In React, how is a default value provided for context?,React.createContext(defaultValue),useContext(defaultValue),useEffect(defaultValue),useState(defaultValue),React.createContext(defaultValue)
+7,1,What is the purpose of `res.status()` in Express?,Sets the HTTP status code,Terminates the response,Parses the request,Redirects the user,Sets the HTTP status code
+7,1,Which method is used to stop further propagation of an event in React?,event.stopPropagation(),event.preventDefault(),event.cancel(),event.remove(),event.stopPropagation()
+7,1,What command is used to uninstall a package in Node.js?,npm uninstall packagename,npm remove packagename,npm delete packagename,npm kill packagename,npm uninstall packagename
+7,1,Which of the following is a React library for managing side effects?,Redux-saga,React-router,Express,Mongoose,Redux-saga
+7,1,In MongoDB, which method is used to create an index?,createIndex(),addIndex(),newIndex(),indexCreate(),createIndex()
+7,1,Which Node.js module is used for encryption and decryption?,crypto,security,hash,lock,crypto
+7,1,What is a common use case of the `componentDidCatch()` method in React?,Handling errors,Fetching data,Rendering elements,Styling components,Handling errors
+7,1,Which command is used to clear the Node.js cache?,npm cache clean,npm clear cache,npm clean cache,npm reset cache,npm cache clean
+7,1,What is the correct syntax to listen on port 8080 in Express?,app.listen(8080),app.start(8080),app.port(8080),app.run(8080),app.listen(8080)
+7,1,What is the main purpose of the `async` keyword in JavaScript?,To define asynchronous functions,To handle callbacks,To fetch data,To declare a constant,To define asynchronous functions
+7,1,In MongoDB, what is the maximum document size?,16MB,64MB,32MB,128MB,16MB
+7,1,Which of the following is used to manage environment variables in Node.js?,dotenv,axios,react,express,dotenv
+7,1,In React, which hook is used to run code when the component mounts?,useEffect(),useState(),useContext(),useReducer(),useEffect()
+7,1,What does the `useParams` hook in React Router do?,Access route parameters,Redirect routes,Fetch data,Handle navigation,Access route parameters
+7,1,What is the default method to fetch all records in MongoDB?,find(),query(),select(),getAll(),find()
+7,1,What does JSON stand for?,JavaScript Object Notation,JavaScript Oriented Network,Java Serialized Object Network,JavaScript Organization Notation,JavaScript Object Notation
+7,1,In JavaScript, what does `this` refer to in a function?,Current object,Parent object,Child object,Global object,Current object
+7,1,Which command is used to exit the MongoDB shell?,exit(),quit(),stop(),shutdown(),exit()
+7,1,What is the purpose of the `useCallback` hook in React?,Memoize a function,Trigger side effects,Update state,Access context,Memoize a function
+7,1,Which of the following is used to create RESTful APIs?,Express,React,Mongoose,Webpack,Express
+7,1,Which method is used to join elements of an array into a string?,join(),concat(),merge(),combine(),join()
+7,1,Which of the following is not a type of middleware in Express?,File management,Error handling,Routing,Authentication,File management
+7,1,In MongoDB, what is a collection?,Group of documents,Single document,Table,Field,Group of documents
+7,1,Which of the following is used to define routes in Express?,Router(),Route(),app.get(),path(),Router()
+7,1,Which of the following is not a JavaScript loop?,foreach(),for(),while(),do...while(),foreach()
+7,1,In MongoDB, which operator is used to search for a specific value?,$eq,$like,$match,$search,$eq
+7,1,Which command installs a package globally in Node.js?,npm install -g packagename,npm global install packagename,npm -global packagename,npm install global packagename,npm install -g packagename
+7,1,In React, which method is used to update state in a class component?,setState(),useState(),changeState(),updateState(),setState()
+7,1,What is the role of Webpack in a React project?,Module bundler,State manager,Routers manager,Styling tool,Module bundler
+7,1,Which function is used to load the contents of a file in Node.js?,fs.readFile(),fs.loadFile(),fs.openFile(),fs.read(),fs.readFile()
+7,1,Which hook is used to access global state in a React component?,useContext(),useState(),useEffect(),useReducer(),useContext()
+7,1,In Express, which middleware is used to serve static files?,express.static(),express.files(),app.static(),app.serveFiles(),express.static()
+7,1,Which of the following is not a correct MongoDB query method?,findOneAndUpdate(),findOne(),findOneAndSort(),findOneAndDelete(),findOneAndSort()
+7,1,In Node.js, which of the following methods is used to create a server?,http.createServer(),fs.createServer(),app.createServer(),mongoose.createServer(),http.createServer()
+7,1,Which command is used to run the current Node.js file?,node filename.js,run filename.js,execute filename.js,node run filename.js,node filename.js
+7,1,In React, which hook is used to optimize re-rendering?,useMemo(),useEffect(),useState(),useReducer(),useMemo()
+7,1,In MongoDB, what does the `insertMany()` method do?,Inserts multiple documents,Deletes multiple documents,Updates multiple documents,Finds multiple documents,Inserts multiple documents
+7,1,Which of the following is used to handle form submissions in React?,onSubmit,onPress,onClick,onLoad,onSubmit
+7,1,What command checks for outdated packages in Node.js?,npm outdated,npm check,npm update,npm status,npm outdated
+7,1,Which of the following is used to install dependencies from `package.json`?,npm install,npm start,npm init,npm run,npm install
+7,1,In JavaScript, what is `null`?,Represents an intentional absence of a value,Represents a non-initialized variable,Represents an error state,Represents zero,Represents an intentional absence of a value
+7,1,What does the `setTimeout()` function do in JavaScript?,Executes a function after a specified delay,Repeats a function,Executes a function immediately,Stops a function,Executes a function after a specified delay
+7,1,Which of the following is a popular templating engine for Express?,EJS,React,Angular,Mongoose,EJS
+7,1,Which of the following is a valid JavaScript array method?,map(),hash(),sortObject(),stringify(),map()
+7,1,Which of the following is used to create a single-page application?,React,Express,MongoDB,Mongoose,React
+7,1,What does the `return` statement do in JavaScript?,Returns a value from a function,Ends a loop,Exits a program,Repeats a function,Returns a value from a function
+7,1,Which method is used to delete a document in MongoDB?,deleteOne(),removeDocument(),eraseOne(),deleteDoc(),deleteOne()
+7,1,Which hook is used to perform side effects in React?,useEffect(),useState(),useContext(),useMemo(),useEffect()
+7,1,In Node.js, which module is used to work with file system operations?,fs,os,path,http,fs
+7,1,What does `async` and `await` handle in JavaScript?,Asynchronous code,Loops,Events,DOM manipulation,Asynchronous code
+7,1,In React, which method is used to create a reference to a DOM element in class components?,React.createRef(),React.ref(),useRef(),React.create(),React.createRef()
+7,1,Which of the following is not a NoSQL database?,PostgreSQL,MongoDB,CouchDB,Firebase,PostgreSQL
+7,1,What command initializes a new Node.js project?,npm init,npm start,npm install,npm config,npm init
+7,1,In Express, which method is used to add a new route?,app.get(),app.route(),app.add(),app.new(),app.get()
+7,1,Which JavaScript method can convert a JSON string into an object?,JSON.parse(),JSON.stringify(),JSON.object(),JSON.convert(),JSON.parse()
+7,1,What does the `useState` hook return?,An array with the current state and a function to update it,A function to update state only,A string representing the current state,A boolean value,An array with the current state and a function to update it
+7,1,Which MongoDB command is used to delete all documents in a collection?,db.collection.deleteMany(),db.collection.drop(),db.collection.remove(),db.collection.delete(),db.collection.deleteMany()
+7,1,What is the purpose of middleware in Express?,To handle HTTP requests and responses,To handle database queries,To manage file uploads,To serve static files,To handle HTTP requests and responses
+7,1,Which JavaScript array method removes the first element?,shift(),unshift(),pop(),slice(),shift()
+7,1,In React, what is the virtual DOM?,A lightweight copy of the real DOM,A different library to manipulate the DOM,An alternative to React state,An API to handle events,A lightweight copy of the real DOM
+7,1,What is the default port number for a MongoDB server?,27017,8080,3000,3306,27017
+7,1,What is the purpose of the `res.json()` method in Express?,To send a JSON response,To send a string response,To serve static files,To start a server,To send a JSON response
+7,1,Which of the following is not a valid data type in JavaScript?,byte,number,boolean,string,byte
+7,1,What is the use of the `return` statement in JavaScript?,To return a value from a function,To exit a loop,To create a new object,To throw an error,To return a value from a function
+7,1,Which method in JavaScript is used to find the index of an element in an array?,indexOf(),findIndex(),search(),find(),indexOf()
+7,1,What does `npm` stand for?,Node Package Manager,Node Programming Module,Node Project Management,New Programming Module,Node Package Manager
+7,1,In MongoDB, what is a document?,A record in a collection,An entire database,A single field,A key-value pair,A record in a collection
+7,1,In React, which hook should you use for data fetching or side-effects?,useEffect(),useState(),useContext(),useReducer(),useEffect()
+7,1,Which of the following is a valid way to define a function in JavaScript?,const myFunc = () => {},function:myFunc(),function = myFunc,func.myFunc = {},const myFunc = () => {}
+7,1,Which method is used to append elements to an array in JavaScript?,push(),concat(),add(),append(),push()
+7,1,Which of the following is a CSS-in-JS library for React?,styled-components,jQuery,Bootstrap,Foundation,styled-components
+7,1,What does the `path` module in Node.js help manage?,File paths,HTTP requests,Database connections,Event handling,File paths
+7,1,Which of the following is not a valid JavaScript loop statement?,loop(),for(),while(),do...while(),loop()
+7,1,In React, what is the `children` prop?,It is used to pass nested elements to components,It is used to handle events,It manages the component state,It manages side-effects,It is used to pass nested elements to components
+7,1,What command installs a package locally in Node.js?,npm install packagename,npm install -g packagename,npm global install packagename,npm get packagename,npm install packagename
+7,1,In MongoDB, what does the `findOne()` method do?,Finds the first matching document,Deletes a single document,Updates a single document,Sorts documents,Finds the first matching document
+7,1,Which of the following is not a MongoDB data type?,Character,Array,String,ObjectID,Character
+7,1,What is the main use of the `useReducer` hook in React?,State management,Form handling,Event handling,Routing,State management
+7,1,Which of the following is not a Node.js built-in module?,request,path,http,fs,request
+7,1,What is the purpose of `axios` in a React project?,To make HTTP requests,To manage state,To render components,To handle routing,To make HTTP requests
+7,1,Which of the following is the default package manager for Node.js?,npm,yarn,gradle,webpack,npm
+7,1,In MongoDB, what is the role of `ObjectID`?,To uniquely identify documents,To create collections,To store arrays,To delete documents,To uniquely identify documents
+7,1,Which method is used to convert an object into a JSON string in JavaScript?,JSON.stringify(),JSON.parse(),objectToJson(),objectify(),JSON.stringify()
+7,1,In React, what is the default method to prevent a form from submitting?,event.preventDefault(),event.stopPropagation(),event.preventSubmit(),form.preventDefault(),event.preventDefault()
+7,1,What is the purpose of the `next()` function in Express middleware?,To pass control to the next middleware,To return a response,To start a new server,To send a response,To pass control to the next middleware
+7,1,In JavaScript, which method is used to check if an array includes a specific element?,includes(),has(),contains(),indexOf(),includes()
+7,1,Which of the following is not a valid lifecycle method in React?,componentWillStop(),componentDidMount(),componentWillUnmount(),componentDidUpdate(),componentWillStop()
+7,1,In MongoDB, what does the `aggregate()` method do?,Performs aggregation operations on documents,Updates multiple documents,Deletes a collection,Finds a document by ID,Performs aggregation operations on documents
+7,1,In Node.js, which method is used to read the contents of a directory?,fs.readdir(),fs.readFile(),fs.readDirFiles(),fs.getFiles(),fs.readdir()
+7,1,In React, what does the `useReducer` hook return?,A state value and a dispatch function,An array and an object,A boolean and a function,A string and an object,A state value and a dispatch function
+7,1,What is the purpose of `useLayoutEffect` in React?,It runs synchronously after all DOM mutations,It manages state changes,It handles asynchronous requests,It is used for routing,It runs synchronously after all DOM mutations
+7,1,In MongoDB, what is a capped collection?,A collection with a fixed size,A collection that cannot be deleted,A collection without indexes,A collection that stores only strings,A collection with a fixed size
+7,1,Which of the following is not a React library?,Express,MobX,Next.js,React Router,Express
+7,1,In JavaScript, which keyword is used to define a constant variable?,const,var,let,static,const
+7,1,In Node.js, which module is used to create a server-side HTTP server?,http,express,fs,crypto,http
+7,1,Which JavaScript array method creates a new array with only the elements that pass a test?,filter(),map(),forEach(),reduce(),filter()
+7,1,What is the primary use of the `fs` module in Node.js?,Handling file system operations,Managing HTTP requests,Serving static files,Routing,Handling file system operations
+7,1,In React, how do you pass data from a parent component to a child component?,Using props,Using state,Using context,Using reducers,Using props
+7,1,Which command is used to start a Node.js application?,node app.js,npm start,npm run start,node server,node app.js
+7,1,Which method in MongoDB removes an entire collection?,drop(),remove(),deleteMany(),clear(),drop()
+7,1,In JavaScript, what does `NaN` represent?,Not a number,Null object,New array,Negative number,Not a number
+7,1,Which of the following is used to access the query parameters in Express?,req.query,req.params,req.get,req.data,req.query
+7,1,What is the default method to handle errors in Express?,error-handling middleware,route middleware,get middleware,async-handler middleware,error-handling middleware
+7,1,In JavaScript, which keyword is used to declare a block-scoped variable?,let,var,define,new,let
+7,1,In MongoDB, which operator is used to check if a field exists?,$exists,$has,$contains,$check,$exists
+7,1,In React, how is a stateful component created using classes?,By extending React.Component,By extending React.Hook,By creating a stateless component,By using hooks,By extending React.Component
+7,1,Which command is used to globally install a package in Node.js?,npm install -g,npm install --global,npm get -g,npm package install -g,npm install -g
+7,1,Which of the following is a valid JavaScript variable declaration?,let x = 10,var x = 10,const x == 10,let x == 10,var x = 10
+7,1,In React, what is a pure component?,A component that renders the same output for the same props,A component that always re-renders,A component with no state,A component with no props,A component that renders the same output for the same props
+7,1,Which command is used to install all dependencies listed in a package.json file?,npm install,npm init,npm update,npm dependencies,npm install
+7,1,In MongoDB, what does `find()` return?,A cursor object pointing to the query results,An array of all documents,A single document,The first matching document,A cursor object pointing to the query results
+7,1,Which hook is used to manage form input state in React?,useState(),useEffect(),useReducer(),useRef(),useState()
+7,1,What does `npm run` do in a Node.js project?,Runs a custom script defined in package.json,Starts the Node.js server,Installs dependencies,Updates the project,Runs a custom script defined in package.json
+7,1,Which method is used to merge two arrays in JavaScript?,concat(),append(),merge(),push(),concat()
+7,1,In Express, which middleware is used to parse JSON bodies?,express.json(),express.urlencoded(),bodyParser.text(),express.body(),express.json()
+7,1,What does JSX stand for in React?,JavaScript XML,JavaScript Extended,JSON XML,JavaScript Xpath,JavaScript XML
+7,1,In MongoDB, what is the purpose of an index?,To improve the speed of queries,To delete documents faster,To update documents automatically,To prevent duplicate documents,To improve the speed of queries
+7,1,Which JavaScript method converts an array into a string?,join(),concat(),toString(),split(),join()
+7,1,In React, what is a key prop used for?,To help React identify which items have changed,To pass unique IDs to child components,To set focus on elements,To bind event handlers,To help React identify which items have changed
+7,1,In MongoDB, what command is used to update multiple documents?,updateMany(),update(),updateOne(),updateDocuments(),updateMany()
+7,1,Which function is used to serialize an object into a JSON string in JavaScript?,JSON.stringify(),JSON.parse(),toJSON(),JSON.serialize(),JSON.stringify()
+7,1,What is the purpose of the `useCallback` hook in React?,To memoize a function,To handle side effects,To fetch data,To manage state,To memoize a function
+7,1,In Node.js, which module is used to create child processes?,child_process,worker_threads,os,cluster,child_process
+7,1,Which MongoDB method returns only a subset of fields in the result set?,project(),select(),filter(),limit(),project()
+7,1,Which React hook is used for accessing the previous state or props?,useRef(),useMemo(),useEffect(),useCallback(),useRef()
+7,1,What does the `res.sendFile()` method in Express do?,Sends a file as a response,Serves static content,Saves a file to disk,Reads a file from disk,Sends a file as a response
+7,1,In JavaScript, what is the purpose of the `bind()` method?,To set the value of `this` in a function,To concatenate two strings,To create a deep copy of an object,To compare two objects,To set the value of `this` in a function
+7,1,Which method is used to remove whitespace from both ends of a string in JavaScript?,trim(),slice(),split(),strip(),trim()
+7,1,In MongoDB, what does the `upsert` option do?,Inserts a document if it doesn't exist,Deletes a document,Updates only the first document,Sorts the query results,Inserts a document if it doesn't exist
+7,1,What is the purpose of the `useMemo` hook in React?,To memoize the result of a computation,To fetch data from an API,To manage form state,To handle side effects,To memoize the result of a computation
+7,1,In JavaScript, what does the `typeof` operator return?,The data type of a variable,The length of a string,The index of an array element,The value of a variable,The data type of a variable
+7,1,Which command is used to remove a package in Node.js?,npm uninstall packagename,npm remove packagename,npm delete packagename,npm del packagename,npm uninstall packagename
+7,1,In MongoDB, which function is used to add a document to a collection?,insertOne(),addOne(),save(),push(),insertOne()
+7,1,In React, what is the purpose of `useEffect` with an empty dependency array?,To run the effect only once after the initial render,To run the effect on every render,To clean up the component,To prevent re-renders,To run the effect only once after the initial render
+7,1,In Node.js, what is the purpose of `process.env`?,To access environment variables,To handle HTTP requests,To log data to the console,To read files,To access environment variables
+7,1,Which method is used to get all keys of an object in JavaScript?,Object.keys(),Object.values(),Object.getKeys(),keys(),Object.keys()
+7,1,In Express, which method is used to redirect a client to another URL?,res.redirect(),res.send(),res.route(),res.goTo(),res.redirect()
+7,1,What does the `Array.prototype.reduce()` method do in JavaScript?,Reduces the array to a single value,Concatenates arrays,Sorts the array,Filters the array,Reduces the array to a single value
+7,1,Which JavaScript keyword is used to declare an asynchronous function?,async,await,promise,defer,async
+7,1,In React, what is the `useContext` hook used for?,To share state between components without props,To handle forms,To trigger side effects,To manage component lifecycle,To share state between components without props
+7,1,Which method is used to fetch data from an API in JavaScript?,fetch(),axios.get(),XMLHttpRequest(),getData(),fetch()
+7,1,In MongoDB, which command is used to count the number of documents in a collection?,countDocuments(),countAll(),count(),findCount(),countDocuments()
+7,1,What is the role of a reducer function in the `useReducer` hook?,To calculate the next state based on the current state and action,To fetch data from an API,To manage side effects,To handle events,To calculate the next state based on the current state and action
+7,1,In Node.js, which method is used to write data to a file?,fs.writeFile(),fs.save(),fs.write(),fs.appendFile(),fs.writeFile()
+7,1,What is the default return type of a MongoDB query?,A cursor,A promise,An array,A string,A cursor
+7,1,In React, what is the purpose of `React.Fragment`?,To group multiple children without adding extra nodes to the DOM,To handle side effects,To manage component state,To prevent re-renders,To group multiple children without adding extra nodes to the DOM
+7,1,Which method is used to handle errors in a JavaScript Promise?,catch(),finally(),then(),onError(),catch()
+7,1,What does the `await` keyword do in JavaScript?,Pauses the execution until the promise resolves,Declares a new asynchronous function,Calls an API,Handles a rejected promise,Pauses the execution until the promise resolves
+7,1,In MongoDB, which method limits the number of documents returned in a query?,limit(),skip(),slice(),reduce(),limit()
+7,1,What does the `res.status()` method do in Express?,Sets the HTTP status code,Ends the response,Starts the server,Sends JSON data,Sets the HTTP status code
+7,1,Which of the following is not a valid React hook?,useMount(),useEffect(),useState(),useRef(),useMount()
+7,1,What does the `finally()` method do in JavaScript Promises?,Executes code after a promise is settled,Executes code if the promise is rejected,Returns the result of a promise,Throws an error,Executes code after a promise is settled
+7,1,In MongoDB, what does the `skip()` method do?,Skips a specified number of documents in the query result,Deletes a document,Updates multiple documents,Sorts the query result,Skips a specified number of documents in the query result
+7,1,What is the purpose of the `res.json()` method in Express?,To send a JSON response,To send a string response,To serve a static file,To render a view,To send a JSON response
+7,1,Which JavaScript array method removes the last element of an array?,pop(),push(),slice(),shift(),pop()
+7,1,What does the `useImperativeHandle` hook in React allow you to do?,Customize the instance value that is exposed to parent components,Handle form validation,Trigger side effects,Perform memoization,Customize the instance value that is exposed to parent components
+7,1,In Node.js, what does `require()` do?,Imports a module,Exports a module,Declares a variable,Creates a new object,Imports a module
+7,1,What is the purpose of the `onSubmit` event in React forms?,To handle form submission,To validate form inputs,To reset form fields,To handle input changes,To handle form submission
+7,1,In MongoDB, which method is used to delete a single document?,deleteOne(),delete(),remove(),deleteMany(),deleteOne()
+7,1,Which JavaScript method converts an array-like object into an array?,Array.from(),Array.convert(),Array.make(),Array.toArray(),Array.from()
+7,1,What does the `useLayoutEffect` hook do in React?,Runs synchronously after all DOM mutations,Fetches data asynchronously,Handles state updates,Runs after the initial render,Runs synchronously after all DOM mutations
+7,1,In React, which hook is used for performing side effects in a component?,useEffect(),useState(),useMemo(),useContext(),useEffect()
+7,1,Which MongoDB method is used to sort query results?,sort(),findSorted(),order(),listSorted(),sort()
+7,1,What does the `return` statement do in a JavaScript function?,Returns a value from the function,Stops the function from running,Passes control to the next line,Assigns a value to a variable,Returns a value from the function
+7,1,In Express, which method sends JSON data as a response?,res.json(),res.sendFile(),res.redirect(),res.write(),res.json()
+7,1,In JavaScript, what is a promise?,An object that represents the eventual completion or failure of an asynchronous operation,A function that always returns a value,A callback function,An error handler,An object that represents the eventual completion or failure of an asynchronous operation
+7,1,Which method is used to add an element at the beginning of an array in JavaScript?,unshift(),push(),shift(),concat(),unshift()
+7,1,In MongoDB, which method removes all documents from a collection?,deleteMany(),removeAll(),drop(),clear(),deleteMany()
+7,1,What is the purpose of `useRef` in React?,To persist a value across renders without causing re-renders,To trigger re-renders,To update state,To fetch data from an API,To persist a value across renders without causing re-renders
+7,1,Which JavaScript operator checks both value and type?,===,==,!=,=,===
+7,1,What is the default port number for MongoDB?,27017,8080,3000,27018,27017
+7,1,In React, how do you pass data from a parent component to a child component?,Via props,Via state,Via context,Via refs,Via props
+7,1,Which method is used to stop event propagation in JavaScript?,stopPropagation(),preventDefault(),stopEvent(),haltEvent(),stopPropagation()
+7,1,In Express, which middleware is used to serve static files?,express.static(),app.useStatic(),express.serve(),app.serveStatic(),express.static()
+7,1,Which of the following is not a valid JavaScript data type?,Float,Number,String,Object,Float
+7,1,In MongoDB, what does the `aggregate()` method do?,Performs operations on the data and returns computed results,Sorts documents,Indexes documents,Updates multiple documents,Performs operations on the data and returns computed results
+7,1,Which React hook should you use to manage component lifecycle events?,useEffect(),useState(),useReducer(),useMemo(),useEffect()
+7,1,In JavaScript, what will `NaN` evaluate to if compared with itself?,false,true,null,undefined,false
+7,1,What is the role of the `useReducer` hook in React?,To manage complex state logic in a component,To handle side effects,To memoize functions,To access DOM nodes,To manage complex state logic in a component
+7,1,Which Node.js module provides methods for working with file paths?,path,fs,http,os,path
+7,1,In MongoDB, which method inserts multiple documents into a collection?,insertMany(),insert(),add(),saveMany(),insertMany()
+7,1,Which method is used to schedule a function to execute after a specified delay in JavaScript?,setTimeout(),setInterval(),delay(),setSchedule(),setTimeout()
+7,1,In React, what is the purpose of the `useEffect` cleanup function?,To prevent memory leaks by cleaning up resources,To rerun the effect on every render,To update the DOM,To update state,To prevent memory leaks by cleaning up resources
+7,1,What does the `fs.readFile()` method in Node.js do?,Reads the contents of a file asynchronously,Writes data to a file,Deletes a file,Opens a file for writing,Reads the contents of a file asynchronously
+7,1,In MongoDB, which index type is used to ensure that each document has a unique value in a field?,Unique index,Compound index,Text index,Geospatial index,Unique index
+7,1,Which JavaScript method is used to copy an array?,slice(),concat(),splice(),split(),slice()
+7,1,In Express, which method handles form data sent via a POST request?,app.post(),app.use(),app.get(),app.listen(),app.post()
+7,1,Which JavaScript array method creates a new array with the results of calling a provided function on every element?,map(),forEach(),filter(),reduce(),map()
+7,1,In MongoDB, what does `findOne()` do?,Returns the first document that matches the query,Returns all documents that match the query,Deletes the first document that matches the query,Updates a single document,Returns the first document that matches the query
+7,1,In React, which hook is used to optimize performance by memoizing values?,useMemo(),useState(),useEffect(),useRef(),useMemo()
+7,1,Which method is used to parse a JSON string into an object in JavaScript?,JSON.parse(),JSON.stringify(),parseJSON(),toObject(),JSON.parse()
+7,1,In Node.js, what is the purpose of `module.exports`?,To export a module so that it can be required by other files,To import a module,To create a new module,To delete a module,To export a module so that it can be required by other files
+7,1,Which MongoDB method is used to update a single document in a collection?,updateOne(),updateMany(),replaceOne(),updateSingle(),updateOne()
+7,1,What is the purpose of the `useRef` hook in React?,To access or modify a DOM element directly,To manage component state,To handle side effects,To update props,To access or modify a DOM element directly
+7,1,Which command is used to check the version of Node.js installed?,node -v,node version,npm -v,checkNodeVersion,node -v
+7,1,In MongoDB, what does the `countDocuments()` method do?,Returns the number of documents that match a query,Deletes a specific number of documents,Updates a specific number of documents,Returns the size of a collection,Returns the number of documents that match a query
+7,1,What does the `filter()` method do in JavaScript arrays?,Creates a new array with elements that pass a test,Removes elements from the array,Finds the index of an element,Sorts the array,Creates a new array with elements that pass a test
+7,1,In React, what does `useState` return?,An array with the current state value and a function to update it,A function to update the state,A promise with the updated state value,The previous state value,An array with the current state value and a function to update it
+7,1,Which of the following is a valid HTTP request method in Express?,POST,WRITE,INSERT,READ,POST
+7,1,In JavaScript, which of the following is a falsy value?,0,1,"false","1",0
+7,1,What is the default method used by forms to send data in HTML?,GET,POST,PUT,DELETE,GET
+7,1,In MongoDB, which method is used to remove a collection from the database?,drop(),deleteCollection(),removeCollection(),clear(),drop()
+7,1,In React, which hook can be used to return a memoized function?,useCallback(),useMemo(),useEffect(),useRef(),useCallback()
+7,1,Which method is used to stop an interval timer in JavaScript?,clearInterval(),stopTimer(),stopInterval(),resetTimer(),clearInterval()
+7,1,In MongoDB, which operator is used to check if a value exists in an array?,$in,$exists,$and,$or,$in
+7,1,What does the `axios.get()` method do in JavaScript?,Sends a GET request to a specified URL,Sends a POST request to a specified URL,Fetches a local file,Sends form data to a server,Sends a GET request to a specified URL
+7,1,In Node.js, what does the `require()` function do?,Imports a module,Declares a variable,Creates a promise,Writes data to a file,Imports a module
+7,1,In MongoDB, which command is used to create a new database?,use databasename,new database,db.create,db.start,use databasename
+7,1,Which array method in JavaScript reverses the order of elements in an array?,reverse(),sort(),push(),shift(),reverse()
+7,1,In Express, which method is used to route a DELETE request?,app.delete(),app.post(),app.remove(),app.put(),app.delete()
+7,1,What does the `useEffect` hook depend on to re-run in React?,Dependency array,State variable,Component props,Component method,Dependency array
+7,1,In MongoDB, which index type is created by default on the `_id` field?,Unique index,Compound index,Text index,Geospatial index,Unique index
+7,1,In JavaScript, what does the `push()` method do?,Adds a new element to the end of an array,Removes the last element from an array,Adds a new element to the beginning of an array,Concatenates two arrays,Adds a new element to the end of an
+7,1,In React, what is the purpose of the `key` prop?,To give a unique identity to elements in a list,To bind data to a component,To style components,To manage component state,To give a unique identity to elements in a list
+7,1,Which method is used to update multiple documents in a MongoDB collection?,updateMany(),updateAll(),editMany(),changeMany(),updateMany()
+7,1,What is the purpose of the `next` function in Express middleware?,To pass control to the next middleware function,To end the request-response cycle,To send a response to the client,To log requests,To pass control to the next middleware function
+7,1,In JavaScript, what does the `splice()` method do?,Adds or removes elements from an array,Returns the first element of an array,Sorts an array,Reverses an array,Adds or removes elements from an array
+7,1,What does `npm start` do in a Node.js application?,Runs the application using the start script defined in package.json,Installs all dependencies,Builds the application,Runs tests,Runs the application using the start script defined in package.json
+7,1,In MongoDB, what is the purpose of the `find()` method?,To retrieve documents from a collection,To update documents,To delete documents,To create a new collection,To retrieve documents from a collection
+7,1,In React, which lifecycle method is invoked immediately after a component is mounted?,componentDidMount(),componentWillMount(),render(),componentDidUpdate(),componentDidMount()
+7,1,Which of the following is a valid way to define a React functional component?,const MyComponent = () => {},class MyComponent {},function MyComponent() {},All of the above,const MyComponent = () => {}
+7,1,In Express, how do you define a route for a GET request?,app.get('/route', handler),app.route('/route', handler),app.handle('GET', '/route', handler),app.request('/route', handler),app.get('/route', handler)
+7,1,In JavaScript, what is the output of `typeof NaN`?,number,string,undefined,object,number
+7,1,What is the use of the `mongoimport` command?,To import data into a MongoDB database,To export data from a MongoDB database,To start a MongoDB instance,To delete a MongoDB database,To import data into a MongoDB database
+7,1,Which property is used to access the query parameters in Express?,req.query,req.params,req.body,req.url,req.query
+7,1,In React, what does the `useEffect` hook do?,Allows you to perform side effects in function components,Manages state in class components,Defines the initial state of a component,Handles component rendering,Allows you to perform side effects in function components
+7,1,Which method is used to create a new document in MongoDB?,insertOne(),create(),add(),new(),insertOne()
+7,1,In JavaScript, what does the `filter()` method return?,A new array with elements that pass a test,The first element that passes a test,The index of the first element that passes a test,A boolean indicating if any elements pass a test,A new array with elements that pass a test
+7,1,In React, which hook is used to manage state in functional components?,useState(),useEffect(),useContext(),useReducer(),useState()
+7,1,What does the `setState()` method do in React?,Updates the component's state and re-renders the component,Sets the initial state of a component,Directly modifies the state,Returns the current state,Updates the component's state and re-renders the component
+7,1,In MongoDB, which command drops a collection?,db.collection.drop(),dropCollection(),removeCollection(),deleteCollection(),db.collection.drop()
+7,1,What does the `req.body` property contain in Express?,The parsed body of the request,The query parameters of the request,The headers of the request,The URL of the request,The parsed body of the request
+7,1,Which method is used to find a document in a MongoDB collection?,findOne(),get(),search(),fetch(),findOne()
+7,1,In JavaScript, what will be the output of `Boolean(null)`?,false,true,undefined,0,false
+7,1,In React, how do you handle events?,Using event handlers,Using state,Using props,Using lifecycle methods,Using event handlers
+7,1,In Express, which method is used to parse incoming request bodies?,express.json(),app.bodyParser(),bodyParser.json(),express.urlencoded(),express.json()
+7,1,What is the purpose of the `useEffect` dependency array?,To specify when the effect should run,To hold state values,To store props,To define initial state,To specify when the effect should run
+7,1,Which method is used to retrieve all documents in a MongoDB collection?,find(),getAll(),retrieve(),fetchAll(),find()
+7,1,In JavaScript, which symbol is used for comments?,//,/* */,#,**,//
+7,1,What does the `mongoose` library do?,Provides a schema-based solution to model application data,Connects to MongoDB,Handles HTTP requests,Creates RESTful APIs,Provides a schema-based solution to model application data
+7,1,In React, what is the purpose of `defaultProps`?,To set default values for props,To define state,To manage event handlers,To control rendering,To set default values for props
+7,1,Which command is used to create a new React application?,npx create-react-app my-app,npm create-react-app my-app,react create my-app,npm init my-app,npx create-react-app my-app
+7,1,In JavaScript, how do you create an object?,const obj = {},const obj = new Object(),const obj = [],const obj = null,const obj = {}
+7,1,Which method in MongoDB is used to count the number of documents that match a query?,countDocuments(),count(),getDocuments(),fetchCount(),countDocuments()
+7,1,In React, what does the `componentWillUnmount` lifecycle method do?,Cleans up resources before the component is removed from the DOM,Initializes component state,Renders the component,Updates props,Cleans up resources before the component is removed from the DOM
+7,1,In JavaScript, what is the purpose of the `map()` method?,Creates a new array by applying a function to each element of an array,Filters elements from an array,Sorts an array,Reduces an array,Creates a new array by applying a function to each element of an array
+7,1,In MongoDB, which operator is used to update a document's fields?,$set,$update,$modify,$change,$set
+7,1,In Express, how do you define a middleware function?,app.use(middlewareFunction),app.middleware(middlewareFunction),app.register(middlewareFunction),app.set(middlewareFunction),app.use(middlewareFunction)
+7,1,What is the purpose of the `console.log()` function in JavaScript?,To print output to the console,To create a new console,To send data to the server,To read input from the user,To print output to the console
+7,1,In React, which hook can be used to consume context?,useContext(),useState(),useEffect(),useReducer(),useContext()
+7,1,In JavaScript, which operator is used to concatenate strings?,+,*,.,&,+
+7,1,In MongoDB, which method is used to rename a field in a document?,updateOne(),renameField(),modifyField(),changeField(),updateOne()
+7,1,What is the role of the `body-parser` middleware in Express?,To parse incoming request bodies,To handle static files,To manage routes,To create session cookies,To parse incoming request bodies
+7,1,In React, what does the `useMemo` hook do?,Memoizes expensive calculations to optimize performance,Creates a new state variable,Tracks component rendering,Fetches data from an API,Memoizes expensive calculations to optimize performance
+7,1,Which command is used to install a package in Node.js?,npm install package-name,npm add package-name,npm get package-name,npm use package-name,npm install package-name
+7,1,In JavaScript, what is the output of `typeof undefined`?,undefined,object,string,number,undefined
+7,1,In MongoDB, what does the `updateOne()` method return?,An object representing the update result,An array of updated documents,The original document,The number of documents updated,An object representing the update result
+7,1,In React, how do you handle user input in forms?,Using controlled components,Using uncontrolled components,Using both controlled and uncontrolled components,Using event handlers,Using controlled components
+7,1,What is the purpose of the `useLayoutEffect` hook in React?,To run side effects synchronously after DOM mutations,To manage state,To handle context updates,To update the DOM asynchronously,To run side effects synchronously after DOM mutations
+7,1,In JavaScript, which method is used to convert an array to a string?,toString(),join(),stringify(),convert(),join()
+7,1,In Express, which method is used to handle a PATCH request?,app.patch(),app.put(),app.post(),app.delete(),app.patch()
+7,1,What is the purpose of the `res.send()` method in Express?,To send a response to the client,To set response headers,To handle errors,To parse request bodies,To send a response to the client
+7,1,Which keyword is used to declare a constant variable in JavaScript?,const,var,let,define,const
+7,1,In React, which lifecycle method is invoked immediately before a component is unmounted?,componentWillUnmount(),componentDidUpdate(),render(),componentDidMount(),componentWillUnmount()
+7,1,Which command is used to run tests in a React application?,npm test,npx test,npm run test,react test,npm test
+7,1,In MongoDB, which method is used to find documents with a specific field value?,find(),get(),searchByField(),query(),find()
+7,1,What does the `async` keyword do in JavaScript?,Declares an asynchronous function,Declares a synchronous function,Defines a callback,Creates a promise,Declares an asynchronous function
+7,1,In JavaScript, which method is used to remove the first element from an array?,shift(),pop(),unshift(),removeFirst(),shift()
+7,1,In React, what is the purpose of the `useContext` hook?,To access context values in functional components,To manage state,To create context,To handle side effects,To access context values in functional components
+7,1,In Express, which method is used to define a route for a PUT request?,app.put(),app.post(),app.delete(),app.get(),app.put()
+7,1,In JavaScript, what will `1 + '1'` evaluate to?,11,2,undefined,NaN,11
+7,1,In MongoDB, which method is used to delete a document?,deleteOne(),remove(),delete(),clear(),deleteOne()
+7,1,In React, what does the `render()` method do in a class component?,Renders the component's output,Updates state,Handles events,Manages lifecycle methods,Renders the component's output
+7,1,What does the `map()` method return in JavaScript?,A new array containing the results of applying a function to each element,An object containing the results,The first matching element,The length of the array,A new array containing the results of applying a function to each element
+7,1,In JavaScript, what does `this` refer to in a function?,The context of the function,The global object,The function itself,The parent object,The context of the function
+7,1,What is the purpose of `mongoose.Schema`?,To define the structure of documents in a MongoDB collection,To create a database,To query documents,To define middleware,To define the structure of documents in a MongoDB collection
+7,1,In React, which hook is used to perform a function on component render?,useEffect(),useState(),useReducer(),useContext(),useEffect()
+7,1,In Express, which property is used to access route parameters?,req.params,req.body,req.query,req.url,req.params
+7,1,In JavaScript, what will be the output of `2 + 3 - 4 * 2`?,-1,3,2,1,-1
+7,1,Which command is used to create a new file in Node.js?,fs.writeFile(),fs.createFile(),fs.newFile(),fs.addFile(),fs.writeFile()
+7,1,In MongoDB, which operator is used to check for equality?,$eq,$equal,$is,$equals,$eq
+7,1,What is the purpose of the `useReducer` hook in React?,To manage complex state in functional components,To perform side effects,To access context,To memoize values,To manage complex state in functional components
+7,1,In Express, which method is used to handle a DELETE request?,app.delete(),app.post(),app.put(),app.patch(),app.delete()
+7,1,In JavaScript, which method converts an object to a JSON string?,JSON.stringify(),JSON.parse(),convertToJSON(),toJSONString(),JSON.stringify()
+7,1,What does the `Promise.all()` method do?,Returns a single Promise that resolves when all of the promises in the iterable have resolved,Waits for one Promise to resolve,Executes a function asynchronously,Creates a new Promise,Returns a single Promise that resolves when all of the promises in the iterable have resolved
+7,1,In React, what does the `useCallback` hook do?,Memoizes a callback function to optimize performance,Creates a new state variable,Handles side effects,Accesses DOM nodes,Memoizes a callback function to optimize performance

@@ -1,0 +1,3 @@
+﻿tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+9,1, Who is credited as the developer of Express.js?,Larry wall,Rich Hickey,TJ Holowaychuk,Rob Pike,TJ Holowaychuk
+9,1,How to install expressjs through npm ?,npm init,npm init -y,npm download express,npm install express,npm install express

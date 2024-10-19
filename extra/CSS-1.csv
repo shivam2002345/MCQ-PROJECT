@@ -1,0 +1,347 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+11,1,What CSS property is used to set the transparency of an element?,opacity,transparency,visibility,alpha,opacity
+11,1,Which CSS function is used to rotate an element?,rotate(),transform(),skew(),rotate-deg(),rotate()
+11,1,What is the default value of the flex-wrap property?,nowrap,wrap,reverse,none,nowrap
+11,1,Which CSS property is used to change the cursor when hovering over an element?,cursor,pointer,hover,action,cursor
+11,1,What property would you use to create space between the content of an element and its border?,padding,margin,spacing,border-spacing,padding
+11,1,Which CSS property defines a shadow on text?,text-shadow,box-shadow,font-shadow,shadow,text-shadow
+11,1,What CSS property is used to set the behavior of an element's content if it overflows its box?,overflow,scroll,display,content-wrap,overflow
+11,1,Which property specifies whether a background image should scroll with the content or be fixed?,background-attachment,background-scroll,scroll-position,background-fixed,background-attachment
+11,1,What value of the position property is used to make an element relative to its containing block?,relative,absolute,static,fixed,relative
+11,1,How do you prevent an element from being resized by the user?,resize:none,resize:disabled,overflow:hidden,no-resize,resize:none
+11,1,Which CSS property is used to set the spacing between lines of text?,line-height,word-spacing,letter-spacing,text-spacing,line-height
+11,1,How do you create rounded corners for an element?,border-radius,corner-radius,border-style,border-round,border-radius
+11,1,What is the default display value for an inline element?,inline,block,inline-block,flex,inline
+11,1,Which CSS property controls the amount of space inside an element's border?,padding,margin,border-spacing,content-gap,padding
+11,1,How do you set the vertical alignment of text inside an element?,vertical-align,text-align,align-content,text-position,vertical-align
+11,1,Which property is used to stack elements above or below each other?,z-index,stacking-order,layer-order,stack-level,z-index
+11,1,What value of the overflow property will hide any content that exceeds an element's box?,hidden,scroll,visible,auto,hidden
+11,1,Which property is used to control the spacing between characters in text?,letter-spacing,word-spacing,line-height,character-spacing,letter-spacing
+11,1,What is the default value of the display property for inline elements?,inline,block,inline-block,flex,inline
+11,1,How do you apply a linear gradient as a background image?,background:linear-gradient(),background-image:linear(),background-gradient,gradient(),background:linear-gradient()
+11,1,Which CSS property is used to set the minimum width of an element?,min-width,width,min-height,element-width,min-width
+11,1,How do you make text underline in CSS?,text-decoration:underline,font-decoration:underline,text-style:underline,underline:text,text-decoration:underline
+11,1,Which property is used to make an element invisible but still take up space?,visibility:hidden,display:none,opacity:0,invisible:hidden,visibility:hidden
+11,1,What CSS property is used to align flex items along the main axis?,justify-content,align-items,flex-direction,flex-align,justify-content
+11,1,Which value of the display property hides an element completely from the page layout?,none,hidden,block:none,invisible:none,none
+11,1,How do you specify that an element is not visible but still maintains its layout?,visibility:hidden,display:none,opacity:hidden,overflow:hidden,visibility:hidden
+11,1,Which property is used to add shadow around an element's box?,box-shadow,shadow,drop-shadow,outline-shadow,box-shadow
+11,1,What property is used to specify the maximum width of an element?,max-width,width,min-width,flex-width,max-width
+11,1,How do you specify a CSS rule that applies only to screen devices?,@media screen,screen-only,@screen,@viewport,@media screen
+11,1,Which property is used to control the layout direction in flexbox?,flex-direction,align-items,justify-content,direction:flex,flex-direction
+11,1,What property is used to control the space between flexbox items?,gap,spacing,item-space,row-gap,gap
+11,1,Which CSS property specifies whether an element is resizable by the user?,resize,overflow,content-resize,element-resize,resize
+11,1,What is the purpose of the z-index property?,controls stacking order,sets element size,defines background color,changes element position,controls stacking order
+11,1,How can you hide an element but still allow it to occupy space?,visibility:hidden,display:none,opacity:hidden,invisible:hidden,visibility:hidden
+11,1,Which CSS property controls the size of an element's margin?,margin,margins,spacing,padding-margin,margin
+11,1,Which property is used to position an element relative to the viewport?,fixed,relative,absolute,sticky,fixed
+11,1,Which value of the overflow property adds scrollbars when necessary?,auto,scroll,hidden,visible,auto
+11,1,What property is used to change the text color in CSS?,color,text-color,foreground-color,background-color,color
+11,1,Which value of the position property positions an element based on the scrolling of its container?,sticky,fixed,absolute,scroll:relative,sticky
+11,1,How do you specify an external CSS file in HTML?,<link rel="stylesheet" href="style.css">,<style src="style.css">,<stylesheet="style.css">,<css file="style.css">,<link rel="stylesheet" href="style.css">
+11,1,What is the purpose of the transform property in CSS?,applies 2D or 3D transformation,adds shadow,changes size of an element,controls visibility,applies 2D or 3D transformation
+11,1,Which property is used to define animation speed?,animation-duration,animation-speed,transition-duration,timing-function,animation-duration
+11,1,What does the display: grid property do?,creates a grid layout,creates a flexbox layout,applies columns,defines a table layout,creates a grid layout
+11,1,How do you create a gradient background?,background:linear-gradient(),background-image:gradient(),background-color-gradient,gradient:color,background:linear-gradient()
+11,1,Which property is used to change the background color of an element?,background-color,bg-color,color:background,fill-color,background-color
+11,1,How do you control the space between words in text?,word-spacing,letter-spacing,line-height,text-gap,word-spacing
+11,1,Which CSS property can be used to create a transition effect?,transition,animation,motion,transform,transition
+11,1,What value of the display property is used for flexbox containers?,flex,inline-flex,flex-box,box,flex
+11,1,How do you prevent text from wrapping to the next line?,white-space:nowrap,text-wrap:none,word-wrap:normal,line-break:none,white-space:nowrap
+11,1,Which property is used to set the background position of an element?,background-position,background-align,background-positioning,position:background,background-position
+11,1,How do you create a multi-column layout in CSS?,column-count,column-width,multi-column,layout-columns,column-count
+11,1,Which property is used to control the order of flex items?,order,flex-order,item-order,stacking-order,order
+11,1,How do you apply rounded corners to an element?,border-radius,corner-radius,border:round,rounding-radius,border-radius
+11,1,Which property is used to control the amount of space between the border and content of an element?,padding,margin,border-spacing,spacing,padding
+11,1,What value of the position property makes an element scroll along with its container?,sticky,fixed,absolute,relative,sticky
+11,1,Which property is used to change the font size of an element?,font-size,text-size,line-height,letter-spacing,font-size
+11,1,What is the purpose of the box-sizing property?,to control how the width and height of an element are calculated,define border size,apply box shadow,set padding,control width and height calculation
+11,1,How do you specify the space between the border and the edge of an element?,padding,border-spacing,margin,outline-padding,padding
+11,1,Which CSS property specifies how much the text will be stretched?,font-stretch,font-size,letter-spacing,text-width,font-stretch
+11,1,What property controls the animation delay?,animation-delay,animation-time,delay-time,delay-interval,animation-delay
+11,1,Which value of the flex-direction property arranges items in a row?,row,column,row-reverse,flex-row,row
+11,1,What is the purpose of the perspective property in CSS?,defines how far the 3D elements are from the viewer,controls 2D elements,changes color on hover,rotates the element,defines 3D distance
+11,1,Which property is used to change the opacity of an element?,opacity,visibility,display,alpha,opacity
+11,1,What property is used to specify the alignment of flex items along the cross axis?,align-items,justify-content,align-self,
+11,1,Which CSS property controls the text transformation of an element?,text-transform,transform-text,case-change,text-style,text-transform
+11,1,What is the purpose of the `grid-template-columns` property?,to define the number and size of columns in a grid layout,to set the background image,to control column spacing,define text alignment,to define column sizes
+11,1,How can you center an element horizontally in CSS?,margin: auto,display: block,align-items: center,use text-align:center,margin: auto
+11,1,Which property allows you to create a scrolling effect on background images?,background-attachment,background-position,background-scroll,background-fixed,background-attachment
+11,1,What does the `display: none` property do to an element?,removes it from the document flow,keeps it visible,hides it but retains space,creates a block element,removes it from the document flow
+11,1,Which property is used to control the vertical space between elements?,margin,padding,spacing,vertical-spacing,margin
+11,1,What is the default value of the `position` property in CSS?,static,relative,absolute,fixed,static
+11,1,How do you make an element flexible using Flexbox?,display: flex,display: block,display: inline-flex,display: grid,display: flex
+11,1,Which CSS property is used to add an outline to an element?,outline,outline-style,border,shadow,outline
+11,1,How do you create a CSS rule that only applies to print media?,@media print,@media screen,@media all,@media type,@media print
+11,1,What property controls the size of the border around an element?,border-width,border-style,border-color,border-spacing,border-width
+11,1,Which CSS property sets the opacity level for an element?,opacity,visibility,transparency,alpha,opacity
+11,1,How can you hide an element while keeping it in the layout?,visibility:hidden,display:none,opacity:0,hidden:hidden,visibility:hidden
+11,1,Which CSS property is used to control how an element will float?,float,position,display,clear,float
+11,1,What value of `text-decoration` is used to underline text?,underline,line,overline,none,underline
+11,1,Which property is used to specify the font family of an element?,font-family,font-style,font-weight,font-type,font-family
+11,1,What does the `flex-grow` property do in Flexbox?,defines how much a flex item will grow relative to the rest,controls the size of an element,sets minimum size,defines alignment,defines growth ratio
+11,1,Which property specifies the width of an element's border?,border-width,border-size,border-thickness,border-extent,border-width
+11,1,How do you create a responsive design using media queries?,@media screen and (max-width: 600px),@media query,@responsive screen,@media only screen,@media screen and (max-width: 600px)
+11,1,What is the default `position` value for elements in CSS?,static,relative,absolute,fixed,static
+11,1,Which property allows you to set the number of decimal places in a number?,decimal-place,number-format,precision,number-formatting,none
+11,1,How can you create a grid layout in CSS?,display: grid,display: box,display: flex,display: inline-grid,display: grid
+11,1,What does the `justify-content` property do in Flexbox?,aligns flex items along the main axis,controls spacing between items,sets item direction,defines wrap behavior,aligns flex items
+11,1,Which property is used to set the margin of an element?,margin,margins,margin-size,spacing,margin
+11,1,How do you change the color of an element when hovered over?,:hover pseudo-class,hover:hover,active:hover,focus:hover,:hover pseudo-class
+11,1,Which property is used to create a shadow effect on an element's box?,box-shadow,shadow,drop-shadow,outline,box-shadow
+11,1,What is the purpose of the `flex-basis` property?,sets the initial size of a flex item,defines item growth,controls item alignment,sets item direction,sets the size of a flex item
+11,1,How do you specify a fallback font in CSS?,font-family: 'Primary', 'Fallback';,font-family: 'Primary';,font-family: 'Primary' or 'Fallback';,font: 'Primary', 'Fallback';,font-family: 'Primary', 'Fallback';
+11,1,What does the `min-height` property do?,sets the minimum height of an element,controls height of child elements,defines maximum height,sets height to auto,sets minimum height
+11,1,Which CSS property is used to specify the background color of an element?,background-color,bg-color,background,fill-color,background-color
+11,1,How can you make an element’s font bold?,font-weight:bold,font-style:bold,font-size:bold,text-style:bold,font-weight:bold
+11,1,What property is used to align text in the center?,text-align:center,center-text,align:center,justify:center,text-align:center
+11,1,How do you create an effect that changes an element's style over time?,animation,transition,transform,style-change,transition
+11,1,Which CSS property defines the space between inline elements?,letter-spacing,word-spacing,line-height,spacing,letter-spacing
+11,1,What does the `align-items` property do in Flexbox?,aligns flex items along the cross axis,sets item order,controls wrap behavior,sets direction,aligns flex items
+11,1,How do you add space between the content of an element and its border?,padding,margins,spacing,border-spacing,padding
+11,1,Which property is used to control the visibility of an element?,visibility,display,opacity,fade,visibility
+11,1,What is the purpose of the `grid-template-rows` property?,to define the number and size of rows in a grid layout,controls the height of columns,sets background color,defines item spacing,to define row sizes
+11,1,Which CSS property allows you to create a vertical gradient?,background:linear-gradient(),background-image:linear-gradient(),background-gradient,gradient:vertical,background:linear-gradient()
+11,1,What does the `overflow-y` property control?,vertical overflow,background overflow,visibility of content,spacing,vertical overflow
+11,1,How do you specify that a background image should not repeat?,background-repeat:no-repeat,background:no-repeat,repeats:none,repeat:none,background-repeat:no-repeat
+11,1,Which property is used to define how an element responds to a user's scroll position?,scroll-behavior,overflow,positioning,transform,scroll-behavior
+11,1,What is the purpose of the `float` property?,to position elements side by side,align elements vertically,control visibility,define item size,to position elements side by side
+11,1,How do you change the display of an element to block?,display:block,visibility:block,position:block,block-display,display:block
+11,1,Which CSS property controls the width of an element's content?,width,height,max-width,min-width,width
+11,1,What does the `background-size` property do?,controls the size of a background image,sets the image color,defines background position,controls spacing,controls background image size
+11,1,Which property is used to apply multiple backgrounds to an element?,background,multiple-backgrounds,background-image,background-attachment,background
+11,1,What is the effect of `visibility: hidden` on an element?,hides it but maintains layout,removes it from layout,sets opacity to 0,changes its position,hides it but maintains layout
+11,1,Which property controls the size of a flex container?,flex-container-size,flex-basis,flex-grow,flex-shrink,flex-basis
+11,1,What does the `transition` property do?,creates smooth changes between styles,defines animation duration,controls text size,sets the display property,creates smooth changes between styles
+11,1,How do you hide text overflow in a box?,overflow:hidden,overflow:visible,overflow:auto,overflow:scroll,overflow:hidden
+11,1,Which property defines how to align a grid item inside its grid area?,align-items,align-content,grid-align,justify-items,align-items
+11,1,What does the `flex-direction` property control in Flexbox?,the direction in which flex items are laid out,spacing between items,alignment of items,how items grow,layout direction
+11,1,How can you create a transition effect for a button hover?,transition: all 0.3s,hover-transition: 0.3s,hover-effect: 0.3s,fade-effect: 0.3s,transition: all 0.3s
+11,1,What is the use of the `border-radius` property?,to create rounded corners,define border thickness,control visibility,set shadow effect,to create rounded corners
+11,1,How do you create a CSS rule for all elements of a specific type?,element-selector,all-selector,type-selector,tag-selector,element-selector
+11,1,What property is used to define how a browser renders a 3D transformed element?,perspective,transform-3D,depth,3D-transform,perspective
+11,1,Which property is used to add a text shadow?,text-shadow,shadow,text-effect,text-glow,text-shadow
+11,1,What does the `flex-wrap` property do in Flexbox?,controls whether flex items wrap onto multiple lines,defines flex direction,sets item spacing,aligns items,controls item wrapping
+11,1,Which property is used to control the color of text?,color,font-color,text-color,foreground-color,color
+11,1,How do you control the display of flex items in Flexbox?,flex-item,flex-style,flex-direction,flex-display,flex-direction
+11,1,What is the purpose of the `min-width` property?,sets the minimum width of an element,defines maximum width,controls height,defines alignment,sets minimum width
+11,1,How can you specify that text should be capitalized?,text-transform:uppercase,text-transform:capitalize,text-style:capital,text-case:capital,text-transform:uppercase
+11,1,Which property is used to specify a custom font size?,font-size,text-size,font-weight,custom-size,font-size
+11,1,What does the `cursor` property do in CSS?,controls the type of cursor displayed,defines mouse position,sets link behavior,controls scrolling,controls cursor type
+11,1,How can you center an element vertically within its parent?,margin: auto; align: center; padding: auto;margin: auto; vertical-align: center;margin: auto; height: auto; align: center;margin: auto; height: 100%; align: center;
+11,1,Which CSS property defines the space around an element's border?,margin,padding,border-spacing,spacing,margin
+11,1,How do you create a hover effect for a link?,:hover,link:hover,hover-effect:link,hover-link,:hover
+11,1,Which property is used to set the text indentation?,text-indent,text-offset,text-align,text-position,text-indent
+11,1,What does the `align-content` property do in Flexbox?,aligns flex lines in the container,sets item order,defines item spacing,controls item direction,aligns flex lines
+11,1,How can you set a fixed height for an element?,height: value,position: fixed,display: fixed,style: fixed,height: value
+11,1,What is the default value of the `box-sizing` property?,content-box,border-box,default,box-sizing-box,content-box
+11,1,How do you specify a fallback color for an element?,color: 'Primary', 'Fallback';,color: 'Primary';,color: 'Primary' or 'Fallback';,color: 'Primary', 'Fallback';,color: 'Primary', 'Fallback';
+11,1,What property is used to define the background image of an element?,background-image,image-background,background,img-source,background-image
+11,1,What does the `text-overflow` property do?,specifies how overflowed content that is not displayed is signaled,controls text color,defines font size,sets spacing,controls overflow text
+11,1,Which CSS property is used to set the display type of an element?,display,type,style,show,display
+11,1,How do you control the horizontal alignment of items in a Flexbox?,justify-content,align-items,align-content,flex-align,justify-content
+11,1,Which property is used to create space between the items of a grid layout?,gap,spacing,margin,padding,gap
+11,1,What does the `outline-style` property do?,defines the style of an outline,controls border color,sets spacing,defines margin,defines outline style
+11,1,How can you make an element semi-transparent?,opacity: 0.5,opacity: 0,visibility: 0.5,transparency: 0.5,opacity: 0.5
+11,1,What property is used to control the placement of a background image?,background-position,image-position,background-set,background-align,background-position
+11,1,What property is used to control the space between letters in text?,letter-spacing,text-spacing,word-spacing,spacing,letter-spacing
+11,1,Which property controls the font family of an element?,font-family,text-font,font-type,font-family,font-family
+11,1,How can you hide an element in CSS?,display: none;,visibility: hidden;,opacity: 0;,'none',display: none;
+11,1,What does the `float` property do?,positions elements to the left or right,defines element size,controls element stacking,aligns items,positions elements
+11,1,Which property is used to apply a shadow effect to an element's box?,box-shadow,text-shadow,shadow-effect,outline-shadow,box-shadow
+11,1,How can you create a grid layout in CSS?,display: grid;,display: flex;,display: box;,display: layout;,display: grid;
+11,1,Which property is used to set the width of an element?,element-width,width-size,box-width,width,width
+11,1,How do you create a CSS class?,.class-name{},class-name{},#class-name{},class: class-name{},class-name
+11,1,What does the `overflow` property do?,controls how content is handled that overflows,defines content visibility,controls element size,sets element position,controls overflow
+11,1,Which property is used to set the border style of an element?,border-style,border-type,border-setting,border-design,border-style
+11,1,How can you make text bold in CSS?,font-weight: bold;,font-style: bold;,text-bold;,font: bold;,font-weight: bold;
+11,1,What does the `display` property do in CSS?,specifies how an element is displayed,defines the size of an element,controls positioning,sets visibility,specifies display type
+11,1,Which property is used to change the color of an element's border?,border-color,border-style,border-background,border,background-color
+11,1,How do you apply a style to an element when it is hovered over?,element:hover{},element.onhover{},:hover{},element:hover{},element:hover{}
+11,1,What does the `flex-grow` property do in Flexbox?,defines how much a flex item will grow,sets item shrinkage,controls item spacing,aligns items,defines growth
+11,1,Which property is used to create rounded corners on an element?,border-radius,corners,round-corners,border-style,border-radius
+11,1,How can you center a block element horizontally?,margin: auto;,padding: auto;,text-align: center;,center-align: block;,margin: center;
+11,1,What does the `z-index` property control?,the stacking order of elements,element size,element position,element visibility,stacking order
+11,1,Which property controls the transparency of an element?,opacity,visibility,transparency,clear,opacity
+11,1,How can you apply a CSS style to all paragraphs?,p {},* {},p.all {},.p {},p * {}
+11,1,What does the `min-height` property do?,sets the minimum height of an element,defines maximum height,controls width,sets alignment,sets minimum height
+11,1,Which property is used to control the size of the text?,text-size,font-size,text-style,font-weight,font-size
+11,1,How do you create a responsive layout using CSS?,media queries,flexbox,grid,all above,all of the above
+11,1,What property is used to control the position of an element?,positioning,type,align,position,position
+11,1,Which property is used to create space inside an element?,padding,margins,spacing,area,padding
+11,1,What does the `background-repeat` property do?,controls how a background image is repeated,defines background size,sets image position,defines background color,controls image repeat
+11,1,How do you apply a shadow effect to text?,text-shadow:;shadow-text:,font-shadow:,text-effect:,text-shadow:
+11,1,What property is used to set the alignment of text?,text-align,font-align,alignment,text-style,text-align
+11,1,How can you make a list appear as a horizontal list?,display: inline; on li,display: block; on li,display: flex; on ul,display: inline-block; on ul,display: inline; on ul
+11,1,What does the `visibility` property control?,whether an element is visible or hidden,element display type,element size,element stacking,controls visibility
+11,1,Which property is used to set the opacity level of an element?,opacity-value,opacity,visibility,transparent,opacity
+11,1,How can you prevent an element from being affected by floats?,clear property,overflow:hidden,position:relative,display:inline,clear
+11,1,What property is used to specify how many columns an element should have in a grid layout?,grid-template-columns,column-count,column-width,column-layout,grid-template-columns
+11,1,How do you style a visited link in CSS?,a:visited{},a.link-visited{},a:active{},a:link-visited{},a.visited{}
+11,1,What does the `flex-direction` property do in Flexbox?,specifies the direction of flex items,defines spacing,aligns items,sets flex order,defines direction
+11,1,Which property is used to set the height of an element?,height-size,height,width,element-height,height
+11,1,How do you make an element's font italic?,font-style: italic;,font-italic: true;,font: italic;,text-italic: true;,font-style: italic;
+11,1,What does the `text-align` property do?,sets the alignment of text,controls text color,defines text size,sets font family,aligns text
+11,1,Which property defines the space between the border and the content of an element?,padding,margins,border-spacing,spacing,padding
+11,1,How do you set the background color of an element?,background-color:;,background:color;,background:;,color:background;,background-color:;
+11,1,What does the `border-collapse` property do?,controls the collapsing of table borders,defines border width,controls background,sets border style,collapses borders
+11,1,How can you create a fixed layout in CSS?,using fixed positioning,using relative positioning,using absolute positioning,all of above,using fixed positioning
+11,1,Which property is used to change the font style?,font-style,text-style,font-family,font-weight,font-style
+11,1,How do you set the maximum width of an element?,max-width:,max-size:,width:max;,max-width:max;max-width:,max-width:
+11,1,What does the `align-items` property do in Flexbox?,aligns flex items along the cross axis,sets item spacing,defines item order,aligns items,aligns flex items
+11,1,How do you create a linear gradient background?,background: linear-gradient();,background: gradient();,background-color: gradient();,background: linear-gradient:,background: linear-gradient();
+11,1,What does the `position: fixed;` property do?,positions an element relative to the viewport,positions an element relative to its parent,positions an element at its original position,sets fixed position,positions element fixed
+11,1,How can you add spacing between elements in a Flexbox container?,justify-content,align-items,flex-spacing,gap,gap
+11,1,What property is used to control the size of the border?,border-size,border-width,border-style,border-thickness,border-width
+11,1,How do you create an animated effect for an element?,animation property,transition property,keyframes property,transform property,animation property
+11,1,What does the `transform` property do in CSS?,applies a transformation to an element,changes element color,sets element size,positions an element,transforms elements
+11,1,Which property is used to control the visibility of an element without removing it from the document flow?,visibility,opacity,display,clear,visibility
+11,1,How can you make a responsive font size in CSS?,using media queries,using percentages,using viewport units,all of above,all of the above
+11,1,What does the `filter` property do in CSS?,applies graphical effects to elements,controls visibility,sets background image,transforms elements,applies effects
+11,1,How do you specify multiple background images?,background: url1, url2;,background: url1; url2;,background-images:url1,url2;,background:url1 url2;,background: url1, url2;
+11,1,What does the `cursor: pointer;` property do?,changes the cursor to a hand icon,sets mouse position,controls scrolling,defines item behavior,changes cursor
+11,1,Which property is used to set the text overflow behavior?,overflow,overflow-x,overflow-y,text-overflow,text-overflow
+11,1,How do you apply styles to an active link?,a:active{},a.active-link{},a:visited{},a:focus{},a:active{}
+11,1,What does the `background-attachment` property control?,how a background image is fixed in the viewport,defines image size,controls element size,sets position,controls background
+11,1,Which property defines the size of the content box?,width,height,box-size,content-size,box-sizing
+11,1,How can you create a custom property in CSS?,using --custom-property,using custom-property,using property,using $custom-property,using --custom-property
+11,1,What does the `gap` property do in CSS Grid?,sets the space between grid items,controls background size,defines item order,sets border spacing,controls gap
+11,1,How do you apply a 3D transform to an element?,transform: perspective();,transform: rotate3D();,transform: translate3D();,transform: rotate3D;,transform: perspective();
+11,1,What property is used to style the scrollbar in webkit browsers?,::-webkit-scrollbar,scrollbar-style::-webkit,scrollbar::-webkit,scrollbar-style::-web,::-webkit-scrollbar
+11,1,What does the `box-sizing` property do?,controls how the total width and height of an element are calculated,defines padding size,sets margin size,controls overflow,calculates box size
+11,1,Which property is used to create a flexible layout?,flex-grow,flex-basis,flex-shrink,display:flex;,display:flex;
+11,1,How do you change the color of a link when it is hovered over?,a:hover { color: red; },a.link-hover { color: red; },a:hover { text-color: red; },a.hover { color: red; },a:hover { color: red; }
+11,1,What does the `justify-content` property do in Flexbox?,aligns items along the main axis,aligns items along the cross axis,sets spacing,defines item size,aligns items
+11,1,How can you apply a gradient background to an element?,background: gradient();,background: linear-gradient();,background: color-gradient();,background-color: gradient;,background: linear-gradient();
+11,1,What does the `display: inline-block;` property do?,allows elements to sit next to each other,sets elements to block level,defines inline elements,displays block and inline elements,displays inline-block
+11,1,Which property is used to create a grid gap?,grid-gap,column-gap,row-gap,gap,gap
+11,1,How can you specify a font fallback in CSS?,font-family: 'Arial', sans-serif;,font-family: 'Arial', 'Helvetica';,font-family: sans-serif, 'Arial';,font-family: 'Arial';,font-family: 'Arial', 'Verdana';
+11,1,What does the `max-height` property do?,sets the maximum height of an element,defines minimum height,controls width,sets alignment,sets maximum height
+11,1,How do you make an element sticky?,position: sticky;,position: fixed;,position: relative;,position: absolute;,position: sticky;
+11,1,Which property controls the visibility of an element?,visibility,opacity,display,clear,visibility
+11,1,What does the `white-space` property do?,controls how whitespace is handled in an element,defines spacing,sets overflow,controls word wrapping,controls whitespace
+11,1,How can you create a vertical center alignment in Flexbox?,align-items: center;,justify-content: center;,align-center: true;,display: flex;,align-items: center;
+11,1,What does the `transition` property do in CSS?,creates smooth transitions between property changes,defines duration of an animation,controls opacity,sets delay time,creates transitions
+11,1,How do you change the cursor to a crosshair?,cursor: crosshair;,cursor: pointer;,cursor: grab;,cursor: move;,cursor: crosshair;
+11,1,Which property controls the background color of an element?,background-color,bg-color,background,bg,background-color
+11,1,What does the `overflow-x` property do?,controls horizontal overflow,controls vertical overflow,sets visibility,defines size,controls overflow
+11,1,How can you apply a media query in CSS?,@media screen and (max-width: 600px) { },@media (max-width: 600px) { },media query: (max-width: 600px) { },@media (max-width: 600px) { },@media screen and (max-width: 600px) { }
+11,1,What does the `background-size` property do?,controls the size of the background image,defines image color,sets size of elements,controls background position,controls size
+11,1,How do you create a flex container?,display: flex;,display: inline-flex;,display: block;,display: grid;,display: flex;
+11,1,Which property is used to apply styles to an input element when it is focused?,input:focus { },input:active { },input:hover { },input:focus { color: red; },input:focus { }
+11,1,What does the `position: relative;` property do?,positions an element relative to its normal position,positions an element fixed to viewport,positions an element at a specific position,defines relative positioning,positions relative
+11,1,How can you create a custom CSS variable?,--my-variable: value;,my-variable: value;,var(--my-variable),variable: my-variable;,--my-variable;
+11,1,What does the `align-self` property do in Flexbox?,allows individual items to override the align-items property,controls item spacing,defines item order,sets item size,aligns individual items
+11,1,Which property is used to change the line height in CSS?,line-height,height-spacing,line-space,line-height,line-height
+11,1,How can you create a responsive image?,img { max-width: 100%; height: auto; },img { width: auto; height: auto; },img { width: 100%; height: 100%; },img { width: 50%; height: auto; },img { max-width: 100%; height: auto; }
+11,1,What does the `cursor: wait;` property do?,changes the cursor to a waiting icon,sets mouse position,controls scrolling,defines item behavior,changes cursor
+11,1,How do you create a fixed header in CSS?,position: fixed;,position: absolute;,position: relative;,position: sticky;,position: fixed;
+11,1,What does the `text-decoration` property do?,controls the decoration of text,defines text color,controls text size,sets text alignment,decorates text
+11,1,How can you remove the default list styling in CSS?,list-style: none;,list-style-type: none;,ul { list-style: none; },ol { list-style: none; },list-style: none;
+11,1,Which property is used to control the visibility of an element?,visibility,opacity,display,clear,visibility
+11,1,What does the `flex-wrap` property do in Flexbox?,controls whether flex items should wrap onto multiple lines,defines spacing,sets order of items,aligns items,controls wrapping
+11,1,How can you create a responsive grid layout?,using grid-template-columns with percentages,using fixed widths,using display: block;,using flexbox,using grid-template-columns
+11,1,What property is used to set the border color of an element?,border-color,border-style,border-background,border,background-color
+11,1,How do you create a hover effect for buttons?,button:hover { },button.active { },button:focus { },button:hover { background: red; },button:hover {}
+11,1,What does the `clip-path` property do?,creates complex shapes for an element,controls overflow,sets background image,defines border radius,creates clipping
+11,1,How can you apply a border radius to an element?,border-radius: 10px;,border-style: round;,border-corners: 10px;,border-radius: round;,border-radius: 10px;
+11,1,What does the `text-overflow` property do?,controls how overflowed text is displayed,defines text color,controls text alignment,sets text size,controls text overflow
+11,1,How do you set the background color of an entire page?,body { background-color: blue; },html { background-color: blue; },body { bg-color: blue; },html { bg: blue; },body { background-color: blue; }
+11,1,What property is used to align text within an element?,text-align,font-align,align-text,text-style,text-align
+11,1,How can you apply a box shadow to an element?,box-shadow: 0px 4px 2px gray;,shadow: 0px 4px 2px gray;,box-shadow: 0 0 5px black;,shadow: 0 0 5px black;,box-shadow: 0px 4px 2px gray;
+11,1,What does the `visibility: hidden;` property do?,hides an element but takes up space,removes an element from the document flow,controls opacity,defines color,controls visibility
+11,1,How do you style a disabled button in CSS?,button:disabled { },button.disabled { },button:focus { },button.active { },button:disabled {}
+11,1,What does the `transition-duration` property do?,sets the duration of a transition,controls timing function,defines delay,sets transition,controls duration
+11,1,Which property is used to control the size of an element's margin?,margin-size,margin,margin-width,element-margin,margin
+11,1,How can you apply a background image to an element?,background-image: url('image.png');,background: image('image.png');,bg-image: url('image.png');,bg: url('image.png');,background-image: url('image.png');
+11,1,What does the `grid-template-areas` property do?,defines named grid areas for layout,sets grid item sizes,controls grid spacing,defines item order,controls layout
+11,1,How can you center an element vertically and horizontally?,using margin auto and fixed height,using display:flex and margin:auto,using position:absolute and margin:auto,using display:inline-block,using margin auto and padding
+11,1,Which property is used to change the font size of an element?,font-size,font-style,font-weight,text-size,font-size
+11,1,What does the `position: sticky;` property do?,positions an element based on scroll position,positions an element relative to the viewport,defines fixed positioning,controls overflow,positions sticky
+11,1,How do you add a shadow effect to text?,text-shadow: 1px 1px 2px gray;,shadow-text: 1px 1px 2px gray;,text-shadow: gray 1px 1px;,text-shadow: 1px 1px gray;,text-shadow: 1px 1px 2px gray;
+11,1,What does the `pointer-events` property do?,controls whether an element can be the target of mouse events,defines cursor behavior,sets visibility,controls z-index,controls mouse events
+11,1,How can you create a fixed background image?,background-attachment: fixed;,background-fixed: true;,background-position: fixed;,background-image: fixed;,background-attachment: fixed;
+11,1,What does the `flex-direction` property do in Flexbox?,controls the direction of flex items,defines item order,controls item alignment,sets spacing,defines direction
+11,1,How do you hide an element in CSS?,display: none;,visibility: none;,opacity: 0;,hide: true;,display: none;
+11,1,What does the `border-collapse` property do?,controls the behavior of borders in tables,sets border color,defines spacing,controls size,collapses borders
+11,1,How can you create a CSS transition?,transition: property duration;,,transition-property: 'color';,transition-property: 'color' duration: 0.5s;,transition: color 0.5s;,transition: color 0.5s;
+11,1,What property is used to define a CSS animation's duration?,animation-duration,animation-time,animation-speed,animation-length,animation-duration
+11,1,How do you create a CSS class selector?,.className { },className { },class className { },#className { },className {};
+11,1,What does the `flex-grow` property do in Flexbox?,controls how much an item will grow relative to the rest,sets item size,defines spacing,controls wrapping,controls growth
+11,1,How can you specify a specific font weight?,font-weight: bold;,font-weight: 700;,font-weight: strong;,font-weight: heavy;,font-weight: 700;
+11,1,What property is used to change the text color of an element?,color,text-color,font-color,foreground-color,color
+11,1,How do you create a CSS transition effect?,transition: all 0.3s ease;,transition-effect: 0.3s;,transition-duration: 0.3s;,transition: 0.3s;,transition: all 0.3s ease;
+11,1,Which property controls the alignment of text within a block?,text-align,align-text,block-align,justify-text,text-align
+11,1,What does the `display: none;` property do?,hides an element completely,removes an element from the flow,defines visibility,controls display,removes element
+11,1,How can you prevent text from wrapping?,white-space: nowrap;,text-wrap: none;,overflow: hidden;,wrap: none;,white-space: nowrap;
+11,1,What property is used to control the spacing between lines of text?,line-height,spacing,line-spacing,spacing-line,line-height
+11,1,How do you apply a style to all paragraphs?,p { },all p { },p:all { },p:style { },p {};
+11,1,What does the `overflow: hidden;` property do?,hides any overflowed content,sets element visibility,defines scrolling,controls text,removes overflow
+11,1,How can you change the text decoration?,text-decoration: underline;,text-decoration: bold;,text-decoration: italic;,text-decoration: strikethrough;,text-decoration: underline;
+11,1,What is the default value of `position` in CSS?,static,relative,absolute,sticky,static
+11,1,How do you create a responsive design using CSS?,using media queries,using fixed widths,using percentages,using floats,using media queries
+11,1,Which property defines the size of the font?,font-size,text-size,font-style,letter-spacing,font-size
+11,1,How do you apply styles to an element that has focus?,element:focus { },element:active { },element:focus { color: blue; },element:focus { style: blue; },element:focus {}
+11,1,What does the `float` property do?,controls the positioning of an element,defines z-index,sets margin,aligns items,controls floating
+11,1,How can you create a gradient border?,border-image: linear-gradient();,border: gradient;,border-image: url();,border: linear-gradient;,border-image: linear-gradient();
+11,1,What does the `flex-basis` property do in Flexbox?,defines the default size of an element,controls growth,sets item alignment,defines item spacing,controls basis
+11,1,How can you change the font style to italic?,font-style: italic;,font-weight: italic;,font-italic: true;,font-style: oblique;,font-style: italic;
+11,1,Which property is used to define the maximum width of an element?,max-width,width:max,maximum-width,max-size,max-width
+11,1,How do you change the background color of a button?,button { background-color: blue; },button { bg-color: blue; },button { color: blue; },button { background: blue; },button { background-color: blue; }
+11,1,What does the `:nth-child()` selector do?,selects elements based on their order in the parent,selects all children,selects only the first child,defines child styles,controls child selection
+11,1,How do you create a custom scrollbar?,::-webkit-scrollbar { },::-scrollbar { },scrollbar: custom;,scrollbar: default;,::-webkit-scrollbar { }
+11,1,What property is used to set the transparency of an element?,opacity,color-opacity,transparency,visible-opacity,opacity
+11,1,How do you create a box shadow?,box-shadow: 2px 2px 5px gray;,shadow: 2px 2px 5px gray;,shadow-box: 2px 2px 5px gray;,box-shadow: 0 0 10px black;,box-shadow: 2px 2px 5px gray;
+11,1,What does the `list-style-type` property control?,the bullet style of list items,defines list color,controls item spacing,sets list margins,controls list type
+11,1,How can you style an input field?,input { },input:style { },input { background: blue; },input { color: red; },input {};
+11,1,What does the `visibility: visible;` property do?,shows an element,controls z-index,defines element size,sets color,controls visibility
+11,1,How do you set a specific font family?,font-family: 'Arial', sans-serif;,font-family: 'Arial';,font-family: sans-serif;,font-family: 'Helvetica';,font-family: 'Arial', 'Helvetica';
+11,1,Which property is used to define the height of an element?,height,size,height-size,element-height,height
+11,1,What does the `white-space: pre;` property do?,preserves whitespace and line breaks,controls overflow,sets display behavior,defines wrapping,controls whitespace
+11,1,How can you apply a background color and image simultaneously?,background: url(image) color;,background-color: blue; background-image: url(image);,background: color url(image);,background: image url();,background: blue url(image);
+11,1,What does the `object-fit` property do?,defines how an element fits within its box,controls size,sets alignment,defines shape,controls fitting
+11,1,How do you change the cursor to a pointer?,cursor: pointer;,cursor: move;,cursor: grab;,cursor: hand;,cursor: pointer;
+11,1,What does the `animation-fill-mode` property do?,controls how styles are applied during animation,defines duration,sets keyframes,controls timing,controls fill mode
+11,1,How can you style a visited link?,a:visited { },a.active { },a:visited { color: purple; },a:hover { color: purple; },a:visited {}
+11,1,What does the `clip` property do?,defines a rectangular area to show,sets overflow,controls display,defines borders,controls clipping
+11,1,How do you create a text shadow effect?,text-shadow: 2px 2px 5px black;,shadow-text: 2px 2px 5px black;,text-shadow: 2px 2px 5px gray;,text-shadow: 0 0 5px black;,text-shadow: 2px 2px 5px black;
+11,1,Which property is used to control the size of an element's padding?,padding-size,padding,padding-width,element-padding,padding
+11,1,How do you make a responsive image?,img { max-width: 100%; height: auto; },img { width: 100%; },img { responsive: true; },img { fit: cover; },img { max-width: 100%; height: auto; }
+11,1,What does the `:hover` pseudo-class do?,applies styles when the user hovers over an element,selects active elements,applies styles on focus,applies styles on click,applies hover styles
+11,1,How do you define a CSS variable?,--variable-name: value;,var: variable-name;,variable: name;,let variable-name: value;,--variable-name: value;
+11,1,What is the purpose of the `z-index` property?,controls the stacking order of elements,defines size,sets visibility,controls position,controls stacking
+11,1,Which property is used to change the display of an element to a block?,display: block;,block-display: true;,display: inline;,display: inline-block;,display: block;
+11,1,How do you center an element horizontally?,margin: auto;,align: center;,text-align: center;,display: flex;,margin: auto;
+11,1,What does the `border-radius` property do?,creates rounded corners,sets border width,defines border color,controls size,creates circular borders
+11,1,How do you remove an element's margin?,margin: 0;,remove-margin: true;,margin: none;,margin: auto;,margin: 0;
+11,1,What property is used to change the cursor when hovering over a link?,cursor: pointer;,cursor: move;,cursor: hover;,cursor: link;,cursor: pointer;
+11,1,How can you create a CSS animation?,@keyframes animation-name { },animation: name;,@animation: animation-name;,animation: create;,@keyframes animation-name {}
+11,1,What does the `align-items` property do in Flexbox?,aligns flex items along the cross axis,controls growth,defines spacing,controls direction,sets alignment
+11,1,How can you add space between elements?,margin,spacing,padding,space-between,margin
+11,1,Which property controls the text transformation?,text-transform,font-transform,transform,case,letter-spacing
+11,1,How do you define a grid layout in CSS?,display: grid;,layout: grid;,grid-layout: true;,grid: true;,display: grid;
+11,1,What does the `opacity` property do?,controls the transparency of an element,sets color,defines size,controls visibility,controls display
+11,1,How do you style a link when it is not visited?,a:link { },a:visited { },a:hover { },a:active { },a:link {}
+11,1,What does the `min-height` property do?,sets the minimum height of an element,controls maximum height,defines size,controls overflow,sets minimum height
+11,1,How do you use media queries in CSS?,@media screen and (max-width: 600px) { },media-query: true;,media: screen { },@media-query: screen { },@media screen and (max-width: 600px) {}
+11,1,What is the default value of the `list-style-type` property?,disc,square,none,decimal,disc
+11,1,How can you create a multi-column layout?,column-count: 3;,columns: 3;,multi-column: true;,column-layout: 3;,column-count: 3;
+11,1,What does the `flex-wrap` property do in Flexbox?,defines whether flex items should wrap onto multiple lines,controls direction,sets item order,controls growth,defines wrapping
+11,1,How do you set the space between grid items?,grid-gap: 10px;,gap: 10px;,grid-space: 10px;,spacing: 10px;,grid-gap: 10px;
+11,1,Which property controls the vertical alignment of text?,vertical-align,text-align,align-text,line-height,text-align
+11,1,How do you add a background image to an element?,background-image: url('image.jpg');,background: image('image.jpg');,image: background('image.jpg');,background-url: url('image.jpg');,background-image: url('image.jpg');
+11,1,What does the `position: sticky;` property do?,makes an element stick to a defined position on scroll,defines fixed position,controls z-index,sets visibility,controls position
+11,1,How can you create a transition effect on hover?,element:hover { transition: all 0.3s; },element:hover { effect: transition; },element:hover { style: transition; },element:hover { all: 0.3s; },element:hover { transition: all 0.3s; }
+11,1,What property controls the space between the content and the border of an element?,padding,margin,border-spacing,spacing,content-spacing
+11,1,How do you set the text alignment to justify?,text-align: justify;,justify-text: true;,align: justify;,text-align: center;,text-align: justify;
+11,1,What does the `border-style` property do?,defines the style of the border,sets border color,controls border width,defines border spacing,controls border style
+11,1,How can you change the order of flex items?,order: 1;,flex-order: 1;,item-order: 1;,flex-direction: column;,order: 1;
+11,1,What property is used to control the size of the margin?,margin-size,margin,margin-width,element-margin,margin
+11,1,How do you create a circle shape using CSS?,border-radius: 50%;,shape: circle;,border-radius: 100%;,border: circle;,border-radius: 50%;
+11,1,What does the `visibility: hidden;` property do?,hides an element but maintains its space,removes an element from the flow,defines visibility,controls size,sets color
+11,1,How can you create an image gallery using CSS?,using display: grid;,using flexbox;,using floats;,using positioning;,using display: grid;
+11,1,What is the purpose of the `background-repeat` property?,controls whether a background image repeats,defines background size,sets background position,controls background color,controls repetition
+11,1,How do you style a button?,button { color: white; background: blue; },button:style { },button { style: blue; },button { background-color: blue; },button { color: white; background: blue; }
+11,1,What does the `float: right;` property do?,floats an element to the right,sets position,controls alignment,defines size,controls floating
+11,1,How can you create a CSS class?,.classname { },class: classname { },classname: true;,class: classname;,classname {}
+11,1,What does the `text-indent` property do?,indents the first line of text,controls spacing,sets margin,defines alignment,controls indentation

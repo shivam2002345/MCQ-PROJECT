@@ -6,17 +6,14 @@ const findUserByEmail = async (email) => {
   return result.rows[0];
 };
 
-// Create new user
-const createUser = async (name, email, password) => {
+// Create new user with user_count and allowed_count
+const createUser = async (name, email, password, user_count = 0, allowed_count = 1) => {
   const result = await pool.query(
-    'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING user_id',
-    [name, email, password]
+    'INSERT INTO users (name, email, password, user_count, allowed_count) VALUES ($1, $2, $3, $4, $5) RETURNING user_id',
+    [name, email, password, user_count, allowed_count]
   );
   return result.rows[0];
 };
-
-module.exports = { findUserByEmail, createUser };
-
 
 // Get user details by user ID
 const getUserDetails = async (userId) => {
@@ -24,6 +21,15 @@ const getUserDetails = async (userId) => {
   const result = await pool.query(query, [userId]);
   return result.rows[0];
 };
+//get all user
+const getAllUsers = async () => {
+  try {
+      const result = await pool.query('SELECT name, email FROM users');
+      return result.rows;
+  } catch (err) {
+      throw new Error('Error fetching users: ' + err.message);
+  }
+};
 
 
-module.exports = { createUser, findUserByEmail ,getUserDetails};
+module.exports = { createUser, findUserByEmail,getAllUsers, getUserDetails };

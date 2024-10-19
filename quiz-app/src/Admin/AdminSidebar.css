@@ -1,0 +1,128 @@
+/* Sidebar container */
+.admin-sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Dark theme for sidebar */
+    height: 100vh;
+    padding: 20px;
+    color: #ecf0f1;
+    transition: all 0.3s ease-in-out; /* Smooth transition for the entire sidebar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+}
+
+/* Sidebar menu list */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual sidebar links */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 14px; /* Reduced text size */
+    font-weight: 400;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px; /* Rounded corners for links */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding a gradient hover effect for the background */
+.sidebar-link:hover {
+    background-image: linear-gradient(135deg, #3498db, #9b59b6);
+    color: #fff;
+    transform: translateX(5px); /* Subtle slide effect on hover */
+}
+
+/* Sidebar icons with animated color transitions */
+.sidebar-icon {
+    margin-right: 12px;
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Animated icons: color shift and slight scaling on hover */
+.sidebar-link:hover .sidebar-icon {
+    color: #f39c12; /* Bright icon color on hover */
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+/* Shading effect on icons */
+.sidebar-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for icon shading */
+.sidebar-link:hover .sidebar-icon::before {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+/* Special logout button styles */
+.logout {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    text-align: left;
+    width: 100%;
+    color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.logout:hover {
+    background-image: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.logout .sidebar-icon {
+    margin-right: 12px;
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logout:hover .sidebar-icon {
+    color: #f1c40f;
+    transform: scale(1.2);
+}
+
+/* Responsive Sidebar for smaller screens */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        position: sticky;
+    }
+
+    .sidebar-link {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .logout {
+        padding: 10px;
+    }
+}

@@ -1,28 +1,143 @@
-.profile-page {
-    padding: 20px;
+/* Container for the entire profile */
+.container-fluid {
+  padding: 20px; /* Padding for the container */
+}
+
+/* Card styling */
+.profile-card {
+  background-color: white; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  margin-top: 20px; /* Space from top */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Profile heading styling */
+.profile-heading {
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: #ff5722; /* Orange color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* User info section styling */
+.user-info {
+  padding: 20px; /* Padding for user info */
+}
+
+/* Individual info item styling */
+.info-row {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between items */
+  margin-bottom: 10px; /* Space between rows */
+}
+
+.info-item {
+  flex: 1; /* Equal width for each item */
+}
+
+.info-label {
+  font-weight: bold; /* Bold labels */
+  color: #0059ff; /* Yellow color */
+}
+
+.info-value {
+  color: #333; /* Dark text for readability */
+}
+
+/* Test history section styling */
+.test-history-heading {
+  font-size: 2rem; /* Heading size */
+  color: #ff5722; /* Orange color */
+  margin-top: 20px; /* Space above the heading */
+}
+
+/* Table styling */
+.table {
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above the table */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 165, 0, 0.1); /* Light orange for odd rows */
+}
+
+.table-bordered {
+  border: 1px solid #050505; /* Yellow border */
+}
+
+/* Button styling */
+.btn {
+  transition: background 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.animated-button {
+  background: linear-gradient(135deg, #ff4081, #ffab40); /* Gradient background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button hover effect */
+.animated-button:hover {
+  background: linear-gradient(135deg, #ffab40, #ff4081); /* Inverted gradient on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Analytics section styling */
+.analytics-section {
+  margin-top: 20px; /* Space from above */
+}
+
+/* Analytics heading styling */
+.analytics-heading {
+  font-size: 2rem; /* Heading size */
+  color: #ff5722; /* Orange color */
+}
+
+/* Card styling for analytics */
+.analytics-card {
+  background-color: rgba(255, 165, 0, 0.7); /* Light orange background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Question breakdown heading */
+.question-breakdown-heading {
+  font-size: 1.5rem; /* Heading size */
+  color: #ffcc00; /* Yellow color */
+}
+
+/* List group item styling */
+.list-group-item {
+  background-color: rgba(255, 204, 0, 0.1); /* Light yellow background */
+  border: 1px solid #ffcc00; /* Yellow border */
+  margin-bottom: 10px; /* Space below each item */
+}
+
+/* Notification styling */
+.alert {
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space from above */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-heading {
+      font-size: 2rem; /* Smaller font size for mobile */
   }
-  
-  .user-details {
-    margin-bottom: 20px;
+
+  .test-history-heading {
+      font-size: 1.5rem; /* Smaller heading for mobile */
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+  .analytics-heading {
+      font-size: 1.5rem; /* Smaller heading for mobile */
   }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+
+  .animated-button {
+      font-size: 1rem; /* Smaller button font size */
+      padding: 8px 16px; /* Adjust padding */
   }
-  
-  th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+}

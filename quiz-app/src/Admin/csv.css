@@ -1,0 +1,56 @@
+/* CsvUploader.css */
+.csv-uploader-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f2f5; /* Light background to differentiate */
+  }
+  
+  .csv-uploader-container {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+  }
+  
+  .csv-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .csv-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .csv-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .csv-upload-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .csv-upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .csv-message {
+    margin-top: 15px;
+    color: #28a745;
+    font-size: 16px;
+  }
+  

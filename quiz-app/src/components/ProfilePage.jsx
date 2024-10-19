@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { isAuthenticated } from '../utils/auth'; // Import the auth function
 import Navbar from './Navbar';
+import './ProfilePage.css'; // Import your custom CSS file
 
 const Profile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -26,11 +27,51 @@ const Profile = () => {
     }
   };
 
+  const fetchUserDetail = async () => {
+    if (!userId) {
+      setError('No user ID found. Please log in again.');
+      return;
+    }
+
+    try {
+      setLoading(true); 
+      const response = await axios.get(`http://localhost:8080/api/users/${userId}`);
+      console.log("User details response:", response.data); 
+
+      if (response.data) {
+        setUserDetails({
+          name: response.data.name,
+          email: response.data.email,
+          allowed_count: response.data.allowed_count,
+        });
+        console.log('UserDetails set:', {
+          name: response.data.name,
+          email: response.data.email,
+          allowed_count: response.data.allowed_count,
+        });
+      } else {
+        setError('No user details available.');
+      }
+    } catch (err) {
+      console.error('Error fetching user details:', err);
+      setError('Error fetching user details. Please try again later.');
+    } finally {
+      setLoading(false); 
+    }
+  };
   const fetchUserProfile = async () => {
     try {
       const response = await axios.get(`http://localhost:8080/api/users/${userId}/profile`);
-      setUserDetails(response.data.userDetails);
-      setTestHistory(response.data.exams); // Correctly reference the exams array
+      if (response.data.userDetails) {
+        setUserDetails(prevDetails => ({
+          ...prevDetails,
+          ...response.data.userDetails,
+        }));
+      }
+
+      if (response.data.exams && response.data.exams.length > 0) {
+        setTestHistory(response.data.exams);
+      }
     } catch (err) {
       setError('Error fetching user profile. Please try again later.');
     } finally {
@@ -73,13 +114,22 @@ const Profile = () => {
   useEffect(() => {
     if (userId) {
       console.log(`Component loaded with userId: ${userId}`);
-      fetchUserProfile();
+      fetchUserDetail(); 
+      fetchUserProfile(); 
     } else {
       console.error('No user ID provided.');
       setError('No user ID provided.');
       setLoading(false);
     }
   }, [userId]);
+
+  useEffect(() => {
+    console.log('User Details State:', userDetails);
+  }, [userDetails]);
+
+  useEffect(() => {
+    console.log('Profile component rendered');
+  });
 
   if (loading) {
     return <div className="text-center">Loading...</div>;
@@ -89,20 +139,37 @@ const Profile = () => {
     return <div className="alert alert-danger">{error}</div>;
   }
 
+
   return (
     <>
       <Navbar />
       <div className="container-fluid">
-        <div className="card shadow-sm p-4 mb-4">
-          <h2 className="text-center mb-4">User Profile</h2>
-          {userDetails && (
-            <div className="mb-4">
-              <p><strong>Email:</strong> {userDetails.email}</p> {/* Show email at the top */}
-              <p><strong>Name:</strong> {userDetails.name}</p>
+        <div className="card shadow-lg profile-card">
+          <h2 className="text-center mb-4 profile-heading">User Profile</h2>
+          {userDetails ? (
+            <div className="mb-4 user-info">
+              <div className="info-row">
+                <div className="info-item">
+                  <span className="info-label">Name:</span>
+                  <span className="info-value">{userDetails.name}</span>
+                </div>
+                <div className="info-item">
+                  <span className="info-label">Email:</span>
+                  <span className="info-value">{userDetails.email}</span>
+                </div>
+              </div>
+              <div className="info-row">
+                <div className="info-item">
+                  <span className="info-label">Allowed Count:</span>
+                  <span className="info-value">{userDetails.allowed_count}</span>
+                </div>
+              </div>
             </div>
+          ) : (
+            <div className="alert alert-info">No user details available.</div>
           )}
 
-          <h3 className="mb-3">Test History</h3>
+          <h3 className="mb-3 test-history-heading">Test History</h3>
           {testHistory && testHistory.length > 0 ? (
             <div className="table-responsive">
               <table className="table table-bordered table-striped">
@@ -116,7 +183,7 @@ const Profile = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {testHistory.slice(0, visibleTests).map((test) => ( // Only show visible tests
+                  {testHistory.slice(0, visibleTests).map((test) => (
                     <tr key={test.exam_id}>
                       <td>{test.technology}</td>
                       <td>{test.level}</td>
@@ -124,9 +191,8 @@ const Profile = () => {
                       <td>{new Date(test.exam_date).toLocaleString()}</td>
                       <td>
                         <button
-                          className="btn btn-primary btn-sm"
-                          style={{ display: 'block', width: '100%' }}
-                          onClick={() => handleGetAnalytics(test.result_id)} // Change to result_id
+                          className="btn btn-primary btn-sm animated-button"
+                          onClick={() => handleGetAnalytics(test.result_id)}
                         >
                           Get Detailed Analytics
                         </button>
@@ -135,13 +201,13 @@ const Profile = () => {
                   ))}
                 </tbody>
               </table>
-              {visibleTests < testHistory.length && ( // Show "Show More" button if there are more tests
-                <button className="btn btn-primary" onClick={handleShowMore}>
+              {visibleTests < testHistory.length && (
+                <button className="btn btn-primary animated-button" onClick={handleShowMore}>
                   Show More
                 </button>
               )}
-              {visibleTests > 4 && ( // Show "Show Less" button if more than 4 tests are visible
-                <button className="btn btn-secondary" onClick={handleShowLess}>
+              {visibleTests > 4 && (
+                <button className="btn btn-secondary animated-button" onClick={handleShowLess}>
                   Show Less
                 </button>
               )}
@@ -151,11 +217,11 @@ const Profile = () => {
           )}
 
           {analytics && activeAnalytics && (
-            <div className="mt-4">
-              <h3>Analytics Overview</h3>
+            <div className="mt-4 analytics-section">
+              <h3 className="analytics-heading">Analytics Overview</h3>
               <div className="row">
                 <div className="col-md-6">
-                  <div className="card text-center mb-3">
+                  <div className="card text-center mb-3 analytics-card">
                     <div className="card-body">
                       <h5 className="card-title">Score</h5>
                       <p className="card-text" style={{ fontSize: '2rem' }}>{analytics.score}</p>
@@ -163,7 +229,7 @@ const Profile = () => {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div className="card text-center mb-3">
+                  <div className="card text-center mb-3 analytics-card">
                     <div className="card-body">
                       <h5 className="card-title">Total Questions</h5>
                       <p className="card-text" style={{ fontSize: '2rem' }}>
@@ -174,7 +240,7 @@ const Profile = () => {
                 </div>
               </div>
 
-              <h5>Question Breakdown</h5>
+              <h5 className="question-breakdown-heading">Question Breakdown</h5>
               <div className="list-group">
                 {analytics.selected_answers ? (
                   analytics.selected_answers.map((item, index) => (
@@ -195,7 +261,7 @@ const Profile = () => {
           )}
 
           <div className="text-center mt-4">
-            <button className="btn btn-primary" onClick={handleStartTest}>
+            <button className="btn btn-primary animated-button" onClick={handleStartTest}>
               Start Test
             </button>
           </div>
@@ -204,5 +270,4 @@ const Profile = () => {
     </>
   );
 };
-
 export default Profile;

@@ -1,0 +1,41 @@
+/* Admin Layout Styles */
+ .admin-layout {
+  display: flex; 
+  flex-direction: column; 
+  height: 100vh; 
+} 
+
+.admin-content {
+  display: flex; /* Side-by-side layout for sidebar and content */
+  flex: 1; /* Take remaining height after navbar */
+}
+
+.admin-page {
+  flex: 1; /* This will fill the remaining space beside the sidebar */
+  padding: 20px; /* Padding around content */
+  background-color: #ecf0f1; /* Light background for content area */
+  overflow-y: auto; /* Allow vertical scrolling */
+  margin-left: 0px; /* Adjust margin to the width of the sidebar */
+}
+
+/* Ensure the sidebar doesn't overlap */
+.admin-sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  background-color: #2c3e50; /* Sidebar background color */
+  height: 100vh; /* Full height minus the height of the navbar */
+  position: relative; /* Ensure it is positioned relative to the layout */
+  top: 0px; /* Position it below the navbar */
+  position: sticky
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 200px; /* Adjust sidebar width for smaller screens */
+    height: calc(100% - 50px); /* Adjust height for responsive */
+  }
+
+  .admin-page {
+    /* margin-left: 20px; Adjust margin for smaller sidebar */
+  }
+}

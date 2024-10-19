@@ -1,0 +1,372 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+10,2,What is the purpose of the `<blockquote>` tag in HTML?,To define a block of text that is a quotation,To create a link,To define a comment,To style text,To define a block of text that is a quotation
+10,2,How can you include an external CSS file in HTML?,<link rel='stylesheet' href=''>,<style>...</style>,<css src=''>,<stylesheet>,<link rel='stylesheet' href=''>
+10,2,What is the correct way to create a responsive image in HTML?,<img src='image.jpg' style='max-width:100%; height:auto;'>,<img responsive='true'>,<image src=''>,<img src='image.jpg' height='100%'>,<img src='image.jpg' style='max-width:100%; height:auto;'>
+10,2,Which tag is used to define an HTML document's character encoding?,<meta charset='UTF-8'>,<charset='UTF-8'>,<meta encoding='UTF-8'>,<meta> charset=<UTF-8>,<meta charset='UTF-8'>
+10,2,What does the `alt` attribute do for an image tag?,Provides alternative text for the image,Defines the image size,Sets the image source,Links to another page,Provides alternative text for the image
+10,2,How can you specify a specific language for an HTML document?,<html lang='en'>,<html language='en'>,<lang='en'>,<html code='en'>,<html lang='en'>
+10,2,What does the `<nav>` tag represent in HTML?,A navigation section,An image,Text formatting,A link,A navigation section
+10,2,How do you define an inline style in an HTML element?,style='color:red;',<style>color:red;</style>,<css>color:red;</css>,style='text:red;',style='color:red;'
+10,2,Which HTML element is used to define the metadata of an HTML document?,<meta>,<data>,<info>,<head>,<meta>
+10,2,What does the `<head>` section of an HTML document contain?,Metadata and links to scripts and styles,Content to display,Images,Navigation,Metadata and links to scripts and styles
+10,2,How do you specify that an input field is required in a form?,<input required>,<input is-required>,<input necessary>,<input must-have>,<input required>
+10,2,What is the correct way to create a drop-down list in HTML?,<select><option></option></select>,<dropdown></dropdown>,<list></list>,<options></options>,<select><option></option></select>
+10,2,Which attribute is used to define the target of a link?,target,href,link,destination,target
+10,2,What does the `<title>` tag define in an HTML document?,The title of the webpage,The header of the page,The main content,The footer,The title of the webpage
+10,2,How do you include a JavaScript file in HTML?,<script src=''>,<js src=''>,<javascript>...</javascript>,<code src=''>,<script src=''>
+10,2,What is the purpose of the `<footer>` tag in HTML?,To define a footer for a document or section,To create links,To define a comment,To style text,To define a footer for a document or section
+10,2,How do you create an HTML table?,Using the `<table>` tag,Using the `<list>` tag,Using the `<grid>` tag,Using the `<data>` tag,Using the `<table>` tag
+10,2,Which tag is used to create a hyperlink in HTML?,<a>,<link>,<href>,<url>,<a>
+10,2,What is the correct syntax for creating a checkbox in HTML?,<input type='checkbox'>,<checkbox>,<input check=''>,<check>,<input type='checkbox'>
+10,2,How do you create a multi-line text input in HTML?,<textarea>,<input>,<field>,<text>,<textarea>
+10,2,What does the `<section>` tag define in HTML?,A thematic grouping of content,An image,Text formatting,A link,A thematic grouping of content
+10,2,How can you specify the size of an image in HTML?,width and height attributes,style='size: ',size attributes,dimensions,width and height attributes
+10,2,What does the `<time>` tag represent in HTML?,A specific time or date,An input field,An image,Text formatting,A specific time or date
+10,2,How do you create a hidden input field in HTML?,<input type='hidden'>,<input type='invisible'>,<input hidden=''>,<input type='secret'>,<input type='hidden'>
+10,2,What is the purpose of the `<label>` tag in HTML?,To define a label for an input element,To create links,To define a comment,To style text,To define a label for an input element
+10,2,How do you create a summary in a `<details>` tag?,Using the `<summary>` tag,Using `<details>`,Using `<info>`,Using `<caption>`,Using the `<summary>` tag
+10,2,Which attribute specifies the dimensions of an iframe?,width and height,dimensions,size,measurements,width and height
+10,2,What does the `<canvas>` tag do in HTML?,Defines a drawable region in HTML,Creates a link,Defines a comment,Formats text,Defines a drawable region in HTML
+10,2,How do you create an embedded video in HTML?,<video src=''>,<embed src=''>,<iframe src=''>,<media>,<video src=''>
+10,2,What is the purpose of the `<cite>` tag in HTML?,To define the title of a work,To create links,To define a comment,To format text,To define the title of a work
+10,2,How can you create an image map in HTML?,Using the `<map>` and `<area>` tags,Using `<img>`,Using `<image>`,Using `<link>`,Using the `<map>` and `<area>` tags
+10,2,What does the `<fieldset>` tag represent in HTML?,A group of related elements in a form,An image,Text formatting,A link,A group of related elements in a form
+10,2,How do you create a dropdown menu in HTML?,Using the `<select>` tag,Using `<options>`,Using `<menu>`,Using `<list>`,Using the `<select>` tag
+10,2,What does the `disabled` attribute do for form elements?,Disables the form element,Enables the form element,Styles the element,Creates a link,Disables the form element
+10,2,How do you specify a default option in a drop-down list?,Using the `selected` attribute,<option default>,<option chosen>,<option first>,Using the `selected` attribute
+10,2,What is the correct way to create a search input in HTML?,<input type='search'>,<input search=''>,<input type='query'>,<search>,<input type='search'>
+10,2,What does the `<bdi>` tag do in HTML?,Isolates a part of text that may be formatted in a different direction,Creates a link,Defines a comment,Styles text,Isolates a part of text that may be formatted in a different direction
+10,2,How do you create a progress bar in HTML?,Using the `<progress>` tag,Using `<bar>`,Using `<meter>`,Using `<status>`,Using the `<progress>` tag
+10,2,What does the `<abbr>` tag represent in HTML?,An abbreviation or acronym,An image,Text formatting,A link,An abbreviation or acronym
+10,2,How do you specify an inline frame's source URL?,src attribute,link attribute,href attribute,URL attribute,src attribute
+10,2,What is the purpose of the `<dialog>` tag in HTML?,To define a dialog box or window,To create links,To define a comment,To style text,To define a dialog box or window
+10,2,How can you create a semantic HTML5 element?,Using `<article>`,Using `<div>`,Using `<section>`,Using `<header>`,Using `<article>`
+10,2,What does the `<progress>` tag represent in HTML?,A progress indicator,An image,Text formatting,A link,A progress indicator
+10,2,How do you create an HTML comment?,<!-- Comment -->,<comment>,<# Comment>,// Comment,<-- Comment -->
+10,2,What is the correct syntax for creating a file input in HTML?,<input type='file'>,<input file=''>,<upload>,<file>,<input type='file'>
+10,2,What does the `<map>` tag do in HTML?,Defines a client-side image map,Creates a link,Defines a comment,Formats text,Defines a client-side image map
+10,2,How do you create a tooltip in HTML?,Using the `title` attribute,Using `<tooltip>`,Using `<tip>`,Using `<info>`,Using the `title` attribute
+10,2,What is the purpose of the `<progress>` tag in HTML?,To represent the completion progress of a task,To create links,To define a comment,To style text,To represent the completion progress of a task
+10,2,How do you create a responsive layout in HTML?,Using the `<meta name='viewport'>` tag,Using `<responsive>`,Using `<layout>`,Using `<style>`,Using the `<meta name='viewport'>` tag
+10,2,What does the `<meter>` tag represent in HTML?,A scalar measurement within a known range,An image,Text formatting,A link,A scalar measurement within a known range
+10,2,How do you create a downloadable link in HTML?,Using the `download` attribute,<download>,<link download=''>,<download link>,Using the `download` attribute
+10,2,What is the correct syntax for defining an HTML heading?,<h1>,<header>,<title>,<head>,<h1>
+10,2,How do you define an abbreviation in HTML?,Using the `<abbr>` tag,Using `<acronym>`,Using `<short>`,Using `<define>`,Using the `<abbr>` tag
+10,2,What is the purpose of the `<time>` tag in HTML?,To represent a specific time or date,To create links,To define a comment,To format text,To represent a specific time or date
+10,2,How do you create a script block in HTML?,Using the `<script>` tag,Using `<js>`,Using `<code>`,Using `<function>`,Using the `<script>` tag
+10,2,What does the `<address>` tag represent in HTML?,Contact information for the author or owner of a document,An image,Text formatting,A link,Contact information for the author or owner of a document
+10,2,How do you create a link that opens in a new tab?,Using `target='_blank'`,Using `target='new'`,Using `target='_self'`,Using `target='_window'`,Using `target='_blank'`
+10,2,What is the correct way to create a sidebar in HTML?,Using the `<aside>` tag,Using `<sidebar>`,Using `<section>`,Using `<div>`,Using the `<aside>` tag
+10,2,How do you define a citation in HTML?,Using the `<cite>` tag,Using `<quote>`,Using `<ref>`,Using `<citation>`,Using the `<cite>` tag
+10,2,What does the `defer` attribute do in a `<script>` tag?,Defers execution of the script until the page has finished loading,Executes the script immediately,Blocks other scripts,Executes the script in the head,Defers execution of the script until the page has finished loading
+10,2,How can you make a list that is numbered in HTML?,Using the `<ol>` tag,Using the `<ul>` tag,Using the `<list>` tag,Using the `<numbered>` tag,Using the `<ol>` tag
+10,2,What is the purpose of the `<link>` tag in the `<head>` section?,To link external resources like CSS,To create hyperlinks,To define the title of the page,To embed images,To link external resources like CSS
+10,2,Which attribute is used to specify the destination URL of a link?,href,src,link,url,href
+10,2,What does the `target` attribute in an anchor (`<a>`) tag do?,Specifies where to open the linked document,Defines the link text,Sets the link color,Specifies the link's title,Specifies where to open the linked document
+10,2,What does the `placeholder` attribute do in an input field?,Provides a hint to the user about what to enter,Defines the input type,Styles the input field,Creates a label for the input,Provides a hint to the user about what to enter
+10,2,Which tag is used to create an unnumbered list in HTML?,<ul>,<ol>,<list>,<li>,<ul>
+10,2,What is the correct way to use the `<iframe>` tag?,<iframe src=''></iframe>,<iframe link=''></iframe>,<frame src=''></frame>,<inline src=''>,<iframe src=''></iframe>
+10,2,How can you create a text area for user input?,<textarea></textarea>,<input type='text'>,<input type='area'>,<text>,<textarea></textarea>
+10,2,What does the `<abbr>` tag do in HTML?,Defines an abbreviation,Creates a link,Formats text,Defines a comment,Defines an abbreviation
+10,2,How can you embed a YouTube video in HTML?,Using the `<iframe>` tag with the video's embed URL,Using the `<video>` tag,Using the `<media>` tag,Using the `<embed>` tag,Using the `<iframe>` tag with the video's embed URL
+10,2,Which HTML element is used to create a comment?,<!-- Comment -->,<comment>,<# Comment>,// Comment,<!-- Comment -->
+10,2,What is the purpose of the `<strong>` tag in HTML?,To indicate strong importance,To create links,To format text,To define a comment,To indicate strong importance
+10,2,How do you create an HTML table with headers?,Using the `<th>` tag within a `<table>`,Using `<header>`,Using `<h1>` tags,Using `<table>`,Using the `<th>` tag within a `<table>`
+10,2,What does the `rowspan` attribute do in an HTML table?,Specifies how many rows a cell should span,Defines the number of columns,Styles the cell,Defines the table's border,Specifies how many rows a cell should span
+10,2,How can you specify a fallback image for an `<img>` tag?,Using the `src` and `onerror` attributes,<img fallback=''>,<img alt=''>,<img src='image.jpg' onerror="this.src='fallback.jpg'>,<img src='image.jpg' onerror="this.src='fallback.jpg'>
+10,2,What is the function of the `<meta>` tag in the `<head>` section?,To provide metadata about the HTML document,To create links,To define the title,To format text,To provide metadata about the HTML document
+10,2,How do you create a navigation menu using an unordered list?,Using `<ul><li></li></ul>`,Using `<nav><ol></ol></nav>`,Using `<list>`,Using `<menu>`,Using `<ul><li></li></ul>`
+10,2,What is the correct syntax for creating a button in HTML?,<button>Click Me</button>,<input type='button'>,<button type='submit'>,<click>,<button>Click Me</button>
+10,2,Which tag is used for the main content of the page in HTML5?,<main>,<content>,<body>,<section>,<main>
+10,2,How do you create an HTML form?,Using the `<form>` tag,Using `<input>`,Using `<fieldset>`,Using `<field>`,Using the `<form>` tag
+10,2,What does the `accept` attribute do for an `<input>` element?,Specifies the types of files that can be uploaded,Defines the input type,Styles the input field,Creates a label for the input,Specifies the types of files that can be uploaded
+10,2,How can you make text bold in HTML?,Using the `<strong>` or `<b>` tag,Using `<bold>`,Using `<text>`,Using `<style>`,Using the `<strong>` or `<b>` tag
+10,2,What is the purpose of the `<script>` tag in HTML?,To define client-side JavaScript,To create links,To define a comment,To format text,To define client-side JavaScript
+10,2,Which tag is used to display a horizontal rule in HTML?,<hr>,<line>,<ruler>,<hrule>,<hr>
+10,2,How do you create a radio button in HTML?,<input type='radio'>,<radio>,<input type='check'>,<input type='option'>,<input type='radio'>
+10,2,What does the `<figure>` tag represent in HTML?,A self-contained content,An image,Text formatting,A link,A self-contained content
+10,2,What is the correct way to create an anchor link in HTML?,<a href=''>Link</a>,<link href=''>Link</link>,<url>Link</url>,<anchor href=''>Link</anchor>,<a href=''>Link</a>
+10,2,How can you add a border to an image in HTML?,Using the `style` attribute,<img border=''>,<img style='border: 1px solid black;'>,<image border=''>,<img style='border: 1px solid black;'>
+10,2,What does the `autocomplete` attribute do in an input field?,Specifies whether the browser should suggest previously entered values,Defines the input type,Styles the input field,Creates a label for the input,Specifies whether the browser should suggest previously entered values
+10,2,Which tag is used to define a section in an HTML document?,<section>,<div>,<article>,<group>,<section>
+10,2,What is the function of the `<details>` tag in HTML?,To create a disclosure widget from which the user can obtain additional information,To define a comment,To create links,To format text,To create a disclosure widget from which the user can obtain additional information
+10,2,How do you specify a video format in HTML?,Using the `type` attribute within a `<source>` tag,Using `<video>`,Using `<media>`,Using `<format>`,Using the `type` attribute within a `<source>` tag
+10,2,What does the `muted` attribute do for a video in HTML?,Silences the audio,Starts the video automatically,Loops the video,Defines the video's poster,Silences the audio
+10,2,How can you create an HTML5 audio player?,Using the `<audio>` tag,<audio src=''>,<media>audio</media>,<sound>,Using the `<audio>` tag
+10,2,What is the purpose of the `role` attribute in HTML?,To define the role of an element for accessibility,To define a comment,To create links,To style text,To define the role of an element for accessibility
+10,2,How do you create a file input that allows multiple files in HTML?,<input type='file' multiple>,<input type='files'>,<input type='upload' multiple>,<input multiple=''>,<input type='file' multiple>
+10,2,What does the `required` attribute do for form fields?,Makes the field mandatory to fill out,Defines the input type,Styles the input field,Creates a label for the input,Makes the field mandatory to fill out
+10,2,Which tag is used to define a navigation section in HTML5?,<nav>,<navigation>,<header>,<menu>,<nav>
+10,2,How do you define an HTML document's language?,Using the `lang` attribute in the `<html>` tag,Using the `language` attribute,Using the `lang` attribute in `<head>`,Using `language`,Using the `lang` attribute in the `<html>` tag
+10,2,What is the purpose of the `<address>` tag in HTML?,To provide contact information for the author,To create links,To define a comment,To format text,To provide contact information for the author
+10,2,How can you specify a specific width for an HTML element?,Using the `style` attribute or width attribute,<width>100px</width>,Using `<style>`,Using the `size` attribute,Using the `style` attribute or width attribute
+10,2,What does the `onload` attribute do in the `<body>` tag?,Specifies a script to run when the page loads,Defines the page title,Creates links,Styles the body,Specifies a script to run when the page loads
+10,2,How can you create a tooltip in HTML?,Using the `title` attribute on an element,Using `<tooltip>`,Using the `tip` attribute,Using `<hover>`,Using the `title` attribute on an element
+10,2,What is the purpose of the `<param>` tag in HTML?,To define parameters for `<object>` elements,To create links,To define comments,To style text,To define parameters for `<object>` elements
+10,2,How do you add a favicon to an HTML page?,Using the `<link rel='icon'>` tag in the `<head>`,Using the `<favicon>` tag,Using the `<img>` tag,Using `<link>`,Using the `<link rel='icon'>` tag in the `<head>`
+10,2,What does the `accept-charset` attribute do in a form?,Specifies the character encodings that are to be used for the form submission,Defines the input type,Styles the form,Creates a label for the input,Specifies the character encodings that are to be used for the form submission
+10,2,Which tag is used to create a definition list?,<dl>,<list>,<ul>,<ol>,<dl>
+10,2,What does the `type` attribute define in an input tag?,Specifies the type of input element,Defines the input size,Styles the input field,Creates a label for the input,Specifies the type of input element
+10,2,How do you create an HTML comment?,<!-- Comment -->,<comment>,// Comment,<!- Comment ->,<!-- Comment -->
+10,2,What is the correct way to specify a color using hexadecimal notation in HTML?,#FFFFFF,RGB(255,255,255),white,Color(255,255,255),#FFFFFF
+10,2,How do you create a link to an email address in HTML?,<a href='mailto:example@example.com'>Email</a>,<link href='mailto:example@example.com'>Email</link>,<email>example@example.com</email>,<mailto>example@example.com</mailto>,<a href='mailto:example@example.com'>Email</a>
+10,2,What does the `accesskey` attribute do in HTML?,Specifies a keyboard shortcut to activate/focus an element,Defines the input type,Styles the element,Creates a label for the input,Specifies a keyboard shortcut to activate/focus an element
+10,2,How can you create a loading spinner in HTML?,Using CSS with `<div>`,Using `<loading>`,Using `<spinner>`,Using `<animate>`,Using CSS with `<div>`
+10,2,What is the purpose of the `async` attribute in a `<script>` tag?,To load the script asynchronously with the page,To execute the script immediately,To define the script type,To block other scripts,To load the script asynchronously with the page
+10,2,Which tag is used to define a footer in HTML5?,<footer>,<bottom>,<section>,<end>,<footer>
+10,2,How do you specify a character set for your HTML document?,Using the `<meta charset='UTF-8'>` tag,Using the `<charset>` tag,Using `<meta>`,Using `<head>`,Using the `<meta charset='UTF-8'>` tag
+10,2,What does the `shape` attribute do in a `<map>` tag?,Specifies the shape of the clickable area,Defines the area size,Styles the map,Creates a label for the map,Specifies the shape of the clickable area
+10,2,How can you create a placeholder for an input field?,Using the `placeholder` attribute,<placeholder>,Using the `<input>` tag,Using `<text>`,Using the `placeholder` attribute
+10,2,What is the function of the `<source>` tag in HTML5?,To specify multiple media resources for elements,To define a comment,To create links,To format text,To specify multiple media resources for elements
+10,2,How do you create a hidden input in HTML?,<input type='hidden'>,<input type='hidden' value=''>,<input hidden=''>,<hidden>,<input type='hidden'>
+10,2,What does the `for` attribute do in a `<label>` tag?,Associates the label with a specific input element,Defines the label text,Styles the label,Creates a comment,Associates the label with a specific input element
+10,2,How can you create a search box in HTML?,Using `<input type='search'>`,Using `<input>`,Using `<search>`,Using `<box>`,Using `<input type='search'>`
+10,2,What is the purpose of the `data-*` attribute in HTML?,To store custom data private to the page or application,To define a comment,To create links,To format text,To store custom data private to the page or application
+10,2,How do you specify a default option in a `<select>` dropdown?,Using the `selected` attribute,<option default>,<selected>,<option selected>,Using the `selected` attribute
+10,2,What does the `target` attribute in a form do?,Specifies where to send the form data when the form is submitted,Defines the form method,Styles the form,Creates a label for the form,Specifies where to send the form data when the form is submitted
+10,2,How can you create a collapsible section in HTML?,Using the `<details>` and `<summary>` tags,Using `<collapse>`,Using `<toggle>`,Using `<expand>`,Using the `<details>` and `<summary>` tags
+10,2,What is the purpose of the `role` attribute in HTML?,To define the accessibility role of an element,To define a comment,To create links,To style text,To define the accessibility role of an element
+10,2,How do you create a range slider in HTML?,Using the `<input type='range'>`,Using `<slider>`,Using `<input>`,Using `<range>`,Using the `<input type='range'>`
+10,2,What is the function of the `<time>` tag in HTML?,To represent a specific time or date,To define a comment,To create links,To format text,To represent a specific time or date
+10,2,How can you make an element's content editable in HTML?,Using the `contenteditable` attribute,<editable>,Using `<edit>`,Using the `editable` attribute,Using the `contenteditable` attribute
+10,2,What does the `<canvas>` element allow you to do?,Draw graphics on the fly via scripting,Embed videos,Create links,Define comments,Draw graphics on the fly via scripting
+10,2,How do you specify a text input to accept only numbers?,Using `<input type='number'>`,Using `<input type='text'>`,Using `<input>`,Using `<numeric>`,Using `<input type='number'>`
+10,2,What is the purpose of the `method` attribute in a form?,Specifies how to send form data,Defines the form's action,Styles the form,Creates a label for the form,Specifies how to send form data
+10,2,How can you define a section of a webpage that is related?,Using the `<section>` tag,Using the `<article>`,Using `<div>`,Using `<related>`,Using the `<section>` tag
+10,2,What does the `contenteditable` attribute do in HTML?,Makes an element editable by the user,Defines the element's width,Sets the element's height,Specifies the element's role,Makes an element editable by the user
+10,2,How can you create a checkbox in HTML?,<input type='checkbox'>,<input type='check'>,<input checkbox=''>,<input type='option'>,<input type='checkbox'>
+10,2,What is the purpose of the `autofocus` attribute in an input element?,Automatically focuses the input when the page loads,Defines the input type,Styles the input field,Creates a label for the input,Automatically focuses the input when the page loads
+10,2,How can you create a summary section for a `<details>` element?,Using the `<summary>` tag,Using the `<details>` tag alone,Using `<header>`,Using `<summary>` alone,Using the `<summary>` tag
+10,2,What does the `<mark>` tag do in HTML?,Highlights text,Defines a comment,Creates links,Styles text,Highlights text
+10,2,How do you specify a default value for a dropdown in HTML?,Using the `selected` attribute in an `<option>` tag,<option default>,<option selected>,Using the `default` attribute,<option selected>
+10,2,What is the correct way to include a CSS file in HTML?,<link rel='stylesheet' href='style.css'>,<style src='style.css'>,<css href='style.css'>,<script src='style.css'>,<link rel='stylesheet' href='style.css'>
+10,2,How do you create an ordered list in HTML?,Using the `<ol>` tag,<ul>,<list>,<ol list=''>,Using the `<ol>` tag
+10,2,What does the `<cite>` tag represent in HTML?,A reference to a creative work,Defines a comment,Creates links,Styles text,A reference to a creative work
+10,2,How can you add a title to an HTML document?,Using the `<title>` tag within the `<head>`,Using the `<header>` tag,Using `<h1>`,Using the `<title>` tag in the body,Using the `<title>` tag within the `<head>`
+10,2,What does the `<small>` tag do in HTML?,Displays text in a smaller size,Defines a comment,Creates links,Styles text,Displays text in a smaller size
+10,2,How can you define a navigation bar using HTML?,Using `<nav>` and `<ul>`,Using `<menu>`,Using `<list>`,Using `<header>`,Using `<nav>` and `<ul>`
+10,2,What is the purpose of the `aria-label` attribute?,To improve accessibility by providing additional descriptions,Defines the element's style,Creates a label for the input,Defines the element's role,To improve accessibility by providing additional descriptions
+10,2,How can you create a password input field in HTML?,<input type='password'>,<input type='text'>,<input type='secure'>,<input type='hidden'>,<input type='password'>
+10,2,What does the `target` attribute in a form do?,Specifies where to send the form data when submitted,Defines the input type,Styles the form,Creates a label for the form,Specifies where to send the form data when submitted
+10,2,What is the correct way to create a list item in an unordered list?,<li>Item</li>,<ul>Item</ul>,<list>Item</list>,<li list=''>Item</li>,<li>Item</li>
+10,2,What is the role of the `<div>` tag in HTML?,To define a section in a document,To create links,To define comments,To format text,To define a section in a document
+10,2,How can you link to a specific part of the same page?,Using an anchor tag with an `id`,Using a link with `href='#'`,Using the `link` tag,Using a JavaScript function,Using an anchor tag with an `id`
+10,2,What does the `<strong>` tag do in HTML?,Indicates strong importance,Formats text,Defines a comment,Creates links,Indicates strong importance
+10,2,How can you define a footer for your HTML document?,Using the `<footer>` tag,Using the `<bottom>` tag,Using `<footer content=''>`,Using `<end>`,Using the `<footer>` tag
+10,2,What is the correct way to include an external JavaScript file in HTML?,<script src='script.js'></script>,<js src='script.js'>,<script ref='script.js'></script>,<link href='script.js'>,<script src='script.js'></script>
+10,2,How do you specify a video source in HTML?,Using the `<source>` tag within the `<video>` tag,<video source='video.mp4'>,<source video='video.mp4'>,<media source='video.mp4'>,<source> tag within the `<video>` tag
+10,2,What does the `src` attribute in an `<img>` tag do?,Specifies the image source,Defines the image title,Styles the image,Creates a link for the image,Specifies the image source
+10,2,How can you create a clickable image link in HTML?,Using the `<a>` tag around an `<img>` tag,<img src=''>,<a href=''><img></a>,Using `<link><img>`,<link href=''><img>,Using the `<a>` tag around an `<img>` tag
+10,2,What is the purpose of the `<aside>` tag in HTML?,To define content that is related to the main content,To create links,To define a comment,To format text,To define content that is related to the main content
+10,2,How do you create a drop-down list in HTML?,Using the `<select>` tag,<input type='dropdown'>,<list>Item</list>,<drop-down>Item</drop-down>,Using the `<select>` tag
+10,2,What is the purpose of the `<fieldset>` tag?,To group related elements in a form,To create links,To define a comment,To style text,To group related elements in a form
+10,2,How can you make a list of definitions in HTML?,Using the `<dl>`,Using `<list>`,Using `<definition>`,Using `<def>`,Using the `<dl>`
+10,2,What does the `method` attribute in a form define?,Specifies how to send form data,Defines the form action,Styles the form,Creates a label for the form,Specifies how to send form data
+10,2,How do you create a responsive image in HTML?,Using the `srcset` attribute,<img responsive=''>,<img src=''>,<img style='width: 100%'>,<img src=''> with the `srcset` attribute
+10,2,What does the `<object>` tag do in HTML?,Defines an embedded object,Creates links,Defines a comment,Styles text,Defines an embedded object
+10,2,How can you create a navigation list using HTML?,Using the `<nav>` and `<ul>` tags,Using the `<list>` tag,Using `<header>`,Using `<menu>`,Using the `<nav>` and `<ul>` tags
+10,2,What is the purpose of the `alt` attribute in an `<img>` tag?,To provide alternative text for the image,To define the image source,To style the image,To create links,To provide alternative text for the image
+10,2,How can you create a button that submits a form in HTML?,Using the `<button type='submit'>` tag,Using `<input type='submit'>`,Using `<submit>`,Using `<button>`,Using the `<button type='submit'>` tag
+10,2,What is the correct way to define an input that accepts email addresses?,<input type='email'>,<input type='text'>,<input type='emailAddress'>,<input email=''>,<input type='email'>
+10,2,How do you create an HTML form that accepts file uploads?,Using `<input type='file'>`,Using `<upload>`,Using `<file>`,Using `<input type='document'>`,Using `<input type='file'>`
+10,2,What does the `<progress>` tag represent?,A progress bar,Defines a comment,Creates links,Styles text,A progress bar
+10,2,How can you specify a language for an HTML document?,Using the `lang` attribute in the `<html>` tag,Using the `language` attribute,Using `<head>`,Using `<meta>`,Using the `lang` attribute in the `<html>` tag
+10,2,What is the purpose of the `tabindex` attribute in HTML?,Specifies the order of focus for keyboard navigation,Defines the element's style,Creates a label for the input,Defines the element's role,Specifies the order of focus for keyboard navigation
+10,2,How do you create a clickable button using HTML?,Using the `<button>` tag,<input type='button'>,<button action=''>,<link button=''>,<button> tag
+10,2,What is the function of the `<noscript>` tag in HTML?,To provide alternative content for users without JavaScript,To define a comment,To create links,To style text,To provide alternative content for users without JavaScript
+10,2,How can you specify a fallback font in CSS?,Using the `font-family` property,<font> tag,<style> tag,<css> tag,Using the `font-family` property
+10,2,What is the purpose of the `<time>` tag in HTML?,To represent a specific time or date,Defines a comment,Creates links,Styles text,To represent a specific time or date
+10,2,How can you create an inline frame in HTML?,Using the `<iframe>` tag,<frame> tag,<inline> tag,<div> tag,Using the `<iframe>` tag
+10,2,What does the `<header>` tag represent in HTML?,Defines introductory content for a document or section,Defines a comment,Creates links,Styles text,Defines introductory content for a document or section
+10,2,How can you create a search form in HTML?,Using `<input type='search'>`,Using `<form>`,Using `<search>`,Using `<box>`,Using `<input type='search'>`
+10,2,What is the function of the `<video>` tag in HTML?,To embed a video player,To define a comment,To create links,To style text,To embed a video player
+10,2,How do you create an HTML link that opens in a new tab?,Using the `target='_blank'` attribute in an `<a>` tag,<a target='new'>Link</a>,Using `<link>`,Using `<a target=''>`,Using the `target='_blank'` attribute in an `<a>` tag
+10,2,What is the correct way to define a text area in HTML?,<textarea></textarea>,<input type='textarea'>,<input type='text'>,<text-area>,<textarea></textarea>
+10,2,What does the `<cite>` tag do in HTML?,Defines a title of a creative work,Defines a comment,Creates links,Styles text,Defines a title of a creative work
+10,2,How can you specify a primary color in HTML?,Using hexadecimal values,Using <color>,Using <color-value>,Using <style>,Using hexadecimal values
+10,2,What does the `<embed>` tag do in HTML?,Embeds external content,Defines a comment,Creates links,Styles text,Embeds external content
+10,2,How do you create an input that accepts dates?,Using `<input type='date'>`,Using `<input type='text'>`,Using `<date>`,Using `<input type='datetime'>`,Using `<input type='date'>`
+10,2,What is the purpose of the `role` attribute in HTML?,To define the accessibility role of an element,Defines the element's style,Creates a label for the input,Defines the element's type,To define the accessibility role of an element
+10,2,How can you specify a background color in HTML?,Using the `style` attribute with `background-color`,Using the `<background>` tag,Using the `<style>` tag,Using the `<color>` tag,Using the `style` attribute with `background-color`
+10,2,What does the `<link>` tag do in HTML?,Defines a relationship between the current document and an external resource,Defines a comment,Creates links,Styles text,Defines a relationship between the current document and an external resource
+10,2,What does the `<abbr>` tag represent in HTML?,An abbreviation or acronym,Defines a comment,Creates links,Styles text,An abbreviation or acronym
+10,2,How do you define a table in HTML?,Using the `<table>` tag,<table definition>,<tab>,Using `<data>`,Using the `<table>` tag
+10,2,What is the purpose of the `<caption>` tag in an HTML table?,To provide a title for the table,Defines a comment,Creates links,Styles text,To provide a title for the table
+10,2,How can you include a comment in HTML code?,Using `<!-- comment -->`,Using `<comment>`,Using `// comment`,Using `<#>`,Using `<!-- comment -->`
+10,2,What does the `<dfn>` tag do in HTML?,Indicates a definition,Defines a comment,Creates links,Styles text,Indicates a definition
+10,2,How do you create a hidden input field in HTML?,Using `<input type='hidden'>`,Using `<input type='secret'>`,Using `<input type='invisible'>`,Using `<hidden>`,Using `<input type='hidden'>`
+10,2,What does the `<time>` tag represent in HTML?,A specific time or date,Defines a comment,Creates links,Styles text,A specific time or date
+10,2,How can you create a responsive table in HTML?,Using CSS styles and `<table>`,Using `<responsive-table>`,Using `<table responsive=''>`,Using JavaScript,Using CSS styles and `<table>`
+10,2,What is the role of the `<section>` tag in HTML?,To define a thematic grouping of content,Defines a comment,Creates links,Styles text,To define a thematic grouping of content
+10,2,How do you specify that an input field is required?,Using the `required` attribute,<input necessary=''>,<input must=''>,<input required=''>,Using the `required` attribute
+10,2,What does the `<details>` tag do in HTML?,Creates a disclosure widget from which the user can obtain additional information,Defines a comment,Creates links,Styles text,Creates a disclosure widget from which the user can obtain additional information
+10,2,How can you create a placeholder text in an input field?,Using the `placeholder` attribute,<input hint=''>,<input text=''>,<input placeholder=''>,Using the `placeholder` attribute
+10,2,What is the purpose of the `<address>` tag in HTML?,To provide contact information,Defines a comment,Creates links,Styles text,To provide contact information
+10,2,How do you create a fixed navigation bar in HTML?,Using CSS with `<nav>`,Using `<fixed-nav>`,Using `<navbar>`,Using `<div>`,Using CSS with `<nav>`
+10,2,What does the `download` attribute in an anchor tag do?,Specifies that the target will be downloaded when the link is clicked,Defines the file type,Creates a link,Styles the link,Specifies that the target will be downloaded when the link is clicked
+10,2,How can you make a text input field accept only numbers?,Using `<input type='number'>`,Using `<input type='text'>`,Using `<input number=''>`,Using `<input validate='number'>`,Using `<input type='number'>`
+10,2,What is the purpose of the `<iframe>` tag in HTML?,To embed another document within the current HTML document,Defines a comment,Creates links,Styles text,To embed another document within the current HTML document
+10,2,How do you create a tooltip in HTML?,Using the `title` attribute,<tooltip> tag,<tip> tag,<info> tag,Using the `title` attribute
+10,2,What does the `<s>` tag represent in HTML?,Indicates text that is no longer accurate or relevant,Defines a comment,Creates links,Styles text,Indicates text that is no longer accurate or relevant
+10,2,How can you specify a character encoding for an HTML document?,Using `<meta charset='UTF-8'>`,Using `<encoding>`,Using `<meta>`,Using `<head>`,Using `<meta charset='UTF-8'>`
+10,2,What is the role of the `<article>` tag in HTML?,To represent a self-contained composition in a document,Defines a comment,Creates links,Styles text,To represent a self-contained composition in a document
+10,2,How do you create a button that resets a form in HTML?,Using `<button type='reset'>`,Using `<input type='reset'>`,Using `<reset>`,Using `<button>`,Using `<button type='reset'>`
+10,2,What does the `<sub>` tag do in HTML?,Displays text as subscript,Defines a comment,Creates links,Styles text,Displays text as subscript
+10,2,How can you create a CSS class in HTML?,Using the `class` attribute,<css class=''>,<style class=''>,<class> tag,Using the `class` attribute
+10,2,What is the function of the `<nav>` tag in HTML?,To define a set of navigation links,Defines a comment,Creates links,Styles text,To define a set of navigation links
+10,2,How do you create a date picker in HTML?,Using `<input type='date'>`,Using `<date>`,Using `<input type='text'>`,Using `<date-picker>`,Using `<input type='date'>`
+10,2,What does the `method='post'` attribute in a form do?,Specifies how to send form data to the server,Defines the form action,Styles the form,Creates a label for the form,Specifies how to send form data to the server
+10,2,How can you create a style block in HTML?,Using the `<style>` tag,Using `<css>`,Using `<style-block>`,Using `<header>`,Using the `<style>` tag
+10,2,What is the purpose of the `<progress>` tag in HTML?,To represent the completion progress of a task,Defines a comment,Creates links,Styles text,To represent the completion progress of a task
+10,2,How do you create a drop-down menu in HTML?,Using `<select>` and `<option>` tags,<menu> tag,<dropdown> tag,<list> tag,Using `<select>` and `<option>` tags
+10,2,What does the `<bdi>` tag do in HTML?,Isolates a portion of text that might be formatted in a different direction,Defines a comment,Creates links,Styles text,Isolates a portion of text that might be formatted in a different direction
+10,2,How can you create a slider in HTML?,Using `<input type='range'>`,Using `<slider>`,Using `<range>`,Using `<input type='slider'>`,Using `<input type='range'>`
+10,2,What is the function of the `<main>` tag in HTML?,To represent the main content of a document,Defines a comment,Creates links,Styles text,To represent the main content of a document
+10,2,How do you create an inline block in HTML?,Using the `display:inline-block` CSS property,Using `<inline-block>`,Using `<div>`,Using `<block>`,Using the `display:inline-block` CSS property
+10,2,What does the `<summary>` tag do in HTML?,Defines a visible heading for a `<details>` element,Defines a comment,Creates links,Styles text,Defines a visible heading for a `<details>` element
+10,2,How can you create a search input with a button in HTML?,Using `<form>` with `<input type='search'>` and `<button>`,Using `<search>`,Using `<input search=''>`,Using `<form>`,Using `<form>` with `<input type='search'>` and `<button>`
+10,2,What is the purpose of the `<figure>` tag in HTML?,To encapsulate media content along with an optional caption,Defines a comment,Creates links,Styles text,To encapsulate media content along with an optional caption
+10,2,How do you include metadata in an HTML document?,Using `<meta>` tags in the `<head>`,Using `<info>`,Using `<data>`,Using `<header>`,Using `<meta>` tags in the `<head>`
+10,2,What does the `<header>` tag do in HTML?,Defines the introductory content for a document or section,Defines a comment,Creates links,Styles text,Defines the introductory content for a document or section
+10,2,How can you define a border for an HTML table?,Using CSS with the `border` property,Using `<border>`,Using `<table border=''>`,Using `<style>`,Using CSS with the `border` property
+10,2,What is the correct way to use the `<canvas>` element?,To draw graphics on the fly,Defines a comment,Creates links,Styles text,To draw graphics on the fly
+10,2,How do you create a hidden link in HTML?,Using `<a style='display:none;'>`,Using `<a hidden=''>`,Using `<link>`,Using `<a>`,Using `<a style='display:none;'>`
+10,2,What does the `<output>` tag do in HTML?,Represents the result of a calculation,Defines a comment,Creates links,Styles text,Represents the result of a calculation
+10,2,How can you include a favicon in an HTML document?,Using `<link rel='icon' href='favicon.ico'>`,Using `<icon>`,Using `<link>`,Using `<favicon>`,Using `<link rel='icon' href='favicon.ico'>`
+10,2,What is the purpose of the `<kbd>` tag in HTML?,To represent user input,Defines a comment,Creates links,Styles text,To represent user input
+10,2,How do you create a multi-line text input in HTML?,Using `<textarea>`,Using `<input type='text'>`,Using `<input type='multi'>`,Using `<input type='paragraph'>`,Using `<textarea>`
+10,2,What does the `<mark>` tag do in HTML?,Highlights text,Defines a comment,Creates links,Styles text,Highlights text
+10,2,How can you create a dropdown that allows multiple selections in HTML?,Using `<select multiple>`,Using `<dropdown>`,Using `<select>`,Using `<list>`,Using `<select multiple>`
+10,2,What is the purpose of the `action` attribute in a form?,To specify where to send the form data when submitted,Defines the method to send data,Styles the form,Creates a label for the form,To specify where to send the form data when submitted
+10,2,How do you create a checkbox input in HTML?,Using `<input type='checkbox'>`,Using `<checkbox>`,Using `<input check=''>`,Using `<input type='checkbox'>`,Using `<input type='checkbox'>`
+10,2,What does the `<wbr>` tag do in HTML?,Suggests an optional line break,Defines a comment,Creates links,Styles text,Suggests an optional line break
+10,2,How can you create an HTML list that has a numbered format?,Using `<ol>` and `<li>`,Using `<list>`,Using `<unordered-list>`,Using `<numbered-list>`,Using `<ol>` and `<li>`
+10,2,What is the purpose of the `method` attribute in a form?,To define how to send form data,Defines the action to send data,Styles the form,Creates a label for the form,To define how to send form data
+10,2,How do you create a password input in HTML?,Using `<input type='password'>`,Using `<input type='text'>`,Using `<password>`,Using `<input type='secret'>`,Using `<input type='password'>`
+10,2,What does the `async` attribute do in a script tag?,Loads the script asynchronously,Defines a comment,Creates links,Styles text,Loads the script asynchronously
+10,2,How can you create a reset button in a form?,Using `<button type='reset'>`,Using `<input type='reset'>`,Using `<button>`,Using `<reset>`,Using `<button type='reset'>`
+10,2,What is the purpose of the `novalidate` attribute in a form?,To disable validation when submitting,Defines the form action,Styles the form,Creates a label for the form,To disable validation when submitting
+10,2,How do you create a text input that accepts email addresses?,Using `<input type='email'>`,Using `<input type='text'>`,Using `<email>`,Using `<input type='mail'>`,Using `<input type='email'>`
+10,2,What does the `<cite>` tag represent in HTML?,To reference the title of a creative work,Defines a comment,Creates links,Styles text,To reference the title of a creative work
+10,2,How can you add a comment in HTML?,Using `<!-- comment -->`,Using `<comment>`,Using `// comment`,Using `<#>`,Using `<!-- comment -->`
+10,2,What is the function of the `<footer>` tag in HTML?,To define the footer for a document or section,Defines a comment,Creates links,Styles text,To define the footer for a document or section
+10,2,What is the purpose of the `<abbr>` tag in HTML?,To define an abbreviation or acronym,To create a hyperlink,To define a comment,To specify an alternative text,To define an abbreviation or acronym
+10,2,How can you create a clickable area in an image in HTML?,Using the `<map>` and `<area>` tags,Using `<link>`,Using `<img>`,Using `<anchor>`,Using the `<map>` and `<area>` tags
+10,2,What does the `target` attribute in an anchor tag specify?,Where to open the linked document,Defines the document type,Styles the link,Specifies the document title,Where to open the linked document
+10,2,How can you specify a custom list style in HTML?,Using the `style` attribute in `<ul>` or `<ol>`,Using `<list-style>`,Using `<custom-list>`,Using `<ul type=''>`,Using the `style` attribute in `<ul>` or `<ol>`
+10,2,What does the `<address>` tag signify in HTML?,Contact information for the author of the document,Defines a comment,Creates links,Styles text,Contact information for the author of the document
+10,2,How can you include a web font in HTML?,Using the `<link>` tag with a stylesheet,Using `<font>`,Using `<style>`,Using `<webfont>`,Using the `<link>` tag with a stylesheet
+10,2,What is the purpose of the `<var>` tag in HTML?,To represent a variable in a mathematical expression,Defines a comment,Creates links,Styles text,To represent a variable in a mathematical expression
+10,2,How do you specify a base URL for all relative URLs in a document?,Using the `<base>` tag,Using `<url>`,Using `<link>`,Using `<head>`,Using the `<base>` tag
+10,2,What does the `href` attribute in the `<a>` tag specify?,The URL of the page the link goes to,Defines the link text,Styles the link,Specifies the link title,The URL of the page the link goes to
+10,2,How can you create a radio button group in HTML?,Using `<input type='radio'>` with the same `name` attribute,Using `<input type='checkbox'>`,Using `<radio>`,Using `<button>`,Using `<input type='radio'>` with the same `name` attribute
+10,2,What is the function of the `<code>` tag in HTML?,To display code snippets,Defines a comment,Creates links,Styles text,To display code snippets
+10,2,How do you create a dropdown list in HTML?,Using `<select>` with `<option>` tags,Using `<list>`,Using `<dropdown>`,Using `<menu>`,Using `<select>` with `<option>` tags
+10,2,What does the `<progress>` element represent in HTML?,The progress of a task,Defines a comment,Creates links,Styles text,The progress of a task
+10,2,How can you create a tooltip for an element in HTML?,Using the `title` attribute,Using `<tooltip>`,Using `<hint>`,Using `<info>`,Using the `title` attribute
+10,2,What is the purpose of the `<data>` tag in HTML?,To associate a machine-readable value with a given content,Defines a comment,Creates links,Styles text,To associate a machine-readable value with a given content
+10,2,How do you create an HTML form that submits data to a server?,Using `<form action='url' method='post'>`,Using `<input>`,Using `<submit>`,Using `<form>`,Using `<form action='url' method='post'>`
+10,2,What does the `<bdi>` tag do in HTML?,Isolates a span of text that may be formatted in a different direction,Defines a comment,Creates links,Styles text,Isolates a span of text that may be formatted in a different direction
+10,2,How can you create an embedded video in HTML?,Using the `<video>` tag,Using `<embed>`,Using `<media>`,Using `<video-link>`,Using the `<video>` tag
+10,2,What is the purpose of the `<figcaption>` tag in HTML?,To provide a caption for a `<figure>` element,Defines a comment,Creates links,Styles text,To provide a caption for a `<figure>` element
+10,2,How do you create a link that opens in a new tab?,Using `<a href='url' target='_blank'>`,Using `<a newtab='url'>`,Using `<link>`,Using `<a href='url'>`,Using `<a href='url' target='_blank'>`
+10,2,What does the `<main>` tag signify in HTML?,The main content of a document,Defines a comment,Creates links,Styles text,The main content of a document
+10,2,How can you define a custom data attribute in HTML?,Using the `data-*` syntax,<custom-data>,Using `<data>`,Using `<attr>`,Using the `data-*` syntax
+10,2,What is the purpose of the `disabled` attribute in an input element?,To prevent user interaction with the input,Defines a comment,Creates links,Styles text,To prevent user interaction with the input
+10,2,How do you create a navigation bar in HTML?,Using the `<nav>` tag,Using `<menu>`,Using `<navbar>`,Using `<div>`,Using the `<nav>` tag
+10,2,What does the `<summary>` tag do in HTML?,Defines a visible heading for a `<details>` element,Defines a comment,Creates links,Styles text,Defines a visible heading for a `<details>` element
+10,2,How can you create an unordered list in HTML?,Using `<ul>` and `<li>`,Using `<list>`,Using `<ol>`,Using `<unordered>`,Using `<ul>` and `<li>`
+10,2,What is the purpose of the `src` attribute in the `<img>` tag?,To specify the image source URL,Defines the image title,Styles the image,Creates a link,To specify the image source URL
+10,2,How do you create an HTML table row?,Using `<tr>` inside `<table>`,Using `<row>`,Using `<table-row>`,Using `<table>`,Using `<tr>` inside `<table>`
+10,2,What does the `<strong>` tag do in HTML?,Indicates strong importance,Defines a comment,Creates links,Styles text,Indicates strong importance
+10,2,How can you specify that an input field should accept only email addresses?,Using `<input type='email'>`,Using `<input type='text'>`,Using `<input email=''>`,Using `<input type='mail'>`,Using `<input type='email'>`
+10,2,What is the function of the `<fieldset>` tag in HTML?,To group related elements in a form,Defines a comment,Creates links,Styles text,To group related elements in a form
+10,2,How do you create a link that navigates to a section within the same page?,Using an anchor link `<a href='#section'>`,Using `<anchor>`,Using `<link>`,Using `<scroll>`,Using an anchor link `<a href='#section'>`
+10,2,What does the `accept` attribute in an input element specify?,The file types allowed for file uploads,Defines the input type,Styles the input,Creates a label for the input,The file types allowed for file uploads
+10,2,How can you add an audio file to an HTML page?,Using the `<audio>` tag,Using `<media>`,Using `<embed>`,Using `<sound>`,Using the `<audio>` tag
+10,2,What is the purpose of the `<time>` tag in HTML?,To represent a specific time or date,Defines a comment,Creates links,Styles text,To represent a specific time or date
+10,2,How do you create a progress bar in HTML?,Using the `<progress>` tag,Using `<bar>`,Using `<loading>`,Using `<meter>`,Using the `<progress>` tag
+10,2,What does the `<mark>` tag do in HTML?,Highlights text,Defines a comment,Creates links,Styles text,Highlights text
+10,2,How can you make a form input required in HTML?,Using the `required` attribute,<input must=''>,<input necessary=''>,<input required=''>,Using the `required` attribute
+10,2,What is the role of the `<section>` tag in HTML?,To define a thematic grouping of content,Defines a comment,Creates links,Styles text,To define a thematic grouping of content
+10,2,How do you create an HTML link that opens a file?,Using `<a href='file.pdf'>`,Using `<link>`,Using `<file>`,Using `<download>`,Using `<a href='file.pdf'>`
+10,2,What does the `rel` attribute in the `<link>` tag specify?,The relationship between the current document and the linked resource,Defines the document type,Styles the link,Specifies the link title,The relationship between the current document and the linked resource
+10,2,How can you specify a fallback image in HTML?,Using the `src` attribute in `<img>` and `<source>` tags,Using `<fallback>`,Using `<img fallback=''>`,Using `<picture>`,Using the `src` attribute in `<img>` and `<source>` tags
+10,2,What is the purpose of the `<canvas>` tag in HTML?,To draw graphics on the fly via scripting,Defines a comment,Creates links,Styles text,To draw graphics on the fly via scripting
+10,2,How do you create a styled link in HTML?,Using CSS styles with the `<a>` tag,Using `<link>`,Using `<style>`,Using `<styled>`,Using CSS styles with the `<a>` tag
+10,2,What does the `tabindex` attribute do in HTML?,Specifies the tab order of elements,Defines a comment,Styles the element,Creates a label for the element,Specifies the tab order of elements
+10,2,How can you specify a color for text in HTML?,Using the `style` attribute with `color`,Using `<text-color>`,Using `<font color=''>`,Using `<color>`,Using the `style` attribute with `color`
+10,2,What is the purpose of the `<meta>` tag in HTML?,To provide metadata about the HTML document,Defines a comment,Creates links,Styles text,To provide metadata about the HTML document
+10,2,How do you create a breadcrumb navigation in HTML?,Using a series of `<a>` tags within `<nav>`,Using `<menu>`,Using `<nav-breadcrumb>`,Using `<breadcrumbs>`,Using a series of `<a>` tags within `<nav>`
+10,2,What does the `role` attribute specify in HTML?,Defines the purpose of an element for accessibility,Defines a comment,Styles the element,Creates a label for the element,Defines the purpose of an element for accessibility
+10,2,How can you create a button that submits a form?,Using `<button type='submit'>`,Using `<input>`,Using `<form-submit>`,Using `<button>`,Using `<button type='submit'>`
+10,2,What is the purpose of the `<svg>` tag in HTML?,To define vector graphics,Defines a comment,Creates links,Styles text,To define vector graphics
+10,2,How do you create a floating element in HTML?,Using the `float` CSS property,Using `<float>`,Using `<position>`,Using `<style>`,Using the `float` CSS property
+10,2,What does the `<s>` tag do in HTML?,Represents text that is no longer accurate,Defines a comment,Creates links,Styles text,Represents text that is no longer accurate
+10,2,How can you define a language for an HTML document?,Using the `lang` attribute in the `<html>` tag,Using `<language>`,Using `<meta>`,Using `<lang>`,Using the `lang` attribute in the `<html>` tag
+10,2,What is the function of the `<link>` tag in HTML?,To link external resources like stylesheets,Defines a comment,Creates links,Styles text,To link external resources like stylesheets
+10,2,How do you create an inline frame in HTML?,Using the `<iframe>` tag,Using `<frame>`,Using `<inline>`,Using `<frame-set>`,Using the `<iframe>` tag
+10,2,What does the `<table>` tag represent in HTML?,A table structure for organizing data,Defines a comment,Creates links,Styles text,A table structure for organizing data
+10,2,How can you specify the width of an image in HTML?,Using the `width` attribute in `<img>`,Using `<image width=''>`,Using `<img size=''>`,Using the `style` attribute,Using the `width` attribute in `<img>`
+10,2,What is the purpose of the `autocomplete` attribute in a form input?,To specify whether the browser should pre-fill input values,Defines a comment,Styles the input,Creates a label for the input,To specify whether the browser should pre-fill input values
+10,2,How do you create an HTML header section?,Using the `<header>` tag,Using `<title>`,Using `<head>`,Using `<h1>`,Using the `<header>` tag
+10,2,What does the `<cite>` tag represent in HTML?,The title of a work,Defines a comment,Creates links,Styles text,The title of a work
+10,2,How can you create a breadcrumb trail in HTML?,Using a series of `<a>` tags,Using `<menu>`,Using `<nav>`,Using `<breadcrumb>`,Using a series of `<a>` tags
+10,2,What does the `async` attribute do in the `<script>` tag?,Loads the script asynchronously,Defines the script type,Specifies the script version,Styles the script,Loads the script asynchronously
+10,2,How do you specify a background color in HTML?,Using the `style` attribute with `background-color`,Using `<bg-color>`,Using `<background>`,Using `<color>`,Using the `style` attribute with `background-color`
+10,2,What is the purpose of the `<details>` tag in HTML?,To create a disclosure widget from which the user can obtain additional information,Defines a comment,Creates links,Styles text,To create a disclosure widget from which the user can obtain additional information
+10,2,How can you create a tooltip using HTML?,Using the `title` attribute,Using `<tooltip>`,Using `<hint>`,Using `<info>`,Using the `title` attribute
+10,2,What does the `<figure>` tag represent in HTML?,To encapsulate media along with an optional caption,Defines a comment,Creates links,Styles text,To encapsulate media along with an optional caption
+10,2,How can you make a form input element read-only?,Using the `readonly` attribute,<input read=''>,<input disabled=''>,<input lock=''>,Using the `readonly` attribute
+10,2,What does the `defer` attribute do in the `<script>` tag?,Delays execution of the script until the HTML document is fully parsed,Defines the script type,Specifies the script version,Styles the script,Delays execution of the script until the HTML document is fully parsed
+10,2,How do you specify a minimum width for an input element?,Using the `min-width` CSS property,Using the `min` attribute,<input min=''>,<input width=''>,Using the `min-width` CSS property
+10,2,What is the purpose of the `<time>` tag in HTML?,To represent a specific time or date,Defines a comment,Creates links,Styles text,To represent a specific time or date
+10,2,How can you group multiple checkbox inputs in HTML?,Using `<input type='checkbox'>` with the same `name`,Using `<input>`,Using `<checkbox-group>`,Using `<group>`,Using `<input type='checkbox'>` with the same `name`
+10,2,What does the `data-*` attribute allow in HTML?,To store custom data on elements,Defines a comment,Styles the element,Creates a label for the element,To store custom data on elements
+10,2,How can you create an HTML document that includes metadata?,Using the `<meta>` tag in the `<head>`,Using `<info>`,Using `<head-info>`,Using `<meta-data>`,Using the `<meta>` tag in the `<head>`
+10,2,What is the role of the `<progress>` tag in HTML?,To display the progress of a task,Defines a comment,Creates links,Styles text,To display the progress of a task
+10,2,How do you create an ordered list in HTML?,Using `<ol>` and `<li>`,Using `<list>`,Using `<ul>`,Using `<ordered-list>`,Using `<ol>` and `<li>`
+10,2,What does the `<kbd>` tag represent in HTML?,User input that is typically typed from the keyboard,Defines a comment,Creates links,Styles text,User input that is typically typed from the keyboard
+10,2,How can you specify the width of a table in HTML?,Using the `width` attribute in the `<table>`,Using `<table width=''>`,Using the `style` attribute,Using `<table-size>`,Using the `width` attribute in the `<table>`
+10,2,What is the purpose of the `<map>` tag in HTML?,To define a client-side image map,Defines a comment,Creates links,Styles text,To define a client-side image map
+10,2,How do you create a responsive image in HTML?,Using the `srcset` attribute in `<img>`,Using `<responsive>`,Using `<img responsive=''>`,Using `<picture>`,Using the `srcset` attribute in `<img>`
+10,2,What does the `placeholder` attribute do in an input field?,Provides a hint to the user of what can be entered,Defines a comment,Styles the input,Creates a label for the input,Provides a hint to the user of what can be entered
+10,2,How can you add a comment in HTML?,Using `<!-- comment -->`,Using `<comment>`,Using `// comment`,Using `<!comment>`,Using `<!-- comment -->`
+10,2,What is the purpose of the `<summary>` tag in HTML?,To provide a summary for a `<details>` element,Defines a comment,Creates links,Styles text,To provide a summary for a `<details>` element
+10,2,How do you define a navigation link that opens a new window?,Using `<a href='url' target='_blank'>`,Using `<a link='url'>`,Using `<a href='url'>`,Using `<nav-link>`,Using `<a href='url' target='_blank'>`
+10,2,What does the `<strong>` tag signify in HTML?,Indicates strong importance,Defines a comment,Creates links,Styles text,Indicates strong importance
+10,2,How can you create a checkbox group in HTML?,Using `<input type='checkbox'>` with the same `name`,Using `<input>`,Using `<checkbox-group>`,Using `<group>`,Using `<input type='checkbox'>` with the same `name`
+10,2,What is the function of the `required` attribute in an input element?,Specifies that the field must be filled out,Defines a comment,Styles the input,Creates a label for the input,Specifies that the field must be filled out
+10,2,How do you create a floating layout in HTML?,Using the `float` CSS property,Using `<float>`,Using `<layout>`,Using `<position>`,Using the `float` CSS property
+10,2,What does the `<em>` tag represent in HTML?,Text with emphasized importance,Defines a comment,Creates links,Styles text,Text with emphasized importance
+10,2,How can you embed a YouTube video in HTML?,Using the `<iframe>` tag,Using `<video>`,Using `<embed>`,Using `<media>`,Using the `<iframe>` tag
+10,2,What is the purpose of the `<header>` tag in HTML?,To define a header for a document or section,Defines a comment,Creates links,Styles text,To define a header for a document or section
+10,2,How do you create a drop-down menu in HTML?,Using `<select>` and `<option>`,Using `<menu>`,Using `<dropdown>`,Using `<list>`,Using `<select>` and `<option>`
+10,2,What does the `role` attribute in HTML signify?,Defines the purpose of an element for accessibility,Defines a comment,Styles the element,Creates a label for the element,Defines the purpose of an element for accessibility
+10,2,How can you define the alignment of a table cell in HTML?,Using the `align` attribute in `<td>`,Using `<td align=''>`,Using the `style` attribute,Using `<cell>`,Using the `align` attribute in `<td>`
+10,2,What is the function of the `<footer>` tag in HTML?,To define a footer for a document or section,Defines a comment,Creates links,Styles text,To define a footer for a document or section
+10,2,How do you create a CSS style for an HTML element?,Using the `style` attribute or in a `<style>` tag,Using `<css>`,Using `<style-type>`,Using `<stylesheet>`,Using the `style` attribute or in a `<style>` tag
+10,2,What does the `src` attribute in the `<img>` tag specify?,The URL of the image file,Defines the image title,Styles the image,Creates a label for the image,The URL of the image file
+10,2,How can you create a hyperlink that opens in a new tab?,Using `<a href='url' target='_blank'>`,Using `<link>`,Using `<anchor>`,Using `<tab-link>`,Using `<a href='url' target='_blank'>`
+10,2,What is the purpose of the `<abbr>` tag in HTML?,To define an abbreviation,Defines a comment,Creates links,Styles text,To define an abbreviation
+10,2,How do you create an HTML form that submits data?,Using `<form action='url' method='post'>`,Using `<input>`,Using `<submit>`,Using `<form>`,Using `<form action='url' method='post'>`
+10,2,What does the `name` attribute in an input element specify?,The name of the input control,Defines a comment,Styles the input,Creates a label for the input,The name of the input control
+10,2,How can you specify an alternative text for an image in HTML?,Using the `alt` attribute in `<img>`,Using `<image alt=''>`,Using `<img title=''>`,Using `<img text=''>`,Using the `alt` attribute in `<img>`
+10,2,What is the purpose of the `<section>` tag in HTML?,To define sections in a document,Defines a comment,Creates links,Styles text,To define sections in a document
+10,2,How do you include a CSS file in an HTML document?,Using `<link rel='stylesheet' href='styles.css'>`,Using `<css>`,Using `<style>`,Using `<stylesheet>`,Using `<link rel='stylesheet' href='styles.css'>`
+10,2,What does the `maxlength` attribute do in an input field?,Specifies the maximum number of characters allowed,Defines a comment,Styles the input,Creates a label for the input,Specifies the maximum number of characters allowed
+10,2,How can you create a list that is not numbered in HTML?,Using `<ul>` and `<li>`,Using `<list>`,Using `<ol>`,Using `<unordered-list>`,Using `<ul>` and `<li>`
+10,2,What is the purpose of the `<article>` tag in HTML?,To define independent content,Defines a comment,Creates links,Styles text,To define independent content
+10,2,How do you create a multi-line text input in HTML?,Using `<textarea>`,Using `<input>`,Using `<text>`,Using `<multi-line>`,Using `<textarea>`
+10,2,What does the `<address>` tag represent in HTML?,Contact information for the author of a document,Defines a comment,Creates links,Styles text,Contact information for the author of a document
+10,2,How can you create a responsive layout in HTML?,Using CSS media queries,Using `<responsive>`,Using `<layout>`,Using `<flex>`,Using CSS media queries
+10,2,What is the function of the `<noscript>` tag in HTML?,To provide alternative content for users without JavaScript,Defines a comment,Creates links,Styles text,To provide alternative content for users without JavaScript
+10,2,How do you create an inline element in HTML?,Using `<span>`,Using `<div>`,Using `<block>`,Using `<inline>`,Using `<span>`
+10,2,What does the `accept` attribute do in file input elements?,Specifies the types of files that are acceptable for upload,Defines a comment,Styles the input,Creates a label for the input,Specifies the types of files that are acceptable for upload
+10,2,How can you create an HTML form with multiple inputs?,Using `<form>` with multiple `<input>` elements,Using `<input>`,Using `<group>`,Using `<form-group>`,Using `<form>` with multiple `<input>` elements
+10,2,What is the purpose of the `<dialog>` tag in HTML?,To define a dialog box,Defines a comment,Creates links,Styles text,To define a dialog box
+10,2,How do you create a reset button in HTML?,Using `<input type='reset'>`,Using `<reset>`,Using `<button>`,Using `<input>`,Using `<input type='reset'>`
+10,2,What does the `value` attribute specify in an input field?,The default value of the input,Defines a comment,Styles the input,Creates a label for the input,The default value of the input
+10,2,How can you create a footer for an HTML document?,Using the `<footer>` tag,Using `<bottom>`,Using `<section>`,Using `<footer-section>`,Using the `<footer>` tag
+10,2,What is the function of the `<link>` tag in the `<head>` section?,To link external resources,Defines a comment,Creates links,Styles text,To link external resources
+10,2,How do you create an HTML comment?,Using `<!-- comment -->`,Using `<comment>`,Using `// comment`,Using `<note>`,Using `<!-- comment -->`

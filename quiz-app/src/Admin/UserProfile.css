@@ -1,0 +1,83 @@
+.container {
+    width: 100%; /* Full width of the area */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    font-size: 2rem; /* Larger font for user name */
+    color: #4A4A4A; /* Dark grey color */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 15px; /* Space below the name */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.user-info {
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Space between items */
+}
+
+.info-item {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between label and value */
+    align-items: center; /* Center items vertically */
+    background: #e3f2fd; /* Light blue background */
+    border: 1px solid #bbdefb; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding around the content */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.info-item:hover {
+    background: #bbdefb; /* Darker shade on hover */
+}
+
+.info-label {
+    font-weight: bold; /* Bold text for labels */
+    /* color: #1976d2; */
+}
+
+.info-value {
+    color: #1976d2; /* Primary color for values */
+}
+
+.no-details {
+    color: #b02a2a; /* Color for no details message */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centered text */
+}
+
+.table {
+    width: 100%; /* Full width of the table */
+    margin-top: 20px; /* Space above the table */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e7f0ff; /* Light blue on hover */
+}
+
+.btn-warning {
+    background-color: #ff6f00; /* Bright warning color */
+    border: none; /* Remove default border */
+}
+
+.btn-warning:hover {
+    background-color: #ff6f00; /* Darker shade on hover */
+}

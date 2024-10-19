@@ -1,0 +1,374 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
+9,2,What is the purpose of middleware in Express.js?,To handle requests before they reach the route handlers,To manage database connections,To serve static files,To define routes,To handle requests before they reach the route handlers
+9,2,Which method is used to create a new Express application?,express.create(),new express(),const app = express(),app = express(),const app = express()
+9,2,How do you define a route that responds to POST requests in Express.js?,app.post('/route', handler),app.get('/route', handler),app.all('/route', handler),app.route('/route', handler),app.post('/route', handler)
+9,2,What is the default behavior of the res.json() method?,Sends a JSON response,Ends the response,Logs the response,Sets the status code,Sends a JSON response
+9,2,How do you send a file as a response in Express.js?,res.sendFile(),res.file(),res.send(),res.download(),res.sendFile()
+9,2,What does the express.Router() method do?,Creates modular route handlers,Defines middleware,Handles errors,Creates middleware,Creates modular route handlers
+9,2,How can you handle errors globally in Express.js?,Using app.use(),Using app.error(),Using app.catch(),Using app.handle(),Using app.use()
+9,2,What is the purpose of the res.redirect() method?,To redirect the client to another URL,To send a response with a status code,To render a view,To serve static files,To redirect the client to another URL
+9,2,How do you parse URL-encoded data in Express.js?,app.use(express.urlencoded()),app.use(express.json()),app.use(express.bodyParser()),app.use(express.query()),app.use(express.urlencoded())
+9,2,What is the purpose of the next() function in Express middleware?,To pass control to the next middleware function,To end the request-response cycle,To log the request,To handle errors,To pass control to the next middleware function
+9,2,Which method would you use to define a route that serves static files?,app.static(),app.use(),app.get(),app.serveStatic(),app.use()
+9,2,How do you set response headers in Express.js?,res.setHeader(),res.headers(),res.sendHeaders(),res.header(),res.setHeader()
+9,2,What does the req.body object contain in Express.js?,The parsed request body,The request headers,The URL parameters,The query string,The parsed request body
+9,2,How do you enable CORS in an Express application?,Using cors middleware,Using app.use(),Using res.set(),Using next(),Using cors middleware
+9,2,How can you create a custom error-handling middleware in Express.js?,app.use((err, req, res, next) => {...}),app.errorHandler((err, req, res) => {...}),app.catch((err) => {...}),app.useError((err) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of app.listen()?,To start the server and listen for incoming requests,To define middleware,To set routes,To serve static files,To start the server and listen for incoming requests
+9,2,How do you access route parameters in Express.js?,req.params,req.body,req.query,req.headers,req.params
+9,2,What is the default port for an Express application?,3000,8000,5000,4000,3000
+9,2,How do you set a custom status code in the response?,res.status(code),res.setStatus(code),res.sendStatus(code),res.send(code),res.status(code)
+9,2,What is the purpose of express.static() middleware?,To serve static files,To log requests,To handle errors,To parse request bodies,To serve static files
+9,2,How can you define a route that matches all HTTP methods?,app.all('/route', handler),app.route('/route', handler),app.get('/route', handler),app.use('/route', handler),app.all('/route', handler)
+9,2,What does the req.originalUrl property return?,The original request URL,The current URL,The query string,The request headers,The original request URL
+9,2,How do you implement rate limiting in Express.js?,Using express-rate-limit middleware,Using app.use(),Using res.limit(),Using next(),Using express-rate-limit middleware
+9,2,What is the function of the app.use() method?,To mount middleware or routes,To send responses,To log requests,To handle errors,To mount middleware or routes
+9,2,What does the res.sendStatus() method do?,Sets the response status and sends a status code,Logs the status,Ends the response,Returns a message,Sets the response status and sends a status code
+9,2,How do you define a route with a wildcard in Express.js?,app.get('/route/*', handler),app.get('/route/:param', handler),app.get('/route?param=value', handler),app.route('/route/:param', handler),app.get('/route/*', handler)
+9,2,How do you serve a JSON response with a status code in Express.js?,res.status(code).json({}),res.json(code, {}),res.send(code, {}),res.sendStatus(code).json({}),res.status(code).json({})
+9,2,What is the purpose of the req.method property?,To get the HTTP method of the request,To get the request URL,To get the request headers,To get the query parameters,To get the HTTP method of the request
+9,2,How do you access query string parameters in Express.js?,req.query,req.body,req.params,req.headers,req.query
+9,2,What does the res.sendFile() method do?,Sends a file as a response,Returns the file path,Logs the file,Sets the response type,Sends a file as a response
+9,2,What is the correct way to create a GET route that includes a dynamic parameter?,app.get('/route/:param', handler),app.get('/route?param=value', handler),app.route('/route/:param', handler),app.get('/route/(param)', handler),app.get('/route/:param', handler)
+9,2,How do you define a route that handles both GET and POST requests?,app.all('/route', handler),app.route('/route', handler),app.get('/route', handler),app.post('/route', handler),app.all('/route', handler)
+9,2,What is the purpose of the express.json() middleware?,To parse JSON request bodies,To serve static files,To log requests,To set response headers,To parse JSON request bodies
+9,2,How do you enable logging in an Express application?,app.use(morgan('dev')),app.enableLogging(),app.useLogging(),app.log('dev'),app.use(morgan('dev'))
+9,2,What does req.headers contain in Express.js?,The request headers,The response headers,The route parameters,The query string,The request headers
+9,2,How do you access the request's HTTP method in Express.js?,req.method,req.getMethod(),req.methodType(),req.methodName(),req.method
+9,2,What is the purpose of the req.cookies object?,To access cookies sent with the request,To access query parameters,To access route parameters,To access headers,To access cookies sent with the request
+9,2,How do you create a middleware that runs for specific routes?,app.use('/route', middleware),app.all('/route', middleware),app.route('/route', middleware),app.method('/route', middleware),app.use('/route', middleware)
+9,2,What is the function of the app.set() method?,To set application-level settings,To define routes,To handle errors,To log requests,To set application-level settings
+9,2,How do you handle 404 errors in Express.js?,Using app.use((req, res) => {...}),Using app.errorHandler(),Using app.notFound(),Using app.useError(),Using app.use((req, res) => {...})
+9,2,What is the purpose of the res.jsonp() method?,To send a JSONP response,To send a JSON response,To set response headers,To log responses,To send a JSONP response
+9,2,How do you access the request parameters in Express.js?,req.params,req.query,req.body,req.headers,req.params
+9,2,What does app.use(express.json()) do in an Express application?,Parses JSON request bodies,Logs requests,Serves static files,Handles errors,Parses JSON request bodies
+9,2,How do you handle different HTTP methods for the same route in Express.js?,Using app.all(),Using app.route(),Using app.use(),Using app.method(),Using app.all()
+9,2,What is the purpose of the res.status() method in Express.js?,To set the HTTP status code for the response,To send a response,To log the response,To end the response,To set the HTTP status code for the response
+9,2,How do you serve static files from a specific directory in Express.js?,app.use('/static', express.static('public')),app.serveStatic('/static', 'public'),app.static('/static', 'public'),app.get('/static', express.static('public')),app.use('/static', express.static('public'))
+9,2,How do you access the response status code in Express.js?,res.statusCode,res.status(),res.getStatus(),res.statusCode(),res.statusCode
+9,2,What is the purpose of the app.locals object in Express.js?,To store local variables accessible in the application,To store request parameters,To store middleware,To store response headers,To store local variables accessible in the application
+9,2,How do you define a route that uses a query string parameter?,app.get('/route', (req, res) => {...}),app.get('/route/:param', (req, res) => {...}),app.route('/route', (req, res) => {...}),app.all('/route', (req, res) => {...}),app.get('/route', (req, res) => {...})
+9,2,What is the correct way to install the express package using npm?,npm install express,npm add express,npm fetch express,npm get express,npm install express
+9,2,How do you handle a POST request in Express.js?,app.post('/route', handler),app.get('/route', handler),app.route('/route', handler),app.all('/route', handler),app.post('/route', handler)
+9,2,What does the res.send() method do in Express.js?,Sends a response to the client,Logs the response,Sets response headers,Ends the response,Sends a response to the client
+9,2,How can you access the original request method when using method-override?,req.originalMethod,req.method,req.override(),req.methodOverride(),req.originalMethod
+9,2,What is the purpose of the res.sendFile() method?,To send a file as a response,To log the file,To set response headers,To serve static files,To send a file as a response
+9,2,How do you serve an HTML file in Express.js?,res.sendFile('index.html'),res.send('index.html'),res.sendHTML('index.html'),res.file('index.html'),res.sendFile('index.html')
+9,2,What is the purpose of the express.Router() method?,To create modular route handlers,To define middleware,To handle errors,To create application settings,To create modular route handlers
+9,2,How do you handle a DELETE request in Express.js?,app.delete('/route', handler),app.post('/route', handler),app.get('/route', handler),app.all('/route', handler),app.delete('/route', handler)
+9,2,What does the app.use(express.static()) method do?,Serves static files,Parses request bodies,Handles errors,Defines routes,Serves static files
+9,2,How do you define a route with multiple parameters in Express.js?,app.get('/route/:param1/:param2', handler),app.get('/route/:params', handler),app.route('/route/:param1/:param2', handler),app.get('/route(param1,param2)', handler),app.get('/route/:param1/:param2', handler)
+9,2,What is the correct way to import the express package in a Node.js file?,const express = require('express'),import express from 'express',require('express'),using express(),const express = require('express')
+9,2,How do you set up a basic Express server?,const app = express(); app.listen(port),const express = require('express'); app.listen(port),app = express(); app.listen(port),app.use(express()); app.listen(port),const app = express(); app.listen(port)
+9,2,How do you add a custom header to the response in Express.js?,res.setHeader('Header-Name', 'value'),res.header('Header-Name', 'value'),res.addHeader('Header-Name', 'value'),res.customHeader('Header-Name', 'value'),res.setHeader('Header-Name', 'value')
+9,2,What is the purpose of the app.get() method?,To define a GET route,To define a POST route,To define middleware,To serve static files,To define a GET route
+9,2,How do you define a route that serves a specific JSON response?,app.get('/route', (req, res) => res.json({ key: value })),app.get('/route', res.json({ key: value })),app.get('/route', (req, res) => res.send({ key: value })),app.get('/route', res.send({ key: value })),app.get('/route', (req, res) => res.json({ key: value }))
+9,2,What does the res.end() method do?,Ends the response,Logs the response,Sets response headers,Returns a message,Ends the response
+9,2,How do you access the user's IP address in Express.js?,req.ip,req.userIP,req.clientIP,req.getIP(),req.ip
+9,2,What is the correct way to handle different HTTP methods for the same endpoint in Express.js?,app.route('/endpoint').get(handler).post(handler),app.endpoint('/endpoint').get(handler).post(handler),app.get('/endpoint').post(handler),app.all('/endpoint', handler),app.route('/endpoint').get(handler).post(handler)
+9,2,How do you access the request's query string parameters in Express.js?,req.query,req.body,req.params,req.headers,req.query
+9,2,What is the correct way to use a template engine in Express.js?,app.set('view engine', 'engine-name'),app.use('view engine', 'engine-name'),app.engine('view engine', 'engine-name'),app.setEngine('view engine', 'engine-name'),app.set('view engine', 'engine-name')
+9,2,What middleware is commonly used to parse JSON request bodies in Express.js?,express.json(),bodyParser.json(),bodyParser.urlencoded(),express.urlencoded(),express.json()
+9,2,How do you send a response with a specific HTTP status code in Express.js?,res.status(200).send(),res.send(200),res.sendStatus(200),res.status(200),res.sendStatus(200)
+9,2,What is the purpose of the next() function in middleware?,To pass control to the next middleware function,To stop the request-response cycle,To end the response,To log request data,To pass control to the next middleware function
+9,2,How do you define a wildcard route that matches all requests in Express.js?,app.get('*', handler),app.all('*', handler),app.route('*', handler),app.use('*', handler),app.get('*', handler)
+9,2,What method is used to serve static files from a directory in Express.js?,express.static(),app.serveStatic(),app.useStatic(),app.staticFiles(),express.static()
+9,2,How can you create a middleware to log request details?,app.use((req, res, next) => {...}),app.log((req, res, next) => {...}),app.middleware((req, res, next) => {...}),app.useLogger((req, res, next) => {...}),app.use((req, res, next) => {...})
+9,2,What is the default port number for an Express server?,3000,8080,4000,5000,3000
+9,2,How do you create a route parameter in Express.js?,/:param,/:parameter,/:param?,/:param*,/:param
+9,2,What does app.listen() do in Express.js?,Starts the server and listens for incoming requests,Defines routes,Parses incoming requests,Handles middleware,Starts the server and listens for incoming requests
+9,2,How do you set a response content type in Express.js?,res.type('text/html'),res.set('Content-Type', 'text/html'),res.contentType('text/html'),res.header('Content-Type', 'text/html'),res.type('text/html')
+9,2,What is the purpose of app.use() in Express.js?,To mount middleware,To define routes,To set response headers,To parse request bodies,To mount middleware
+9,2,How do you handle errors in Express.js?,app.use((err, req, res, next) => {...}),app.errorHandler((err, req, res, next) => {...}),app.catch((err, req, res, next) => {...}),app.handleError((err, req, res, next) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of res.json() in Express.js?,To send a JSON response,To send a plain text response,To set response headers,To log the response,To send a JSON response
+9,2,How do you specify a route that responds to both GET and POST requests?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,What is the purpose of the app.param() method?,To define middleware for route parameters,To handle request headers,To set response headers,To define global middleware,To define middleware for route parameters
+9,2,How do you enable CORS in an Express.js application?,app.use(cors()),app.use(cors({origin: '*'})),app.set('Access-Control-Allow-Origin', '*'),app.use((req, res, next) => {...}),app.use(cors())
+9,2,What does res.sendStatus() do in Express.js?,Sends a response with a status code and message,Sends a response with only a status code,Sends a plain text response,Logs the response,Ends the response
+9,2,How can you serve an HTML file located in a subdirectory?,res.sendFile('./subdir/file.html'),res.sendFile('subdir/file.html'),res.sendFile('/subdir/file.html'),res.send('subdir/file.html'),res.sendFile('./subdir/file.html')
+9,2,What is the correct way to handle PUT requests in Express.js?,app.put('/route', handler),app.post('/route', handler),app.get('/route', handler),app.all('/route', handler),app.put('/route', handler)
+9,2,How do you define a route that uses route chaining?,app.route('/path').get(handler).post(handler),app.route('/path', handler),app.get('/path', handler).post(handler),app.all('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,What is the purpose of the res.sendFile() method?,To send a file as a response,To serve static files,To log the file,To set response headers,To send a file as a response
+9,2,How do you define an error handling middleware in Express.js?,app.use((err, req, res, next) => {...}),app.error((req, res) => {...}),app.catch((err) => {...}),app.useError((err, req, res) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of the app.get() method?,To define a GET route,To define a POST route,To define middleware,To serve static files,To define a GET route
+9,2,How do you define a route that responds with plain text?,app.get('/path', (req, res) => res.send('Text')),app.get('/path', (req, res) => res.json('Text')),app.get('/path', (req, res) => res.sendFile('Text')),app.get('/path', (req, res) => res.end('Text')),app.get('/path', (req, res) => res.send('Text'))
+9,2,What method would you use to redirect a request in Express.js?,res.redirect('/new-path'),res.sendRedirect('/new-path'),res.go('/new-path'),res.route('/new-path'),res.redirect('/new-path')
+9,2,How do you define a route that uses a regular expression?,app.get(/regex/, handler),app.get('/route/:regex', handler),app.get('/route', handler),app.get('/regex/:param', handler),app.get(/regex/, handler)
+9,2,What is the purpose of express.Router()?,To create modular route handlers,To define middleware,To handle errors,To create application settings,To create modular route handlers
+9,2,How can you access route parameters in the request object?,req.params,req.query,req.body,req.headers,req.params
+9,2,What is the correct way to define a DELETE route?,app.delete('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.delete('/path', handler)
+9,2,What does app.use(express.urlencoded()) do?,Parses incoming request bodies with URL-encoded data,Parses incoming request bodies with JSON data,Serves static files,Defines routes,Parses incoming request bodies with URL-encoded data
+9,2,How do you handle multiple middleware for a single route?,app.get('/route', [middleware1, middleware2], handler),app.get('/route', middleware1, middleware2, handler),app.route('/route', middleware1).get(handler),app.use('/route', middleware1, middleware2),app.get('/route', [middleware1, middleware2], handler)
+9,2,What is the correct way to serve static files from a "public" directory?,app.use(express.static('public')),app.useStatic('public'),app.static('public'),app.use('/public', express.static()),app.use(express.static('public'))
+9,2,How can you send an HTML response from an Express route?,res.send('<h1>Hello</h1>'),res.html('<h1>Hello</h1>'),res.sendHtml('<h1>Hello</h1>'),res.sendFile('<h1>Hello</h1>'),res.send('<h1>Hello</h1>')
+9,2,How do you access the request headers in Express.js?,req.headers,req.body,req.query,req.params,req.headers
+9,2,What is the purpose of the app.locals object?,To store local variables accessible in the application,To store request parameters,To define middleware,To handle errors,To store local variables accessible in the application
+9,2,How do you set a timeout for a request in Express.js?,req.setTimeout(900),res.setTimeout(900),app.useTimeout(900),app.set('timeout', 900),req.setTimeout(900)
+9,2,What is the correct way to import a custom middleware function in Express.js?,const middleware = require('./middleware'),import middleware from './middleware',import { middleware } from './middleware',require('./middleware'),const middleware = require('./middleware')
+9,2,How do you pass data to the response in Express.js?,res.data(data),res.send(data),res.json(data),res.write(data),res.send(data)
+9,2,How can you respond with a status code and JSON data?,res.status(200).json(data),res.sendStatus(200).json(data),res.json(200, data),res.status(200).send(data),res.status(200).json(data)
+9,2,What method would you use to end the response in Express.js?,res.end(),res.send(),res.close(),res.finish(),res.end()
+9,2,How do you define a route for a specific HTTP method in Express.js?,app.method('/route', handler),app.route('/route').method(handler),app.method('/route', handler),app.route('/route').get(handler),app.get('/route', handler)
+9,2,What is the purpose of the res.set() method?,To set response headers,To set status codes,To set response body,To define routes,To set response headers
+9,2,How do you create a route that uses an array of middleware?,app.get('/route', [middleware1, middleware2], handler),app.get('/route', middleware1, middleware2, handler),app.route('/route').get(middleware1, middleware2, handler),app.use('/route', [middleware1, middleware2]),app.get('/route', [middleware1, middleware2], handler)
+9,2,What does the res.sendFile() method accept as an argument?,The file path to send,The response body,The response headers,The request object,The file path to send
+9,2,How do you handle a 404 error in Express.js?,app.use((req, res) => res.status(404).send('Not Found')),app.use((req, res, next) => {...}),app.error((req, res) => {...}),app.catch((req, res) => {...}),app.use((req, res) => res.status(404).send('Not Found'))
+9,2,What is the purpose of the req.method property?,To get the HTTP method used for the request,To get the request URL,To get the request headers,To get the request body,To get the HTTP method used for the request
+9,2,How do you define a route that responds to any HTTP method?,app.all('/path', handler),app.route('/path', handler),app.get('/path', handler),app.use('/path', handler),app.all('/path', handler)
+9,2,What is the correct way to add a new route in Express.js?,app.get('/new-route', handler),app.route('/new-route', handler),app.addRoute('/new-route', handler),app.post('/new-route', handler),app.get('/new-route', handler)
+9,2,How can you read JSON data from a request body?,app.use(express.json()),app.bodyParser(),app.use(bodyParser.json()),app.use(express.json()),app.use(express.json())
+9,2,What does the res.status() method do?,Sets the HTTP status code for the response,Sets the response headers,Sends the response body,Defines a route,Sets the HTTP status code for the response
+9,2,How do you create a basic Express application?,const app = express(),const application = express(),const app = new express(),const expressApp = express(),const app = express()
+9,2,What does the next() function do in middleware?,Passes control to the next middleware function,Ends the request-response cycle,Logs the request data,Stops the server,Passes control to the next middleware function
+9,2,How do you define a route with multiple path parameters?,app.get('/path/:param1/:param2', handler),app.get('/path/:param1&:param2', handler),app.get('/path/:param1|:param2', handler),app.get('/path/:param1:param2', handler),app.get('/path/:param1/:param2', handler)
+9,2,What is the default response type when sending JSON in Express.js?,application/json,text/html,text/plain,application/xml,application/json
+9,2,How do you send a redirect response in Express.js?,res.redirect('/new-path'),res.go('/new-path'),res.send('/new-path'),res.route('/new-path'),res.redirect('/new-path')
+9,2,What is the purpose of express.json()?,To parse JSON request bodies,To serve static files,To define routes,To log requests,To parse JSON request bodies
+9,2,How do you handle a request with query parameters in Express.js?,req.query,req.body,req.params,req.headers,req.query
+9,2,What does app.all() do in Express.js?,Defines a route for all HTTP methods,Defines a route for GET requests,Defines middleware for requests,Serves static files,Defines a route for all HTTP methods
+9,2,How do you serve a JSON response in Express.js?,res.json(data),res.sendJSON(data),res.send(data),res.jsonFile(data),res.json(data)
+9,2,What is the purpose of the res.sendFile() method?,To send a file as a response,To serve static files,To log the file,To set response headers,To send a file as a response
+9,2,How do you define a route that can handle both GET and POST requests?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,What does res.json() do in Express.js?,Sends a JSON response,Logs the response,Sets response headers,Ends the response,Ends the response
+9,2,How can you send a response with a specific HTTP status code and a message?,res.status(200).send('Message'),res.sendStatus(200, 'Message'),res.send('Message', 200),res.status(200).message('Message'),res.status(200).send('Message')
+9,2,How do you handle requests with URL parameters?,req.params,req.query,req.body,req.headers,req.params
+9,2,What method is used to serve static files from a directory in Express.js?,app.use(express.static('public')),app.serveStatic('public'),app.use('/public', express.static()),app.serve('public'),app.use(express.static('public'))
+9,2,How do you define a middleware function?,const middleware = (req, res, next) => {...},const middleware = req, res => {...},const middleware = (req, res) => {...},const middleware = req => {...},const middleware = (req, res, next) => {...}
+9,2,What is the correct way to create a DELETE route in Express.js?,app.delete('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.delete('/path', handler)
+9,2,How do you handle errors in Express.js?,app.use((err, req, res, next) => {...}),app.errorHandler((err, req, res, next) => {...}),app.catch((err) => {...}),app.useError((err, req, res) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of req.query in Express.js?,To access query parameters,To access URL parameters,To access the request body,To access request headers,To access query parameters
+9,2,How do you define a route for a specific HTTP method in Express.js?,app.method('/route', handler),app.route('/route').method(handler),app.route('/route').get(handler),app.method('/route', handler),app.route('/route').get(handler)
+9,2,What does res.sendStatus() do in Express.js?,Sends a response with a status code,Ends the response with a status code,Logs the response,Sets the response headers,Ends the response
+9,2,How do you define a route that responds to both GET and POST requests?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,What is the purpose of express.static()?,To serve static files from a directory,To define routes,To parse request bodies,To handle errors,To serve static files from a directory
+9,2,How do you send a JSON response with a custom status code?,res.status(404).json(data),res.json(404, data),res.sendStatus(404).json(data),res.status(404).send(data),res.status(404).json(data)
+9,2,What is the correct way to define a GET route?,app.get('/path', handler),app.route('/path', handler),app.all('/path', handler),app.use('/path', handler),app.get('/path', handler)
+9,2,How do you access the request body in Express.js?,req.body,req.params,req.query,req.headers,req.body
+9,2,What is the purpose of the app.use() method?,To define middleware,To define routes,To set response headers,To handle errors,To define middleware
+9,2,How do you handle a 404 error in Express.js?,app.use((req, res) => res.status(404).send('Not Found')),app.use((req, res, next) => {...}),app.error((req, res) => {...}),app.catch((req, res) => {...}),app.use((req, res) => res.status(404).send('Not Found'))
+9,2,What is the purpose of req.params in Express.js?,To access route parameters,To access query parameters,To access the request body,To access headers,To access route parameters
+9,2,How do you define a route for a specific HTTP method in Express.js?,app.method('/route', handler),app.route('/route').method(handler),app.route('/route').get(handler),app.method('/route', handler),app.route('/route').get(handler)
+9,2,What does res.send() do in Express.js?,Sends a response to the client,Logs the response,Sets the response headers,Ends the response,Ends the response
+9,2,What method is used to send a response with a specific HTTP status code?,res.sendStatus(),res.status().send(),res.send().status(),res.status().send(),res.sendStatus()
+9,2,How do you create a simple Express server?,const app = express(),const server = express(),const app = new express(),const expressServer = express(),const app = express()
+9,2,What is the correct way to create a PUT route in Express.js?,app.put('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.put('/path', handler)
+9,2,How do you define middleware that handles errors?,const errorMiddleware = (err, req, res, next) => {...},const middleware = (req, res, next) => {...},const errorHandler = (req, res) => {...},const middleware = (err, req, res) => {...},const errorMiddleware = (err, req, res, next) => {...}
+9,2,What is the purpose of req.body in Express.js?,To access the request body,To access URL parameters,To access query parameters,To access headers,To access the request body
+9,2,How do you define a route with a wildcard parameter?,app.get('/path/*', handler),app.get('/path/:param', handler),app.get('/path/(.*)', handler),app.get('/path/:*', handler),app.get('/path/*', handler)
+9,2,What does the res.redirect() method do?,Redirects the client to a different URL,Ends the response,Sets the response headers,Sends a JSON response,Redirects the client to a different URL
+9,2,How do you access query parameters in Express.js?,req.query,req.body,req.params,req.headers,req.query
+9,2,What method is used to create a new Express application?,const app = express(),const application = express(),const app = new express(),const expressApp = express(),const app = express()
+9,2,What is the purpose of app.get()?,To define a route for GET requests,To define a route for POST requests,To serve static files,To set response headers,To define a route for GET requests
+9,2,How do you send a response with a specific status code?,res.status(code).send('message'),res.send(code, 'message'),res.sendStatus(code, 'message'),res.send('message', code),res.status(code).message('message')
+9,2,What is the correct way to handle a POST request?,app.post('/path', handler),app.get('/path', handler),app.delete('/path', handler),app.all('/path', handler),app.post('/path', handler)
+9,2,How do you define a route for multiple HTTP methods?,app.route('/path').all(handler),app.all('/path', handler),app.route('/path').get(handler).post(handler),app.get('/path', handler).post(handler),app.route('/path').get(handler).post(handler)
+9,2,What does res.json() do in Express.js?,Sends a JSON response,Logs the response,Sets response headers,Ends the response,Ends the response
+9,2,How do you handle a request with parameters in Express.js?,req.params,req.body,req.query,req.headers,req.params
+9,2,What is the purpose of express.urlencoded()?,To parse URL-encoded request bodies,To serve static files,To define routes,To log requests,To parse URL-encoded request bodies
+9,2,How do you access the request headers in Express.js?,req.headers,req.params,req.body,req.query,req.headers
+9,2,What is the purpose of app.listen()?,To start the Express server,To define middleware,To handle requests,To set response headers,To start the Express server
+9,2,How do you define a middleware function in Express.js?,const middleware = (req, res, next) => {...},const middleware = req, res => {...},const middleware = (req, res) => {...},const middleware = req => {...},const middleware = (req, res, next) => {...}
+9,2,How do you create a new Express router?,const router = express.Router(),const router = new express.Router(),const router = express.createRouter(),const router = Router(),const router = express.Router()
+9,2,What is the purpose of the res.sendFile() method in Express.js?,To send a file as a response,To serve static files,To log the file,To set response headers,To send a file as a response
+9,2,How do you create a middleware that logs requests?,const logger = (req, res, next) => {...},const logger = (req, res) => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const logger = (req, res, next) => {...}
+9,2,What method is used to handle a request to the root URL?,app.get('/', handler),app.root('/', handler),app.all('/', handler),app.use('/', handler),app.get('/', handler)
+9,2,What is the correct way to define a POST route?,app.post('/path', handler),app.route('/path', handler),app.all('/path', handler),app.use('/path', handler),app.post('/path', handler)
+9,2,How do you access URL parameters in Express.js?,req.params,req.query,req.body,req.headers,req.params
+9,2,What is the purpose of the res.status() method?,To set the HTTP status code for the response,To set the response headers,To send the response body,To define routes,To set the HTTP status code for the response
+9,2,How do you send a response with a JSON object?,res.json(object),res.send(object),res.sendJSON(object),res.jsonFile(object),res.sendJSON(object)
+9,2,What is the purpose of the app.route() method?,To chain route handlers for the same path,To define middleware,To handle errors,To serve static files,To chain route handlers for the same path
+9,2,How do you handle a request with multiple middleware?,app.get('/path', [middleware1, middleware2], handler),app.get('/path', middleware1, middleware2, handler),app.route('/path').get(middleware1, middleware2, handler),app.use('/path', [middleware1, middleware2]),app.get('/path', [middleware1, middleware2], handler)
+9,2,What does res.end() do in Express.js?,Ends the response,Logs the response,Sets response headers,Defines a route,Ends the response
+9,2,How do you access the request method in Express.js?,req.method,req.requestMethod,req.type,req.methodType,req.method
+9,2,What is the correct way to create a middleware in Express.js?,const middleware = (req, res, next) => {...},const middleware = req, res => {...},const middleware = (req, res) => {...},const middleware = req => {...},const middleware = (req, res, next) => {...}
+9,2,How do you handle form data in Express.js?,app.use(express.urlencoded()),app.use(express.json()),app.bodyParser(),app.use(bodyParser.urlencoded()),app.use(express.urlencoded())
+9,2,What is the purpose of app.listen() in Express.js?,To start the Express server,To define middleware,To handle requests,To set response headers,To start the Express server
+9,2,How do you serve static files in Express.js?,app.use(express.static('public')),app.serveStatic('public'),app.use('/public', express.static()),app.serve('public'),app.use(express.static('public'))
+9,2,What does the next() function do in middleware?,Passes control to the next middleware function,Ends the request-response cycle,Logs the request data,Stops the server,Passes control to the next middleware function
+9,2,How do you define a route with multiple path parameters?,app.get('/path/:param1/:param2', handler),app.get('/path/:param1&:param2', handler),app.get('/path/:param1|:param2', handler),app.get('/path/:param1:param2', handler),app.get('/path/:param1/:param2', handler)
+9,2,What is the correct way to define a DELETE route?,app.delete('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.delete('/path', handler)
+9,2,How do you handle a request with URL parameters?,req.params,req.query,req.body,req.headers,req.params
+9,2,What method is used to create a new Express application?,const app = express(),const application = express(),const app = new express(),const expressApp = express(),const app = express()
+9,2,What is the purpose of express.static() in Express.js?,To serve static files from a directory,To define routes,To parse request bodies,To handle errors,To serve static files from a directory
+9,2,How do you send a JSON response with a custom status code?,res.status(404).json(data),res.json(404, data),res.sendJSON(404, data),res.json(404, data),res.status(404).json(data)
+9,2,How do you access the request URL in Express.js?,req.url,req.path,req.query,req.body,req.url
+9,2,What is the purpose of req.params in Express.js?,To access URL parameters,To access query parameters,To access the request body,To access headers,To access URL parameters
+9,2,How do you define a route that responds to multiple HTTP methods?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,What is the correct way to create a POST route?,app.post('/path', handler),app.route('/path', handler),app.all('/path', handler),app.use('/path', handler),app.post('/path', handler)
+9,2,What is the purpose of express.json()?,To parse JSON request bodies,To serve static files,To define routes,To log requests,To parse JSON request bodies
+9,2,How do you send a response with a specific status code and message?,res.status(code).send('message'),res.sendStatus(code, 'message'),res.send('message', code),res.status(code).message('message'),res.send('message', code)
+9,2,What method is used to create a new Express application?,const app = express(),const application = express(),const app = new express(),const expressApp = express(),const app = express()
+9,2,How do you create a router for handling routes in Express.js?,const router = express.Router(),const router = new express.Router(),const router = express.createRouter(),const router = Router(),const router = express.Router()
+9,2,What is the purpose of the req.body property in Express.js?,To access the request body,To access URL parameters,To access query parameters,To access headers,To access the request body
+9,2,How do you define a middleware function in Express.js?,const middleware = (req, res, next) => {...},const middleware = req, res => {...},const middleware = (req, res) => {...},const middleware = req => {...},const middleware = (req, res, next) => {...}
+9,2,What does the res.status() method do in Express.js?,Sets the HTTP status code for the response,Sends the response body,Defines routes,Sets the response headers,Sets the HTTP status code for the response
+9,2,How do you send a response with a JSON object?,res.json(object),res.send(object),res.sendJSON(object),res.jsonFile(object),res.sendJSON(object)
+9,2,How do you define a route with a wildcard parameter?,app.get('/path/*', handler),app.get('/path/:param', handler),app.get('/path/(.*)', handler),app.get('/path/:*', handler),app.get('/path/*', handler)
+9,2,What does the res.send() method do in Express.js?,Sends a response to the client,Logs the response,Sets the response headers,Ends the response,Ends the response
+9,2,How do you create a middleware that logs requests?,const logger = (req, res, next) => {...},const logger = (req, res) => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const logger = (req, res, next) => {...}
+9,2,What is the purpose of express.urlencoded()?,To parse URL-encoded request bodies,To serve static files,To define routes,To log requests,To parse URL-encoded request bodies
+9,2,What is the correct way to create a PUT route in Express.js?,app.put('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.put('/path', handler)
+9,2,What does the next() function do in middleware?,Passes control to the next middleware function,Ends the request-response cycle,Logs the request data,Stops the server,Passes control to the next middleware function
+9,2,What is the purpose of app.get()?,To define a route for GET requests,To define a route for POST requests,To serve static files,To set response headers,To define a route for GET requests
+9,2,How do you access the request method in Express.js?,req.method,req.requestMethod,req.type,req.methodType,req.method
+9,2,How do you serve static files in Express.js?,app.use(express.static('public')),app.serveStatic('public'),app.use('/public', express.static()),app.serve('public'),app.use(express.static('public')
+9,2,What method is used to handle GET requests in Express.js?,app.get(),app.request(),app.handleGet(),app.httpGet(),app.get()
+9,2,How can you chain route handlers in Express.js?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.route('/path').get(handler).post(handler)
+9,2,Which method is used to handle errors in Express.js?,app.error(),app.catch(),app.use(),app.handleError(),app.use()
+9,2,What is the default port for an Express server?,3000,8080,5000,4000,3000
+9,2,How can you define a route parameter in Express.js?,app.get('/user/:id', handler),app.get('/user/id', handler),app.get('/user/{id}', handler),app.get('/user/<id>', handler),app.get('/user/:id', handler)
+9,2,What middleware is commonly used to handle CORS in Express.js?,cors,express-cors,allow-cors,app-cors,cors
+9,2,How do you enable CORS in Express.js?,app.use(cors()),app.use(cors),app.enableCORS(),app.set(cors),app.use(cors())
+9,2,What is the purpose of express.Router()?,To create modular route handlers,To serve static files,To log requests,To define middleware,To create modular route handlers
+9,2,How do you create a custom error handling middleware?,app.use((err, req, res, next) => {...}),app.error((err, req, res, next) => {...}),app.catch((err) => {...}),app.handleError((err) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of the app.listen() method?,To start the server and listen on a port,To define routes,To handle requests,To send responses,To start the server and listen on a port
+9,2,How do you send a response with status code 201 in Express.js?,res.status(201).send('Created'),res.sendStatus(201, 'Created'),res.send('Created', 201),res.status(201, 'Created'),res.status(201).send('Created')
+9,2,What method is used to serve static files from a specific directory?,app.use(express.static('directory')),app.static('directory'),app.serveStatic('directory'),app.use('/directory', express.static()),app.use(express.static('directory'))
+9,2,How do you parse JSON request bodies in Express.js?,app.use(express.json()),app.json(),app.use(bodyParser.json()),app.parseJson(),app.use(express.json())
+9,2,What is the purpose of next() in middleware?,To pass control to the next middleware function,To end the request-response cycle,To log the request data,To stop the server,To pass control to the next middleware function
+9,2,How do you define a middleware that serves static files?,app.use(express.static('public')),app.static('public'),app.use('/public', express.static()),app.serve('public'),app.use(express.static('public'))
+9,2,What is the correct way to create a DELETE route?,app.delete('/path', handler),app.get('/path', handler),app.post('/path', handler),app.all('/path', handler),app.delete('/path', handler)
+9,2,What does res.sendFile() do in Express.js?,Sends a file as a response,Serves static files,Handles file uploads,Sends an HTML file,Handles file downloads
+9,2,How do you create a route that responds to all HTTP methods?,app.all('/path', handler),app.route('/path').get(handler).post(handler),app.get('/path', handler).post(handler),app.use('/path', handler),app.all('/path', handler)
+9,2,What is the purpose of express.static()?,To serve static files,To create dynamic routes,To parse request bodies,To define middleware,To serve static files
+9,2,How do you access query parameters in Express.js?,req.query,req.params,req.body,req.headers,req.query
+9,2,What method is used to create a new Express application?,const app = express(),const application = express(),const app = new express(),const expressApp = express(),const app = express()
+9,2,How do you log all incoming requests in Express.js?,app.use((req, res, next) => {...}),app.logRequests((req, res) => {...}),app.middleware((req) => {...}),app.useLogger(),app.use((req, res, next) => {...})
+9,2,What is the purpose of the req.body property in Express.js?,To access the request body,To access URL parameters,To access query parameters,To access headers,To access the request body
+9,2,How do you define a route with multiple parameters?,app.get('/user/:id/:name', handler),app.get('/user/:id/name', handler),app.get('/user/id/name', handler),app.get('/user/id/:name', handler),app.get('/user/:id/:name', handler)
+9,2,What does app.use() do in Express.js?,Adds middleware to the application,Defines routes,Handles requests,Ends the response,Adds middleware to the application
+9,2,How can you create a redirect in Express.js?,res.redirect('/new-path'),res.redirectTo('/new-path'),res.go('/new-path'),res.move('/new-path'),res.redirect('/new-path')
+9,2,What is the purpose of res.locals?,To store local variables for the response,To store query parameters,To store request headers,To store session data,To store local variables for the response
+9,2,How do you create a wildcard route in Express.js?,app.get('/path/*', handler),app.get('/path/:param', handler),app.get('/path/(.*)', handler),app.get('/path/:*', handler),app.get('/path/*', handler)
+9,2,What is the method used to parse URL-encoded request bodies?,express.urlencoded(),bodyParser.urlencoded(),app.urlencoded(),express.urlencoded(),express.urlencoded()
+9,2,How do you create a middleware that handles 404 errors?,app.use((req, res) => {...}),app.use((req, res, next) => {...}),app.use('/404', handler),app.handle404((req, res) => {...}),app.use((req, res) => {...})
+9,2,How do you set response headers in Express.js?,res.set(),res.header(),res.headers(),res.sendHeaders(),res.set()
+9,2,What is the purpose of the req.params property in Express.js?,To access URL parameters,To access query parameters,To access the request body,To access headers,To access URL parameters
+9,2,How do you send a response with a JSON object?,res.json(object),res.send(object),res.sendJSON(object),res.jsonFile(object),res.sendJSON(object)
+9,2,How do you define a route that responds to a specific HTTP method?,app.method('/path', handler),app.get('/path', handler),app.post('/path', handler),app.use('/path', handler),app.method('/path', handler)
+9,2,What is the purpose of the res.sendStatus() method?,Sends a response with a specific status code,Defines routes,Sends an error response,Ends the response,Defines middleware
+9,2,How do you create a middleware that checks for authentication?,const authMiddleware = (req, res, next) => {...},const authMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const authMiddleware = (req, res, next) => {...}
+9,2,How do you access the request method in Express.js?,req.method,req.requestMethod,req.type,req.methodType,req.method
+9,2,How do you handle form submissions in Express.js?,app.post('/submit', handler),app.get('/submit', handler),app.use('/submit', handler),app.handle('/submit', handler),app.post('/submit', handler)
+9,2,What is the purpose of app.param() in Express.js?,To define middleware for specific route parameters,To define routes,To serve static files,To log requests,To define middleware for specific route parameters
+9,2,How do you handle file uploads in Express.js?,Using multer middleware,Using body-parser middleware,Using express-fileupload,Using express-file,Using multer middleware
+9,2,How can you serve HTML files in Express.js?,res.sendFile('index.html'),res.send('index.html'),res.html('index.html'),res.file('index.html'),res.sendFile('index.html')
+9,2,What method is used to handle PUT requests?,app.put(),app.update(),app.patch(),app.handlePut(),app.put()
+9,2,How do you create a custom middleware in Express.js?,const myMiddleware = (req, res, next) => {...},const myMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const myMiddleware = (req, res, next) => {...}
+9,2,What is the default response format for res.send()?,Plain text,HTML,JSON,XML,Plain text
+9,2,How do you create a middleware that logs the request URL?,app.use((req, res, next) => {...}),app.logger((req) => {...}),app.middleware((req) => {...}),app.log((req) => {...}),app.use((req, res, next) => {...})
+9,2,How do you enable Gzip compression in Express.js?,app.use(compression()),app.enableGzip(),app.useGzip(),app.setCompression(),app.use(compression())
+9,2,How do you create a session in Express.js?,Using express-session middleware,Using cookie-parser middleware,Using body-parser middleware,Using express-session(),Using express-session middleware
+9,2,What is the purpose of the app.set() method?,To set application settings,To define routes,To add middleware,To handle errors,To set application settings
+9,2,How do you access request headers in Express.js?,req.headers,req.header,req.requestHeaders,req.body.headers,req.headers
+9,2,What method is used to handle PATCH requests?,app.patch(),app.modify(),app.update(),app.handlePatch(),app.patch()
+9,2,How do you send a file for download in Express.js?,res.download('file.txt'),res.sendFile('file.txt'),res.send('file.txt'),res.file('file.txt'),res.download('file.txt')
+9,2,What is the purpose of the res.end() method?,To end the response,To send data,To log the response,To set headers,To end the response
+9,2,How do you create a middleware that checks for user roles?,const roleMiddleware = (req, res, next) => {...},const roleMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const roleMiddleware = (req, res, next) => {...}
+9,2,How do you define a route that responds to a specific path?,app.get('/path', handler),app.use('/path', handler),app.all('/path', handler),app.route('/path', handler),app.get('/path', handler)
+9,2,What method is used to retrieve a specific route?,app.route(),app.get(),app.find(),app.retrieve(),app.route()
+9,2,How do you create a middleware that validates input data?,const validateMiddleware = (req, res, next) => {...},const validateMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const validateMiddleware = (req, res, next) => {...}
+9,2,How do you set the response content type in Express.js?,res.type('json'),res.set('Content-Type', 'application/json'),res.header('Content-Type', 'application/json'),res.contentType('application/json'),res.set('Content-Type', 'application/json')
+9,2,What is the purpose of the app.get() method?,To define GET routes,To serve static files,To log requests,To handle errors,To define GET routes
+9,2,How do you send a response with plain text in Express.js?,res.send('Hello World'),res.text('Hello World'),res.plain('Hello World'),res.write('Hello World'),res.send('Hello World')
+9,2,What method is used to create a new route handler?,app.route(),app.newRoute(),app.createRoute(),app.defineRoute(),app.route()
+9,2,How do you handle multiple routes for the same path?,Using app.route(),Using app.all(),Using app.use(),Using app.get() and app.post(),Using app.route()
+9,2,What is the purpose of app.listen()?,To start the server,To define routes,To log requests,To send responses,To start the server
+9,2,How do you create a middleware that checks for required fields?,const requiredFieldsMiddleware = (req, res, next) => {...},const requiredFieldsMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const requiredFieldsMiddleware = (req, res, next) => {...}
+,2,What is the method used to parse cookie data?,cookieParser(),express.cookieParser(),app.use(cookieParser()),express.cookie(),app.use(cookieParser())
+9,2,How do you set default values for route parameters?,Using req.params.default,Using req.params['paramName'],Using req.params.paramName || defaultValue,Using req.defaultParam,Using req.params.paramName || defaultValue
+9,2,What is the purpose of the req.url property in Express.js?,To access the full request URL,To access the request headers,To access URL parameters,To access the request method,To access the full request URL
+9,2,How do you serve files from a specific directory?,app.use(express.static('directory')),app.serve('directory'),app.directory('directory'),app.use('/directory', express.static()),app.use(express.static('directory'))
+9,2,How do you send a JSON response with a custom status code?,res.status(201).json(object),res.json(object, 201),res.sendStatus(201, object),res.json(object).status(201),res.status(201).json(object)
+9,2,What is the correct way to create a middleware that handles 404 errors?,app.use((req, res) => {...}),app.use((req, res, next) => {...}),app.use('/404', handler),app.handle404((req, res) => {...}),app.use((req, res) => {...})
+9,2,How do you access route parameters in Express.js?,req.params,req.routeParams,req.body.params,req.queryParams,req.params
+9,2,What method is used to handle POST requests?,app.post(),app.create(),app.handlePost(),app.submit(),app.post()
+9,2,How do you create a middleware that logs the response time?,app.use((req, res, next) => {...}),app.logger((req) => {...}),app.middleware((req) => {...}),app.logTime((req) => {...}),app.use((req, res, next) => {...})
+9,2,How do you create a route that serves an HTML file?,app.get('/path', (req, res) => res.sendFile('index.html')),app.get('/path', (req, res) => res.html('index.html')),app.get('/path', (req, res) => res.send('index.html')),app.get('/path', (req, res) => res.file('index.html')),app.get('/path', (req, res) => res.sendFile('index.html'))
+9,2,How do you enable body parsing for URL-encoded data?,app.use(express.urlencoded()),app.bodyParser(express.urlencoded()),app.use(bodyParser.urlencoded()),app.use(express.urlencoded()),app.use(express.urlencoded())
+9,2,What is the purpose of the res.redirect() method?,To redirect to a different URL,To send a response,To define middleware,To handle errors,To redirect to a different URL
+9,2,How do you handle cookies in Express.js?,Using cookie-parser middleware,Using express.cookie(),Using body-parser middleware,Using express.cookieParser(),Using cookie-parser middleware
+9,2,What method is used to retrieve all request headers?,req.headers,req.header(),req.allHeaders(),req.getHeaders(),req.headers
+9,2,How do you create a middleware that checks if a user is authenticated?,const authMiddleware = (req, res, next) => {...},const authMiddleware = req, res => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const authMiddleware = (req, res, next) => {...}
+9,2,What is the method used to send a 204 No Content response?,res.sendStatus(204),res.status(204).send(),res.noContent(),res.send(204),res.sendStatus(204)
+9,2,How do you define a route that responds to multiple HTTP methods?,app.route('/path').get(handler).post(handler),app.all('/path', handler),app.use('/path', handler),app.get('/path', handler).post(handler),app.route('/path').get(handler).post(handler)
+9,2,What is the purpose of the req.method property in Express.js?,To access the HTTP method of the request,To access the request URL,To access the request headers,To access the request body,To access the HTTP method of the request
+9,2,How do you send a JSON response with a custom status code?,res.status(201).json(object),res.json(object, 201),res.sendStatus(201, object),res.json(object).status(201),res.status(201).json(object)
+9,2,What is the purpose of the app.use() method in Express.js?,To add middleware to the application,To define routes,To serve static files,To log requests,To add middleware to the application
+9,2,How do you create a route that serves a JSON response?,app.get('/path', (req, res) => res.json({ key: 'value' })),app.get('/path', (req, res) => res.send({ key: 'value' })),app.get('/path', (req, res) => res.sendJSON({ key: 'value' })),app.get('/path', (req, res) => res.json('key=value')),app.get('/path', (req, res) => res.json({ key: 'value' }))
+9,2,What is the purpose of the res.json() method?,To send a JSON response,To send a text response,To redirect to a URL,To serve a file,To send a JSON response
+9,2,How do you handle errors in Express.js?,Using app.use() middleware,Using try/catch blocks,Using express.errorHandler(),Using app.errorHandler(),Using app.use() middleware
+9,2,What is the method used to parse JSON data?,bodyParser.json(),express.json(),app.use(express.json()),app.parseJson(),app.use(express.json())
+9,2,How do you create a middleware that handles specific HTTP methods?,app.use('GET', middleware),app.method(middleware),app.handleMethod('GET', middleware),app.get('/path', middleware),app.use(method(middleware))
+9,2,What is the purpose of the req.body property in Express.js?,To access the request payload,To access URL parameters,To access request headers,To access query parameters,To access the request payload
+9,2,How do you send a response with a specific status code?,res.status(400).send('Bad Request'),res.send('Bad Request', 400),res.sendStatus(400, 'Bad Request'),res.send(400, 'Bad Request'),res.status(400).send('Bad Request')
+9,2,How do you define a route that serves a file for download?,app.get('/download', (req, res) => res.download('file.txt')),app.get('/download', (req, res) => res.sendFile('file.txt')),app.get('/download', (req, res) => res.send('file.txt')),app.get('/download', (req, res) => res.file('file.txt')),app.get('/download', (req, res) => res.download('file.txt'))
+9,2,What method is used to create a redirect response?,res.redirect('/new-url'),res.changeUrl('/new-url'),res.redirectTo('/new-url'),res.moveTo('/new-url'),res.redirect('/new-url')
+9,2,How do you send a 500 Internal Server Error response?,res.sendStatus(500),res.status(500).send('Internal Server Error'),res.send(500, 'Internal Server Error'),res.sendStatus(500, 'Internal Server Error'),res.status(500).send('Internal Server Error')
+9,2,What is the method used to retrieve query parameters?,req.query,req.params,req.body,req.url,req.query
+9,2,How do you create a middleware that checks if a request is from a specific origin?,const originMiddleware = (req, res, next) => {...},const originMiddleware = req => {...},const middleware = (req) => {...},const middleware = (req, res) => {...},const originMiddleware = (req, res, next) => {...}
+9,2,What is the purpose of the res.sendFile() method?,To send a file to the client,To serve a static file,To send a JSON response,To redirect to a URL,To send a file to the client
+9,2,How do you create a middleware that logs all requests?,app.use((req, res, next) => {...}),app.logger((req) => {...}),app.middleware((req) => {...}),app.logAll((req) => {...}),app.use((req, res, next) => {...})
+9,2,How do you handle multipart/form-data in Express.js?,Using multer middleware,Using body-parser,Using express.json(),Using express.urlencoded(),Using multer middleware
+9,2,What is the method used to create a new instance of an Express app?,express(),app.create(),app.new(),app.createApp(),express()
+9,2,How do you enable CORS in an Express.js application?,app.use(cors()),app.enableCORS(),app.useCors(),app.setCors(),app.use(cors())
+9,2,How do you set a timeout for requests in Express.js?,app.setTimeout(5000),app.timeout(5000),app.use((req, res, next) => {...}),app.use(express.timeout(5000)),app.setTimeout(5000)
+9,2,What is the method used to parse incoming requests with JSON payloads?,app.use(express.json()),app.jsonParser(),app.use(bodyParser.json()),app.use(express.bodyParser()),app.use(express.json())
+9,2,How do you define a route that responds to a DELETE request?,app.delete('/path', handler),app.route('/path').delete(handler),app.all('/path', handler),app.delete('/path', (req, res) => {...}),app.delete('/path', handler)
+9,2,How do you serve static files from a directory?,app.use(express.static('public')),app.serveStatic('public'),app.serve('public'),app.use('/public', express.static()),app.use(express.static('public'))
+9,2,What is the purpose of the req.query property in Express.js?,To access query parameters,To access URL parameters,To access request headers,To access the request body,To access query parameters
+9,2,How do you define a route that responds to a specific HTTP verb?,app.route('/path').get(handler),app.route('/path').post(handler),app.route('/path').put(handler),app.route('/path').delete(handler),app.route('/path').get(handler)
+9,2,What method is used to end a response?,res.end(),res.close(),res.finish(),res.return(),res.end()
+9,2,How do you define a route for a specific HTTP verb with multiple handlers?,app.route('/path').get(handler1).post(handler2),app.route('/path').all(handler),app.get('/path', handler1).post('/path', handler2),app.route('/path').all(handler),app.route('/path').get(handler1).post(handler2)
+9,2,What is the purpose of the app.get() method in Express.js?,To define GET request routes,To send data,To handle errors,To log requests,To define GET request routes
+9,2,How do you create a route that serves an image?,app.get('/image', (req, res) => res.sendFile('image.jpg')),app.get('/image', (req, res) => res.send('image.jpg')),app.get('/image', (req, res) => res.file('image.jpg')),app.get('/image', (req, res) => res.sendImage('image.jpg')),app.get('/image', (req, res) => res.sendFile('image.jpg'))
+9,2,What is the method used to create a redirect response to a different URL?,res.redirect('/new-url'),res.moveTo('/new-url'),res.go('/new-url'),res.navigate('/new-url'),res.redirect('/new-url')
+9,2,How do you access URL parameters in Express.js?,req.params,req.query,req.body,req.url,req.params
+9,2,What is the purpose of the app.all() method?,To define middleware for all HTTP methods,To define routes,To handle errors,To log requests,To define middleware for all HTTP methods
+9,2,How do you create a middleware that handles errors globally?,app.use((err, req, res, next) => {...}),app.errorHandler((err, req, res) => {...}),app.handleErrors((err) => {...}),app.use((req, res) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the method used to parse incoming requests with URL-encoded payloads?,bodyParser.urlencoded(),express.urlencoded(),app.use(bodyParser.urlencoded()),app.use(express.urlencoded()),app.use(bodyParser.urlencoded())
+9,2,How do you create a route that returns plain text?,app.get('/text', (req, res) => res.send('Hello, world!')),app.get('/text', (req, res) => res.text('Hello, world!')),app.get('/text', (req, res) => res.sendText('Hello, world!')),app.get('/text', (req, res) => res.plain('Hello, world!')),app.get('/text', (req, res) => res.send('Hello, world!'))
+9,2,What is the purpose of the res.send() method?,To send a response to the client,To serve static files,To handle errors,To define middleware,To send a response to the client
+9,2,How do you set the response headers in Express.js?,res.set('Header-Name', 'value'),res.headers('Header-Name', 'value'),res.header('Header-Name', 'value'),res.header('Header-Name', 'value'),res.set('Header-Name', 'value')
+9,2,What is the method used to create a middleware for logging requests?,app.use(requestLogger),app.middleware(requestLogger),app.logRequests(requestLogger),app.requestLogger(),app.use(requestLogger)
+9,2,How do you create a middleware that handles validation errors?,app.use((err, req, res, next) => {...}),app.validationErrorHandler((err, req, res) => {...}),app.useValidationErrors((err) => {...}),app.handleErrors((err) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the method used to retrieve the request body?,req.body,req.requestBody,req.bodyParams,req.getBody(),req.body
+9,2,How do you create a middleware that measures request duration?,app.use((req, res, next) => {...}),app.measureDuration((req) => {...}),app.use(durationLogger),app.logDuration((req) => {...}),app.use((req, res, next) => {...})
+9,2,What is the purpose of the req.ip property in Express.js?,To get the IP address of the request,To get the request headers,To get the request body,To get the query parameters,To get the IP address of the request
+9,2,What method is used to send a 404 Not Found response?,res.sendStatus(404),res.status(404).send('Not Found'),res.send(404, 'Not Found'),res.status(404).send('Not Found'),res.sendStatus(404)
+9,2,How do you handle authentication in Express.js?,Using middleware,Using session storage,Using cookies,Using JSON Web Tokens,Using middleware
+9,2,What is the method used to access the request's HTTP method?,req.method,req.methodType,req.httpMethod,req.methodType,req.method
+9,2,How do you handle rate limiting in Express.js?,Using middleware,Using a database,Using sessions,Using JSON Web Tokens,Using middleware
+9,2,What is the method used to create a new route handler in Express.js?,app.route('/path'),app.handle('/path'),app.new('/path'),app.create('/path'),app.route('/path')
+9,2,How do you create a middleware that checks for valid API keys?,app.use(apiKeyMiddleware),app.apiKeyValidator(),app.checkApiKey(apiKeyMiddleware),app.use((req, res, next) => {...}),app.use(apiKeyMiddleware)
+9,2,What is the purpose of the req.headers property in Express.js?,To access request headers,To access URL parameters,To access query parameters,To access the request body,To access request headers
+9,2,How do you define a route that responds to a PUT request?,app.put('/path', handler),app.route('/path').put(handler),app.all('/path', handler),app.put('/path', (req, res) => {...}),app.put('/path', handler)
+9,2,What is the method used to handle cookies in Express.js?,req.cookies,req.handleCookies(),req.cookieHandler(),res.cookie(),req.cookies
+9,2,What is the method used to create a new Express application?,express(),app.create(),app.new(),app.createApp(),express()
+9,2,How do you enable session management in Express.js?,app.use(session()),app.enableSession(),app.sessionMiddleware(),app.use(session()),app.use(session())
+9,2,What is the method used to serve static files?,express.static(),app.serveStatic(),app.static(),app.useStatic(),app.use(express.static())
+9,2,What is the purpose of the res.redirect() method?,To redirect the client to a different URL,To send a response to the client,To serve static files,To define middleware,To redirect the client to a different URL
+9,2,How do you define a route that responds to a PATCH request?,app.patch('/path', handler),app.route('/path').patch(handler),app.all('/path', handler),app.patch('/path', (req, res) => {...}),app.patch('/path', handler)
+9,2,What is the method used to handle session data in Express.js?,req.session,req.handleSession(),req.sessionData(),res.session(),req.session
+9,2,What is the purpose of the req.method property in Express.js?,To get the HTTP method of the request,To get the request body,To get the request headers,To get the query parameters,To get the request body
+9,2,How do you create a middleware for error handling?,app.use((err, req, res, next) => {...}),app.errorHandler((err) => {...}),app.useError((err) => {...}),app.handleError((err) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the method used to retrieve URL parameters?,req.params,req.query,req.body,req.url,req.params
+9,2,How do you create a middleware that checks for user authentication?,app.use(authMiddleware),app.checkAuth(),app.use((req, res) => {...}),app.authenticate(),app.use(authMiddleware)
+9,2,What is the purpose of the req.originalUrl property in Express.js?,To get the original URL of the request,To get the request headers,To get the query parameters,To get the request body,To get the original URL of the request
+9,2,What method is used to handle file uploads in Express.js?,multer(),bodyParser(),fileUpload(),uploadFile(),multer()
+9,2,How do you serve HTML files in Express.js?,app.get('/html', (req, res) => res.sendFile('index.html')),app.get('/html', (req, res) => res.html('index.html')),app.get('/html', (req, res) => res.send('index.html')),app.get('/html', (req, res) => res.sendFile('index.html')),app.get('/html', (req, res) => res.sendFile('index.html'))
+9,2,What is the method used to create a new middleware function?,function middleware(req, res, next) {...},app.middleware(),app.newMiddleware(),app.createMiddleware(),function middleware(req, res, next) {...}
+9,2,How do you create a middleware for logging errors?,app.use((err, req, res, next) => {...}),app.errorLogger((err) => {...}),app.logError((err) => {...}),app.use((err, req, res, next) => {...}),app.use((err, req, res, next) => {...})
+9,2,What is the purpose of the req.cookies property in Express.js?,To access cookies sent by the client,To access URL parameters,To access query parameters,To access the request body,To access cookies sent by the client
+9,2,How do you create a middleware for handling JSON responses?,app.use((req, res, next) => {...}),app.jsonResponse((req) => {...}),app.sendJson((req) => {...}),app.use((req, res) => {...}),app.use((req, res) => {...})
+9,2,What is the method used to access cookies in Express.js?,req.cookies,req.handleCookies(),req.cookieHandler(),res.cookie(),req.cookies
+9,2,How do you define a route that serves a JSON response?,app.get('/json', (req, res) => res.json({ message: 'Hello, world!' })),app.get('/json', (req, res) => res.sendJSON({ message: 'Hello, world!' })),app.get('/json', (req, res) => res.send('{"message": "Hello, world!"}')),app.get('/json', (req, res) => res.json({ message: 'Hello, world!' })),app.get('/json', (req, res) => res.json({ message: 'Hello, world!' }))
+9,2,What is the method used to handle URL parameters?,req.params,req.query,req.body,req.url,req.params
+9,2,How do you create a middleware for parsing form data?,app.use(bodyParser.urlencoded({ extended: true })),app.use(express.urlencoded({ extended: true })),app.use(formParser()),app.use(express.formParser()),app.use(bodyParser.urlencoded({ extended: true }))
+9,2,What is the method used to send a 403 Forbidden response?,res.sendStatus(403),res.status(403).send('Forbidden'),res.send(403, 'Forbidden'),res.status(403).send('Forbidden'),res.sendStatus(403)
+9,2,How do you create a route that returns a status code of 204 No Content?,app.get('/empty', (req, res) => res.sendStatus(204)),app.get('/empty', (req, res) => res.status(204).send()),app.get('/empty', (req, res) => res.status(204).send('No Content')),app.get('/empty', (req, res) => res.sendStatus(204)),app.get('/empty', (req, res) => res.status(204).send())
+9,2,What is the method used to handle file downloads in Express.js?,res.download(),res.fileDownload(),res.sendFile(),res.sendDownload(),res.download()
+9,2,How do you create a route that returns a 301 Moved Permanently response?,app.get('/old', (req, res) => res.redirect(301, '/new')),app.get('/old', (req, res) => res.sendStatus(301)),app.get('/old', (req, res) => res.status(301).send('Moved Permanently')),app.get('/old', (req, res) => res.send(301, 'Moved Permanently')),app.get('/old', (req, res) => res.redirect(301, '/new'))
+9,2,What is the purpose of the req.session property in Express.js?,To access session data,To access query parameters,To access request headers,To access URL parameters,To access session data
+9,2,How do you create a middleware for handling rate limiting?,app.use(rateLimitMiddleware),app.use((req, res, next) => {...}),app.rateLimit(),app.use(rateLimitMiddleware),app.use((req, res, next) => {...})
+9,2,What is the method used to send a response with a custom status code?,res.status(400).send('Error'),res.send(400, 'Error'),res.sendCustomStatus(400, 'Error'),res.status(400).send('Error'),res.send(400, 'Error')

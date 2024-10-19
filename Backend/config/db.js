@@ -1,3 +1,4 @@
+
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
@@ -17,5 +18,7 @@ pool.connect((err, client, release) => {
     release(); // Release the client back to the pool
   }
 });
+
+
 
 module.exports = pool;

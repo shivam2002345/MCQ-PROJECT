@@ -1,7 +1,7 @@
 // SignIn.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../utils/auth';
+import { login } from '../utils/userAuth';
 import '../styles/AuthStyles.css';
 
 const SignIn = () => {
@@ -12,14 +12,15 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(''); // Clear any previous error
-
+    setError('');
+  
     const isLoggedIn = await login(email, password);
-
+  
     if (isLoggedIn) {
-      // After successful login, redirect to dashboard
+      console.log('Login successful, navigating to dashboard...');
       navigate('/dashboard', { state: { notification: 'You have successfully logged in!' } });
     } else {
+      console.log('Login failed');
       setError('Invalid email or password');
     }
   };
