@@ -32,7 +32,7 @@ const UserList = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4">User List</h2>
+            <h2 className="text-center mb-4 user-Heading" >User List</h2>
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-hover user-list-table">
                     <thead className="thead-dark">

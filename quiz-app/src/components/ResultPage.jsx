@@ -13,7 +13,7 @@ const ResultPage = () => {
     // Fetch the result data from the backend
     const fetchResult = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/results/${exam_id}/${user_id}`);
+        const response = await fetch(`http://localhost:8080/api/results/${exam_id}/${user_id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch result data');
         }

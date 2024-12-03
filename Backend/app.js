@@ -6,6 +6,7 @@ const examRoutes = require('./routes/examRoutes');  // Path to examRoutes
 const resultRoutes = require('./routes/resultRoutes');
 const levelRoutes = require('./routes/levelRoutes');
 const cors = require('cors');
+const sequelize = require('./config/database');  // Sequelize connection
 
 const profileRoutes = require('./routes/profileRoutes');
 const technologyRoutes = require('./routes/technologyRoutes');// Load environment variables
@@ -25,7 +26,12 @@ const { connectDBs } = require('./config/dbs');
 const questionRoutes = require('./routes/questionRoutes');
 const filterquestionRoutes = require('./routes/filterquestionRoutes'); // Import question routes
 const userRoutes = require('./routes/userRoutes'); // Import user routes
-
+const exams = require('./routes/exams');
+const fetchHostedExam = require('./routes/fetchHostedExam');
+const Admin = require('./routes/Admin');
+const subtopicRoutes = require('./routes/subtopicRoutes');
+const modifyPassword = require('./routes/modifyPassword');
+const hostedresultRoutes = require('./routes/hostedresult');
 
 dotenv.config();
 
@@ -45,7 +51,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use('/api', questionRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/exams', examRoutes);
-app.use('/results', resultRoutes);
+app.use('/api/results', resultRoutes);
 app.use('/testdetails', testDetailsRoutes); 
 app.use('/api/levels', levelRoutes);
 app.use('/api/technologies', technologyRoutes);
@@ -60,6 +66,15 @@ app.use('/admin', adminRoutes);
 app.use('/api', filterquestionRoutes);
 app.use('/api', userRoutes);
 app.use('/api', questionRoutes);
+app.use('/api', technologyRoutes);
+app.use('/api/customexams', exams);
+app.use('/api/admin', adminRoutes);
+app.use('/api', fetchHostedExam);
+app.use('/api', Admin); // API base route
+app.use('/api/subtopics', subtopicRoutes);
+app.use('/api', modifyPassword);
+app.use('/api/hostedresults', hostedresultRoutes);
+
 
 // Start the server
 const PORT = process.env.PORT || 8080;

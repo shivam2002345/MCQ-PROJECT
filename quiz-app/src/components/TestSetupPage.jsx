@@ -5,9 +5,11 @@ import '../styles/TestSetup.css';
 const TestSetupPage = () => {
   const [technologies, setTechnologies] = useState([]);
   const [levels, setLevels] = useState([]);
+  const [subtopics, setSubtopics] = useState([]);
   const [selectedTech, setSelectedTech] = useState('');
   const [selectedLevel, setSelectedLevel] = useState('');
-  const [errorMessage, setErrorMessage] = useState(''); // New state for error message
+  const [selectedSubtopic, setSelectedSubtopic] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   const user_id = localStorage.getItem('user_id');
 
@@ -15,6 +17,12 @@ const TestSetupPage = () => {
     fetchTechnologies();
     fetchLevels();
   }, []);
+
+  useEffect(() => {
+    if (selectedTech) {
+      fetchSubtopics(selectedTech); 
+    }
+  }, [selectedTech]);
 
   const fetchTechnologies = async () => {
     try {
@@ -38,6 +46,32 @@ const TestSetupPage = () => {
     }
   };
 
+  const fetchSubtopics = async (techId) => {
+    try {
+      // Fetch subtopics based on the provided techId
+      const response = await fetch(`http://localhost:8080/api/subtopics/${techId}`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Ensure data is an array before setting it
+      setSubtopics(Array.isArray(data) ? data : []);
+      
+      // Set the first subtopic as the selected subtopic if there are any results
+      if (data.length > 0) {
+        setSelectedSubtopic(data[0].subtopic_id);
+      } else {
+        setSelectedSubtopic(''); // Reset if no subtopics
+      }
+    } catch (error) {
+      console.error('Error fetching subtopics:', error);
+      setSubtopics([]); // Reset subtopics on error
+    }
+  };
+
   const handleStartExam = async (e) => {
     e.preventDefault();
 
@@ -45,10 +79,11 @@ const TestSetupPage = () => {
       user_id: user_id,
       tech_id: selectedTech,
       level_id: selectedLevel,
+      subtopic_id: selectedSubtopic, // Include selected subtopic in exam data
     };
 
     try {
-      const response = await fetch('http://localhost:8080/api/exams', {
+      const response = await fetch('http://localhost:8080/api/exams/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -109,6 +144,28 @@ const TestSetupPage = () => {
             ))}
           </select>
         </div>
+
+        <div className="form-group mt-3">
+          <label htmlFor="subtopic">Subtopic</label>
+          <select
+            id="subtopic"
+            className="form-control"
+            value={selectedSubtopic}
+            onChange={(e) => setSelectedSubtopic(e.target.value)}
+            required
+          >
+            {subtopics.length > 0 ? (
+              subtopics.map((subtopic) => (
+                <option key={subtopic.subtopic_id} value={subtopic.subtopic_id}>
+                  {subtopic.subtopic_name}
+                </option>
+              ))
+            ) : (
+              <option value="">No subtopics available</option>
+            )}
+          </select>
+        </div>
+
         <div className="form-group mt-3">
           <label htmlFor="level">Difficulty Level</label>
           <select
@@ -125,6 +182,7 @@ const TestSetupPage = () => {
             ))}
           </select>
         </div>
+
         <button type="submit" className="btn btn-primary mt-3">
           Start Exam
         </button>

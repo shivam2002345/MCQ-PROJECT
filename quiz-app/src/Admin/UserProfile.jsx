@@ -8,6 +8,7 @@ const UserProfile = () => {
     const [exams, setExams] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [noHistoryMessage, setNoHistoryMessage] = useState(null); // For custom message from backend
     const navigate = useNavigate();
 
     const fetchUserData = async () => {
@@ -18,9 +19,17 @@ const UserProfile = () => {
             setUser(userData);
 
             const examsResponse = await fetch(`http://localhost:8080/api/users/${user_id}/profile`);
-            if (!examsResponse.ok) throw new Error('Failed to fetch exams data');
             const examsData = await examsResponse.json();
-            setExams(examsData.exams);
+
+            if (examsResponse.ok) {
+                if (examsData.exams) {
+                    setExams(examsData.exams);
+                } else if (examsData.message) {
+                    setNoHistoryMessage(examsData.message); // Capture backend message
+                }
+            } else {
+                throw new Error('Failed to fetch exams data');
+            }
         } catch (err) {
             setError(err.message);
         } finally {
@@ -64,8 +73,11 @@ const UserProfile = () => {
                     )}
                 </div>
             </div>
+
             <h3 className="mt-4 text-success">Exam Details</h3>
-            {exams.length > 0 ? (
+            {noHistoryMessage ? ( // Display message if no history is available
+                <p className="no-history-message">{noHistoryMessage}</p>
+            ) : exams.length > 0 ? (
                 <table className="table table-hover shadow">
                     <thead className="thead-dark">
                         <tr>

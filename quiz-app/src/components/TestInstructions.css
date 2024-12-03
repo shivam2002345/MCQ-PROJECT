@@ -7,6 +7,7 @@
   margin: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.5s ease-in-out;
+  overflow: hidden; /* Prevents content overflow */
 }
 
 .header {
@@ -15,8 +16,10 @@
 }
 
 .logo {
+  max-width: 100%; /* Ensures the logo stays inside the container */
   width: 150px; /* Adjust as necessary */
-  margin-bottom: 20px;
+  height: auto;  /* Maintains the aspect ratio */
+  margin: 0 auto 20px; /* Centers the logo */
 }
 
 .title {
@@ -47,20 +50,20 @@
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 /* Responsive styles */
 @media (max-width: 600px) {
   .title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .logo {
-      width: 120px;
+    width: 120px;
   }
 }

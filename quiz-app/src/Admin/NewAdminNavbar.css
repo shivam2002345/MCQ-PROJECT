@@ -1,0 +1,33 @@
+/* Navbar Styles */
+.newadmin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Matching dark tone from login/signup */
+    padding: 15px 30px;
+    color: #ecf0f1; /* Light text for better contrast */
+    max-width: 1550px;
+    /* margin: 0 auto; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional feel */
+}
+
+.newadmin-company-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

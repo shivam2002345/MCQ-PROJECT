@@ -78,6 +78,37 @@ const getTestHistoryByUserId = async (userId) => {
   }
 };
 
+const getResultsByUserId = async (user_id) => {
+  const query = `
+    SELECT 
+      result_id,
+     
+      user_id,
+      total_questions,
+      correct_answers,
+      score,
+      result_date,
+      selected_answers,
+      hosted_exam_id
+    FROM 
+      results
+    WHERE 
+      user_id = $1
+    ORDER BY 
+      result_date DESC;
+  `;
+  const values = [user_id];
+
+  try {
+    const result = await pool.query(query, values);
+    return result.rows;
+  } catch (error) {
+    console.error('Error fetching results by user ID:', error);
+    throw error;
+  }
+};
 
 
-module.exports = { createResult, getResultByExamAndUser ,getTestHistoryByUserId};
+
+
+module.exports = { createResult, getResultByExamAndUser ,getTestHistoryByUserId,getResultsByUserId};

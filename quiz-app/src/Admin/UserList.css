@@ -1,12 +1,18 @@
 /* Container Styling */
 .container {
+    margin-top: 1px;
     background-color: #f8f9fa; /* Light background */
-    padding: 30px; /* Adequate padding for aesthetics */
+    padding: 30px; 
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     width: 100%; /* Full width */
     max-width: 1200px; /* Optional: maximum width */
-    margin: auto; /* Center the container */
+    margin: auto;
+    
+}
+
+.user-Heading{
+    color: black;
 }
 
 /* Table Styling */

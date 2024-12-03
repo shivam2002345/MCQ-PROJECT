@@ -5,13 +5,14 @@ const createResult = async (req, res) => {
   const { exam_id, user_id, total_questions, correct_answers, score, selected_answers } = req.body;
 
   try {
+    // Call createResult method from resultModel to insert the result
     const newResult = await resultModel.createResult(
       exam_id,
       user_id,
       total_questions,
       correct_answers,
       score,
-      JSON.stringify(selected_answers)
+      JSON.stringify(selected_answers) // Ensure selected_answers is a string
     );
     res.status(201).json({ message: 'Result created successfully', result: newResult });
   } catch (err) {
@@ -59,7 +60,5 @@ const getResultByExamAndUser = async (req, res) => {
     res.status(500).json({ message: 'Server error', error: err.message });
   }
 };
-
-module.exports = { createResult, getResultByExamAndUser };
 
 module.exports = { createResult, getResultByExamAndUser };

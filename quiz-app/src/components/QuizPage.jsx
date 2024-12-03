@@ -130,7 +130,7 @@ const QuizPage = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/results", {
+      const response = await fetch("http://localhost:8080/api/results", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -270,14 +270,14 @@ const QuizPage = () => {
                 </button>
               )}
             </div>
-            <button
-              className="btn btn-success submit-btn"
-              onClick={handleSubmitClick}
-            >
-              Submit
-            </button>
-          </div>
-        </div>
+            {/* Show submit button only if on the last question */}
+      {currentQuestion === questions.length - 1 && (
+        <button className="btn btn-success submit-btn" onClick={handleSubmitClick}>
+          Submit
+        </button>
+      )}
+    </div>
+  </div>
       ) : (
         <div className="results-container mt-4">
           <h3>Results</h3>

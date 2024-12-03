@@ -1,0 +1,88 @@
+/* General Styles */
+.admin-list {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: #f9f9fc; /* Subtle light gray-blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styles */
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #2b4f60; /* Rich dark blue */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #3b82f6; /* Bright blue */
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.6); /* Updated shadow color */
+}
+
+/* Table Styles */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #2b4f60;
+  background-color: #ffffff; /* Clean white for table rows */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.admin-table th {
+  background-color: #e8f0fe; /* Subtle blue for headers */
+  color: #1e3a8a; /* Deep blue for text */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f0f9ff; /* Lighter blue for hover */
+  transform: scale(1.01);
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px;
+  color: #666;
+}
+
+.error {
+  color: red;
+}

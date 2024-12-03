@@ -1,0 +1,111 @@
+.form-container {
+  position: relative; /* Ensure the logo is positioned relative to this container */
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-image: url('./becomeadmin.jpg'); /* Set your background image here */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with a dark background and logo */
+.header {
+  /* background-color: #333; Dark background */
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 20px; /* Adjust as per your preference */
+  z-index: 10; /* Ensure logo is in front of other content */
+  width: 100px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.logo:hover {
+  opacity: 0.7; /* Slight fade effect when hovering over the logo */
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.form-input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.textarea {
+  min-height: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.next-button, .back-button, .submit-button {
+  width: 100%;
+}
+
+.back-button {
+  background: linear-gradient(145deg, #a121d3, #8e44ad);
+  color: white;
+}
+
+.back-button:hover {
+  background: linear-gradient(145deg, #9b59b6, #cb9cdf);
+  color: white;
+}
+
+.submit-button {
+  background: linear-gradient(145deg, #6c9ef5, #4a78f6);
+  color: #fff;
+}
+
+.submit-button:hover {
+  background-color: #007ba7;
+}

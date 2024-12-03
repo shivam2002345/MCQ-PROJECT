@@ -1,11 +1,11 @@
 tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option
-3,1,What is ReactJS?,A JavaScript library for building user interfaces,A framework for mobile apps,A server-side programming language,A database management system,A JavaScript library for building user interfaces
-3,1,Which company developed ReactJS?,Google,Facebook,Microsoft,Twitter,Facebook
-3,1,What is the default port for a React application?,8080,3000,5000,4000,3000
-3,1,What does JSX stand for?,JavaScript XML,JavaScript Extension,Java XML,JavaScript X,JavaScript XML
-3,1,How do you create a class component in React?,By extending React.Component,By using React.createClass,By using function keyword,By extending Component,By extending React.Component
-3,1,What is the purpose of the `render` method in React?,To define what should be displayed on the screen,To handle events,To manage state,To fetch data,To define what should be displayed on the screen
-3,1,Which lifecycle method is called after a component is mounted?,componentDidMount,componentWillUnmount,componentDidUpdate,componentWillMount,componentDidMount
-3,1,What is the purpose of state in React?,To manage dynamic data in a component,To define the structure of a component,To style components,To create new components,To manage dynamic data in a component
-3,1,What are props in React?,Short for properties,They are state variables,They are methods,They are lifecycle methods,Short for properties
-3,1,Which hook is used for managing state in functional components?,useEffect,useState,useContext,useReducer,useState
+13,1,What is ReactJS?,A JavaScript library for building user interfaces,A framework for mobile apps,A server-side programming language,A database management system,A JavaScript library for building user interfaces
+13,1,Which company developed ReactJS?,Google,Facebook,Microsoft,Twitter,Facebook
+13,1,What is the default port for a React application?,8080,13000,5000,4000,13000
+13,1,What does JSX stand for?,JavaScript XML,JavaScript Extension,Java XML,JavaScript X,JavaScript XML
+13,1,How do you create a class component in React?,By extending React.Component,By using React.createClass,By using function keyword,By extending Component,By extending React.Component
+13,1,What is the purpose of the `render` method in React?,To define what should be displayed on the screen,To handle events,To manage state,To fetch data,To define what should be displayed on the screen
+13,1,Which lifecycle method is called after a component is mounted?,componentDidMount,componentWillUnmount,componentDidUpdate,componentWillMount,componentDidMount
+13,1,What is the purpose of state in React?,To manage dynamic data in a component,To define the structure of a component,To style components,To create new components,To manage dynamic data in a component
+13,1,What are props in React?,Short for properties,They are state variables,They are methods,They are lifecycle methods,Short for properties
+13,1,Which hook is used for managing state in functional components?,useEffect,useState,useContext,useReducer,useState

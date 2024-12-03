@@ -1,132 +1,133 @@
-/* Navbar Brand (Logo) */
-.user-navbar-brand img {
-  width: 50px;
-  height: auto;
-  transition: transform 0.5s ease-in-out; /* Smooth scale transition */
+.user-navbar-container-light {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 6px 0;
 }
 
-/* Hover Effect for the Logo */
-.user-navbar-brand img:hover {
-  transform: scale(1.2); /* First, the logo scales up */
-  animation: jump-and-dance 1.5s ease-in-out infinite; /* Adds dancing and jumping */
+.user-navbar-container-light .user-nav-link {
+  color: #333;
 }
 
-/* Keyframes for the Dance and Jump Animation */
-@keyframes jump-and-dance {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1.2); /* Initial state - scaled up */
-  }
-  25% {
-    transform: translateY(-10px) rotate(-10deg) scale(1.2); /* Move up and rotate left */
-  }
-  50% {
-    transform: translateY(0) rotate(10deg) scale(1.2); /* Move back to original Y and rotate right */
-  }
-  75% {
-    transform: translateY(-5px) rotate(-10deg) scale(1.2); /* Small jump and rotate back left */
-  }
+.user-navbar-container-light .user-nav-link:hover {
+  color: #007bff;
 }
 
-/* Navbar Container */
-.user-navbar-container {
-  background-color: #000; /* Dark background */
-  border-bottom: 2px solid #060606;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  
+.user-navbar-container-dark {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 6px 0;
+}
+
+.user-navbar-container-dark .user-nav-link {
+  color: #fff;
+}
+
+.user-navbar-container-dark .user-nav-link:hover {
+  color: #007bff;
+}
+
+.user-navbar-container .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 6px 15px;
 }
 
-/* Navbar Links Styling */
 .user-navbar-nav {
   display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
-  margin-left: auto;
+  padding: 0;
 }
 
-.user-navbar-nav .user-nav-item {
-  margin-right: 20px;
+.user-nav-item {
+  margin: 0 12px; /* Adjusted spacing between items */
+  text-align: center;
 }
 
-.user-navbar-nav .user-nav-link {
+.user-nav-link {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: 1.1rem;
-  color: #fff;
-  font-weight: 500;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  color: inherit;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effect for Links */
-.user-navbar-nav .user-nav-link:hover {
-  color: #f39c12; /* Change to a yellow/orange color */
-  opacity: 0.85; /* Fade effect */
-  transform: translateY(-3px); /* Slight upward motion */
-}
-
-/* Icon Styling */
 .user-nav-icon {
-  margin-right: 8px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  margin-bottom: 6px; /* Slightly increased space between icon and text */
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.user-nav-link:hover .user-nav-icon {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #007bff;
+}
+
+/* Active Link Styling */
+.user-nav-link.active {
+  color: #007bff;
+}
+
+.user-nav-link.active .user-nav-icon {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.user-nav-link.active span {
+  font-weight: bold;
+}
+
+.theme-icon {
+  font-size: 1.6rem;
+}
+
+.user-nav-link.active {
+  color: #007bff;
+}
+
+.user-navbar-brand img {
+  width: 40px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
-/* Add animation for icons */
-.user-navbar-nav .user-nav-link:hover .user-nav-icon {
-  transform: rotate(15deg);  /* Rotate icons slightly on hover */
-}
-
-/* Logout Button */
-.user-btn-outline-danger {
-  border: 1px solid #e74c3c;
-  color: #e74c3c;
-  background-color: transparent;
-  padding: 5px 15px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.user-btn-outline-danger:hover {
-  background-color: #e74c3c;
-  color: white;
-  transform: translateY(-5px) scale(1.05);  /* Animate upward motion and scaling */
+.user-navbar-brand img:hover {
+  transform: scale(1.15);
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
   .user-navbar-container {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  .user-navbar-brand img {
-    width: 40px; /* Smaller logo size on mobile */
+    align-items: center;
+    padding: 8px;
   }
 
   .user-navbar-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    padding: 10px 0;
   }
 
-  .user-navbar-nav .user-nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .user-navbar-nav .user-nav-link {
-    font-size: 1rem;
-  }
-
-  .user-btn-outline-danger {
-    width: 100%; /* Full width button on smaller screens */
-    font-size: 1rem;
+  .user-nav-item {
+    margin-bottom: 12px;
   }
 }

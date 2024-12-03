@@ -1,0 +1,103 @@
+/* Exam.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .exam-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .exam-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .exam-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .timer {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .question-container {
+    padding: 30px;
+  }
+  
+  .question-text {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .options-container {
+    margin-top: 10px;
+  }
+  
+  .option-label {
+    display: block;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .option-label input {
+    margin-right: 10px;
+  }
+  
+  .exam-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .btn-next {
+    background-color: #28a745;
+  }
+  
+  .btn-next:hover {
+    background-color: #218838;
+  }
+  
+  .btn-submit {
+    background-color: #dc3545;
+  }
+  
+  .btn-submit:hover {
+    background-color: #c82333;
+  }
+  

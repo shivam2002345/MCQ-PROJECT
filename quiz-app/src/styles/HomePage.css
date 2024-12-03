@@ -100,7 +100,7 @@
 .info-section h2 {
     color: #ffcc00; /* Bright yellow color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    animation: bounce 1s infinite; /* Add bounce animation */
+    animation: bounce 3s infinite; /* Add bounce animation */
 }
 
 /* Image styling */
@@ -227,7 +227,7 @@
     text-align: center;
     padding: 20px 0; /* Increased top and bottom padding */
     position: relative; /* Changed to relative to allow for dynamic height */
-    height: auto; /* Allow the height to adjust based on content */
+    height: 300px; /* Allow the height to adjust based on content */
 }
 
 /* Social icons styling */

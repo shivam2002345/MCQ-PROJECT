@@ -14,6 +14,14 @@ import RequestForm from './components/CreateRequest';
 import AdminLayout from './Admin/AdminDashboard';
 import Notifications from './components/UserNotifications';
 import AdminLogin from './Admin/AdminLogin';
+import BecomeAdmin from "./components/BecomeAdmin";
+import NewAdminLogin from './components/NewAdminLogin';
+import NewAdminDashboard from './Admin/NewAdminDashboard';
+import Login from './CustomExam/Login';
+import Result from './CustomExam/Result';
+import Exam from './CustomExam/Exam';
+import OldUserExam from './CustomExam/OldUserExam';
+import ExamResults from './Components/Customresult';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(isAuthenticated());
@@ -45,15 +53,34 @@ const App = () => {
                 <Route path="/results/:exam_id/:user_id" element={<ResultPage />} />
                 <Route path="/request" element={<RequestForm />} />
                 <Route path="/notifications" element={<Notifications />} />
+                <Route path="/exam" element={<OldUserExam />} />
+                <Route path="/resultof-customexam" element={ <ExamResults />} />
+
+               
+
+                
                 <Route path="/dashboard" element={
                    <ProfilePage />  
                 } />
+                 <Route path="/become-an-admin" element={<BecomeAdmin />} />
+                 <Route path="/new-admin-login" element={<NewAdminLogin />} />
+
+                 <Route path="/newuser/:user_id" element={<Login />} />
+                <Route path="/exam/:examId" element={<Exam />} />
+                <Route path="/result" element={<><Result></Result></>}></Route>
 
                 {/* Admin routes */}
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route path="/admin/*" element={
                      <AdminLayout />   } />
+                     
+                     
+                     <Route path="/newadmin/*" element={<NewAdminDashboard />} />
+
             </Routes>
+
+           
+
         </Router>
     );
 };

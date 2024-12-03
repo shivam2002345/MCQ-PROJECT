@@ -9,7 +9,7 @@ const TestInstructions = () => {
       <UserNavbar/>
         <div className="instructions-container">
             <header className="header">
-                <img src={logo} alt="CyberInfoMines Technology Logo" className="logo" />
+                <img src={logo} alt="CyberInfoMines Technology Logo" className="company-logo" />
                 <h1 className="title">Test Instructions</h1>
             </header>
             <div className="content">

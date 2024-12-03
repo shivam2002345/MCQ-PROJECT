@@ -1,0 +1,178 @@
+/* Overall container styling */
+.admin-subtopics-page {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Main container background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    background: linear-gradient(to right, #e0f7fa, #ffffff); /* Subtle gradient for freshness */
+}
+
+/* Heading styling */
+.admin-subtopics-page h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #37474f; /* Dark, modern text color */
+    text-align: center;
+    border-bottom: 2px solid #009688;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Select technology container */
+.select-technology {
+    margin-bottom: 20px;
+}
+
+.select-technology label {
+    font-weight: 600;
+    color: #37474f;
+    margin-right: 10px;
+}
+
+.select-technology select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Add subtopic container */
+.add-subtopic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.add-subtopic input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.add-subtopic button {
+    background-color: #009688; /* Teal */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.add-subtopic button:hover {
+    background-color: #00695c; /* Dark teal */
+}
+
+/* Subtopics list styling */
+.subtopics-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.subtopic-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.subtopic-item:last-child {
+    border-bottom: none;
+}
+
+.subtopic-item span {
+    font-size: 16px;
+    color: #37474f;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+}
+
+.subtopic-item input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Buttons for each subtopic */
+.subtopic-item button {
+    background-color: #009688; /* Teal for primary action */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.subtopic-item button:hover {
+    background-color: #00695c; /* Dark teal */
+}
+
+/* Secondary button styling */
+.subtopic-item button.secondary {
+    background-color: #ff9800; /* Orange for secondary actions */
+}
+
+.subtopic-item button.secondary:hover {
+    background-color: #f57c00; /* Deep orange for hover */
+}
+
+/* Align buttons properly */
+.subtopic-item button + button {
+    margin-left: 10px;
+}
+
+/* Error message styling */
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .admin-subtopics-page {
+        padding: 15px;
+    }
+
+    .add-subtopic {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subtopic-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .subtopic-item button {
+        width: 100%; /* Full-width buttons for mobile */
+    }
+}

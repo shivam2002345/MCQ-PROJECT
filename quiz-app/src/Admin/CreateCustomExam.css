@@ -1,0 +1,27 @@
+.custom-exam-container {
+    background: url("./formbackground.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .exam-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  

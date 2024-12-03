@@ -9,6 +9,11 @@ import FilterQuestions from './FilterQuestions';
 import UserList from './UserList';
 import UserProfile from './UserProfile';
 import AdminDashboard from './Dashboard';
+import TechnologyManagement from './TechnologyManagement ';
+import AdminRequestManagement from './AdminRequestManagement';
+import AdminList from './AdminList';
+import AdminDetail from './AdminDetail';
+import AdminSubtopicsPage from './AdminSubtopicsPage';
 
 const AdminLayout = () => {
     return (
@@ -24,7 +29,11 @@ const AdminLayout = () => {
                         <Route path="questions" element={<FilterQuestions />} />
                         <Route path="users" element={<UserList />} />
                         <Route path="users/:user_id" element={<UserProfile />} />
-
+                        <Route path="technology-management" element={<TechnologyManagement/>} />
+                        <Route path="admin-requests" element={<AdminRequestManagement />} />
+                        <Route path="adminlist" element={<AdminList />} />
+                        <Route path="/:adminId" element={<AdminDetail />} />
+                        <Route path="subtopics" element={<AdminSubtopicsPage />} />
                     </Routes>
                 </div>
             </div>

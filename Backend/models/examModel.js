@@ -1,10 +1,12 @@
 const pool = require('../config/db'); // Your database pool configuration
 
-const createExam = async (user_id, level_id, tech_id) => {
+// Function to create an exam and return the exam ID
+const createExam = async (user_id, level_id, tech_id, subtopic_id) => {
   try {
+    // Insert the exam with user_id, level_id, tech_id, and subtopic_id
     const result = await pool.query(
-      'INSERT INTO exams (user_id, level_id, tech_id) VALUES ($1, $2, $3) RETURNING exam_id',
-      [user_id, level_id, tech_id]
+      'INSERT INTO exams (user_id, level_id, tech_id, subtopic_id) VALUES ($1, $2, $3, $4) RETURNING exam_id',
+      [user_id, level_id, tech_id, subtopic_id]
     );
 
     if (result.rows.length === 0) {

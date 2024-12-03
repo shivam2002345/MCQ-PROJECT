@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Navbar from './Navbar';
+import UpdatedUserNavbar from './Navbar';
+import { Link} from "react-router-dom";
 import { isAuthenticated } from '../utils/auth'; // Import the auth function
 // import quizImage from '../assets/home.jpg'; // Ensure the path is correct
 import '../styles/HomePage.css'; // Import the custom CSS file
+import {
+   
+  FaUserShield,
+ 
+} from "react-icons/fa"; // FontAwesome icons
 // import choose from '../assets/choose.jpg';
 const HomePage = () => {
   const [warning, setWarning] = useState(''); // State to store the warning message
@@ -30,7 +36,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage-container">
-    <Navbar />
+    <UpdatedUserNavbar />
 
     {notification && (
         <div className="alert alert-success notification" role="alert">
@@ -80,6 +86,24 @@ const HomePage = () => {
         </a>
     </div>
     <p>&copy; 2024 CyberInfoMines. All rights reserved.</p>
+
+    <li className="user-nav-item">
+                <Link className="user-nav-link" to="/admin/login">
+                  <FaUserShield className="user-nav-icon" /> Admin Panel
+                </Link>
+              </li>
+
+              <li className="user-nav-item">
+                <Link className="user-nav-link" to="/become-an-admin">
+                  <FaUserShield className="user-nav-icon" /> Apply for Admin Role
+                </Link>
+              </li>
+
+              <li className="user-nav-item">
+                <Link className="user-nav-link" to="/new-admin-login">
+                  <FaUserShield className="user-nav-icon" /> Login as Admin
+                </Link>
+              </li>
 </footer>
 
 </div>
