@@ -1,5 +1,5 @@
 const { findAdminByEmail } = require('../models/adminModel');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('../config/db'); // Adjust the path as needed
 
@@ -8,25 +8,25 @@ const JWT_SECRET = 'your_secret_key'; // Use a strong secret key
 const adminLogin = async (req, res) => {
     const { email, password } = req.body;
 
-    // Find admin by email
-    const admin = await findAdminByEmail(email); // Ensure you await this function
-    if (!admin) {
-        return res.status(401).json({ message: 'Invalid email or password' });
+    try {
+        const admin = await findAdminByEmail(email);
+        if (!admin) {
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, admin.password);
+        if (!isPasswordValid) {
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+
+        const token = jwt.sign({ adminId: admin.id }, JWT_SECRET, { expiresIn: '1h' });
+
+        res.status(200).json({ message: 'Login successful', token, redirectTo: '/admin/dashboard' });
+    } catch (error) {
+        console.error("Error during login:", error);
+        res.status(500).json({ message: 'An error occurred. Please try again.' });
     }
-
-    // Verify the plain-text password against the hashed password
-    const isPasswordValid = await bcrypt.compare(password, admin.password);
-    if (!isPasswordValid) {
-        return res.status(401).json({ message: 'Invalid email or password' });
-    }
-
-    // Generate a JWT token
-    const token = jwt.sign({ adminId: admin.id }, JWT_SECRET, { expiresIn: '1h' }); // Adjust expiration as needed
-
-    // Successful login, return token and redirect
-    res.status(200).json({ message: 'Login successful', token, redirectTo: '/admin/dashboard' });
 };
-
 // Utility function to validate email format
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -6,7 +6,7 @@ const csvParser = require("csv-parser");
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 const Notification = require('../models/Notification'); // Import the Notification model
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const { findUserByEmail, createUser } = require('../models/userModel'); // Import functions from userModel
 

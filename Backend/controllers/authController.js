@@ -1,5 +1,5 @@
 const { body, validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Changed to bcryptjs
 const jwt = require('jsonwebtoken');
 const userModel = require('../models/userModel');
 const errorHandler = require('../utils/errorHandler');
@@ -27,7 +27,7 @@ const loginValidations = [
 const signup = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+    return res.status(400).json({ status: 'error', errors: errors.array() });
   }
 
   const { name, email, password } = req.body;
@@ -35,16 +35,16 @@ const signup = async (req, res) => {
     // Check for duplicate email
     const existingUser = await userModel.findUserByEmail(email);
     if (existingUser) {
-      return res.status(400).json({ message: 'User already exists' });
+      return res.status(400).json({ status: 'error', message: 'User already exists' });
     }
 
-    // Hash password
+    // Hash password with bcryptjs
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Add user_count = 0 and allowed_count = 1 on signup
     const newUser = await userModel.createUser(name, email, hashedPassword, 0, 1);
 
-    res.status(201).json({ message: 'User created successfully', user_id: newUser.user_id });
+    res.status(201).json({ status: 'success', message: 'User created successfully', user_id: newUser.user_id });
   } catch (error) {
     errorHandler(res, error);
   }
@@ -53,7 +53,7 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+    return res.status(400).json({ status: 'error', errors: errors.array() });
   }
 
   const { email, password } = req.body;
@@ -61,19 +61,20 @@ const login = async (req, res) => {
     // Check if user exists
     const user = await userModel.findUserByEmail(email);
     if (!user) {
-      return res.status(401).json({ message: 'Invalid email or password' });
+      return res.status(401).json({ status: 'error', message: 'Invalid email or password' });
     }
 
-    // Compare password
+    // Compare password with bcryptjs
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(401).json({ message: 'Invalid email or password' });
+      return res.status(401).json({ status: 'error', message: 'Invalid email or password' });
     }
 
     // Create JWT token
     const token = jwt.sign({ user_id: user.user_id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.json({
+      status: 'success',
       message: 'Login successful',
       token,
       user_id: user.user_id,
