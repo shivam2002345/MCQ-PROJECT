@@ -1,68 +1,74 @@
-/* Navbar Styles */
 .admin-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50; /* Matching dark tone from login/signup */
-    /* padding: 15px 30px; */
-    color: #ecf0f1; /* Light text for better contrast */
-    max-width: 1200px;
-    /* margin: 0 auto; */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional feel */
+    background-color: #2c3e50; /* Dark tone */
+    padding: 10px 20px;
+    color: #ecf0f1; /* Light text */
+    max-width: 100%; /* Full-width navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .company-logo {
-    height: 50px;
+    height: 60px;
     width: auto;
-    margin-right: 20px;
+    margin-left: 15px; /* Adjust spacing */
+    cursor: pointer; /* Pointer for interactivity */
 }
 
-/* Navbar Icons Container */
 .navbar-icons {
     display: flex;
-    gap: 25px; /* Spacing between icons */
-    align-items: center; /* Vertically align the icons */
+    align-items: center;
+    gap: 30px; /* Increased spacing between icons */
 }
 
-/* Ticket Icon Specific Styles */
 .ticket-icon {
     position: relative;
     font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .ticket-icon:hover {
-    color: #f67d03; /* A yellow hover effect */
-    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #34495e; /* Slightly darker background on hover */
+    transform: scale(1.1); /* Zoom effect */
 }
 
-/* Notification Badge */
 .notification-badge {
     position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: #e74c3c;
-    color: #fff;
+    top: 0px;
+    right: 0px;
+    background-color: #e74c3c; /* Red notification badge */
+    color: white;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar-admin {
+    .admin-navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px;
     }
 
     .navbar-icons {
-        justify-content: center;
         margin-top: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .ticket-icon {
+        font-size: 16px;
     }
 }

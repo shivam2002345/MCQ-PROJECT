@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import './ResultPage.css'; // Add CSS for styling the colors
+import logAction from '../utils/logAction'; // Import the logAction function
 
 const ResultPage = () => {
   const { exam_id, user_id } = useParams(); // Get exam_id and user_id from the URL
@@ -20,8 +21,14 @@ const ResultPage = () => {
         const data = await response.json();
         console.log('API Response:', data); // Log the response
         setResult(data);
+
+        // Log the successful fetching action
+        logAction(`Fetched result data for exam ${exam_id} and user ${user_id}`, 'info');
       } catch (error) {
         setError(error.message);
+
+        // Log the error action
+        logAction(`Error fetching result data for exam ${exam_id} and user ${user_id}: ${error.message}`, 'error');
       } finally {
         setLoading(false);
       }

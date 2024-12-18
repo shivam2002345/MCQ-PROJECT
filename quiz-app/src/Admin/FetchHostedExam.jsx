@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FetchhostedExam.css';
+import logAction from '../utils/logAction'; // Import the logAction file
 
 const ExamList = () => {
   const [exams, setExams] = useState([]);
@@ -15,6 +16,7 @@ const ExamList = () => {
     if (!adminId) {
       setError('Admin ID not found. Please log in.');
       setLoading(false);
+      logAction('Error', { message: 'Admin ID not found.' });
       return;
     }
 
@@ -23,16 +25,19 @@ const ExamList = () => {
       .then((data) => {
         setExams(data.exams);
         setLoading(false);
+        logAction('Fetched Exams', { adminId, exams: data.exams.length });
       })
       .catch((error) => {
         console.error('Error fetching exams:', error);
         setError('Failed to load exams.');
         setLoading(false);
+        logAction('Error Fetching Exams', { error: error.message });
       });
   }, [adminId]);
 
   const toggleQuestions = (examId) => {
     setActiveExamId(activeExamId === examId ? null : examId);
+    logAction('Toggle Questions Visibility', { examId, visible: activeExamId !== examId });
   };
 
   if (loading) {
@@ -45,9 +50,8 @@ const ExamList = () => {
 
   return (
     <div className="exam-list-container">
-     
       <div className="exam-table-wrapper">
-      <h1>Exams</h1>
+        <h1>Exams</h1>
         <table className="exam-table">
           <thead>
             <tr>

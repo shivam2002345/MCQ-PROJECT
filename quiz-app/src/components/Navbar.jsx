@@ -8,7 +8,7 @@ import {
   FaRegFileAlt,
   FaRegBell,
   FaSignOutAlt,
-  FaSun,FaUserPlus, FaSignInAlt,
+  FaSun, FaUserPlus, FaSignInAlt,
   FaMoon,
 } from "react-icons/fa"; // FontAwesome icons
 import { MdDashboard } from "react-icons/md"; // For dashboard
@@ -21,7 +21,6 @@ const UserNavbar = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    // Check if user has a saved theme in localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
@@ -40,9 +39,7 @@ const UserNavbar = () => {
   };
 
   return (
-    <div
-      className={`user-navbar-container-${theme} sticky-top container-fluid`}
-    >
+    <div className={`user-navbar-container-${theme} sticky-top container-fluid`}>
       <nav className="navbar">
         <Link className="user-navbar-brand" to="/">
           <img src={logo} alt="Website Logo" />
@@ -81,6 +78,7 @@ const UserNavbar = () => {
                   <IoIosSchool className="user-nav-icon" />
                   <span>Access Exam</span>
                 </Link>
+               
               </li>
               <li className="user-nav-item">
                 <Link className="user-nav-link" to="/resultof-customexam">
@@ -95,10 +93,7 @@ const UserNavbar = () => {
                 </Link>
               </li>
               <li className="user-nav-item">
-                <button
-                  className="user-btn-outline-danger"
-                  onClick={handleLogout}
-                >
+                <button className="user-btn-outline-danger" onClick={handleLogout}>
                   <FaSignOutAlt className="user-nav-icon" />
                   <span>Logout</span>
                 </button>

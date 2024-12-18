@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Notifications.css'; // Import the CSS file
 import Navbar from './Navbar';
+import logAction  from '../utils/logAction'; // Import logAction
 
 const Notification = () => {
     const [notifications, setNotifications] = useState([]);
@@ -24,12 +25,14 @@ const Notification = () => {
                 // Ensure that data is an array before setting it
                 if (Array.isArray(data)) {
                     setNotifications(data);
+                    logAction(userId, 'Fetched notifications', data.length); // Log action when notifications are fetched
                 } else {
                     console.error('Expected an array but got:', data);
                     setNotifications([]); // Reset to an empty array if not an array
                 }
             } catch (error) {
                 console.error('Error fetching notifications:', error);
+                logAction(userId, 'Error fetching notifications', error.message); // Log action on error
             }
         };
 
@@ -58,6 +61,9 @@ const Notification = () => {
             setReadNotifications(updatedReadNotifications);
             localStorage.setItem('readNotifications', JSON.stringify(updatedReadNotifications));
 
+            // Log action for marking as read
+            logAction(userId, 'Marked notification as read', id);
+
             // Set a timeout to hide the notification after 10 seconds
             setTimeout(() => {
                 setNotifications((prevNotifications) =>
@@ -66,6 +72,7 @@ const Notification = () => {
             }, 10000); // 10000ms = 10 seconds
         } catch (error) {
             console.error('Error marking notification as read:', error);
+            logAction(userId, 'Error marking notification as read', error.message); // Log error action
         }
     };
 

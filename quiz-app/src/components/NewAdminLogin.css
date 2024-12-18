@@ -1,89 +1,131 @@
-.login-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background to improve contrast */
+/* Container and Header */
+.external-admin-login-container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-image: url('./imagebg.jpg'); /* Set your background image here */
-  background-size: cover;
-  background-position: center;
-  position: relative; /* To handle layering */
-  z-index: 1;
+  padding: 20px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: Arial, sans-serif;
-  color: #333; /* Ensure a visible color */
-  font-size: 24px;
-  z-index: 2; /* Bring the text above background */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: text shadow to improve readability */
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
+.external-admin-login-header {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
   font-weight: bold;
-  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
-input {
+/* Form Card */
+.external-admin-form-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-input.error {
-  border-color: red;
+.external-admin-form-group {
+  margin-bottom: 25px;
 }
 
-.error-message {
+.external-admin-form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.external-admin-form-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #2b2b2b;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.external-admin-form-input.error {
+  border: 1px solid red;
+}
+
+.external-admin-error-message {
   color: red;
-  font-size: 12px;
+  font-size: 0.9rem;
   margin-top: 5px;
 }
 
-.submit-button {
-  width: 100%;
-  padding: 10px;
+/* Submit Button */
+.external-admin-submit-button {
   background-color: #007bff;
-  color: white;
+  color: #fff;
+  padding: 14px 25px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.submit-button:hover {
+.external-admin-submit-button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-.response {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.response.success {
-  color: #155724;
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-}
-
+/* Error Response */
 .response.error {
-  color: #721c24;
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
+  color: red;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Return Home Button */
+.external-admin-return-home-button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #007bff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.external-admin-return-home-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .external-admin-form-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .external-admin-login-header {
+    font-size: 1.8rem;
+  }
+
+  .external-admin-submit-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .external-admin-return-home-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }

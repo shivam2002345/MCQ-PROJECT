@@ -1,33 +1,121 @@
-/* Navbar Styles */
-.newadmin-navbar {
+.admin-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50; /* Matching dark tone from login/signup */
-    padding: 15px 30px;
-    color: #ecf0f1; /* Light text for better contrast */
-    max-width: 1550px;
-    /* margin: 0 auto; */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional feel */
+    background-color: #2c3e50; /* Dark tone */
+    padding: 10px 20px;
+    color: #ecf0f1; /* Light text */
+    max-width: 100%; /* Full-width navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.newadmin-company-logo {
-    height: 50px;
+.company-logo {
+    height: 60px;
     width: auto;
-    margin-right: 20px;
+    margin-left: 15px; /* Adjust spacing */
+    cursor: pointer; /* Pointer for interactivity */
 }
 
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased spacing between icons */
+}
+.download-icons {
+    display: flex;
+    gap: 20px; /* Adds space between items */
+    align-items: center;
+  }
+  
+  .download-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .admin-navbar.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .company-logo {
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-icons {
+    display: flex;
+    gap: 20px; /* Adds space between items */
+    align-items: center;
+  }
+  
+  .download-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .download-item .fa-download {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .download-item .fa-download:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+  }
+  
+  .download-item div {
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+.notification-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #e74c3c; /* Red notification badge */
+    color: white;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+}
 
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
+    .admin-navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px;
     }
 
     .navbar-icons {
-        justify-content: center;
         margin-top: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .ticket-icon {
+        font-size: 16px;
     }
 }

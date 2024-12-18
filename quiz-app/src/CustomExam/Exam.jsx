@@ -13,16 +13,28 @@ const Exam = () => {
 
   useEffect(() => {
     const fetchExamData = async () => {
-      const response = await fetch(`http://localhost:8080/api/customexams/exams/${examId}`);
-      const data = await response.json();
-      if (data.exam) {
-        setExamData(data.exam);
-        setTimer(data.exam.duration * 60); // Convert duration to seconds
+      try {
+        const response = await fetch(`http://localhost:8080/api/customexams/exams/${examId}`);
+        const data = await response.json();
+  
+        // Check if the exam status is 'already taken'
+        if (data.message && data.message === 'Sorry, you have already given this exam!') {
+          alert(data.message);  // Show the message if the exam has already been taken
+        } else if (data.exam) {
+          setExamData(data.exam);
+          setTimer(data.exam.duration * 60); // Convert duration to seconds
+        } else {
+          alert("Exam not found.");
+        }
+      } catch (error) {
+        console.error("Error fetching exam data:", error);
+        alert("Failed to fetch exam data. Please try again.");
       }
     };
-
+  
     fetchExamData();
   }, [examId]);
+  
 
   useEffect(() => {
     let interval;
@@ -34,11 +46,10 @@ const Exam = () => {
     return () => clearInterval(interval);
   }, [timer]);
 
-  const handleOptionChange = (event) => {
-    const selectedOption = event.target.value;
+  const handleOptionChange = (selectedOption) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
-      [currentQuestionIndex]: selectedOption, // Save answer text
+      [currentQuestionIndex]: selectedOption,
     }));
   };
 
@@ -54,8 +65,8 @@ const Exam = () => {
     let correctAnswers = 0;
 
     examData.questions.forEach((q, index) => {
-      const selectedOption = answers[index]; // User's selected option key (e.g., A, B, C, D)
-      const selectedOptionText = q.options[selectedOption]; // Text of the selected option
+      const selectedOption = answers[index];
+      const selectedOptionText = q.options[selectedOption];
 
       if (selectedOptionText && selectedOptionText.trim().toUpperCase() === q.correct_option.trim().toUpperCase()) {
         correctAnswers += 1;
@@ -72,22 +83,22 @@ const Exam = () => {
     }
   
     try {
+      // Calculate the score
       const correctAnswers = calculateScore();
       const resultData = {
-        user_id: examData.user_id, // Directly use user_id from examData
+        user_id: examData.user_id,
         hosted_exam_id: examData.exam_id,
         technology: examData.technology,
         total_questions: examData.num_questions,
         correct_answers: correctAnswers,
-        score: correctAnswers, // Assuming 1 mark per question
-        total_marks: examData.num_questions, // Assuming total marks = total questions
+        score: correctAnswers,
+        total_marks: examData.num_questions,
         question_text: examData.questions.map((q) => q.question_text || "No question provided"),
         selected_option: examData.questions.map((_, index) => answers[index] || "Not answered"),
         correct_option: examData.questions.map((q) => q.correct_option || "Unknown"),
       };
   
-      console.log("Submitting resultData:", resultData);
-  
+      // Save the exam results
       const saveResponse = await fetch("http://localhost:8080/api/hostedresults/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -97,15 +108,22 @@ const Exam = () => {
       const saveData = await saveResponse.json();
       console.log("Save response:", saveData);
   
+      // Update the status of the exam (change to 'true' after submission)
+      const updateStatusResponse = await fetch(`http://localhost:8080/api/update-status/${examData.exam_id}`, {
+        method: "PUT", // Assuming POST method for updating status
+      });
+  
+      const updateStatusData = await updateStatusResponse.json();
+      console.log("Status update response:", updateStatusData);
+  
       alert("Exam submitted successfully!");
-      navigate("/dashboard"); // Redirect to dashboard or another route
+      navigate("/signin");
     } catch (error) {
       console.error("Error in handleSubmit:", error);
       alert("Failed to submit the exam. Please try again.");
     }
   };
   
-
   if (!examData || !examData.questions || examData.questions.length === 0) {
     return <div>Loading exam data...</div>;
   }
@@ -116,39 +134,45 @@ const Exam = () => {
     <>
       <UserNavbar />
       <div className="exam-container">
-        <h2>{examData.name}</h2>
-        <p>
+        <h2 className="exam-title">{examData.name}</h2>
+        <p className="timer">
           Time Remaining: {String(Math.floor(timer / 60)).padStart(2, "0")}:
           {String(timer % 60).padStart(2, "0")}
         </p>
-        <h3>
-          Question {currentQuestionIndex + 1}: {currentQuestion.question_text}
-        </h3>
-        <div className="options-container">
-          {Object.entries(currentQuestion.options).map(
-            ([key, value]) =>
-              value && (
-                <label key={key}>
-                  <input
-                    type="radio"
-                    name="option"
-                    value={key}
-                    checked={answers[currentQuestionIndex] === key}
-                    onChange={handleOptionChange}
-                  />
+        <div className="question-container">
+          <h3 className="question-text">
+            Question {currentQuestionIndex + 1}: {currentQuestion.question_text}
+          </h3>
+          <div className="options-container">
+            {Object.entries(currentQuestion.options).map(([key, value]) =>
+              value ? (
+                <button
+                  key={key}
+                  className={`option-button ${answers[currentQuestionIndex] === key ? "selected" : ""}`}
+                  onClick={() => handleOptionChange(key)}
+                >
                   {key.toUpperCase()}: {value}
-                </label>
-              )
-          )}
+                </button>
+              ) : null
+            )}
+          </div>
         </div>
         <div className="navigation-buttons">
-          <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
+          <button
+            className="nav-button nav-button-previous"
+            onClick={handlePrevious}
+            disabled={currentQuestionIndex === 0}
+          >
             Previous
           </button>
           {currentQuestionIndex < examData.questions.length - 1 ? (
-            <button onClick={handleNext}>Next</button>
+            <button className="nav-button" onClick={handleNext}>
+              Next
+            </button>
           ) : (
-            <button onClick={handleSubmit}>Submit</button>
+            <button className="nav-button nav-button-submit" onClick={handleSubmit}>
+              Submit
+            </button>
           )}
         </div>
       </div>

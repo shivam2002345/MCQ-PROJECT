@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import logAction  from '../utils/logAction'; // Adjust path based on where your logAction file is
 import './AdminDetail.css';
 
 const AdminDetail = () => {
@@ -13,6 +14,7 @@ const AdminDetail = () => {
   useEffect(() => {
     const fetchAdminDetails = async () => {
       try {
+        logAction('INFO', `Fetching details for admin ID: ${adminId}`); // Log action before fetching
         const [adminResponse, examsResponse] = await Promise.all([
           axios.get(`http://localhost:8080/api/admins/${adminId}`),
           axios.get(`http://localhost:8080/api/admin/${adminId}/exams`),
@@ -20,9 +22,11 @@ const AdminDetail = () => {
         setAdmin(adminResponse.data.admin);
         setExams(examsResponse.data.exams);
         setLoading(false);
-      } catch {
+        logAction('INFO', `Successfully fetched details for admin ID: ${adminId}`); // Log success
+      } catch (err) {
         setError('Failed to fetch admin details.');
         setLoading(false);
+        logAction('ERROR', `Failed to fetch details for admin ID: ${adminId}`); // Log error
       }
     };
     fetchAdminDetails();

@@ -80,7 +80,6 @@ const RequestManagement = () => {
         <h1>Request Management</h1>
         {notification && <div className="notification">{notification}</div>} {/* Notification display */}
         <div className="actions">
-      
         </div>
       </div>
       <table className="requests-table">

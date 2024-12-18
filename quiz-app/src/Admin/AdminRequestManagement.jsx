@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import  logAction  from "../utils/logAction"; // Import logAction
 import "./AdminRequestManagement.css";
 
 const AdminRequestManagement = () => {
@@ -14,9 +15,11 @@ const AdminRequestManagement = () => {
       const response = await axios.get("http://localhost:8080/api/admin/new/requests");
       setRequests(response.data);
       setLoading(false);
+      logAction("Successfully fetched requests"); // Log successful fetch
     } catch (error) {
       console.error("Error fetching requests:", error);
       setLoading(false);
+      logAction("Error fetching requests"); // Log error
     }
   };
 
@@ -30,8 +33,10 @@ const AdminRequestManagement = () => {
       const response = await axios.put(`http://localhost:8080/api/admin/request/${request_id}`, body);
       setMessage(response.data.message);
       fetchRequests(); // Refresh the list
+      logAction(`Status for request ID ${request_id} updated to ${status}`); // Log status change
     } catch (error) {
       console.error("Error updating request status:", error);
+      logAction(`Error updating request ID ${request_id} status`); // Log error
     }
   };
 

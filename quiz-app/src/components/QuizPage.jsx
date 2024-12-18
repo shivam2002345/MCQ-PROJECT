@@ -4,6 +4,7 @@ import "../styles/QuizPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Pie } from "react-chartjs-2"; // Importing Pie chart
 import "chart.js/auto"; // Important for Chart.js v3+
+import  logAction  from "../utils/logAction"; // Import logAction
 
 const QuizPage = () => {
   const { exam_id } = useParams();
@@ -74,17 +75,35 @@ const QuizPage = () => {
       );
       return [...updatedAnswers, answer];
     });
+
+    // Log the action of selecting an answer
+    logAction({
+      user_id,
+      action: "Selected an answer",
+      question_id: questionId,
+      answer: selectedOption,
+    });
   };
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
+      logAction({
+        user_id,
+        action: "Moved to next question",
+        question_id: questions[currentQuestion + 1].id,
+      });
     }
   };
 
   const handlePrevious = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
+      logAction({
+        user_id,
+        action: "Moved to previous question",
+        question_id: questions[currentQuestion - 1].id,
+      });
     }
   };
 
@@ -109,6 +128,13 @@ const QuizPage = () => {
     setScore(calculatedScore);
     setCorrectAnswersCount(correctAnswers);
     setShowResults(true);
+
+    // Log the action when the quiz is submitted
+    logAction({
+      user_id,
+      action: "Submitted the quiz",
+      score: calculatedScore,
+    });
   };
 
   const handleReviewExam = async () => {
@@ -270,32 +296,31 @@ const QuizPage = () => {
                 </button>
               )}
             </div>
-            {/* Show submit button only if on the last question */}
-      {currentQuestion === questions.length - 1 && (
-        <button className="btn btn-success submit-btn" onClick={handleSubmitClick}>
-          Submit
-        </button>
-      )}
-    </div>
-  </div>
+            {currentQuestion === questions.length - 1 && (
+              <button className="btn btn-success submit-btn" onClick={handleSubmitClick}>
+                Submit
+              </button>
+            )}
+          </div>
+        </div>
       ) : (
         <div className="results-container mt-4">
           <h3>Results</h3>
           <div className="pie-chart-container">
             <Pie className="pie" data={data} />
             <div className="data">
-            <p>
-              <strong>Total Questions:</strong> {questions.length}
-            </p>
-            <p>
-              <strong>Correct Answers:</strong> {correctAnswersCount}
-            </p>
-            <p>
-              <strong>Score:</strong> {score.toFixed(2)}%
-            </p>
-            <button className="btn btn-primary" onClick={handleReviewExam}>
-              Review Exam
-            </button>
+              <p>
+                <strong>Total Questions:</strong> {questions.length}
+              </p>
+              <p>
+                <strong>Correct Answers:</strong> {correctAnswersCount}
+              </p>
+              <p>
+                <strong>Score:</strong> {score.toFixed(2)}%
+              </p>
+              <button className="btn btn-primary" onClick={handleReviewExam}>
+                Review Exam
+              </button>
             </div>
           </div>
         </div>

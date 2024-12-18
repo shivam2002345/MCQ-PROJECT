@@ -2,7 +2,7 @@ const sequelize = require('../config/dbn.js');  // Your sequelize instance
 const { DataTypes } = require("sequelize");
 
 const HostedExam = sequelize.define('HostedExam', {
-  exam_id: {  // Changed from `id` to `exam_id`
+  exam_id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
     primaryKey: true,
@@ -39,10 +39,16 @@ const HostedExam = sequelize.define('HostedExam', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
   },
-  admin_id: {  // Added admin_id field
+  admin_id: {
     type: DataTypes.INTEGER,
-    allowNull: true,  // Optional, or set to false if required
+    allowNull: true,
   },
+  // Add the status field to track if the exam has been taken or not
+  status: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,  // Default to false (exam not taken)
+    allowNull: false,
+  }
 }, {
   tableName: 'hosted_exam',
   timestamps: false,

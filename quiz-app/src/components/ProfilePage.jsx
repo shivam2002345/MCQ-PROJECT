@@ -18,11 +18,25 @@ const Profile = () => {
   const userId = localStorage.getItem('user_id');
   const navigate = useNavigate();
 
+  // logAction function to track user actions
+  const logAction = (actionType, message) => {
+    console.log(`Action: ${actionType}, Message: ${message}`);
+    // Ideally, send this data to a logging endpoint or analytics service
+    axios.post('http://localhost:8080/api/logs', {
+      userId,
+      actionType,
+      message,
+      timestamp: new Date().toISOString(),
+    }).catch(err => console.error('Error logging action:', err));
+  };
+
   const handleStartTest = () => {
     if (isAuthenticated()) {
+      logAction('Start Test', 'User started the test setup.');
       navigate('/test-setup');
     } else {
       setWarning('Please log in to start the test.');
+      logAction('Warning', 'User attempted to start the test without being logged in.');
       alert('Warning: Please log in to start the test.');
     }
   };
@@ -44,21 +58,20 @@ const Profile = () => {
           email: response.data.email,
           allowed_count: response.data.allowed_count,
         });
-        console.log('UserDetails set:', {
-          name: response.data.name,
-          email: response.data.email,
-          allowed_count: response.data.allowed_count,
-        });
+        logAction('Fetch User Details', 'Successfully fetched user details.');
       } else {
         setError('No user details available.');
+        logAction('Error', 'User details not found.');
       }
     } catch (err) {
       console.error('Error fetching user details:', err);
       setError('Error fetching user details. Please try again later.');
+      logAction('Error', 'Failed to fetch user details.');
     } finally {
       setLoading(false); 
     }
   };
+
   const fetchUserProfile = async () => {
     try {
       const response = await axios.get(`http://localhost:8080/api/users/${userId}/profile`);
@@ -71,9 +84,11 @@ const Profile = () => {
 
       if (response.data.exams && response.data.exams.length > 0) {
         setTestHistory(response.data.exams);
+        logAction('Fetch Test History', 'Successfully fetched test history.');
       }
     } catch (err) {
       setError('Error fetching user profile. Please try again later.');
+      logAction('Error', 'Failed to fetch user profile.');
     } finally {
       setLoading(false);
     }
@@ -82,22 +97,22 @@ const Profile = () => {
   const fetchDetailedAnalytics = async (resultId) => {
     try {
       console.log(`Fetching detailed analytics for resultId: ${resultId}, userId: ${userId}`);
-      const response = await axios.get(`http://localhost:8080/testdetails/${resultId}`); // Correct API endpoint
+      const response = await axios.get(`http://localhost:8080/testdetails/${resultId}`);
       console.log('Fetched analytics data:', response.data);
       setAnalytics(response.data);
+      logAction('Fetch Analytics', `Successfully fetched analytics for resultId: ${resultId}`);
     } catch (err) {
       console.error('Error fetching detailed analytics:', err.message);
       setError('Error fetching detailed analytics. Please try again later.');
+      logAction('Error', `Failed to fetch analytics for resultId: ${resultId}`);
     }
   };
 
   const handleGetAnalytics = (resultId) => {
     if (activeAnalytics === resultId) {
-      // If the analytics for this resultId is already active, reset it
       setActiveAnalytics(null);
       setAnalytics(null); // Optionally clear the analytics data
     } else {
-      // Otherwise, fetch the analytics
       fetchDetailedAnalytics(resultId);
       setActiveAnalytics(resultId); // Set the active analytics to this resultId
     }
@@ -105,10 +120,12 @@ const Profile = () => {
 
   const handleShowMore = () => {
     setVisibleTests((prev) => prev + 4); // Increase the visible test count
+    logAction('Show More Tests', 'User clicked to show more tests.');
   };
 
   const handleShowLess = () => {
     setVisibleTests((prev) => Math.max(prev - 4, 4)); // Decrease the visible test count, but not below 4
+    logAction('Show Less Tests', 'User clicked to show fewer tests.');
   };
 
   useEffect(() => {
@@ -120,15 +137,13 @@ const Profile = () => {
       console.error('No user ID provided.');
       setError('No user ID provided.');
       setLoading(false);
+      logAction('Error', 'No user ID provided.');
     }
   }, [userId]);
 
   useEffect(() => {
-    console.log('User Details State:', userDetails);
-  }, [userDetails]);
-
-  useEffect(() => {
     console.log('Profile component rendered');
+    logAction('Render Profile', 'Profile component was rendered.');
   });
 
   if (loading) {
@@ -138,7 +153,6 @@ const Profile = () => {
   if (error) {
     return <div className="alert alert-danger">{error}</div>;
   }
-
 
   return (
     <>
@@ -270,4 +284,5 @@ const Profile = () => {
     </>
   );
 };
+
 export default Profile;

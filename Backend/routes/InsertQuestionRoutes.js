@@ -1,88 +1,61 @@
-const csv = require('csv-parser');
-const { Readable } = require('stream');
-const pool = require('../config/db');
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const fileUpload = require('express-fileupload');
+const { uploadQuestions } = require('../controllers/InsertQuestionController');
 
-// Function to process the CSV file and return the data as an array of objects
-const processCsvFile = (file) => {
-  return new Promise((resolve, reject) => {
-    const results = [];
+const router = express.Router();
 
-    // Create a stream from the file buffer
-    const stream = Readable.from(file.data);
+// Use express-fileupload middleware
+router.use(fileUpload());
 
-    stream
-      .pipe(csv({ headers: true, skipEmptyLines: true })) // Ensure headers are read correctly
-      .on('data', (data) => {
-        console.log('Parsed CSV Data:', data); // Log parsed data
-        console.log('tech_id:', data.tech_id); // Log tech_id specifically
-        results.push(data);
-      })
-      .on('end', () => resolve(results))
-      .on('error', (err) => {
-        console.error('Error processing CSV:', err); // Log parsing errors
-        reject(err);
-      });
-  });
-};
+// Route to upload questions
+router.post('/upload', async (req, res) => {
+  const { file } = req.files; // Use file from req.files
 
-// Controller function to handle CSV upload and bulk insert
-const uploadCsv = async (req, res) => {
-  try {
-    if (!req.files || Object.keys(req.files).length === 0) {
-      return res.status(400).send('No file uploaded.');
+  if (!file) {
+    return res.status(400).json({ error: 'No file uploaded. Please upload a CSV file.' });
+  }
+
+  const uploadsDir = path.join(__dirname, '../uploads');
+  const filePath = path.join(uploadsDir, file.name);
+
+  // Ensure the file is a CSV
+  if (file.mimetype !== 'text/csv' && !file.name.endsWith('.csv')) {
+    return res.status(400).json({ error: 'Only CSV files are allowed.' });
+  }
+
+  // Move the file to the desired location
+  file.mv(filePath, async (err) => {
+    if (err) {
+      return res.status(500).json({ error: 'Error moving file.', details: err });
     }
-
-    const csvFile = req.files.file;
-
-    // Process the CSV file
-    const questions = await processCsvFile(csvFile);
-
-    // Bulk insert questions into the PostgreSQL database
-    const queryText = 'INSERT INTO questions (tech_id, level_id, question_text, option_a, option_b, option_c, option_d, correct_option) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)';
-    
-    const client = await pool.connect();
 
     try {
-      await client.query('BEGIN');
+      // Process the uploaded CSV file
+      await uploadQuestions(filePath);
 
-      // Insert each question from the CSV
-      for (let question of questions) {
-        // Validate the tech_id
-        if (!question.tech_id || question.tech_id === undefined || question.tech_id === null) {
-          console.error('Missing tech_id for question:', question.question_text, 'Data:', question);
-          continue;  // Skip this question
-        }
+      // Clean up the temporary file after processing
+      fs.unlinkSync(filePath);
 
-        const values = [
-          question.tech_id,
-          question.level_id,
-          question.question_text,
-          question.option_a,
-          question.option_b,
-          question.option_c,
-          question.option_d,
-          question.correct_option,
-        ];
+      res.status(201).json({ message: 'File uploaded and processed successfully.' });
+    } catch (error) {
+      console.error('Error processing file:', error);
 
-        await client.query(queryText, values);
-        
-        // Log the inserted question
-        console.log('Inserted Question:', values);
+      // Clean up temporary file on error
+      if (filePath) fs.unlinkSync(filePath);
+
+      // Handle specific error types
+      if (error.message.includes('CSV')) {
+        return res.status(400).json({ error: error.message });
+      }
+      if (error.message.includes('Database')) {
+        return res.status(500).json({ error: error.message });
       }
 
-      await client.query('COMMIT');
-      res.status(200).send('Questions inserted successfully');
-    } catch (error) {
-      await client.query('ROLLBACK');
-      console.error('Error inserting questions:', error);
-      res.status(500).send('Error inserting questions.');
-    } finally {
-      client.release();
+      res.status(500).json({ error: 'Something went wrong.', details: error.message });
     }
-  } catch (error) {
-    console.error('Error processing CSV:', error);
-    res.status(500).send('Error processing CSV file.');
-  }
-};
+  });
+});
 
-module.exports = uploadCsv;
+module.exports = router;

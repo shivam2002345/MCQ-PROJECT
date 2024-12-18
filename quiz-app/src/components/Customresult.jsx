@@ -1,9 +1,8 @@
-// src/components/ExamResults.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './customresult.css'
 import UserNavbar from './Navbar';
+import  logAction  from '../utils/logAction'; // Import the logAction function
 
 const ExamResults = () => {
   const [results, setResults] = useState(null);
@@ -25,6 +24,8 @@ const ExamResults = () => {
       .then((response) => {
         if (response.data.success) {
           setResults(response.data.data);
+          // Log the action after successfully fetching results
+          logAction(userId, 'fetched exam results');
         } else {
           setError("No results found.");
         }
@@ -34,6 +35,8 @@ const ExamResults = () => {
         console.error("Error fetching results:", error);
         setError("Failed to fetch results.");
         setLoading(false);
+        // Log the error action
+        logAction(userId, 'failed to fetch exam results');
       });
   }, [userId]);
 
@@ -51,38 +54,38 @@ const ExamResults = () => {
 
   return (
     <>
-    <UserNavbar/>
-    <div className="exam-results">
-      <h1 className="page-title">Your Exam Results</h1>
-      <div className="results-table-container">
-        <table className="results-table">
-          <thead>
-            <tr>
-              <th>Exam ID</th>
-              <th>Technology</th>
-              <th>Total Questions</th>
-              <th>Total Marks</th>
-              <th>Scored Marks</th>
-              <th>Correct Answers</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((result) => (
-              <tr key={result.result_id}>
-                <td>{result.hosted_exam_id}</td>
-                <td>{result.technology}</td>
-                <td>{result.total_questions}</td>
-                <td>{result.total_marks}</td>
-                <td>{result.score}</td>
-                <td>{result.correct_answers}</td>
-                <td>{new Date(result.created_at).toLocaleString()}</td>
+      <UserNavbar />
+      <div className="exam-results">
+        <h1 className="page-title">Your Exam Results</h1>
+        <div className="results-table-container">
+          <table className="results-table">
+            <thead>
+              <tr>
+                <th>Exam ID</th>
+                <th>Technology</th>
+                <th>Total Questions</th>
+                <th>Total Marks</th>
+                <th>Scored Marks</th>
+                <th>Correct Answers</th>
+                <th>Date</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {results.map((result) => (
+                <tr key={result.result_id}>
+                  <td>{result.hosted_exam_id}</td>
+                  <td>{result.technology}</td>
+                  <td>{result.total_questions}</td>
+                  <td>{result.total_marks}</td>
+                  <td>{result.score}</td>
+                  <td>{result.correct_answers}</td>
+                  <td>{new Date(result.created_at).toLocaleString()}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
     </>
   );
 };

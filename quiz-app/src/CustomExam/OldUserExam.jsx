@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserNavbar from "../components/Navbar";
-
+import "./OldUserExam.css"; // Assuming you have a CSS file for custom styles
+import bgvideos from "./bgvideo.mp4"
 const OldUserExam = () => {
   const navigate = useNavigate();
   const [examIdInput, setExamIdInput] = useState("");
@@ -24,7 +25,10 @@ const OldUserExam = () => {
     try {
       const response = await fetch(`http://localhost:8080/api/customexams/exams/${examId}`);
       const data = await response.json();
-      if (data.exam) {
+      
+      if (data.message && data.message === 'Sorry, you have already given this exam!') {
+        alert(data.message);  // Show message if the exam has already been taken
+      } else if (data.exam) {
         const mappedExam = mapExamData(data.exam);
         setExamData(mappedExam);
         setTimer(mappedExam.duration * 60); // Convert minutes to seconds
@@ -38,7 +42,7 @@ const OldUserExam = () => {
       setLoading(false);
     }
   };
-
+  
   const mapExamData = (exam) => ({
     ...exam,
     questions: exam.questions
@@ -99,9 +103,12 @@ const OldUserExam = () => {
     }
   
     try {
+      // Calculate score
       const correctAnswers = calculateScore();
+      
+      // Prepare result data
       const resultData = {
-        user_id: examData.user_id, // Directly use user_id from examData
+        user_id: examData.user_id,
         hosted_exam_id: examData.exam_id,
         technology: examData.technology,
         total_questions: examData.num_questions,
@@ -113,8 +120,7 @@ const OldUserExam = () => {
         correct_option: examData.questions.map((q) => q.correct_option || "Unknown"),
       };
   
-      console.log("Submitting resultData:", resultData);
-  
+      // Save the exam result
       const saveResponse = await fetch("http://localhost:8080/api/hostedresults/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -122,10 +128,26 @@ const OldUserExam = () => {
       });
   
       const saveData = await saveResponse.json();
-      console.log("Save response:", saveData);
   
-      alert("Exam submitted successfully!");
-      navigate("/dashboard"); // Redirect to dashboard or another route
+      if (saveData.success) {
+        // Update exam status after saving the result
+        const updateStatusResponse = await fetch(`http://localhost:8080/api/update-status/${examData.exam_id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+        });
+  
+        const updateStatusData = await updateStatusResponse.json();
+  
+        if (updateStatusData.success) {
+          alert("Exam submitted and status updated successfully!");
+        } else {
+          alert("Failed to update exam status.");
+        }
+        
+        navigate("/dashboard"); // Redirect to dashboard or another route
+      } else {
+        alert("Failed to submit the exam result.");
+      }
     } catch (error) {
       console.error("Error in handleSubmit:", error);
       alert("Failed to submit the exam. Please try again.");
@@ -133,23 +155,31 @@ const OldUserExam = () => {
   };
   
 
-  if (loading) return <div>Loading exam data...</div>;
+  if (loading) return <div className="loading-spinner">Loading exam data...</div>;
 
   if (!examData) {
     return (
       <>
-      <UserNavbar/>
-     
-      <div>
-        <h3>Enter Exam ID</h3>
-        <input
-          type="text"
-          value={examIdInput}
-          onChange={(e) => setExamIdInput(e.target.value)}
-          placeholder="Enter Exam ID"
-        />
-        <button onClick={handleSubmitExamId}>Start Exam</button>
-      </div>
+        <UserNavbar />
+        <div className="exam-id-container">
+        <video className="exam-video" autoPlay loop muted>
+        <source src={bgvideos} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="exam-content">
+      <h3 style={{ textAlign: 'center', marginRight: '0 auto' }}>Enter Exam ID</h3>
+
+  <div className="input-container">
+    <input
+      type="text"
+      value={examIdInput}
+      onChange={(e) => setExamIdInput(e.target.value)}
+      placeholder="Enter Exam ID"
+    />
+  </div>
+  <button onClick={handleSubmitExamId}>Start Exam</button>
+</div>
+        </div>
       </>
     );
   }
@@ -157,43 +187,47 @@ const OldUserExam = () => {
   const currentQuestion = examData.questions[currentQuestionIndex];
 
   return (
-    <div className="exam-container">
-      <h2>{examData.name}</h2>
-      <p>
-        Time Remaining: {String(Math.floor(timer / 60)).padStart(2, "0")}:
-        {String(timer % 60).padStart(2, "0")}
-      </p>
-      <h3>
-        Question {currentQuestionIndex + 1}: {currentQuestion.question_text}
-      </h3>
-      <div className="options-container">
-        {Object.entries(currentQuestion.options).map(
-          ([key, value]) =>
-            value && (
-              <label key={key}>
-                <input
-                  type="radio"
-                  name="option"
-                  value={key}
-                  checked={answers[currentQuestionIndex] === key}
-                  onChange={handleOptionChange}
-                />
-                {key}: {value}
-              </label>
-            )
-        )}
-      </div>
-      <div className="navigation-buttons">
-        <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-          Previous
-        </button>
-        {currentQuestionIndex < examData.questions.length - 1 ? (
-          <button onClick={handleNext}>Next</button>
-        ) : (
-          <button onClick={handleSubmit}>Submit</button>
-        )}
-      </div>
-    </div>
+   <div className="exam-container">
+  <h2>{examData.name}</h2>
+  <p>
+    Time Remaining: {String(Math.floor(timer / 60)).padStart(2, "0")}:
+    {String(timer % 60).padStart(2, "0")}
+  </p>
+  <h3>
+    Question {currentQuestionIndex + 1}: {currentQuestion.question_text}
+  </h3>
+  <div className="options-container">
+    {Object.entries(currentQuestion.options).map(
+      ([key, value]) =>
+        value && (
+          <button
+            key={key}
+            className={`option-button ${
+              answers[currentQuestionIndex] === key ? "selected" : ""
+            }`}
+            onClick={() => handleOptionChange({ target: { value: key } })}
+          >
+            {key}: {value}
+          </button>
+        )
+    )}
+  </div>
+  <div className="navigation-buttons">
+    <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
+      Previous
+    </button>
+    {currentQuestionIndex < examData.questions.length - 1 ? (
+      <button onClick={handleNext} disabled={!answers[currentQuestionIndex]}>
+        Next
+      </button>
+    ) : (
+      <button onClick={handleSubmit} disabled={!answers[currentQuestionIndex]}>
+        Submit
+      </button>
+    )}
+  </div>
+</div>
+
   );
 };
 

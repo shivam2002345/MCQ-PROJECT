@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/AuthStyles.css'; // Assuming the above CSS is in authStyles.css
+import '../styles/AuthStyles.css';
+import logAction from '../utils/logAction'; // Import logAction
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -9,9 +10,26 @@ const SignUp = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const validateForm = () => {
+    if (!name.trim()) return 'Name is required';
+    if (name.length < 3) return 'Name must be at least 3 characters long';
+    if (!email.trim()) return 'Email is required';
+    if (!/\S+@\S+\.\S+/.test(email)) return 'Invalid email format';
+    if (!password.trim()) return 'Password is required';
+    if (password.length < 6) return 'Password must be at least 6 characters long';
+    return null;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      logAction(`Validation error: ${validationError}`, 'error'); // Log validation error
+      return;
+    }
 
+    setError('');
     try {
       const response = await fetch('http://localhost:8080/api/auth/signup', {
         method: 'POST',
@@ -23,30 +41,20 @@ const SignUp = () => {
 
       const result = await response.json();
       if (response.ok) {
-        // Store the user ID in local storage
-        localStorage.setItem('userId', result.user_id);
-        navigate('/signin'); // Redirect on success
+        logAction(`User signed up successfully with email: ${email}`, 'info'); // Log successful signup
+        navigate('/signin');
       } else {
         setError(result.message || 'Signup failed');
+        logAction(`Signup failed for email: ${email}, Error: ${result.message}`, 'error'); // Log failed signup
       }
-    } catch (error) {
+    } catch (err) {
       setError('An error occurred. Please try again.');
+      logAction(`Signup error: ${err.message}`, 'error'); // Log error during signup
     }
-  };
-
-  const handleHomeRedirect = () => {
-    navigate('/'); // Redirect to home page
   };
 
   return (
     <div className="container mt-5" style={{ maxWidth: '600px' }}>
-      {/* Home button */}
-      <div className="d-flex justify-content-start mb-4">
-        <button className="btn btn-primary" onClick={handleHomeRedirect}>
-          Home
-        </button>
-      </div>
-
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -57,7 +65,6 @@ const SignUp = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
           />
         </div>
         <div className="mb-3">
@@ -68,7 +75,6 @@ const SignUp = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div className="mb-3">
@@ -79,7 +85,6 @@ const SignUp = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         {error && <p className="text-danger">{error}</p>}

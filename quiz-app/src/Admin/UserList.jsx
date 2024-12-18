@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './UserList.css';
 import avatar from '../assets/avatar.svg';
+import logAction from '../utils/logAction'; // Import logAction.js
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -23,6 +24,17 @@ const UserList = () => {
         }
     };
 
+    const handleUserClick = async (user) => {
+        try {
+            // Log the action before navigating
+            await logAction('View User', `User with ID: ${user.user_id} viewed`);
+            // Navigate to the user details page
+            navigate(`/admin/users/${user.user_id}`);
+        } catch (err) {
+            console.error('Error logging action:', err.message);
+        }
+    };
+
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -32,7 +44,7 @@ const UserList = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4 user-Heading" >User List</h2>
+            <h2 className="text-center mb-4 user-Heading">User List</h2>
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-hover user-list-table">
                     <thead className="thead-dark">
@@ -45,7 +57,7 @@ const UserList = () => {
                     </thead>
                     <tbody>
                         {users.map((user) => (
-                            <tr key={user.user_id} onClick={() => navigate(`/admin/users/${user.user_id}`)} style={{ cursor: 'pointer' }}>
+                            <tr key={user.user_id} onClick={() => handleUserClick(user)} style={{ cursor: 'pointer' }}>
                                 <td className="text-center">
                                     <img src={avatar} alt="Profile" className="user-avatar" />
                                 </td>

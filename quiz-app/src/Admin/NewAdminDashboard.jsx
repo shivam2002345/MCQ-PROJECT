@@ -7,6 +7,9 @@ import OldUsers from "./OldUsers";
 import HostExamForm from "./NewUserExam";
 import CreateCustomExam from "./CreateCustomExam";
 import ExamList from "./FetchHostedExam";
+import AdminDashboard from './Dashboard';
+import NewAdminRequest from "./NewAdminRequest";
+import AdminRequestDetailsPage from "./AdminRequestDetailsPage";
 
 const NewAdminDashboard = () => {
   return (
@@ -14,15 +17,19 @@ const NewAdminDashboard = () => {
       <NewAdminNavbar />
       <div className="admin-content">
         <StableAdminSidebar className="admin-sidebar" />
-        <div className="admin-page">
+        <div className="newadmin-page">
           <Routes>
+          <Route path="newAdmindashboard" element={<AdminDashboard />} />
             <Route path="oldusers" element={<OldUsers />} />
             <Route path="hostexamfornewuser" element={<HostExamForm />} />
             <Route
               path="oldusers/customize/:user_id"
               element={<CreateCustomExam />}
             />
+            <Route path="requests" element={<NewAdminRequest/>} />
             <Route path="examlist" element={<ExamList />} />
+            <Route path="requests/admin/request/:request_id" element={<AdminRequestDetailsPage />} />
+
           </Routes>
         </div>
       </div>

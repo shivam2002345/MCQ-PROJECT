@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './UserProfile.css';
+import logAction from '../utils/logAction'; // Import logAction.js
 
 const UserProfile = () => {
     const { user_id } = useParams();
@@ -13,6 +14,9 @@ const UserProfile = () => {
 
     const fetchUserData = async () => {
         try {
+            // Log action for viewing user profile
+            await logAction('View User Profile', `Viewing profile of user with ID: ${user_id}`);
+
             const userResponse = await fetch(`http://localhost:8080/api/users/${user_id}`);
             if (!userResponse.ok) throw new Error('Failed to fetch user data');
             const userData = await userResponse.json();
@@ -34,6 +38,16 @@ const UserProfile = () => {
             setError(err.message);
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleBackToUserList = async () => {
+        try {
+            // Log action for navigating back to the user list
+            await logAction('Back to User List', `Navigated back to the user list from profile of user with ID: ${user_id}`);
+            navigate('/admin/users');
+        } catch (err) {
+            console.error('Error logging action:', err.message);
         }
     };
 
@@ -101,7 +115,7 @@ const UserProfile = () => {
             ) : (
                 <p>No exam records found.</p>
             )}
-            <button onClick={() => navigate('/admin/users')} className="btn btn-warning mt-4">Back to User List</button>
+            <button onClick={handleBackToUserList} className="btn btn-warning mt-4">Back to User List</button>
         </div>
     );
 };

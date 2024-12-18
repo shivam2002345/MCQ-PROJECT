@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom"; // Import useParams
 import "./CreateCustomExam.css";
+import  logAction  from '../utils/logAction'; // Import logAction function
 
 const CreateCustomExam = () => {
   const { user_id, exam_id } = useParams(); // Extract user_id and exam_id from the URL
@@ -85,6 +86,9 @@ const CreateCustomExam = () => {
       setNumQuestions("");
       setDuration("");
       setQuestions([]);
+
+      // Log the action
+      logAction('create', 'custom exam', { user_id, exam_id, technology: selectedTechnology });
     } catch (error) {
       setErrorMessage("Failed to create exam");
     }

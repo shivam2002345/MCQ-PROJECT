@@ -1,0 +1,11 @@
+question_text,options,correct_option
+What is React?,"Library,Framework,Language,IDE",Library
+What is JSX?,"JavaScript XML,Java Simple XML,Java Secure XML,JavaScript Syntax",JavaScript XML
+What is the use of useState in React?,"To manage state,To create components,To handle props,To add routing",To manage state
+Which command is used to create a React app?,"npm create react-app,npx create-react-app,npm start,npx react-create",npx create-react-app
+Which lifecycle method is deprecated in React?,"componentWillMount,componentDidMount,componentDidUpdate,componentWillUnmount",componentWillMount
+What is the purpose of props in React?,"To manage state,To pass data,To define styles,To handle events",To pass data
+What is a key in React?,"A unique identifier,An event handler,A style property,A state variable",A unique identifier
+What is the output of '2' + 2 in JavaScript?,"22,4,Error,NaN",22
+Which method is used to fetch data in React?,"fetch,axios,render,componentDidMount",fetch
+What is React Router?,"A state management library,A testing library,A routing library,A CSS framework",A routing library

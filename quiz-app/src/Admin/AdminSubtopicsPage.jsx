@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AdminSubtopicsPage.css'; // Add custom styling as needed
+import logAction from '../utils/logAction'; // Import logAction function
 
 const AdminSubtopicsPage = () => {
     const [technologies, setTechnologies] = useState([]);
@@ -42,6 +43,13 @@ const AdminSubtopicsPage = () => {
         }
     };
 
+    // Check for duplicate subtopic names
+    const isDuplicateSubtopic = (name) => {
+        return subtopics.some(
+            (subtopic) => subtopic.subtopic_name.toLowerCase() === name.toLowerCase()
+        );
+    };
+
     // Add a new subtopic
     const handleAddSubtopic = async () => {
         if (!selectedTechnology) {
@@ -52,6 +60,10 @@ const AdminSubtopicsPage = () => {
             alert('Subtopic name cannot be empty.');
             return;
         }
+        if (isDuplicateSubtopic(newSubtopic)) {
+            alert('Subtopic name already exists. Please use a unique name.');
+            return;
+        }
 
         try {
             const response = await axios.post('http://localhost:8080/api/subtopics', {
@@ -60,8 +72,12 @@ const AdminSubtopicsPage = () => {
             });
             setSubtopics([...subtopics, response.data]);
             setNewSubtopic('');
+
+            // Log the action
+            logAction('add', 'subtopic', response.data);
         } catch (error) {
             console.error('Error adding subtopic:', error);
+            alert('Failed to add subtopic. Please try again.');
         }
     };
 
@@ -70,8 +86,12 @@ const AdminSubtopicsPage = () => {
         try {
             await axios.delete(`http://localhost:8080/api/subtopics/${subtopicId}`);
             setSubtopics(subtopics.filter((subtopic) => subtopic.subtopic_id !== subtopicId));
+
+            // Log the action
+            logAction('delete', 'subtopic', { subtopic_id: subtopicId });
         } catch (error) {
             console.error('Error deleting subtopic:', error);
+            alert('Failed to delete subtopic. Please try again.');
         }
     };
 
@@ -79,6 +99,13 @@ const AdminSubtopicsPage = () => {
     const handleEditSubtopic = async () => {
         if (!editSubtopicName.trim()) {
             alert('Subtopic name cannot be empty.');
+            return;
+        }
+        if (
+            isDuplicateSubtopic(editSubtopicName) &&
+            subtopics.find((sub) => sub.subtopic_id === editSubtopicId).subtopic_name !== editSubtopicName
+        ) {
+            alert('Subtopic name already exists. Please use a unique name.');
             return;
         }
 
@@ -93,8 +120,12 @@ const AdminSubtopicsPage = () => {
             );
             setEditSubtopicId(null);
             setEditSubtopicName('');
+
+            // Log the action
+            logAction('edit', 'subtopic', response.data);
         } catch (error) {
             console.error('Error editing subtopic:', error);
+            alert('Failed to edit subtopic. Please try again.');
         }
     };
 
@@ -185,11 +216,3 @@ const AdminSubtopicsPage = () => {
 };
 
 export default AdminSubtopicsPage;
-
-
-
-
-
-
-
-

@@ -1,11 +1,6 @@
 // Check if the user is authenticated
 export const isAuthenticated = () => {
-  return localStorage.getItem('isUserLoggedIn') !== null;
-};
-
-// Check if the admin is authenticated
-export const isAdminAuthenticated = () => {
-  return localStorage.getItem('adminToken') !== null;
+  return localStorage.getItem('isUserLoggedIn') === 'true';
 };
 
 // Check if the user session has expired
@@ -39,7 +34,7 @@ export const login = async (email, password) => {
       const now = new Date().getTime();
       localStorage.setItem('login_time', now); // Store login time
 
-      // Store user token
+      // Store user token and id
       localStorage.setItem('token', token); // Store JWT token
       localStorage.setItem('user_id', data.user_id); // Store user_id
       localStorage.setItem('isUserLoggedIn', 'true'); // Set isUserLoggedIn to true
@@ -55,50 +50,13 @@ export const login = async (email, password) => {
   }
 };
 
-// Admin login function (use `adminToken`)
-export const adminLogin = async (email, password) => {
-  try {
-    const response = await fetch('http://localhost:8080/api/admin/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }), // Send admin credentials
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      const token = data.token; // Get admin JWT token
-
-      // Store login time
-      const now = new Date().getTime();
-      localStorage.setItem('login_time', now); // Store login time
-
-      // Store admin token
-      localStorage.setItem('adminToken', token); // Store admin JWT token
-      localStorage.setItem('isAdminLoggedIn', 'true'); // Set isAdminLoggedIn to true
-
-      return true; // Admin login successful!
-    } else {
-      console.error("Admin login failed:", data.message); // Log the error message
-      return false; // Login failed!
-    }
-  } catch (error) {
-    console.error('Admin login failed:', error);
-    return false;
-  }
-};
-
 // Logout the user or admin
 export const logout = () => {
-  // Remove user and admin details
+  // Remove user details
   localStorage.removeItem('token');
-  localStorage.removeItem('adminToken');
   localStorage.removeItem('user_id');
-  localStorage.removeItem('login_time'); // Clear login time
-  localStorage.removeItem('isUserLoggedIn'); // Clear user login status
-  localStorage.removeItem('isAdminLoggedIn'); // Clear admin login status
+  localStorage.removeItem('login_time');
+  localStorage.removeItem('isUserLoggedIn'); // Clear login status
 };
 
 // Get current user details

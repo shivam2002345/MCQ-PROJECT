@@ -1,0 +1,5 @@
+tech_id,level_id,question_text,option_a,option_b,option_c,option_d,correct_option,subtopic_id
+2,1,What CSS property is used to set the transparency of an element?,opacity,transparency,visibility,alpha,opacity,2
+2,1,Which CSS function is used to rotate an element?,rotate(),transform(),skew(),rotate-deg(),rotate(),2
+2,1,What is the default value of the flex-wrap property?,nowrap,wrap,reverse,none,nowrap,2
+2,1,Which CSS property is used to change the cursor when hovering over an element?,cursor,pointer,hover,action,cursor,2

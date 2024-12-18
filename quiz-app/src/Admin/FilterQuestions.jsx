@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './FilterQuestions.css'; // Keep custom styles
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import logAction from '../utils/logAction'; // Import logAction for logging
 
 const FilterQuestions = () => {
   const [questions, setQuestions] = useState([]);
@@ -32,6 +33,7 @@ const FilterQuestions = () => {
 
       setTechnologies(techRes.data || []);
       setLevels(levelRes.data || []);
+      logAction('Fetched technologies and levels');
     } catch (error) {
       console.error('Error fetching technologies and levels:', error);
       setError('Error fetching technologies and levels. Please try again.');
@@ -49,6 +51,7 @@ const FilterQuestions = () => {
         setQuestions(res.data.data || []);
         setCount(res.data.count || 0);
         setError('');
+        logAction(`Fetched ${res.data.count} questions for tech: ${tech}, level: ${level}`);
       } else {
         setQuestions([]);
         setCount(0);
@@ -82,6 +85,7 @@ const FilterQuestions = () => {
         setQuestions(questions.filter(q => q.question_id !== id));
         setCount(prevCount => prevCount - 1);
         setError('');
+        logAction(`Deleted question with ID: ${id}`);
       }
     } catch (error) {
       console.error('Error deleting question:', error.response ? error.response.data : error.message);
@@ -100,7 +104,6 @@ const FilterQuestions = () => {
       option_c: question.option_c,
       option_d: question.option_d,
       correct_option: question.correct_option,
-      // Do not include tech_id here
     });
   };
 
@@ -110,7 +113,6 @@ const FilterQuestions = () => {
     setCurrentQuestion(null);
   };
 
-  // Handle update operation
   // Handle update operation
   const handleUpdate = async () => {
     try {
@@ -124,16 +126,16 @@ const FilterQuestions = () => {
             option_c: updatedData.option_c,
             option_d: updatedData.option_d,
             correct_option: updatedData.correct_option,
-            // Exclude tech_id and level_id from the payload
           }
         );
-  
+
         if (response.data.success) {
           setQuestions(questions.map(q => 
             q.question_id === currentQuestion.question_id ? { ...q, ...updatedData } : q
           ));
           setError('');
           closeEditModal();
+          logAction(`Updated question with ID: ${currentQuestion.question_id}`);
         } else {
           setError('Failed to update the question.');
         }
@@ -143,7 +145,6 @@ const FilterQuestions = () => {
       setError('Error updating question. Please try again.');
     }
   };
-  
 
   return (
     <div className="filter-container">

@@ -89,8 +89,8 @@ const HostExamForm = () => {
     axios
       .post("http://localhost:8080/api/customexams/exams/newuser/create", postData)
       .then((response) => {
+        console.log("Exam creation response:", response.data); // Log the response
         alert("Exam hosted successfully!");
-        console.log("Exam created successfully:", response.data);
         setFormData({
           name: "",
           email: "",
@@ -102,14 +102,15 @@ const HostExamForm = () => {
         setCsvFile(null);
       })
       .catch((error) => {
+        console.error("Error response:", error.response); // Log the error response
         const errorMessage = error.response?.data?.message || "Error hosting exam. Please try again.";
         alert(errorMessage);
-        console.error("Error hosting exam:", error.response?.data || error.message);
       })
       .finally(() => {
         setIsSubmitting(false);
       });
   };
+
 
   return (
     <div className="exam-form-container">

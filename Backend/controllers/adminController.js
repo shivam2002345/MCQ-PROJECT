@@ -54,7 +54,7 @@ async function submitAdminRequest(req, res) {
 
     // Utility function for mobile number validation
     function isValidMobile(mobileNo) {
-        const regex = /^\+\d{1,3}-\d{6,12}$/; // Format: +<country_code>-<number>
+        const regex = /^\+\d{1,3}\d{6,12}$/; // Format: +<country_code>-<number>
         return regex.test(mobileNo);
     }
 

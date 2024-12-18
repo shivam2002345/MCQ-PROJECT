@@ -221,27 +221,81 @@
 
 
 .footer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-    color: white;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with transparency */
+    color: #ffffff; /* White text for contrast */
     text-align: center;
-    padding: 20px 0; /* Increased top and bottom padding */
-    position: relative; /* Changed to relative to allow for dynamic height */
-    height: 300px; /* Allow the height to adjust based on content */
+    padding: 40px 20px; /* Increased padding for a spacious look */
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
 }
 
-/* Social icons styling */
-.social-icons {
-    margin-bottom: 10px; /* Space below the icons */
+.footer .social-icons {
+    margin-bottom: 20px; /* Space below the icons */
 }
 
-.social-icons a {
-    margin: 0 10px; /* Space between icons */
-    color: white; /* Icon color */
-    font-size: 24px; /* Size of icons */
-    transition: color 0.3s; /* Smooth transition for hover */
+.footer .social-icons a {
+    margin: 0 15px; /* Space between icons */
+    color: #ffffff; /* Default icon color */
+    font-size: 30px; /* Larger icon size */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 }
 
-.social-icons a:hover {
-    color: #0075fc; /* Change color on hover */
+.footer .social-icons a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    opacity: 0.8; /* Slightly faded text */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center;
+    gap: 20px; /* Space between list items */
+}
+
+.footer ul li {
+    display: inline-block;
+}
+
+.footer ul li a {
+    color: #ffffff; /* Link color */
+    font-size: 16px;
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center; /* Align icon with text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+
+.user-nav-icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 18px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+    }
+
+    .footer .social-icons a {
+        font-size: 25px; /* Adjust icon size for smaller screens */
+    }
 }

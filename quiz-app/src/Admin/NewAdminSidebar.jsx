@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./StableAdminSidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-
+import dashboard from '../assets/dashboard.png';
 const StableAdminSidebar = () => {
   const navigate = useNavigate();
 
@@ -18,6 +18,12 @@ const StableAdminSidebar = () => {
   return (
     <div className="stable-sidebar">
       <ul className="stable-menu">
+
+      <li>
+                    <NavLink to="/newadmin/newAdmindashboard" className="sidebar-link" activeClassName="active">
+                        <img src={dashboard} alt="Dashboard" />
+                    </NavLink>
+                </li>
         <li>
           <NavLink
             to="/newadmin/oldusers"
@@ -46,6 +52,13 @@ const StableAdminSidebar = () => {
           >
             <FontAwesomeIcon icon={faUsers} className="stable-icon" /> Total
             Hosted Exams
+          </NavLink>
+          <NavLink
+            to="/newadmin/requests"
+            className="stable-link"
+            activeClassName="stable-active"
+          >
+            <FontAwesomeIcon icon={faUsers} className="stable-icon" /> Request Super Admin
           </NavLink>
         </li>
         <li>

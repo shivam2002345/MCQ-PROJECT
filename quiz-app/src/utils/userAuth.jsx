@@ -2,7 +2,7 @@
 
 // Check if the user is authenticated
 export const isAuthenticated = () => {
-    return localStorage.getItem('token') !== null;
+    return localStorage.getItem('user_id') !== null;
   };
   
   // Check if the user session has expired
