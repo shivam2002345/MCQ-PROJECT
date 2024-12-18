@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Import bcryptjs
 const User = require('../models/modifyPassword'); // Assuming Sequelize or similar ORM is used
 
 // Update Password Controller
@@ -17,7 +17,7 @@ exports.updatePassword = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Hash the new password
+    // Hash the new password using bcryptjs
     const hashedPassword = await bcrypt.hash(newPassword, 10);
 
     // Update the password in the database
