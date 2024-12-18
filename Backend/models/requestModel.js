@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 // Fetch user details based on user_id
 const getUserById = async (user_id) => {

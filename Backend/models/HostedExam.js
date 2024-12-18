@@ -1,6 +1,7 @@
-const sequelize = require('../config/dbn.js');  // Your sequelize instance
+const { sequelize } = require('../config/database.js'); // Import sequelize instance
 const { DataTypes } = require("sequelize");
 
+// Define the HostedExam model
 const HostedExam = sequelize.define('HostedExam', {
   exam_id: {
     type: DataTypes.UUID,
@@ -43,15 +44,14 @@ const HostedExam = sequelize.define('HostedExam', {
     type: DataTypes.INTEGER,
     allowNull: true,
   },
-  // Add the status field to track if the exam has been taken or not
   status: {
     type: DataTypes.BOOLEAN,
-    defaultValue: false,  // Default to false (exam not taken)
+    defaultValue: false, // Default to false (exam not taken)
     allowNull: false,
   }
 }, {
   tableName: 'hosted_exam',
-  timestamps: false,
+  timestamps: false, // Disable automatic timestamps (use custom created_at and updated_at)
 });
 
 module.exports = HostedExam;

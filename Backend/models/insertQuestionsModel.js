@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Database connection setup
+const {pool} = require('../config/database'); // Database connection setup
 
 const insertQuestionsToDB = async (questions) => {
     const query = `

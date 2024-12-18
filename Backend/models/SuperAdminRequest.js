@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 // Add a new request
 const addRequest = async ({ admin_id, request_title, request_description = '' }) => {

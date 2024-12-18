@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Assuming you are using PostgreSQL
+const {pool} = require('../config/database'); // Assuming you are using PostgreSQL
 
 // Create result and delete specific exam questions
 const createResult = async (exam_id, user_id, total_questions, correct_answers, score, selected_answers) => {

@@ -1,6 +1,6 @@
 // models/HostedExam.js
 
-const sequelize = require('../config/dbn');
+const {sequelize} = require('../config/database');
 const { DataTypes } = require("sequelize");
 
 const HostedExam = sequelize.define('HostedExam', {

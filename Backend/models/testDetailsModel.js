@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Assuming you are using PostgreSQL
+const {pool} = require('../config/database'); // Assuming you are using PostgreSQL
 
 // Get result by result_id
 const getResultById = async (result_id) => {

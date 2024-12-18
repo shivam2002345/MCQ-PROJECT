@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Your database pool configuration
+const {pool} = require('../config/database'); // Your database pool configuration
 
 // Function to create an exam and return the exam ID
 const createExam = async (user_id, level_id, tech_id, subtopic_id) => {

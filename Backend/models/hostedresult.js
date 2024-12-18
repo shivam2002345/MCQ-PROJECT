@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 module.exports = {
   // Save the result into the exam_results table

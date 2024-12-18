@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const pool = new Pool(); // Ensure your PostgreSQL environment variables are set
+const {pool} = new Pool(); // Ensure your PostgreSQL environment variables are set
 
 exports.insertQuestions = async (questions) => {
   const client = await pool.connect();

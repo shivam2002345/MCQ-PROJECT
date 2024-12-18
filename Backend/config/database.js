@@ -1,71 +1,72 @@
+require('dotenv').config(); // Load environment variables
 const { Pool } = require('pg');
 const { Sequelize } = require('sequelize');
-const dotenv = require('dotenv');
 
-// Load environment variables
-dotenv.config();
-
-// Create a PostgreSQL pool for raw SQL queries
+// PostgreSQL Pool Configuration for Raw Queries
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL, // Load DB connection string from .env
-  max: 20, // Max number of clients in the pool
+  connectionString: process.env.DATABASE_URL, // Connection string from .env
+  max: 20, // Maximum number of connections in the pool
   idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Timeout after 2 seconds if unable to connect
+  connectionTimeoutMillis: 2000, // Timeout after 2 seconds
 });
 
-// Create a Sequelize instance for ORM
+// Sequelize Configuration for ORM
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  logging: false, // Set to true if you want to see the SQL queries
+  protocol: 'postgres',
+  logging: false, // Disable logging
+  dialectOptions: {
+    // Uncomment for remote PostgreSQL with SSL
+    /*
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+    */
+  },
 });
 
-// Test the pg pool connection
-pool.connect()
-  .then(client => {
+// Connect Databases Function
+const connectDBs = async () => {
+  try {
+    // Test the pg pool connection
+    const client = await pool.connect();
     console.log('Database connected successfully (pg pool)');
     client.release(); // Release the client back to the pool
-  })
-  .catch(err => {
-    console.error('Error acquiring client from the pool', err.stack);
-  });
 
-// Test the Sequelize connection
-sequelize.authenticate()
-  .then(() => {
+    // Test the Sequelize connection
+    await sequelize.authenticate();
     console.log('Database connected successfully (Sequelize)');
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err.message);
-    console.error('Stack trace:', err.stack); // Log stack trace for debugging
-  });
+  } catch (error) {
+    console.error('Database connection error:', error.message);
+    process.exit(1); // Exit process with failure
+  }
+};
 
-// Gracefully shutdown PostgreSQL pool and Sequelize connections
-process.on('SIGINT', () => {
+// Gracefully handle shutdown
+process.on('SIGINT', async () => {
   console.log('Shutting down gracefully...');
-  
-  // Close the PostgreSQL pool
-  pool.end()
-    .then(() => {
-      console.log('PostgreSQL pool has ended');
-    })
-    .catch(err => {
-      console.error('Error during PostgreSQL shutdown', err);
-    });
 
-  // Close the Sequelize connection
-  sequelize.close()
-    .then(() => {
-      console.log('Sequelize connection closed');
-      process.exit(0); // Exit the process after clean shutdown
-    })
-    .catch(err => {
-      console.error('Error during Sequelize shutdown', err);
-      process.exit(1); // Exit the process if cleanup fails
-    });
+  try {
+    await pool.end();
+    console.log('PostgreSQL pool has ended');
+  } catch (err) {
+    console.error('Error during PostgreSQL pool shutdown:', err);
+  }
+
+  try {
+    await sequelize.close();
+    console.log('Sequelize connection closed');
+  } catch (err) {
+    console.error('Error during Sequelize shutdown:', err);
+  }
+
+  process.exit(0); // Exit the process after cleanup
 });
 
-// Export both the pg pool and Sequelize instance
+// Export both the pg pool, Sequelize instance, and connectDBs function
 module.exports = {
-  pool,
-  sequelize,
+  pool,        // For raw SQL queries
+  sequelize,   // For ORM-based operations
+  connectDBs,  // Function to connect to the databases
 };

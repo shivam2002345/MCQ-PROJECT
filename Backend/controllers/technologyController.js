@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Your database connection config
+const {pool} = require('../config/database'); // Your database connection config
 const Joi = require('joi'); // Import Joi for validation
 const { getAllTechnologies } = require('../models/technologyModel'); // Correct import
 

@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // PostgreSQL pool
+const {pool} = require('../config/database'); // PostgreSQL pool
 
 // Get user details by user ID, including password
 const getUserDetailsById = async (user_id) => {

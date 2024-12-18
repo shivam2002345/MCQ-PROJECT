@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 module.exports = {
   // Function to update the status of an exam in the hosted_exam table

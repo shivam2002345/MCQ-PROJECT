@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Import the pool here
+const {pool} = require('../config/database'); // Import the pool here
 const examService = require('../services/examService');
 
 const examController = {

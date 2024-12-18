@@ -1,5 +1,5 @@
 // models/subtopicModel.js
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 // Get all subtopics for a given tech_id
 const getSubtopicsByTechId = async (tech_id) => {

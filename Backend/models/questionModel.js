@@ -1,5 +1,5 @@
 // models/questionModel.js
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 const Question = {
     getAllQuestions: async () => {

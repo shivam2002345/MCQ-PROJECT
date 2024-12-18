@@ -1,4 +1,4 @@
-const { pool } = require('../config/dbs');
+const { pool } = require('../config/database');
 
 // Fetch questions based on tech_id and level_id
 const getQuestions = async (tech_id, level_id) => {

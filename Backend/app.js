@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
-const { connectDBs } = require('./config/dbs');
+const { connectDBs } = require('./config/database');
 
 // Import route handlers
 const authRoutes = require('./routes/authRoutes');

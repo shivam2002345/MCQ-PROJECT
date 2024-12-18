@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 // Add a new chat message
 const addMessage = async (request_id, message, user_id) => {

@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const pool = require('../config/db'); // Import the pool to query the database
+const {pool} = require('../config/database'); // Import the pool to query the database
 const router = express.Router();
 
 // Route to handle file download

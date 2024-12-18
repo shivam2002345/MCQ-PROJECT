@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {pool} = require('../config/database');
 
 // Function to get file details by file_id
 const getFileById = async (fileId, category) => {

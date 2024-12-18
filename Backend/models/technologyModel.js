@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Your database connection config
+const {pool} = require('../config/database'); // Your database connection config
 
 // Function to get all technologies
 const getAllTechnologies = async () => {

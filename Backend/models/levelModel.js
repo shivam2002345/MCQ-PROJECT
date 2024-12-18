@@ -1,4 +1,4 @@
-const pool = require('../config/db'); // Your database connection
+const {pool} = require('../config/database'); // Your database connection
 
 // Fetch all levels
 const getAllLevels = async () => {

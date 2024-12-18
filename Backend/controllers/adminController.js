@@ -1,7 +1,7 @@
 const { findAdminByEmail } = require('../models/adminModel');
 const bcrypt = require('bcryptjs');  // Ensure bcryptjs is imported
 const jwt = require('jsonwebtoken');
-const db = require('../config/db'); // Adjust the path as needed
+const { pool } = require('../config/database');  // Use pool from the new database.js
 
 const JWT_SECRET = 'your_secret_key'; // Use a strong secret key
 
@@ -15,7 +15,7 @@ const adminLogin = async (req, res) => {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
-        // Compare password with hashed password from DB
+        // Compare password with hashed password from  pool
         const isPasswordValid = await bcrypt.compare(password, admin.password);
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid email or password' });
@@ -112,7 +112,7 @@ async function submitAdminRequest(req, res) {
 
     try {
         // Check for duplicate email
-        const existingAdmin = await db.query(
+        const existingAdmin = await  pool.query(
             `SELECT admin_id FROM admin WHERE email = $1`,
             [email]
         );
@@ -122,7 +122,7 @@ async function submitAdminRequest(req, res) {
         }
 
         // Insert new admin with hashed password
-        const newAdmin = await db.query(
+        const newAdmin = await  pool.query(
             `
             INSERT INTO admin (name, email, password, organisation_name, organisation_address, designation, mobile_no, status) 
             VALUES ($1, $2, crypt($3, gen_salt('bf')), $4, $5, $6, $7, 'pending')
@@ -134,7 +134,7 @@ async function submitAdminRequest(req, res) {
         const adminId = newAdmin.rows[0].admin_id;
 
         // Insert the admin request
-        await db.query(
+        await  pool.query(
             `
             INSERT INTO adminrequest (user_id, note, status, requested_on) 
             VALUES ($1, $2, 'pending', CURRENT_TIMESTAMP)
@@ -143,7 +143,7 @@ async function submitAdminRequest(req, res) {
         );
 
         // Insert notification for the user about the pending request
-        await db.query(
+        await  pool.query(
             `
             INSERT INTO adminnotification (user_id, message, status) 
             VALUES ($1, 'Your request to become an admin is pending. Please wait for 48 hours.', 'unread')
@@ -168,7 +168,7 @@ async function submitAdminRequest(req, res) {
 // Get all pending admin requests
 async function getPendingAdminRequests(req, res) {
     try {
-        const result = await db.query('SELECT * FROM AdminRequest WHERE status = $1', ['pending']);
+        const result = await  pool.query('SELECT * FROM AdminRequest WHERE status = $1', ['pending']);
         res.status(200).json(result.rows);
     } catch (error) {
         console.error("Error fetching pending admin requests:", error);
@@ -187,7 +187,7 @@ async function updateAdminRequestStatus(req, res) {
 
     try {
         // Update the request status in AdminRequest table
-        const updateResult = await db.query(`
+        const updateResult = await  pool.query(`
             UPDATE AdminRequest 
             SET status = $1 
             WHERE request_id = $2 
@@ -202,7 +202,7 @@ async function updateAdminRequestStatus(req, res) {
         const userId = updateResult.rows[0].user_id;
 
         // Update the status in Admin table as well (approve/reject the admin status)
-        await db.query(`
+        await  pool.query(`
             UPDATE Admin 
             SET status = $1 
             WHERE admin_id = $2
@@ -217,7 +217,7 @@ async function updateAdminRequestStatus(req, res) {
         }
 
         // Update or insert a new notification message for the user
-        const notificationResult = await db.query(`
+        const notificationResult = await  pool.query(`
             UPDATE AdminNotification 
             SET message = $1, status = 'unread' 
             WHERE user_id = $2
@@ -226,7 +226,7 @@ async function updateAdminRequestStatus(req, res) {
 
         // If no notification was found, insert a new one
         if (notificationResult.rows.length === 0) {
-            await db.query(`
+            await  pool.query(`
                 INSERT INTO AdminNotification (user_id, message, status)
                 VALUES ($1, $2, 'unread')
             `, [userId, notificationMessage]);
@@ -245,7 +245,7 @@ async function getUserNotifications(req, res) {
     const { user_id } = req.params;
 
     try {
-        const result = await db.query('SELECT * FROM AdminNotification WHERE user_id = $1', [user_id]);
+        const result = await  pool.query('SELECT * FROM AdminNotification WHERE user_id = $1', [user_id]);
         res.status(200).json(result.rows);
     } catch (error) {
         console.error("Error fetching notifications:", error);
@@ -258,7 +258,7 @@ async function markNotificationAsRead(req, res) {
     const { id } = req.params;
 
     try {
-        await db.query('UPDATE AdminNotification SET status = $1 WHERE notification_id = $2', ['read', id]);
+        await  pool.query('UPDATE AdminNotification SET status = $1 WHERE notification_id = $2', ['read', id]);
         res.status(200).json({ message: "Notification marked as read." });
     } catch (error) {
         console.error("Error marking notification as read:", error);
@@ -273,7 +273,7 @@ async function newadminLogin(req, res) {
 
     try {
         // Query the database to find the admin by email
-        const result = await db.query('SELECT * FROM Admin WHERE email = $1', [email]);
+        const result = await  pool.query('SELECT * FROM Admin WHERE email = $1', [email]);
         if (result.rows.length === 0) {
             return res.status(400).json({ error: "Invalid email or password." });
         }
@@ -293,7 +293,7 @@ if (!isPasswordValid) {
             res.status(400).json({ error: "Your admin request has been rejected." });
         } else if (admin.status === 'pending') {
             // If the status is pending, show the associated message
-            const notificationResult = await db.query(`
+            const notificationResult = await  pool.query(`
                 SELECT message FROM AdminNotification 
                 WHERE user_id = $1 AND status = 'unread' 
                 ORDER BY created_at DESC LIMIT 1
