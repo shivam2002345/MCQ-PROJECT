@@ -1,5 +1,5 @@
 const { findAdminByEmail } = require('../models/adminModel');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');  // Ensure bcryptjs is imported
 const jwt = require('jsonwebtoken');
 const db = require('../config/db'); // Adjust the path as needed
 
@@ -9,19 +9,27 @@ const adminLogin = async (req, res) => {
     const { email, password } = req.body;
 
     try {
+        // Find the admin by email
         const admin = await findAdminByEmail(email);
         if (!admin) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
+        // Compare password with hashed password from DB
         const isPasswordValid = await bcrypt.compare(password, admin.password);
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
-        const token = jwt.sign({ adminId: admin.id }, JWT_SECRET, { expiresIn: '1h' });
+        // Generate JWT token
+        const token = jwt.sign({ adminId: admin.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        res.status(200).json({ message: 'Login successful', token, redirectTo: '/admin/dashboard' });
+        // Send response with the token and redirect path
+        res.status(200).json({
+            message: 'Login successful',
+            token,
+            redirectTo: '/admin/dashboard'
+        });
     } catch (error) {
         console.error("Error during login:", error);
         res.status(500).json({ message: 'An error occurred. Please try again.' });
@@ -272,11 +280,11 @@ async function newadminLogin(req, res) {
 
         const admin = result.rows[0];
 
-        // Check if the password matches using bcrypt
-        const isPasswordValid = await bcrypt.compare(password, admin.password);
-        if (!isPasswordValid) {
-            return res.status(400).json({ error: "Invalid email or password." });
-        }
+       // Check if the password matches using bcryptjs
+const isPasswordValid = await bcrypt.compare(password, admin.password);
+if (!isPasswordValid) {
+    return res.status(400).json({ error: "Invalid email or password." });
+}
 
         // Check the status of the admin account
         if (admin.status === 'approved') {

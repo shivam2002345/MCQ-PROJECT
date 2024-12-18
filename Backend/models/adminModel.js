@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Import bcryptjs
 
 // Admin credentials stored in-memory (In production, this should be a database)
 const adminCredentials = [
@@ -20,7 +20,7 @@ const findAdminByEmail = (email) => {
 // Function to verify password
 const verifyPassword = async (enteredPassword, storedHashedPassword) => {
     try {
-        const isMatch = await bcrypt.compare(enteredPassword, storedHashedPassword);
+        const isMatch = await bcrypt.compare(enteredPassword, storedHashedPassword); // Use bcryptjs for password comparison
         return isMatch;
     } catch (error) {
         console.error('Error verifying password:', error);
@@ -29,4 +29,3 @@ const verifyPassword = async (enteredPassword, storedHashedPassword) => {
 };
 
 module.exports = { findAdminByEmail, verifyPassword };
-
