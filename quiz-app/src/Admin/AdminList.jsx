@@ -13,7 +13,7 @@ const AdminList = () => {
   useEffect(() => {
     logAction('INFO', 'Fetching admins list'); // Log action before fetching
     axios
-      .get('http://localhost:8080/api/admins')
+      .get('https://mcq-project-backend.onrender.com/api/admins')
       .then((response) => {
         setAdmins(response.data.admins);
         setLoading(false);
