@@ -16,8 +16,8 @@ const AdminDetail = () => {
       try {
         logAction('INFO', `Fetching details for admin ID: ${adminId}`); // Log action before fetching
         const [adminResponse, examsResponse] = await Promise.all([
-          axios.get(`http://localhost:8080/api/admins/${adminId}`),
-          axios.get(`http://localhost:8080/api/admin/${adminId}/exams`),
+          axios.get(`https://mcq-project-backend.onrender.com/api/admins/${adminId}`),
+          axios.get(`https://mcq-project-backend.onrender.com/api/admin/${adminId}/exams`),
         ]);
         setAdmin(adminResponse.data.admin);
         setExams(examsResponse.data.exams);
