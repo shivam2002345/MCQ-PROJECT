@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom"; // Import useParams
 import "./CreateCustomExam.css";
-import './Csv.css'; // Assuming this file contains the styles
+import './csv.css'; // Assuming this file contains the styles
 
 const CreateCustomExam = () => {
   const { user_id, exam_id } = useParams(); // Extract user_id and exam_id from the URL
