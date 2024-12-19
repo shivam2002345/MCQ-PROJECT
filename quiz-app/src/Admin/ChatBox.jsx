@@ -10,7 +10,7 @@ const ChatBox = ({ request_id }) => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/chat/${request_id}`);
+        const response = await axios.get(`https://mcq-project-backend.onrender.com/api/chat/${request_id}`);
         
         // Ensure the response is an array
         const fetchedMessages = Array.isArray(response.data) ? response.data : [];
@@ -31,7 +31,7 @@ const ChatBox = ({ request_id }) => {
     const newMessage = { message, user_id };
 
     try {
-      const response = await axios.post(`http://localhost:8080/api/chat/${request_id}`, newMessage);
+      const response = await axios.post(`https://mcq-project-backend.onrender.com/api/chat/${request_id}`, newMessage);
       
       // Ensure the response data is correctly handled as an object or array
       setMessages(prevMessages => [...prevMessages, response.data]);
