@@ -20,7 +20,7 @@ const ExamList = () => {
       return;
     }
 
-    fetch(`http://localhost:8080/api/admin/${adminId}/exams`)
+    fetch(`https://mcq-project-backend.onrender.com/api/admin/${adminId}/exams`)
       .then((response) => response.json())
       .then((data) => {
         setExams(data.exams);
