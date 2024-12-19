@@ -17,7 +17,7 @@ const AdminLogin = () => {
         logAction('INFO', 'Attempting admin login'); // Log when login attempt starts
 
         try {
-            const response = await axios.post('http://localhost:8080/admin/login', {
+            const response = await axios.post('https://mcq-project-backend.onrender.com/admin/login', {
                 email,
                 password,
             });
