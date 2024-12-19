@@ -17,12 +17,12 @@ const UserProfile = () => {
             // Log action for viewing user profile
             await logAction('View User Profile', `Viewing profile of user with ID: ${user_id}`);
 
-            const userResponse = await fetch(`http://localhost:8080/api/users/${user_id}`);
+            const userResponse = await fetch(`https://mcq-project-backend.onrender.com/api/users/${user_id}`);
             if (!userResponse.ok) throw new Error('Failed to fetch user data');
             const userData = await userResponse.json();
             setUser(userData);
 
-            const examsResponse = await fetch(`http://localhost:8080/api/users/${user_id}/profile`);
+            const examsResponse = await fetch(`https://mcq-project-backend.onrender.com/api/users/${user_id}/profile`);
             const examsData = await examsResponse.json();
 
             if (examsResponse.ok) {
