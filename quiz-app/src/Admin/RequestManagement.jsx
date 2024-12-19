@@ -12,13 +12,13 @@ const RequestManagement = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/admin/requests');
+        const response = await axios.get('https://mcq-project-backend.onrender.com/api/admin/requests');
         setRequests(response.data);
 
         const counts = {};
         await Promise.all(
           response.data.map(async (request) => {
-            const userResponse = await axios.get(`http://localhost:8080/api/users/${request.user_id}`);
+            const userResponse = await axios.get(`https://mcq-project-backend.onrender.com/api/users/${request.user_id}`);
             counts[request.user_id] = userResponse.data.allowed_count;
           })
         );
@@ -36,11 +36,11 @@ const RequestManagement = () => {
   const handleAccept = async (requestId, userId) => {
     try {
       const newAllowedCount = allowedCounts[userId];
-      await axios.put(`http://localhost:8080/api/users/${userId}/allowed_count`, {
+      await axios.put(`https://mcq-project-backend.onrender.com/api/users/${userId}/allowed_count`, {
         allowed_count: newAllowedCount,
       });
 
-      const response = await axios.post(`http://localhost:8080/api/admin/requests/accept/${requestId}`);
+      const response = await axios.post(`https://mcq-project-backend.onrender.com/api/admin/requests/accept/${requestId}`);
       setNotification('Request accepted successfully! 🎉');  // Show success notification
       removeHandledRequest(requestId);
     } catch (error) {
@@ -51,7 +51,7 @@ const RequestManagement = () => {
 
   const handleReject = async (requestId) => {
     try {
-      const response = await axios.post(`http://localhost:8080/api/admin/requests/reject/${requestId}`);
+      const response = await axios.post(`https://mcq-project-backend.onrender.com/api/admin/requests/reject/${requestId}`);
       setNotification('Request rejected successfully! ❌');  // Show success notification
       removeHandledRequest(requestId);
     } catch (error) {
