@@ -13,7 +13,7 @@ const UserList = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/users');
+            const response = await fetch('https://mcq-project-backend.onrender.com/api/users');
             if (!response.ok) throw new Error('Failed to fetch users');
             const data = await response.json();
             setUsers(data);
