@@ -9,7 +9,7 @@ const RequestStatus = ({ request_id, status, setRequestStatus }) => {
 
   const updateStatus = async (newStatus) => {
     try {
-      await axios.put(`http://localhost:8080/api/superadmin/requests/${request_id}/status`, { status: newStatus });
+      await axios.put(`https://mcq-project-backend.onrender.com/api/superadmin/requests/${request_id}/status`, { status: newStatus });
       setRequestStatus(newStatus);
       logAction('Status Updated', newStatus); // Log the action after status update
     } catch (err) {
