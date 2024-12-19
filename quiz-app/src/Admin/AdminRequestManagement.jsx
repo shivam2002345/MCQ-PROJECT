@@ -12,7 +12,7 @@ const AdminRequestManagement = () => {
   const fetchRequests = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:8080/api/admin/new/requests");
+      const response = await axios.get("https://mcq-project-backend.onrender.com/api/admin/new/requests");
       setRequests(response.data);
       setLoading(false);
       logAction("Successfully fetched requests"); // Log successful fetch
@@ -30,7 +30,7 @@ const AdminRequestManagement = () => {
         status: status,
         message: status === "rejected" ? "We currently do not need additional admins." : undefined,
       };
-      const response = await axios.put(`http://localhost:8080/api/admin/request/${request_id}`, body);
+      const response = await axios.put(`https://mcq-project-backend.onrender.com/api/admin/request/${request_id}`, body);
       setMessage(response.data.message);
       fetchRequests(); // Refresh the list
       logAction(`Status for request ID ${request_id} updated to ${status}`); // Log status change
