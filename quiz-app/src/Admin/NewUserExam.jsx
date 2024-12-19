@@ -19,7 +19,7 @@ const HostExamForm = () => {
   // Fetch technologies on component mount
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/technologies")
+      .get("https://mcq-project-backend.onrender.com/api/technologies")
       .then((response) => setTechnologies(response.data))
       .catch((error) => console.error("Error fetching technologies:", error));
   }, []);
@@ -87,7 +87,7 @@ const HostExamForm = () => {
     setIsSubmitting(true);
 
     axios
-      .post("http://localhost:8080/api/customexams/exams/newuser/create", postData)
+      .post("https://mcq-project-backend.onrender.com/api/customexams/exams/newuser/create", postData)
       .then((response) => {
         console.log("Exam creation response:", response.data); // Log the response
         alert("Exam hosted successfully!");
