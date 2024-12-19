@@ -10,7 +10,7 @@ const SuperAdminDashboard = () => {
     const fetchRequests = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('http://localhost:8080/api/superadmin/requests', {
+        const response = await axios.get('https://mcq-project-backend.onrender.com/api/superadmin/requests', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setRequests(response.data);
