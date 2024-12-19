@@ -21,7 +21,7 @@ const AdminRequestDetailsPage = () => {
     const fetchRequest = async () => {
       logAction('Fetching request details for request_id:', { request_id }); // Log fetching action
       try {
-        const response = await axios.get(`http://localhost:8080/api/superadmin/requests/${request_id}`); // Replace with your API endpoint
+        const response = await axios.get(`https://mcq-project-backend.onrender.com/api/superadmin/requests/${request_id}`); // Replace with your API endpoint
         logAction('Request details fetched successfully:', response.data); // Log successful fetch
         setRequest(response.data);
         setRequestStatus(response.data.status); // Set the initial status
