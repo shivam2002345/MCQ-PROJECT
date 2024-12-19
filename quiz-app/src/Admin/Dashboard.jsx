@@ -16,11 +16,11 @@ const AdminDashboard = () => {
         const fetchData = async () => {
             try {
                 // Fetch total users count
-                const userRes = await axios.get('http://localhost:8080/api/users');
+                const userRes = await axios.get('https://mcq-project-backend.onrender.com/api/users');
                 setUserCount(userRes.data.length); // Assuming the endpoint returns an array of users
 
                 // Fetch question counts by technology
-                const questionCountRes = await axios.get('http://localhost:8080/api/count');
+                const questionCountRes = await axios.get('https://mcq-project-backend.onrender.com/api/count');
                 if (Array.isArray(questionCountRes.data)) {
                     setQuestionData(questionCountRes.data);
                 } else {
