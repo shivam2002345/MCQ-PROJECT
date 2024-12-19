@@ -4,29 +4,29 @@ const { Sequelize } = require('sequelize');
 
 // PostgreSQL Pool Configuration for Raw Queries
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL, // Connection string from .env
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for cloud-hosted databases with self-signed certificates
+  },
   max: 20, // Maximum number of connections in the pool
   idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Timeout after 2 seconds
+  connectionTimeoutMillis: 5000, // Timeout after 5 seconds
 });
 
 // Sequelize Configuration for ORM
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   protocol: 'postgres',
-  logging: false, // Disable logging
+  logging: false, // Disable logging; set to console.log for debugging
   dialectOptions: {
-    // Uncomment for remote PostgreSQL with SSL
-    /*
     ssl: {
       require: true,
-      rejectUnauthorized: false,
+      rejectUnauthorized: false, // Required for cloud-hosted databases with self-signed certificates
     },
-    */
   },
 });
 
-// Connect Databases Function
+// Function to Test and Connect Databases
 const connectDBs = async () => {
   try {
     // Test the pg pool connection
@@ -39,11 +39,12 @@ const connectDBs = async () => {
     console.log('Database connected successfully (Sequelize)');
   } catch (error) {
     console.error('Database connection error:', error.message);
-    process.exit(1); // Exit process with failure
+    console.error(error.stack); // Print stack trace for detailed debugging
+    process.exit(1); // Exit the process with failure
   }
 };
 
-// Gracefully handle shutdown
+// Graceful Shutdown for Cleanup
 process.on('SIGINT', async () => {
   console.log('Shutting down gracefully...');
 
@@ -64,7 +65,10 @@ process.on('SIGINT', async () => {
   process.exit(0); // Exit the process after cleanup
 });
 
-// Export both the pg pool, Sequelize instance, and connectDBs function
+// Call connectDBs to test the connections on startup
+connectDBs();
+
+// Export the pool, Sequelize instance, and connectDBs function
 module.exports = {
   pool,        // For raw SQL queries
   sequelize,   // For ORM-based operations
