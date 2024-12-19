@@ -14,7 +14,7 @@ const NewAdminRequest = () => {
     const fetchRequests = async () => {
       const token = localStorage.getItem('token'); // Ensure the token exists
       try {
-        const response = await axios.get('http://localhost:8080/api/superadmin/requests', {
+        const response = await axios.get('https://mcq-project-backend.onrender.com/api/superadmin/requests', {
           headers: { Authorization: `Bearer ${token}` }, // Add token if needed
         });
         console.log('API Response:', response.data); // Log API response for debugging
@@ -47,7 +47,7 @@ const NewAdminRequest = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/superadmin/requests',
+        'https://mcq-project-backend.onrender.com/api/superadmin/requests',
         { ...newRequest, admin_id }, // Include admin_id in the payload
         {
           headers: { Authorization: `Bearer ${token}` }, // Add token if needed
