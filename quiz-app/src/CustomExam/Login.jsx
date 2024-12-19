@@ -13,7 +13,7 @@ const Login = () => {
     // Fetch user details by user_id from the database.
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/users/${user_id}`);
+        const response = await fetch(`https://mcq-project-backend.onrender.com/api/users/${user_id}`);
         const data = await response.json();
         if (response.ok) {
           setEmail(data.email); // Populate email field.
@@ -39,7 +39,7 @@ const Login = () => {
     try {
       // Update password API call with the correct body
       const updatePasswordResponse = await fetch(
-        `http://localhost:8080/api/users/${user_id}/password`, // API endpoint
+        `https://mcq-project-backend.onrender.com/api/users/${user_id}/password`, // API endpoint
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
