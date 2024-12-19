@@ -17,7 +17,7 @@ const CreateCustomExam = () => {
   useEffect(() => {
     const fetchTechnologies = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/technologies");
+        const response = await axios.get("https://mcq-project-backend.onrender.com/api/technologies");
         setTechnologies(response.data);
       } catch (error) {
         setErrorMessage("Failed to fetch technologies");
@@ -79,7 +79,7 @@ const CreateCustomExam = () => {
       admin_id: admin_id,
     };
     try {
-      await axios.post("http://localhost:8080/api/customexams/create", payload);
+      await axios.post("https://mcq-project-backend.onrender.com/api/customexams/create", payload);
       setSuccessMessage("Exam created successfully!");
       setErrorMessage("");
       setSelectedTechnology("");
