@@ -24,7 +24,7 @@ import Login from "./CustomExam/Login";
 import Result from "./CustomExam/Result";
 import Exam from "./CustomExam/Exam";
 import OldUserExam from "./CustomExam/OldUserExam";
-import ExamResults from "./Components/Customresult";
+import ExamResults from "./components/Customresult";
 import { isAuthenticated } from "./utils/userAuth";
 import { isAdminAuthenticated } from "./utils/adminAuth";
 // import RequestForm from "./components/CreateRequest";
