@@ -17,7 +17,7 @@ export const checkLoginExpiration = () => {
 // Login with real token logic (API login)
 export const login = async (email, password) => {
   try {
-    const response = await fetch('http://localhost:8080/api/auth/login', {
+    const response = await fetch('https://mcq-project-backend.onrender.com/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
