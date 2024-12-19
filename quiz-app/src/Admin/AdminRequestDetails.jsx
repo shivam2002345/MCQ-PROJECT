@@ -16,7 +16,7 @@ const AdminRequestDetails = () => {
     useEffect(() => {
       const fetchRequest = async () => {
         try {
-          const response = await axios.get(`http://localhost:8080/api/superadmin/requests/${request_id}`); // Replace with your API endpoint
+          const response = await axios.get(`https://mcq-project-backend.onrender.com/api/superadmin/requests/${request_id}`); // Replace with your API endpoint
           setRequest(response.data);
           setRequestStatus(response.data.status); // Set the initial status
           setLoading(false);
