@@ -12,7 +12,7 @@ const RequestForm = () => {
     // Fetch user info based on user_id from backend
     const fetchUserInfo = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/users/${user_id}`);
+        const response = await fetch(`https://mcq-project-backend.onrender.com/api/users/${user_id}`);
         const data = await response.json();
         setUserInfo({ User: data.user_id, name: data.name, email: data.email });
       } catch (error) {
@@ -31,7 +31,7 @@ const RequestForm = () => {
     const requestData = { user_id, note };
 
     try {
-      const response = await fetch('http://localhost:8080/api/requests/submit', {
+      const response = await fetch('https://mcq-project-backend.onrender.com/api/requests/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
