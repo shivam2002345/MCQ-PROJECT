@@ -14,7 +14,7 @@ const AdminNavbar = () => {
   const fetchUnhandledRequests = async () => {
     try {
       logAction('INFO', 'Fetching unhandled requests'); // Log action when fetching requests
-      const response = await axios.get('http://localhost:8080/api/admin/requests/unhandled');
+      const response = await axios.get('https://mcq-project-backend.onrender.com/api/admin/requests/unhandled');
       const requests = response.data;
       setUnhandledRequests(requests.length);
       console.log('Fetched Unhandled Requests:', requests);
@@ -35,7 +35,7 @@ const AdminNavbar = () => {
   const handleDownload = async (fileId) => {
     try {
       logAction('INFO', `Initiating file download for file ID: ${fileId}`); // Log action when download starts
-      const response = await axios.get(`http://localhost:8080/api/exam-csv/download/${fileId}`, {
+      const response = await axios.get(`https://mcq-project-backend.onrender.com/api/exam-csv/download/${fileId}`, {
         responseType: 'blob', // Ensure the response type is blob for file download
       });
 
