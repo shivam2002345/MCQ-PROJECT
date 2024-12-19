@@ -22,7 +22,7 @@ const Profile = () => {
   const logAction = (actionType, message) => {
     console.log(`Action: ${actionType}, Message: ${message}`);
     // Ideally, send this data to a logging endpoint or analytics service
-    axios.post('http://localhost:8080/api/logs', {
+    axios.post('https://mcq-project-backend.onrender.com/api/logs', {
       userId,
       actionType,
       message,
@@ -49,7 +49,7 @@ const Profile = () => {
 
     try {
       setLoading(true); 
-      const response = await axios.get(`http://localhost:8080/api/users/${userId}`);
+      const response = await axios.get(`https://mcq-project-backend.onrender.com/api/users/${userId}`);
       console.log("User details response:", response.data); 
 
       if (response.data) {
@@ -74,7 +74,7 @@ const Profile = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/users/${userId}/profile`);
+      const response = await axios.get(`https://mcq-project-backend.onrender.com/api/users/${userId}/profile`);
       if (response.data.userDetails) {
         setUserDetails(prevDetails => ({
           ...prevDetails,
@@ -97,7 +97,7 @@ const Profile = () => {
   const fetchDetailedAnalytics = async (resultId) => {
     try {
       console.log(`Fetching detailed analytics for resultId: ${resultId}, userId: ${userId}`);
-      const response = await axios.get(`http://localhost:8080/testdetails/${resultId}`);
+      const response = await axios.get(`https://mcq-project-backend.onrender.com/testdetails/${resultId}`);
       console.log('Fetched analytics data:', response.data);
       setAnalytics(response.data);
       logAction('Fetch Analytics', `Successfully fetched analytics for resultId: ${resultId}`);
