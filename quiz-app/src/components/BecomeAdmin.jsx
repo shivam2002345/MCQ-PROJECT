@@ -52,7 +52,7 @@ const BecomeAdmin = () => {
 
         // Axios POST request with headers
         const response = await axios.post(
-          "http://localhost:8080/api/admin/request",
+          "https://mcq-project-backend.onrender.com/api/admin/request",
           values,
           {
             headers: {
