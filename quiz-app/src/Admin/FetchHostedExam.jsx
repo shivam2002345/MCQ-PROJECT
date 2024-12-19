@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './FetchhostedExam.css';
+import './FetchHostedExam.css';
 import logAction from '../utils/logAction'; // Import the logAction file
 
 const ExamList = () => {
