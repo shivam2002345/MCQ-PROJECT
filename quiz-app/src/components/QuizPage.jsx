@@ -26,7 +26,7 @@ const QuizPage = () => {
     const fetchQuestions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/exams/${exam_id}`
+          `https://mcq-project-backend.onrender.com/api/exams/${exam_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch questions");
@@ -156,7 +156,7 @@ const QuizPage = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/results", {
+      const response = await fetch("https://mcq-project-backend.onrender.com/api/results", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
