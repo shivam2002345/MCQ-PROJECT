@@ -20,7 +20,7 @@ const ExamResults = () => {
     }
 
     // Fetch results based on the user_id
-    axios.get(`http://localhost:8080/api/hostedresults/user/${userId}`)
+    axios.get(`https://mcq-project-backend.onrender.com/api/hostedresults/user/${userId}`)
       .then((response) => {
         if (response.data.success) {
           setResults(response.data.data);
