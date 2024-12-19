@@ -14,7 +14,7 @@ const Exam = () => {
   useEffect(() => {
     const fetchExamData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/customexams/exams/${examId}`);
+        const response = await fetch(`https://mcq-project-backend.onrender.com/api/customexams/exams/${examId}`);
         const data = await response.json();
   
         // Check if the exam status is 'already taken'
@@ -99,7 +99,7 @@ const Exam = () => {
       };
   
       // Save the exam results
-      const saveResponse = await fetch("http://localhost:8080/api/hostedresults/save", {
+      const saveResponse = await fetch("https://mcq-project-backend.onrender.com/api/hostedresults/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(resultData),
@@ -109,7 +109,7 @@ const Exam = () => {
       console.log("Save response:", saveData);
   
       // Update the status of the exam (change to 'true' after submission)
-      const updateStatusResponse = await fetch(`http://localhost:8080/api/update-status/${examData.exam_id}`, {
+      const updateStatusResponse = await fetch(`https://mcq-project-backend.onrender.com/api/update-status/${examData.exam_id}`, {
         method: "PUT", // Assuming POST method for updating status
       });
   
