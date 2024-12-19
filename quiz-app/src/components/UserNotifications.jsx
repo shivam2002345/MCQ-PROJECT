@@ -18,7 +18,7 @@ const Notification = () => {
         // Fetch notifications based on the user ID from local storage
         const fetchNotifications = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/notifications/${userId}`);
+                const response = await fetch(`https://mcq-project-backend.onrender.com/api/notifications/${userId}`);
                 const data = await response.json();
                 console.log("Fetched notifications:", data); // Log the fetched data
 
@@ -42,7 +42,7 @@ const Notification = () => {
     const markAsRead = async (id) => {
         try {
             // Send the request to mark the notification as read
-            await fetch(`http://localhost:8080/api/notifications/${id}/read`, {
+            await fetch(`https://mcq-project-backend.onrender.com/api/notifications/${id}/read`, {
                 method: 'PATCH',
             });
 
