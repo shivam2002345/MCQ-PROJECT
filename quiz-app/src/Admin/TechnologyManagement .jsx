@@ -44,7 +44,7 @@ const TechnologyManagement = () => {
   const fetchTechnologies = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:8080/api/technologies');
+      const response = await axios.get('https://mcq-project-backend.onrender.com/api/technologies');
       if (Array.isArray(response.data)) {
         setTechnologies(response.data);
       } else {
@@ -69,7 +69,7 @@ const TechnologyManagement = () => {
     }
 
     try {
-      await axios.post('http://localhost:8080/api/technologies/add', { tech_name: techName });
+      await axios.post('https://mcq-project-backend.onrender.com/api/technologies/add', { tech_name: techName });
       setTechName('');
       setSuccessMessage('Technology added successfully!');
       fetchTechnologies();
@@ -98,7 +98,7 @@ const TechnologyManagement = () => {
 
     if (window.confirm("Are you sure you want to update this technology?")) {
       try {
-        await axios.put(`http://localhost:8080/api/technologies/edit/${editTechId}`, { tech_name: techName });
+        await axios.put(`https://mcq-project-backend.onrender.com/api/technologies/edit/${editTechId}`, { tech_name: techName });
         setTechName('');
         setEditTechId(null);
         setSuccessMessage('Technology updated successfully!');
@@ -113,7 +113,7 @@ const TechnologyManagement = () => {
   const deleteTechnology = async (id) => {
     if (window.confirm("Are you sure you want to delete this technology?")) {
       try {
-        await axios.delete(`http://localhost:8080/api/technologies/delete/${id}`);
+        await axios.delete(`https://mcq-project-backend.onrender.com/api/technologies/delete/${id}`);
         setSuccessMessage('Technology deleted successfully!');
         fetchTechnologies();
         logAction('Delete Technology', `Deleted technology with ID: ${id}`); // Log the action
