@@ -15,7 +15,7 @@ const AdminSubtopicsPage = () => {
     // Fetch all technologies
     const fetchTechnologies = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/technologies');
+            const response = await axios.get('https://mcq-project-backend.onrender.com/api/technologies');
             if (response.status === 200) {
                 setTechnologies(response.data);
             } else {
@@ -31,7 +31,7 @@ const AdminSubtopicsPage = () => {
     // Fetch subtopics for the selected technology
     const fetchSubtopics = async (tech_id) => {
         try {
-            const response = await axios.get(`http://localhost:8080/api/subtopics/${tech_id}`);
+            const response = await axios.get(`https://mcq-project-backend.onrender.com/api/subtopics/${tech_id}`);
             if (response.data && Array.isArray(response.data)) {
                 setSubtopics(response.data);
             } else {
@@ -66,7 +66,7 @@ const AdminSubtopicsPage = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8080/api/subtopics', {
+            const response = await axios.post('https://mcq-project-backend.onrender.com/api/subtopics', {
                 tech_id: selectedTechnology,
                 subtopic_name: newSubtopic,
             });
@@ -84,7 +84,7 @@ const AdminSubtopicsPage = () => {
     // Delete a subtopic
     const handleDeleteSubtopic = async (subtopicId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/subtopics/${subtopicId}`);
+            await axios.delete(`https://mcq-project-backend.onrender.com/api/subtopics/${subtopicId}`);
             setSubtopics(subtopics.filter((subtopic) => subtopic.subtopic_id !== subtopicId));
 
             // Log the action
@@ -110,7 +110,7 @@ const AdminSubtopicsPage = () => {
         }
 
         try {
-            const response = await axios.put(`http://localhost:8080/api/subtopics/${editSubtopicId}`, {
+            const response = await axios.put(`https://mcq-project-backend.onrender.com/api/subtopics/${editSubtopicId}`, {
                 subtopic_name: editSubtopicName,
             });
             setSubtopics(
