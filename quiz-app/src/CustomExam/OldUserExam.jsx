@@ -23,7 +23,7 @@ const OldUserExam = () => {
   const fetchExamData = async (examId) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/api/customexams/exams/${examId}`);
+      const response = await fetch(`https://mcq-project-backend.onrender.com/api/customexams/exams/${examId}`);
       const data = await response.json();
       
       if (data.message && data.message === 'Sorry, you have already given this exam!') {
@@ -121,7 +121,7 @@ const OldUserExam = () => {
       };
   
       // Save the exam result
-      const saveResponse = await fetch("http://localhost:8080/api/hostedresults/save", {
+      const saveResponse = await fetch("https://mcq-project-backend.onrender.com/api/hostedresults/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(resultData),
@@ -131,7 +131,7 @@ const OldUserExam = () => {
   
       if (saveData.success) {
         // Update exam status after saving the result
-        const updateStatusResponse = await fetch(`http://localhost:8080/api/update-status/${examData.exam_id}`, {
+        const updateStatusResponse = await fetch(`https://mcq-project-backend.onrender.com/api/update-status/${examData.exam_id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
         });
