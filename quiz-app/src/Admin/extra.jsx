@@ -25,8 +25,8 @@ const FilterQuestions = () => {
   const fetchTechAndLevels = async () => {
     try {
       const [techRes, levelRes] = await Promise.all([
-        axios.get('http://localhost:8080/api/technologies'),
-        axios.get('http://localhost:8080/api/levels'),
+        axios.get('https://mcq-project-backend.onrender.com/api/technologies'),
+        axios.get('https://mcq-project-backend.onrender.com/api/levels'),
       ]);
 
       setTechnologies(techRes.data || []);
@@ -39,7 +39,7 @@ const FilterQuestions = () => {
 
   const fetchQuestions = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/questions', {
+      const res = await axios.get('https://mcq-project-backend.onrender.com/api/questions', {
         params: { tech_id: tech, level_id: level },
       });
 
@@ -72,7 +72,7 @@ const FilterQuestions = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8080/api/questions/delete/${id}`);
+      const response = await axios.delete(`https://mcq-project-backend.onrender.com/api/questions/delete/${id}`);
       if (response.data.success) {
         setQuestions(questions.filter(q => q.question_id !== id));
         setCount(prevCount => prevCount - 1);
@@ -107,7 +107,7 @@ const FilterQuestions = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/api/questions/edit/${currentQuestion.question_id}`, updatedData);
+      const response = await axios.put(`https://mcq-project-backend.onrender.com/api/questions/edit/${currentQuestion.question_id}`, updatedData);
 
       if (response.data.success) {
         setQuestions(questions.map(q => (q.question_id === currentQuestion.question_id ? response.data.data : q)));
