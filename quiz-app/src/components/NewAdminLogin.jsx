@@ -32,7 +32,7 @@ const NewAdminLogin = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/admin/newadmin/login",
+          "https://mcq-project-backend.onrender.com/api/admin/newadmin/login",
           values
         );
         // Accessing admin_id from response data
